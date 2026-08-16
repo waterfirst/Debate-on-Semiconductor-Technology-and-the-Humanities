@@ -1,0 +1,21 @@
+:root {
+  --ink: #18212b;
+  --accent: #8b2f24;
+  --paper: #fbf7ef;
+  --line: #d8cbb8;
+}
+
+body { line-height: 1.78; }
+.quarto-title-banner { background: linear-gradient(135deg, #171b22, #3d2924); }
+.sidebar-title { font-weight: 800; letter-spacing: -0.02em; }
+blockquote { border-left: 4px solid var(--accent); background: rgba(139, 47, 36, 0.06); padding: 1rem 1.2rem; }
+.callout { border-radius: 0.6rem; }
+table { font-size: 0.94rem; }
+@media (min-width: 992px) { main.content { max-width: 860px; } }
+@media (max-width: 767px) {
+  body { font-size: 1rem; }
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.42rem; }
+  .page-columns { display: block; }
+}
+

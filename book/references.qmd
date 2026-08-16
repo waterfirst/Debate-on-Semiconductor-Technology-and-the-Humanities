@@ -1,0 +1,30 @@
+---
+title: "출처와 검증 원칙"
+---
+
+## 기본 원칙
+
+1. 법령·통계·정부기관·기업공시·원 논문을 1차 출처로 우선한다.
+2. 핵심 수치는 출처 URL, 기준일, 단위, 정의를 함께 기록한다.
+3. 상관관계를 인과관계로 바꾸어 쓰지 않는다.
+4. 정부·기업·군의 전시 발표는 이해관계가 있는 주장으로 표시한다.
+5. 최신성이 중요한 데이터는 발행 직전 다시 수집한다.
+6. 조선시대 답안은 원문·번역·현대적 재구성을 구분한다.
+
+## 프로젝트 연결
+
+- [조선시대 책문 아카이브](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/)
+- [Insight Lab](https://waterfirst.github.io/insight-lab/)
+- [Alpha Hunter — 반도체 산업 분석](https://waterfirst.github.io/alpha-hunter/)
+- [Chimera AI — 시장 분석](https://waterfirst.github.io/chimera-ai/)
+- [Culture Voyager](https://waterfirst.github.io/culture-voyager/)
+
+## 출판 절차 참고
+
+- [출판사 차리기 — 1인부터 중소까지 단계별 가이드와 비용](https://aipublisher.co.kr/blog/starting-publishing-company-guide) — 민간 참고자료
+- [출판문화산업 진흥법 제9조](https://www.law.go.kr/LSW//lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0009&lsiSeq=276403&urlMode=lsScJoRltInfoR) — 출판사 신고
+- [국립중앙도서관 ISBN·ISSN·UCI·납본 시스템](https://www.nl.go.kr/seoji/) — 발행자번호, ISBN, 납본
+- [국립중앙도서관 자료 납본](https://www.nl.go.kr/NL/contents/N50107020100.do) — 30일 이내 납본 원칙
+- [bit2r/bitPublish](https://github.com/bit2r/bitPublish) — 한국어 Quarto 종이책 PDF
+- [R2bit 출판 프로젝트](https://r2bit.com/) — Quarto 기반 출판 사례
+

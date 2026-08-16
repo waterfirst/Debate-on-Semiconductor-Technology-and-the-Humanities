@@ -1,0 +1,11 @@
+book/_book/
+book/.quarto/
+book/*-files/
+book/*.pdf
+book/*.epub
+book/*.docx
+_extensions/
+__pycache__/
+*.pyc
+.DS_Store
+
