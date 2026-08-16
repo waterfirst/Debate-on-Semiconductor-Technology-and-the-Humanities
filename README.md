@@ -1,1 +1,57 @@
-# Debate-on-Semiconductor-Technology-and-the-Humanities
+# 반도체 면접은 책문이다
+
+> 조선의 과거시험으로 푸는 AI·전쟁·환율·공급망 토론 30
+
+**분야명/저널명은 ‘반도체와 인문학 주제 토론’, 종이책 제목은 ‘반도체 면접은 책문이다’**입니다. 이 저장소는 조선시대 과거시험의 `책문(策問)` 형식을 오늘의 반도체 산업에 적용한 독립 저널이자 종이책 제작 프로젝트입니다. 정답을 암기하는 자료가 아니라, 데이터와 대립 논거를 바탕으로 판단의 조건을 설명하는 토론 교재를 지향합니다.
+
+SK하이닉스 채용·면접에서 인문학적 토론이 중요해진 현상은 집필의 계기 가운데 하나였지만, 이 프로젝트는 특정 기업의 공식 채용 자료가 아니며 SK하이닉스의 후원·검수·승인을 받지 않았습니다.
+
+## 읽는 법
+
+- 한 장은 지하철 2~3개 역 사이에 읽을 수 있는 길이를 목표로 합니다.
+- 각 장은 `오늘의 책문 → 데이터 렌즈 → 대립 답안 → 판정 조건 → 꼬리 질문`으로 구성됩니다.
+- 수치는 출처·기준일·단위를 함께 기록합니다. 최신성이 중요한 수치는 발행 직전에 다시 검증해야 합니다.
+- AI는 조사·초안·반론 생성 도구로 사용하되, 사실 확인과 최종 판단의 책임은 저자와 편집자에게 있습니다.
+
+## 폴더
+
+```text
+book/                 Quarto 단행본 원고와 30개 장
+data/                 주제 카탈로그와 데이터 출처 목록
+scripts/              원고 동기화·구조 검증 도구
+.github/workflows/    GitHub Pages용 HTML 빌드
+PUBLISHING.md         1인 출판 및 판매 실행안
+TITLE_AND_LAUNCH.md   교보 바로출판용 제목·표지 문구·출간 일정
+```
+
+## 미리보기와 출판
+
+먼저 [Quarto](https://quarto.org/)를 설치합니다.
+
+```bash
+cd book
+quarto preview --to html
+```
+
+전자책은 `quarto render --to epub`으로 만들 수 있습니다. 한국어 종이책 PDF는 [bit2r/bitPublish](https://github.com/bit2r/bitPublish) 확장을 설치한 다음 생성합니다.
+
+```bash
+cd book
+quarto add --no-prompt bit2r/bitPublish
+quarto render --to bitPublish-pdf
+```
+
+공개 저장소에서는 유료 판매용 최종 PDF·EPUB을 커밋하지 마십시오. 본문 HTML은 독자 유입용 공개 저널로, 교정·워크북·업데이트를 더한 완성판은 별도 제작물로 운영하는 방식을 권합니다.
+
+## 검증
+
+```bash
+python scripts/validate_book.py
+```
+
+검증기는 30개 장의 존재, 필수 섹션, 외부 출처 링크, 출판 안내 문서를 확인합니다. 검증 통과는 사실의 진실성을 보증하지 않으며 발행 전 사람의 교차검증이 필요합니다.
+
+## 라이선스
+
+- 원고·도표 설명·편집 구성: `LICENSE-CONTENT.md` (저작권 보유)
+- 코드: `LICENSE-CODE` (MIT)
