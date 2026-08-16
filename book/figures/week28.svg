@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 294" role="img" aria-labelledby="title desc">
+<title id="title">데이터 주권과 국경을 넘는 팹</title><desc id="desc">상위 5개 디지털 다국적기업 매출 점유율(%) 막대그래프</desc>
+<style>.bg{fill:#fbf7ef}.bar{fill:#8b2f24}.title{font:700 27px sans-serif;fill:#18212b}.unit{font:16px sans-serif;fill:#655f58}.label{font:18px sans-serif;fill:#18212b}.value{font:700 17px sans-serif;fill:#18212b}</style>
+<rect class="bg" width="100%" height="100%" rx="18"/><text x="28" y="46" class="title">데이터 주권과 국경을 넘는 팹</text><text x="28" y="76" class="unit">단위: 상위 5개 디지털 다국적기업 매출 점유율(%)</text>
+<text x="28" y="135" class="label">2017</text><rect x="230" y="112" width="266.9" height="34" rx="6" class="bar"/><text x="512.9" y="136" class="value">21</text><text x="28" y="207" class="label">2025</text><rect x="230" y="184" width="610.0" height="34" rx="6" class="bar"/><text x="850.0" y="208" class="value">48</text></svg>

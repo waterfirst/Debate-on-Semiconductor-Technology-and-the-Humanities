@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 294" role="img" aria-labelledby="title desc">
+<title id="title">안전과 생산량 사이의 침묵</title><desc id="desc">연간 인원(백만 명, 로그축 권장) 막대그래프</desc>
+<style>.bg{fill:#fbf7ef}.bar{fill:#8b2f24}.title{font:700 27px sans-serif;fill:#18212b}.unit{font:16px sans-serif;fill:#655f58}.label{font:18px sans-serif;fill:#18212b}.value{font:700 17px sans-serif;fill:#18212b}</style>
+<rect class="bg" width="100%" height="100%" rx="18"/><text x="28" y="46" class="title">안전과 생산량 사이의 침묵</text><text x="28" y="76" class="unit">단위: 연간 인원(백만 명, 로그축 권장)</text>
+<text x="28" y="135" class="label">업무 관련 사망</text><rect x="230" y="112" width="4.5" height="34" rx="6" class="bar"/><text x="250.5" y="136" class="value">2.93</text><text x="28" y="207" class="label">비치명적 부상</text><rect x="230" y="184" width="610.0" height="34" rx="6" class="bar"/><text x="850.0" y="208" class="value">395</text></svg>

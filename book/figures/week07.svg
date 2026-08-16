@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 366" role="img" aria-labelledby="title desc">
+<title id="title">환율 급등과 반도체 기업의 진짜 실력</title><desc id="desc">환율 가정별 10억 달러 매출 환산(조 원) 막대그래프</desc>
+<style>.bg{fill:#fbf7ef}.bar{fill:#8b2f24}.title{font:700 27px sans-serif;fill:#18212b}.unit{font:16px sans-serif;fill:#655f58}.label{font:18px sans-serif;fill:#18212b}.value{font:700 17px sans-serif;fill:#18212b}</style>
+<rect class="bg" width="100%" height="100%" rx="18"/><text x="28" y="46" class="title">환율 급등과 반도체 기업의 진짜 실력</text><text x="28" y="76" class="unit">단위: 환율 가정별 10억 달러 매출 환산(조 원)</text>
+<text x="28" y="135" class="label">1,200원/$</text><rect x="230" y="112" width="488.0" height="34" rx="6" class="bar"/><text x="734.0" y="136" class="value">1.2</text><text x="28" y="207" class="label">1,350원/$</text><rect x="230" y="184" width="549.0" height="34" rx="6" class="bar"/><text x="795.0" y="208" class="value">1.35</text><text x="28" y="279" class="label">1,500원/$</text><rect x="230" y="256" width="610.0" height="34" rx="6" class="bar"/><text x="850.0" y="280" class="value">1.5</text></svg>

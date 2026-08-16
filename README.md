@@ -13,6 +13,8 @@ SK하이닉스 채용·면접에서 인문학적 토론이 중요해진 현상�
 - 수치는 출처·기준일·단위를 함께 기록합니다. 최신성이 중요한 수치는 발행 직전에 다시 검증해야 합니다.
 - AI는 조사·초안·반론 생성 도구로 사용하되, 사실 확인과 최종 판단의 책임은 저자와 편집자에게 있습니다.
 
+현재 원고는 30개 장, 23개 데이터 그래프, 68개 비교 데이터 행으로 구성되어 있습니다. 각 장에는 데이터 카드, 수치의 한계, 적극론·경계론·조건부론, 사례형 토론, 90초 발언 예시와 교차질문이 포함됩니다. 수치 그래프가 오해를 만들 수 있는 주제는 억지로 점수화하지 않고 의사결정 흐름도로 대체했습니다.
+
 ## 폴더
 
 ```text
@@ -22,6 +24,7 @@ scripts/              원고 동기화·구조 검증 도구
 .github/workflows/    GitHub Pages용 HTML 빌드
 PUBLISHING.md         1인 출판 및 판매 실행안
 TITLE_AND_LAUNCH.md   교보 바로출판용 제목·표지 문구·출간 일정
+EBOOK_LAUNCH.md       e퍼플 전자책 선출간 및 POD 병행안
 ```
 
 ## 미리보기와 출판
@@ -39,6 +42,12 @@ quarto preview --to html
 cd book
 quarto add --no-prompt bit2r/bitPublish
 quarto render --to bitPublish-pdf
+```
+
+Quarto가 설치되지 않은 긴급 환경에서는 저장소의 Pandoc 폴백 빌더로 제출 전 검수용 EPUB을 만들 수 있습니다.
+
+```bash
+python scripts/build_ebook.py
 ```
 
 공개 저장소에서는 유료 판매용 최종 PDF·EPUB을 커밋하지 마십시오. 본문 HTML은 독자 유입용 공개 저널로, 교정·워크북·업데이트를 더한 완성판은 별도 제작물로 운영하는 방식을 권합니다.
