@@ -70,7 +70,7 @@ def main() -> None:
                 "--toc",
                 "--toc-depth=1",
                 "--split-level=1",
-                "--metadata=title:반도체 면접은 책문이다",
+                "--metadata=title:반도체 면접, 왕의 질문에 답하라",
                 "--metadata=subtitle:조선의 과거시험으로 푸는 AI·전쟁·환율·공급망 토론 30",
                 "--metadata=author:waterfirst",
                 "--metadata=lang:ko-KR",
