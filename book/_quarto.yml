@@ -6,9 +6,12 @@ lang: ko-KR
 title: "반도체 면접, 왕의 질문에 답하라"
 subtitle: "조선의 책문으로 훈련하는 AI·전쟁·환율·공급망 데이터 토론 30"
 author: "최낙초"
+publisher: "스칼라브릿지"
+rights: "© 2026 최낙초. All rights reserved."
 date: last-modified
 
 book:
+  cover-image: cover/front-cover-final.png
   title: "반도체 면접, 왕의 질문에 답하라"
   subtitle: "조선의 책문으로 훈련하는 AI·전쟁·환율·공급망 데이터 토론 30"
   author: "최낙초"
@@ -16,6 +19,7 @@ book:
   search: true
   chapters:
     - index.qmd
+    - copyright.qmd
     - part: "1부 전쟁과 공급망"
       chapters:
         - chapters/week01.qmd
@@ -55,8 +59,9 @@ book:
         - chapters/week27.qmd
         - chapters/week28.qmd
         - chapters/week29.qmd
-        - chapters/week30.qmd
+    - chapters/week30.qmd
     - epilogue.qmd
+    - interview-checklist.qmd
     - author.qmd
     - references.qmd
 
@@ -73,6 +78,33 @@ format:
   epub:
     toc: true
     number-sections: true
+  pdf:
+    documentclass: scrbook
+    pdf-engine: xelatex
+    papersize: a5
+    mainfont: "Pretendard-Regular.otf"
+    mainfontoptions:
+      - "Path=C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/"
+      - "BoldFont=Pretendard-SemiBold.otf"
+    sansfont: "Pretendard-Regular.otf"
+    sansfontoptions:
+      - "Path=C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/"
+      - "BoldFont=Pretendard-SemiBold.otf"
+    fontsize: 10.5pt
+    linestretch: 1.32
+    include-in-header:
+      - print-style.tex
+    geometry:
+      - inner=20mm
+      - outer=15mm
+      - top=18mm
+      - bottom=20mm
+    toc: true
+    number-sections: true
+    colorlinks: false
+
+filters:
+  - book-question.lua
 
 execute:
   freeze: auto

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1748" height="2480" viewBox="0 0 1748 2480">
+  <defs>
+    <linearGradient id="titleShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#06111f" stop-opacity="1"/>
+      <stop offset="0.78" stop-color="#06111f" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#06111f" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+      <feOffset dy="5"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.48"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1748" height="2480" fill="#06111f"/>
+  <image href="cover-art-gat-wafer-v2.png" x="-18" y="180" width="1784" height="2530" preserveAspectRatio="xMidYMid slice"/>
+  <rect x="0" y="0" width="1748" height="1120" fill="url(#titleShade)"/>
+
+  <g fill="#f4f1e8" filter="url(#shadow)">
+    <text x="874" y="205" text-anchor="middle" font-family="KoPub Dotum" font-weight="700" font-size="80" letter-spacing="13">반도체 면접,</text>
+    <text x="874" y="438" text-anchor="middle" font-family="KoPub Batang" font-weight="700" font-size="164" letter-spacing="-5">왕의 질문에</text>
+    <text x="874" y="665" text-anchor="middle" font-family="KoPub Dotum" font-weight="700" font-size="165" letter-spacing="9">답하라</text>
+  </g>
+
+  <g fill="#e2e8ec" font-family="KoPub Dotum" font-weight="700" text-anchor="middle">
+    <text x="874" y="808" font-size="46" letter-spacing="1">조선의 책문으로 훈련하는</text>
+    <text x="874" y="878" font-size="43" letter-spacing="0.5">AI · 전쟁 · 환율 · 공급망 데이터 토론 30</text>
+  </g>
+
+  <rect x="0" y="2308" width="1748" height="172" fill="#f7f5ef"/>
+  <text x="112" y="2418" fill="#102238" font-family="KoPub Batang" font-size="48" font-weight="700" letter-spacing="2">최낙초 지음</text>
+  <image href="scholarbridge-logo.png" x="1038" y="2344" width="585" height="76" preserveAspectRatio="xMidYMid meet"/>
+</svg>

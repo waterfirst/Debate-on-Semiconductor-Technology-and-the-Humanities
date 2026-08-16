@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3700" height="2551" viewBox="0 0 3700 2551">
+  <!-- A5 148 x 210 mm, 3 mm bleed, provisional 11.3 mm spine for 226 interior pages. -->
+  <rect width="3700" height="2551" fill="#071423"/>
+
+  <!-- Back cover plus outer bleed. -->
+  <image href="back-cover-final.png" x="0" y="0" width="1783" height="2551" preserveAspectRatio="xMidYMid slice"/>
+
+  <!-- Spine: title only, by design. -->
+  <rect x="1783" y="0" width="133" height="2551" fill="#081727"/>
+  <path d="M1783 0V2551M1916 0V2551" stroke="#8eacc3" stroke-opacity="0.34" stroke-width="2"/>
+  <text x="0" y="0" transform="translate(1871 178) rotate(90)" fill="#f3f0e7"
+        font-family="KoPub Batang" font-weight="700" font-size="38" letter-spacing="1">반도체 면접, 왕의 질문에 답하라</text>
+
+  <!-- Front cover plus outer bleed. -->
+  <image href="front-cover-final.png" x="1916" y="0" width="1784" height="2551" preserveAspectRatio="xMidYMid slice"/>
+</svg>

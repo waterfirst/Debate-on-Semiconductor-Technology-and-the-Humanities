@@ -1,0 +1,45 @@
+% A5 print typography: modern Korean sans serif with editorial hierarchy.
+\usepackage[most]{tcolorbox}
+\definecolor{questionnavy}{HTML}{10283F}
+\definecolor{questionaccent}{HTML}{A94E32}
+\definecolor{questioncream}{HTML}{F6F1E7}
+\definecolor{questionink}{HTML}{18212B}
+\newfontfamily\BookQuestionSerif{KoPubBatang Medium}
+\newfontfamily\BookQuestionSans[
+  Path=C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/,
+  BoldFont=Pretendard-SemiBold.otf
+]{Pretendard-Regular.otf}
+\newcommand{\BookQuestionLabel}[1]{{\BookQuestionSans\bfseries\color{questionaccent}\fontsize{9.5pt}{12pt}\selectfont #1}}
+\newcommand{\BookQuestionPrompt}[1]{{\BookQuestionSerif\bfseries\color{questionink}\fontsize{11.5pt}{17pt}\selectfont #1}}
+
+\setkomafont{disposition}{\sffamily\bfseries}
+\setkomafont{chapter}{\sffamily\bfseries\color{questionnavy}\fontsize{15.5pt}{20pt}\selectfont}
+\setkomafont{section}{\sffamily\bfseries\fontsize{13.5pt}{18pt}\selectfont}
+\setkomafont{subsection}{\sffamily\bfseries\fontsize{11.5pt}{16pt}\selectfont}
+\RedeclareSectionCommand[
+  beforeskip=0pt,
+  afterskip=1.15em
+]{chapter}
+\renewcommand{\chapterlinesformat}[3]{%
+  \parbox{\textwidth}{%
+    \color{questionnavy}\rule{\textwidth}{0.8pt}\par\vspace{7pt}%
+    \raggedright #2#3\par\vspace{7pt}%
+    \color{questionaccent}\rule{30mm}{2.4pt}%
+  }%
+}
+
+% Korean line breaking and print readability.
+\XeTeXlinebreaklocale "ko"
+\XeTeXlinebreakskip=0pt plus 0.1pt
+\AtBeginDocument{%
+  \raggedright
+  \rightskip=0pt plus 2em
+  \spaceskip=0.32em
+  \xspaceskip=0.32em
+}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{1.5em}
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom

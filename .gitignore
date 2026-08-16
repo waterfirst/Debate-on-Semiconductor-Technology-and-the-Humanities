@@ -1,9 +1,13 @@
 book/_book/
 book/.quarto/
 book/*-files/
+book/chapters/*_files/
 book/*.pdf
 book/*.epub
 book/*.docx
+book/tmp/
+book/output/archive/
+book/figures/symbols/source-sheets-color/
 _extensions/
 dist/
 __pycache__/

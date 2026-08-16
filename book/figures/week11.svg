@@ -1,5 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 366" role="img" aria-labelledby="title desc">
-<title id="title">공공 AI는 양극화를 줄일 것인가</title><desc id="desc">기업의 AI 사용률(%) 막대그래프</desc>
-<style>.bg{fill:#fbf7ef}.bar{fill:#8b2f24}.title{font:700 27px sans-serif;fill:#18212b}.unit{font:16px sans-serif;fill:#655f58}.label{font:18px sans-serif;fill:#18212b}.value{font:700 17px sans-serif;fill:#18212b}</style>
-<rect class="bg" width="100%" height="100%" rx="18"/><text x="28" y="46" class="title">공공 AI는 양극화를 줄일 것인가</text><text x="28" y="76" class="unit">단위: 기업의 AI 사용률(%)</text>
-<text x="28" y="135" class="label">소기업</text><rect x="230" y="112" width="181.0" height="34" rx="6" class="bar"/><text x="427.0" y="136" class="value">11.9</text><text x="28" y="207" class="label">중기업</text><rect x="230" y="184" width="310.3" height="34" rx="6" class="bar"/><text x="556.3" y="208" class="value">20.4</text><text x="28" y="279" class="label">대기업</text><rect x="230" y="256" width="610.0" height="34" rx="6" class="bar"/><text x="850.0" y="280" class="value">40.1</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+<title id="title">공공 AI는 양극화를 줄일 것인가</title>
+<style>
+  .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
+  .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
+  .value{font:700 15px "Noto Sans KR",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
+  .axis{stroke:#768594;stroke-width:1.4} .note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="44" class="title">공공 AI는 양극화를 줄일 것인가</text>
+<text x="30" y="72" class="unit">단위: 기업의 AI 사용률(%)</text><desc id="desc">범주별 세로 비교 차트</desc><line x1="78" y1="350" x2="850" y2="350" class="axis"/><rect x="157.3" y="284.7" width="112.0" height="65.3" rx="7" fill="#A94E32"/><text x="213.3" y="271.7" text-anchor="middle" class="value">11.9</text><text x="213.3" y="380" text-anchor="middle" class="label">소기업</text><rect x="404.0" y="238.1" width="112.0" height="111.9" rx="7" fill="#1F5A75"/><text x="460.0" y="225.1" text-anchor="middle" class="value">20.4</text><text x="460.0" y="380" text-anchor="middle" class="label">중기업</text><rect x="650.7" y="130.0" width="112.0" height="220.0" rx="7" fill="#4D7C6F"/><text x="706.7" y="117.0" text-anchor="middle" class="value">40.1</text><text x="706.7" y="380" text-anchor="middle" class="label">대기업</text>
+<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">세로 비교</text>
+</svg>

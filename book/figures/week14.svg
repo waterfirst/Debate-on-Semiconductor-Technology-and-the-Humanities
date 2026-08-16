@@ -1,5 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 366" role="img" aria-labelledby="title desc">
-<title id="title">자동화가 숙련을 없애는가 바꾸는가</title><desc id="desc">세계 고용 비중(%) 막대그래프</desc>
-<style>.bg{fill:#fbf7ef}.bar{fill:#8b2f24}.title{font:700 27px sans-serif;fill:#18212b}.unit{font:16px sans-serif;fill:#655f58}.label{font:18px sans-serif;fill:#18212b}.value{font:700 17px sans-serif;fill:#18212b}</style>
-<rect class="bg" width="100%" height="100%" rx="18"/><text x="28" y="46" class="title">자동화가 숙련을 없애는가 바꾸는가</text><text x="28" y="76" class="unit">단위: 세계 고용 비중(%)</text>
-<text x="28" y="135" class="label">일부 노출</text><rect x="230" y="112" width="203.3" height="34" rx="6" class="bar"/><text x="449.3" y="136" class="value">25</text><text x="28" y="207" class="label">최고 노출</text><rect x="230" y="184" width="26.8" height="34" rx="6" class="bar"/><text x="272.8" y="208" class="value">3.3</text><text x="28" y="279" class="label">그 외</text><rect x="230" y="256" width="610.0" height="34" rx="6" class="bar"/><text x="850.0" y="280" class="value">75</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+<title id="title">자동화가 숙련을 없애는가 바꾸는가</title>
+<style>
+  .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
+  .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
+  .value{font:700 15px "Noto Sans KR",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
+  .axis{stroke:#768594;stroke-width:1.4} .note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="44" class="title">자동화가 숙련을 없애는가 바꾸는가</text>
+<text x="30" y="72" class="unit">단위: 세계 고용 비중(%)</text><desc id="desc">격차를 강조하는 롤리팝 차트</desc><text x="32" y="135" class="label">일부 노출</text><line x1="275" y1="130" x2="456.7" y2="130" stroke="#A94E32" stroke-width="5" stroke-linecap="round"/><circle cx="456.7" cy="130" r="11" fill="#A94E32"/><text x="478.7" y="136" class="value">25</text><text x="32" y="205" class="label">최고 노출</text><line x1="275" y1="200" x2="299.0" y2="200" stroke="#1F5A75" stroke-width="5" stroke-linecap="round"/><circle cx="299.0" cy="200" r="11" fill="#1F5A75"/><text x="321.0" y="206" class="value">3.3</text><text x="32" y="275" class="label">그 외</text><line x1="275" y1="270" x2="820.0" y2="270" stroke="#4D7C6F" stroke-width="5" stroke-linecap="round"/><circle cx="820.0" cy="270" r="11" fill="#4D7C6F"/><text x="842.0" y="276" class="value">75</text><text x="32" y="410" class="note">최대값은 최소값의 22.7배 · 격차의 원인과 기준을 토론</text>
+<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">격차 비교</text>
+</svg>

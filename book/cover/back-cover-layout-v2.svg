@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1748" height="2480" viewBox="0 0 1748 2480">
+  <defs>
+    <linearGradient id="backFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#071423"/>
+      <stop offset="0.65" stop-color="#0b1c30"/>
+      <stop offset="1" stop-color="#06101d"/>
+    </linearGradient>
+    <pattern id="dies" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#8fb4cf" stroke-opacity="0.13" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <rect width="1748" height="2480" fill="url(#backFade)"/>
+  <circle cx="1460" cy="350" r="610" fill="url(#dies)" stroke="#a8c8de" stroke-opacity="0.25" stroke-width="7"/>
+  <circle cx="1460" cy="350" r="540" fill="none" stroke="#8aaec9" stroke-opacity="0.1" stroke-width="2"/>
+
+  <g font-family="KoPub Dotum" fill="#f3f0e7">
+    <text x="130" y="300" font-family="KoPub Batang" font-size="66" font-weight="700">왕이 묻고,</text>
+    <text x="130" y="390" font-family="KoPub Batang" font-size="66" font-weight="700">엔지니어가 답한다.</text>
+
+    <text x="130" y="580" font-size="42" font-weight="500">
+      <tspan x="130" dy="0">조선의 책문은 왕이 인재에게 던진</tspan>
+      <tspan x="130" dy="68">국가의 질문이었다.</tspan>
+      <tspan x="130" dy="96">이 책은 그 질문의 형식을 오늘의</tspan>
+      <tspan x="130" dy="68">반도체 산업으로 옮긴다.</tspan>
+      <tspan x="130" dy="96">AI, 전쟁, 환율, 공급망, 기술윤리의</tspan>
+      <tspan x="130" dy="68">충돌 앞에서 정답을 암기하는 대신,</tspan>
+      <tspan x="130" dy="68">근거를 세우고 판단하는 힘을 훈련한다.</tspan>
+    </text>
+
+    <rect x="130" y="1285" width="1488" height="2" fill="#9fb8cb" opacity="0.45"/>
+    <text x="130" y="1390" fill="#b9cedd" font-size="34" font-weight="700" letter-spacing="1">30개의 질문  ·  데이터 근거  ·  찬반 토론  ·  면접 실전</text>
+
+    <text x="130" y="1585" font-family="KoPub Batang" font-size="48" font-weight="700">최낙초</text>
+    <text x="130" y="1660" fill="#d7e0e7" font-size="32" font-weight="500">
+      <tspan x="130" dy="0">삼성디스플레이 연구원. 제조 현장과 연구개발의 복잡한 문제를</tspan>
+      <tspan x="130" dy="50">데이터로 분석하고, 기술과 인문학을 연결하는 글을 써왔다.</tspan>
+      <tspan x="130" dy="50">조선시대 책문의 형식을 오늘날 반도체 산업의 질문에 적용했다.</tspan>
+    </text>
+  </g>
+
+  <rect x="0" y="2308" width="1748" height="172" fill="#f7f5ef"/>
+  <image href="scholarbridge-logo.png" x="116" y="2345" width="585" height="76" preserveAspectRatio="xMidYMid meet"/>
+  <rect x="1260" y="2254" width="370" height="186" rx="7" fill="#ffffff" stroke="#d5d5d5" stroke-width="2"/>
+</svg>

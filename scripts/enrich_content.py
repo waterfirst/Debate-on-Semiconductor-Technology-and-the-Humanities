@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import csv
 import html
+import math
 from pathlib import Path
 
 from scaffold_content import TOPICS
@@ -54,20 +55,142 @@ EVIDENCE = {
 
 
 def svg_chart(week: int, title: str, unit: str, rows: list[tuple[str, float]]) -> str:
-    width, height = 920, 150 + 72 * len(rows)
+    """Render an evidence chart whose form follows the data rather than one template."""
+    width, height = 920, 440
+    palette = ["#A94E32", "#1F5A75", "#4D7C6F", "#C18A3D", "#725B8C"]
     max_value = max(value for _, value in rows) or 1
-    items = []
-    for idx, (label, value) in enumerate(rows):
-        y = 112 + idx * 72
-        bar = 610 * value / max_value
-        shown = f"{value:,.2f}".rstrip("0").rstrip(".")
-        items.append(f'<text x="28" y="{y + 23}" class="label">{html.escape(label)}</text>')
-        items.append(f'<rect x="230" y="{y}" width="{bar:.1f}" height="34" rx="6" class="bar"/>')
-        items.append(f'<text x="{min(850, 246 + bar):.1f}" y="{y + 24}" class="value">{shown}</text>')
+
+    def shown(value: float) -> str:
+        return f"{value:,.2f}".rstrip("0").rstrip(".")
+
+    common = f'''<title id="title">{html.escape(title)}</title>
+<style>
+  .bg{{fill:#F7F4ED}} .title{{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}}
+  .unit{{font:15px "Noto Sans KR",sans-serif;fill:#6A625A}} .label{{font:16px "Noto Sans KR",sans-serif;fill:#253443}}
+  .value{{font:700 15px "Noto Sans KR",sans-serif;fill:#10283F}} .grid{{stroke:#D9D1C5;stroke-width:1}}
+  .axis{{stroke:#768594;stroke-width:1.4}} .note{{font:13px "Noto Sans KR",sans-serif;fill:#756C63}}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="44" class="title">{html.escape(title)}</text>
+<text x="30" y="72" class="unit">단위: {html.escape(unit)}</text>'''
+
+    if week == 5:
+        total = sum(value for _, value in rows)
+        radius, circumference, offset = 98, 2 * math.pi * 98, 0.0
+        segments = []
+        legend = []
+        for idx, (label, value) in enumerate(rows):
+            length = circumference * value / total
+            color = palette[idx % len(palette)]
+            segments.append(
+                f'<circle cx="230" cy="250" r="{radius}" fill="none" stroke="{color}" stroke-width="54" '
+                f'stroke-dasharray="{length:.1f} {circumference - length:.1f}" stroke-dashoffset="{-offset:.1f}" '
+                'transform="rotate(-90 230 250)"/>'
+            )
+            pct = value / total * 100
+            y = 142 + idx * 55
+            legend.append(f'<rect x="430" y="{y - 16}" width="18" height="18" rx="4" fill="{color}"/>')
+            legend.append(f'<text x="462" y="{y}" class="label">{html.escape(label)}</text>')
+            legend.append(f'<text x="790" y="{y}" text-anchor="end" class="value">{shown(value)} · {pct:.1f}%</text>')
+            offset += length
+        body = (
+            '<desc id="desc">재원 구성 도넛 차트</desc>'
+            + ''.join(segments)
+            + f'<text x="230" y="242" text-anchor="middle" class="unit">총 재원</text>'
+            + f'<text x="230" y="274" text-anchor="middle" class="title">{shown(total)}</text>'
+            + ''.join(legend)
+            + '<text x="430" y="385" class="note">구성비는 항목 합계 기준이며 반올림할 수 있음</text>'
+        )
+        chart_name = "도넛 차트"
+    elif week in {2, 4, 8, 9, 12, 16, 25, 26, 27, 28}:
+        left, top, chart_width, chart_height = 82, 118, 760, 225
+        step = chart_width / max(1, len(rows) - 1)
+        points = []
+        circles = []
+        labels = []
+        for idx, (label, value) in enumerate(rows):
+            x = left + idx * step
+            y = top + chart_height - (value / max_value) * chart_height
+            points.append(f"{x:.1f},{y:.1f}")
+            circles.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/>')
+            labels.append(f'<text x="{x:.1f}" y="{top + chart_height + 32}" text-anchor="middle" class="label">{html.escape(label)}</text>')
+            labels.append(f'<text x="{x:.1f}" y="{max(104, y - 15):.1f}" text-anchor="middle" class="value">{shown(value)}</text>')
+        grid = ''.join(
+            f'<line x1="{left}" y1="{top + chart_height * i / 4:.1f}" x2="{left + chart_width}" y2="{top + chart_height * i / 4:.1f}" class="grid"/>'
+            for i in range(5)
+        )
+        body = (
+            '<desc id="desc">시간과 시나리오의 변화를 보여주는 추세선</desc>'
+            + grid
+            + f'<polyline points="{" ".join(points)}" fill="none" stroke="#1F5A75" stroke-width="5" stroke-linejoin="round"/>'
+            + ''.join(circles + labels)
+            + f'<text x="82" y="410" class="note">첫 값 대비 마지막 값 변화: {((rows[-1][1] / rows[0][1]) - 1) * 100:+.1f}%</text>'
+        )
+        chart_name = "추세선"
+    elif week in {1, 6, 11, 18, 19, 23, 30}:
+        left, base, chart_height = 90, 350, 220
+        slot = 740 / len(rows)
+        bar_width = min(112, slot * 0.58)
+        items = ['<line x1="78" y1="350" x2="850" y2="350" class="axis"/>']
+        for idx, (label, value) in enumerate(rows):
+            x = left + idx * slot + (slot - bar_width) / 2
+            bar_height = chart_height * value / max_value
+            y = base - bar_height
+            color = palette[idx % len(palette)]
+            items.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_width:.1f}" height="{bar_height:.1f}" rx="7" fill="{color}"/>')
+            items.append(f'<text x="{x + bar_width / 2:.1f}" y="{y - 13:.1f}" text-anchor="middle" class="value">{shown(value)}</text>')
+            items.append(f'<text x="{x + bar_width / 2:.1f}" y="380" text-anchor="middle" class="label">{html.escape(label)}</text>')
+        body = '<desc id="desc">범주별 세로 비교 차트</desc>' + ''.join(items)
+        chart_name = "세로 비교"
+    else:
+        items = []
+        for idx, (label, value) in enumerate(rows):
+            y = 130 + idx * 70
+            end = 275 + 545 * value / max_value
+            color = palette[idx % len(palette)]
+            items.append(f'<text x="32" y="{y + 5}" class="label">{html.escape(label)}</text>')
+            items.append(f'<line x1="275" y1="{y}" x2="{end:.1f}" y2="{y}" stroke="{color}" stroke-width="5" stroke-linecap="round"/>')
+            items.append(f'<circle cx="{end:.1f}" cy="{y}" r="11" fill="{color}"/>')
+            items.append(f'<text x="{min(875, end + 22):.1f}" y="{y + 6}" class="value">{shown(value)}</text>')
+        ratio = max_value / min(value for _, value in rows if value > 0)
+        body = (
+            '<desc id="desc">격차를 강조하는 롤리팝 차트</desc>'
+            + ''.join(items)
+            + f'<text x="32" y="410" class="note">최대값은 최소값의 {ratio:.1f}배 · 격차의 원인과 기준을 토론</text>'
+        )
+        chart_name = "격차 비교"
+
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
-<title id="title">{html.escape(title)}</title><desc id="desc">{html.escape(unit)} 막대그래프</desc>
-<style>.bg{{fill:#fbf7ef}}.bar{{fill:#8b2f24}}.title{{font:700 27px sans-serif;fill:#18212b}}.unit{{font:16px sans-serif;fill:#655f58}}.label{{font:18px sans-serif;fill:#18212b}}.value{{font:700 17px sans-serif;fill:#18212b}}</style>
-<rect class="bg" width="100%" height="100%" rx="18"/><text x="28" y="46" class="title">{html.escape(title)}</text><text x="28" y="76" class="unit">단위: {html.escape(unit)}</text>
+{common}{body}
+<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">{chart_name}</text>
+</svg>'''
+
+
+def svg_matrix(title: str) -> str:
+    """Render a centered 2x2 decision matrix for qualitative evidence chapters."""
+    cards = [
+        (70, 118, "문제 정의", "어떤 결정을 내려야 하는가"),
+        (520, 118, "영향받는 사람", "편익과 비용은 누구에게 가는가"),
+        (70, 278, "측정 지표", "무엇으로 결과를 확인할 것인가"),
+        (520, 278, "중단·수정 조건", "언제 판단을 바꿀 것인가"),
+    ]
+    items = []
+    for index, (x, y, label, note) in enumerate(cards):
+        color = "#A94E32" if index in {0, 3} else "#1F5A75"
+        items.extend([
+            f'<rect x="{x}" y="{y}" width="330" height="112" rx="14" fill="#FCFAF5" stroke="{color}" stroke-width="2"/>',
+            f'<circle cx="{x + 32}" cy="{y + 34}" r="17" fill="{color}"/>',
+            f'<text x="{x + 32}" y="{y + 40}" text-anchor="middle" class="num">{index + 1}</text>',
+            f'<text x="{x + 62}" y="{y + 38}" class="label">{label}</text>',
+            f'<text x="{x + 28}" y="{y + 80}" class="note">{note}</text>',
+        ])
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" role="img" aria-labelledby="title desc">
+<title id="title">{html.escape(title)} 판단 매트릭스</title><desc id="desc">문제, 사람, 지표, 수정 조건을 중앙 대칭으로 배열한 표</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7C8994"/></marker></defs>
+<style>.bg{{fill:#F7F4ED}}.title{{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}}.label{{font:700 18px "Noto Sans KR",sans-serif;fill:#10283F}}.note{{font:14px "Noto Sans KR",sans-serif;fill:#675F58}}.num{{font:700 15px "Noto Sans KR",sans-serif;fill:#FFF}}.badge{{font:700 12px "Noto Sans KR",sans-serif;fill:#F7F4ED}}</style>
+<rect class="bg" width="100%" height="100%" rx="18"/><text x="30" y="46" class="title">{html.escape(title)}</text>
+<rect x="772" y="28" width="118" height="28" rx="14" fill="#10283F"/><text x="831" y="47" text-anchor="middle" class="badge">판단 매트릭스</text>
+<path d="M400 174H510M235 230V268M685 230V268M400 334H510" fill="none" stroke="#7C8994" stroke-width="2.5" marker-end="url(#arrow)"/>
 {''.join(items)}</svg>'''
 
 
@@ -75,25 +198,22 @@ def render(topic) -> str:
     week, title, question, motif, source_name, source_url, data_lens, pro, con, condition = topic
     ev = EVIDENCE[week]
     facts = ev["facts"]
-    figure = f"![{title} 핵심 데이터](../figures/week{week:02d}.svg){{fig-alt=\"{title} 핵심 데이터\"}}" if ev["chart"] else '''```{mermaid}
-flowchart LR
-  A[문제 정의] --> B[영향받는 사람]
-  B --> C[측정 지표]
-  C --> D[중단·수정 조건]
-```'''
+    figure = f"![{title} 핵심 데이터](../figures/week{week:02d}.png){{fig-alt=\"{title} 핵심 데이터와 판단 구조\"}}"
     fact_rows = "\n".join(f"| {i} | {fact} |" for i, fact in enumerate(facts, 1))
     memo = "첫 번째와 두 번째 핵심 수치"
     extra_sources = "\n".join(f"- [{name}]({url})" for name, url in ev.get("extra_sources", []))
     spoken_condition = condition.rstrip(".")
     return f'''---
-title: "{week:02d}. {title}"
+title: "{title}"
 description: "{question}"
 categories: [반도체, 인문학, 집단토론, 데이터]
 ---
 
-## 오늘의 책문
+::: {{.book-question}}
+[오늘의 책문]{{.book-question-label}}
 
-> **{question}?**
+[{question}?]{{.book-question-prompt}}
+:::
 
 조선의 모티브는 **{motif}**이다. 책문은 사실을 많이 아는 사람보다, 충돌하는 가치의 우선순위와 자기 답이 실패할 조건을 밝히는 사람을 가려냈다. 오늘의 응시자는 이 질문을 산업의 숫자와 인간의 비용을 함께 놓고 답해야 한다.
 
@@ -105,7 +225,9 @@ categories: [반도체, 인문학, 집단토론, 데이터]
 
 {figure}
 
-| 데이터 카드 | 발언에 쓸 수 있는 검증 문장 |
+### 근거 데이터 표
+
+| 근거 번호 | 토론에 쓸 수 있는 검증 문장 |
 |---:|---|
 {fact_rows}
 
@@ -166,14 +288,6 @@ categories: [반도체, 인문학, 집단토론, 데이터]
 - 같은 원칙을 경쟁국·경쟁사에도 적용해도 받아들일 수 있는가?
 - {memo} 가운데 어느 것이 바뀌면 결론을 수정할 것인가?
 - 결정이 실패했을 때 책임자가 실제로 통제할 수 있었던 변수는 무엇인가?
-
-## 면접장 직전 메모
-
-- 숫자는 **출처·연도·단위**와 함께 말한다.
-- 전망과 실제, 명목과 실질, 상관과 인과를 구분한다.
-- 상대 주장의 가장 강한 버전을 먼저 인정한다.
-- 자기 결론의 수혜자·비용부담자·중단조건을 밝힌다.
-- 모르는 수치는 만들지 말고 확인할 데이터셋을 말한다.
 
 ## 출처
 

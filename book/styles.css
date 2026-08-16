@@ -11,6 +11,51 @@ body { line-height: 1.78; }
 blockquote { border-left: 4px solid var(--accent); background: rgba(139, 47, 36, 0.06); padding: 1rem 1.2rem; }
 .callout { border-radius: 0.6rem; }
 table { font-size: 0.94rem; }
+.book-question {
+  margin: 1.25rem 0 1.5rem;
+  padding: 1.05rem 1.25rem 1.15rem;
+  border: 1px solid #c8b9a4;
+  border-left: 6px solid #a94e32;
+  border-radius: 0.65rem;
+  background: #f6f1e7;
+  box-shadow: 0 8px 22px rgba(16, 40, 63, 0.08);
+}
+.book-question-label {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: #a94e32;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.book-question-prompt {
+  display: block;
+  color: #18212b;
+  font-family: "KoPub Batang", "Noto Serif KR", serif;
+  font-size: 1.16rem;
+  font-weight: 700;
+  line-height: 1.72;
+}
+.book-question-image {
+  display: block;
+  width: min(9rem, 32vw);
+  height: auto;
+  margin: 0.25rem auto 0.8rem;
+  border-radius: 0.45rem;
+}
+h1.title, main.content > header h1 {
+  padding-top: 0.65rem;
+  border-top: 1px solid #10283f;
+}
+h1.title::after, main.content > header h1::after {
+  display: block;
+  width: 5.5rem;
+  height: 0.24rem;
+  margin-top: 0.65rem;
+  background: #a94e32;
+  content: "";
+}
 @media (min-width: 992px) { main.content { max-width: 860px; } }
 @media (max-width: 767px) {
   body { font-size: 1rem; }

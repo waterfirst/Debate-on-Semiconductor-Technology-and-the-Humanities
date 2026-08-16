@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1748" height="2480" viewBox="0 0 1748 2480">
+  <title>반도체 면접, 왕의 질문에 답하라 — 스칼라브릿지 앞표지</title>
+
+  <image href="cover-art-v1.png" x="0" y="0" width="1748" height="2480"
+         preserveAspectRatio="xMidYMid slice"/>
+
+  <rect x="0" y="0" width="1748" height="620" fill="#071a2c" opacity="0.38"/>
+
+  <g fill="#f3efe6">
+    <text x="140" y="190" font-family="KoPub Dotum" font-size="86" font-weight="700"
+          letter-spacing="-2">반도체 면접,</text>
+    <text x="136" y="354" font-family="KoPub Batang" font-size="138" font-weight="700"
+          letter-spacing="-5">왕의 질문에</text>
+    <text x="136" y="510" font-family="KoPub Batang" font-size="138" font-weight="700"
+          letter-spacing="-5">답하라</text>
+  </g>
+
+  <rect x="140" y="555" width="126" height="8" rx="4" fill="#c85f2a"/>
+
+  <g fill="#f3efe6" font-family="KoPub Dotum" font-size="43" font-weight="400">
+    <text x="140" y="2070">조선의 책문으로 훈련하는</text>
+    <text x="140" y="2132">AI·전쟁·환율·공급망 데이터 토론 30</text>
+  </g>
+
+  <rect x="0" y="2240" width="1748" height="240" fill="#ffffff"/>
+  <rect x="0" y="2240" width="1748" height="6" fill="#c85f2a"/>
+
+  <text x="140" y="2378" fill="#071a2c" font-family="KoPub Dotum" font-size="48"
+        font-weight="700" letter-spacing="-1">최낙초 지음</text>
+
+  <image href="../../../scholarbridge-logo.svg" x="1020" y="2311" width="590" height="76"
+         preserveAspectRatio="xMidYMid meet"/>
+</svg>

@@ -1,5 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 438" role="img" aria-labelledby="title desc">
-<title id="title">주가는 기업의 미래를 얼마나 먼저 아는가</title><desc id="desc">2025 세계 반도체 시장 전망(십억 달러) 막대그래프</desc>
-<style>.bg{fill:#fbf7ef}.bar{fill:#8b2f24}.title{font:700 27px sans-serif;fill:#18212b}.unit{font:16px sans-serif;fill:#655f58}.label{font:18px sans-serif;fill:#18212b}.value{font:700 17px sans-serif;fill:#18212b}</style>
-<rect class="bg" width="100%" height="100%" rx="18"/><text x="28" y="46" class="title">주가는 기업의 미래를 얼마나 먼저 아는가</text><text x="28" y="76" class="unit">단위: 2025 세계 반도체 시장 전망(십억 달러)</text>
-<text x="28" y="135" class="label">봄 전망</text><rect x="230" y="112" width="537.4" height="34" rx="6" class="bar"/><text x="783.4" y="136" class="value">700.9</text><text x="28" y="207" class="label">상반기 수정</text><rect x="230" y="184" width="558.2" height="34" rx="6" class="bar"/><text x="804.2" y="208" class="value">728</text><text x="28" y="279" class="label">가을 전망</text><rect x="230" y="256" width="591.9" height="34" rx="6" class="bar"/><text x="837.9" y="280" class="value">772</text><text x="28" y="351" class="label">실제</text><rect x="230" y="328" width="610.0" height="34" rx="6" class="bar"/><text x="850.0" y="352" class="value">795.6</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+<title id="title">주가는 기업의 미래를 얼마나 먼저 아는가</title>
+<style>
+  .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
+  .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
+  .value{font:700 15px "Noto Sans KR",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
+  .axis{stroke:#768594;stroke-width:1.4} .note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="44" class="title">주가는 기업의 미래를 얼마나 먼저 아는가</text>
+<text x="30" y="72" class="unit">단위: 2025 세계 반도체 시장 전망(십억 달러)</text><desc id="desc">시간과 시나리오의 변화를 보여주는 추세선</desc><line x1="82" y1="118.0" x2="842" y2="118.0" class="grid"/><line x1="82" y1="174.2" x2="842" y2="174.2" class="grid"/><line x1="82" y1="230.5" x2="842" y2="230.5" class="grid"/><line x1="82" y1="286.8" x2="842" y2="286.8" class="grid"/><line x1="82" y1="343.0" x2="842" y2="343.0" class="grid"/><polyline points="82.0,144.8 335.3,137.1 588.7,124.7 842.0,118.0" fill="none" stroke="#1F5A75" stroke-width="5" stroke-linejoin="round"/><circle cx="82.0" cy="144.8" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><circle cx="335.3" cy="137.1" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><circle cx="588.7" cy="124.7" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><circle cx="842.0" cy="118.0" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><text x="82.0" y="375" text-anchor="middle" class="label">봄 전망</text><text x="82.0" y="129.8" text-anchor="middle" class="value">700.9</text><text x="335.3" y="375" text-anchor="middle" class="label">상반기 수정</text><text x="335.3" y="122.1" text-anchor="middle" class="value">728</text><text x="588.7" y="375" text-anchor="middle" class="label">가을 전망</text><text x="588.7" y="109.7" text-anchor="middle" class="value">772</text><text x="842.0" y="375" text-anchor="middle" class="label">실제</text><text x="842.0" y="104.0" text-anchor="middle" class="value">795.6</text><text x="82" y="410" class="note">첫 값 대비 마지막 값 변화: +13.5%</text>
+<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">추세선</text>
+</svg>

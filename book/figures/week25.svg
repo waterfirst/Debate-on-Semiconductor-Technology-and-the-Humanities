@@ -1,5 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 294" role="img" aria-labelledby="title desc">
-<title id="title">전자폐기물과 보이지 않는 식민지</title><desc id="desc">전자폐기물 발생량(백만 톤) 막대그래프</desc>
-<style>.bg{fill:#fbf7ef}.bar{fill:#8b2f24}.title{font:700 27px sans-serif;fill:#18212b}.unit{font:16px sans-serif;fill:#655f58}.label{font:18px sans-serif;fill:#18212b}.value{font:700 17px sans-serif;fill:#18212b}</style>
-<rect class="bg" width="100%" height="100%" rx="18"/><text x="28" y="46" class="title">전자폐기물과 보이지 않는 식민지</text><text x="28" y="76" class="unit">단위: 전자폐기물 발생량(백만 톤)</text>
-<text x="28" y="135" class="label">2022</text><rect x="230" y="112" width="461.2" height="34" rx="6" class="bar"/><text x="707.2" y="136" class="value">62</text><text x="28" y="207" class="label">2030 전망</text><rect x="230" y="184" width="610.0" height="34" rx="6" class="bar"/><text x="850.0" y="208" class="value">82</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+<title id="title">전자폐기물과 보이지 않는 식민지</title>
+<style>
+  .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
+  .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
+  .value{font:700 15px "Noto Sans KR",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
+  .axis{stroke:#768594;stroke-width:1.4} .note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="44" class="title">전자폐기물과 보이지 않는 식민지</text>
+<text x="30" y="72" class="unit">단위: 전자폐기물 발생량(백만 톤)</text><desc id="desc">시간과 시나리오의 변화를 보여주는 추세선</desc><line x1="82" y1="118.0" x2="842" y2="118.0" class="grid"/><line x1="82" y1="174.2" x2="842" y2="174.2" class="grid"/><line x1="82" y1="230.5" x2="842" y2="230.5" class="grid"/><line x1="82" y1="286.8" x2="842" y2="286.8" class="grid"/><line x1="82" y1="343.0" x2="842" y2="343.0" class="grid"/><polyline points="82.0,172.9 842.0,118.0" fill="none" stroke="#1F5A75" stroke-width="5" stroke-linejoin="round"/><circle cx="82.0" cy="172.9" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><circle cx="842.0" cy="118.0" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><text x="82.0" y="375" text-anchor="middle" class="label">2022</text><text x="82.0" y="157.9" text-anchor="middle" class="value">62</text><text x="842.0" y="375" text-anchor="middle" class="label">2030 전망</text><text x="842.0" y="104.0" text-anchor="middle" class="value">82</text><text x="82" y="410" class="note">첫 값 대비 마지막 값 변화: +32.3%</text>
+<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">추세선</text>
+</svg>
