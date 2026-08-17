@@ -9,7 +9,7 @@ const cover = path.join(root, "book", "cover");
 const assets = [
   ["front-cover-layout-final.svg", "front-cover-final.png", 1748, 2480],
   ["back-cover-layout-final.svg", "back-cover-final.png", 1748, 2480],
-  ["full-wrap-layout-final.svg", "full-wrap-cover-final.png", 3700, 2551],
+  ["full-wrap-layout-final.svg", "full-wrap-cover-final.png", 5693, 2551],
 ];
 
 for (const [source, output, width, height] of assets) {

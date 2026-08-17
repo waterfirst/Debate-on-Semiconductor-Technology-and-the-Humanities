@@ -1,7 +1,9 @@
 from pathlib import Path
+import math
 import shutil
 
 from pypdf import PdfReader, PdfWriter
+from pypdf.generic import RectangleObject
 from reportlab.lib.pagesizes import A5
 from reportlab.lib.units import mm
 from reportlab.pdfgen import canvas
@@ -28,9 +30,28 @@ def image_pdf(image: Path, output: Path, size: tuple[float, float]) -> None:
     page.save()
 
 
+def print_ready_wrap(input_pdf: Path, output_pdf: Path, size: tuple[float, float]) -> None:
+    """Set 3 mm bleed and the centered A5-spread trim area explicitly."""
+    reader = PdfReader(input_pdf)
+    writer = PdfWriter()
+    writer.add_page(reader.pages[0])
+    page = writer.pages[0]
+    media = RectangleObject((0, 0, size[0], size[1]))
+    trim = RectangleObject((3 * mm, 3 * mm, size[0] - 3 * mm, size[1] - 3 * mm))
+    page.mediabox = media
+    page.cropbox = media
+    page.bleedbox = media
+    page.trimbox = trim
+    with output_pdf.open("wb") as stream:
+        writer.write(stream)
+
+
 interior_reader = PdfReader(INTERIOR)
 interior_pages = len(interior_reader.pages)
-spine_mm = round(interior_pages * 0.05, 2)
+sheet_count = math.ceil(interior_pages / 2)
+paper_caliper_mm = 0.12  # white woodfree 100 gsm
+spine_mm = math.ceil(sheet_count * paper_caliper_mm)
+wing_mm = 80
 
 front_pdf = TMP / "front-final.pdf"
 back_pdf = TMP / "back-final.pdf"
@@ -57,8 +78,11 @@ interior_path = OUTPUT / "반도체-면접-왕의-질문에-답하라-본문-A5.
 shutil.copy2(INTERIOR, interior_path)
 
 wrap_path = OUTPUT / "반도체-면접-왕의-질문에-답하라-인쇄용-펼침표지.pdf"
-wrap_size = ((148 + spine_mm + 148 + 6) * mm, (210 + 6) * mm)
-image_pdf(WRAP, wrap_path, wrap_size)
+# Kyobo wing cover: outer 3 mm + wing + inner 3 mm on both sides.
+wrap_size = ((148 + spine_mm + 148 + (wing_mm * 2) + 12) * mm, (210 + 6) * mm)
+wrap_raw = TMP / "full-wrap-final-raw.pdf"
+image_pdf(WRAP, wrap_raw, wrap_size)
+print_ready_wrap(wrap_raw, wrap_path, wrap_size)
 
 print(f"interior={interior_path}")
 print(f"preview={preview_path}")

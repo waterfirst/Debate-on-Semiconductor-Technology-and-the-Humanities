@@ -33,5 +33,6 @@
 
   </g>
 
-  <rect x="1260" y="2254" width="370" height="186" rx="7" fill="#ffffff" stroke="#d5d5d5" stroke-width="2"/>
+  <!-- Reserved ISBN/EAN-13 barcode area, safely inside the trim line. -->
+  <rect x="1168" y="2050" width="450" height="300" rx="7" fill="#ffffff" stroke="#d5d5d5" stroke-width="2"/>
 </svg>

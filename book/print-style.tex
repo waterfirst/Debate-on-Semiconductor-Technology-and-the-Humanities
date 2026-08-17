@@ -31,6 +31,10 @@
 % Korean line breaking and print readability.
 \XeTeXlinebreaklocale "ko"
 \XeTeXlinebreakskip=0pt plus 0.1pt
+% Keep author/date metadata in the PDF, but omit them from the interior title page.
+\makeatletter
+\AtBeginDocument{\gdef\@author{}\gdef\@date{}}
+\makeatother
 \AtBeginDocument{%
   \raggedright
   \rightskip=0pt plus 2em

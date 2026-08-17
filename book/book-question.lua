@@ -57,7 +57,13 @@ function Div(element)
 end
 
 function Table(element)
-  local header_text = pandoc.utils.stringify(element.head)
+  local header_parts = {}
+  for _, row in ipairs(element.head.rows) do
+    for _, cell in ipairs(row.cells) do
+      table.insert(header_parts, pandoc.utils.stringify(cell.contents))
+    end
+  end
+  local header_text = table.concat(header_parts, " ")
   if not header_text:match("근거 번호") and not header_text:match("데이터 카드") then
     return nil
   end
