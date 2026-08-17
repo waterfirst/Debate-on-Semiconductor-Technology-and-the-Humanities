@@ -68,7 +68,7 @@ writer.add_metadata(
     {
         "/Title": "반도체 면접, 왕의 질문에 답하라",
         "/Author": "최낙초",
-        "/Publisher": "스칼라브릿지",
+        "/Publisher": "스칼라브릿지(Scholar Bridge)",
     }
 )
 with preview_path.open("wb") as stream:

@@ -53,6 +53,8 @@
   <path d="M2763 0V2551M2928 0V2551" stroke="#6f8797" stroke-opacity="0.46" stroke-width="2"/>
   <text x="0" y="0" transform="translate(2873 178) rotate(90)" fill="#071b2d"
         font-family="KoPub Batang, serif" font-weight="700" font-size="38" letter-spacing="1">반도체 면접, 왕의 질문에 답하라</text>
+  <text x="0" y="0" transform="translate(2873 2110) rotate(90)" fill="#31536a"
+        font-family="KoPub Dotum, sans-serif" font-weight="700" font-size="18" letter-spacing="2">SCHOLAR BRIDGE</text>
   <image href="front-cover-final.png" x="2928" y="0" width="1748" height="2551"
          preserveAspectRatio="xMidYMid slice"/>
 

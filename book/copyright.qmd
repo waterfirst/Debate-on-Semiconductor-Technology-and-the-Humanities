@@ -1,17 +1,18 @@
 ---
-title: "판권"
 numbered: false
 number-sections: false
 toc: false
 ---
 
+# 판권 {.unnumbered .unlisted}
+
 **반도체 면접, 왕의 질문에 답하라**
 
 지은이 | 최낙초  
 펴낸이 | 최낙초  
-발행처 | 스칼라브릿지  
+발행처 | 스칼라브릿지(Scholar Bridge)  
 아트 디렉션·편집 디자인 | 최낙초  
-표지·본문 삽화 | 최낙초 기획·선정·편집 / OpenAI GPT Image 2 생성 보조
+표지·본문 삽화 | 최낙초 기획·편집 / OpenAI GPT Image 2 생성
 
 © 2026 최낙초. All rights reserved.
 

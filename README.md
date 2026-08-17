@@ -6,6 +6,13 @@
 
 이 책은 특정 기업의 공식 채용 자료가 아니며 SK하이닉스 또는 다른 기업의 후원·검수·승인을 받지 않았습니다.
 
+## 현재 출간 상태
+
+PDF·EPUB·인쇄용 날개 펼침표지까지 만든 **출간 후보본**입니다. 추천사, 종이책·전자책 ISBN, 정가, 발행일과 실제 바코드가 확정되면 해당 정보를 반영해 최종 판본을 다시 출력합니다. 추천사가 추가되면 본문 쪽수와 책등 폭도 반드시 다시 계산합니다.
+
+- 교보 제출 절차와 체크리스트: [KYOBO_PUBLISHING_GUIDE.md](KYOBO_PUBLISHING_GUIDE.md)
+- 이 프로젝트의 재현 가능한 편집·출판 절차: [SKILL.md](SKILL.md)
+
 ## 하루 만에 출판 교정쇄까지 만든 방식
 
 짧은 시간에 출판 수준을 확보한 핵심은 글을 한 번에 길게 생성하는 것이 아니라, 원고·데이터·삽화·조판·검수를 서로 독립된 공정으로 나눈 것입니다.
@@ -30,9 +37,9 @@
 - 삽화: 장별 30점, 단색 연필·수묵화 계열
 - 표지: 밝은 한지와 낮의 수묵화 위에서 갓의 창을 실리콘 웨이퍼로 재해석한 전면 디자인
 - 인쇄용 표지: 좌우 80mm 책날개, 본문 224쪽·백색모조 100g 기준 14mm 책등, 사방 3mm 도련을 반영한 482 × 216mm 펼침표지
-- 후면 우측 하단의 흰 상자는 출판 등록 뒤 ISBN/EAN-13 바코드를 배치하는 예약 영역입니다.
+- 후면 왼쪽 하단에는 Scholar Bridge 로고를, 우측 하단 흰 상자에는 출판 등록 뒤 ISBN/EAN-13 바코드를 배치합니다.
 - 제작 사양: 표지 컬러·무광 코팅, 내지 흑백, 백색모조 100g. 표지 용지는 제작처가 지원하면 스노우 250g을 사용하고, 교보 POD에서는 선택 화면에 제공되는 250g 표지 용지를 확인합니다.
-- 발행처: 스칼라브릿지(표지 전면에는 저자명·출판사명 미표기, 판권면에만 표기)
+- 발행처: 스칼라브릿지(Scholar Bridge). 표지 전면에는 미표기하고, 뒤표지 왼쪽 아래·책등 아래·판권면에 표기합니다.
 
 ## 사용한 도구와 패키지
 
@@ -63,6 +70,7 @@ scripts/
   update_book_layout.mjs      장 구조·중복 코너·조판 문법 정리
   formalize_korean.mjs        존댓말 종결 검수
   render_cover_assets.mjs     표지 SVG를 인쇄용 PNG로 렌더링
+  verify_publish_artifacts.py PDF·EPUB 쪽수·판형·도련·발행처 검증
 SKILL.md                      이 출판 공정을 재사용하는 작업 지침
 ```
 
@@ -80,15 +88,18 @@ node scripts/update_book_layout.mjs
 node scripts/formalize_korean.mjs
 node scripts/render_cover_assets.mjs
 
-# 3. A5 본문 PDF
+# 3. EPUB을 먼저 만들고 안정된 출력 폴더에 보존
 cd book
-quarto render . --to pdf
-
-# 4. EPUB
 quarto render . --to epub
+Copy-Item "_book/*.epub" "output/epub/반도체-면접-왕의-질문에-답하라.epub" -Force
 
-# 5. 앞표지+본문+뒷표지 및 POD 제출 파일
+# 4. A5 본문 PDF와 POD 제출 파일
+quarto render . --to pdf
 python cover/build_cover_pdfs.py
+
+# 5. 쪽수·판형·도련·발행처 메타데이터 검증
+cd ..
+uv run --with pypdf python scripts/verify_publish_artifacts.py
 ```
 
 최종 산출물은 다음처럼 분리합니다.
@@ -102,6 +113,8 @@ python cover/build_cover_pdfs.py
 
 - 교보 POD에서 제공하는 실제 종이 종류와 책등 계산식으로 책등 폭을 다시 확정합니다.
 - ISBN·가격·발행일을 확정한 뒤 판권면을 갱신합니다.
+- 추천사를 받으면 판권면 다음·서문 앞에 배치하고 목차, 본문 쪽수, 책등 폭, 펼침표지를 모두 다시 만듭니다.
+- 판매 승인 뒤에는 추천사 추가로 쪽수를 바꾸기 어려우므로 추천사 마감 전 파일은 출간 후보본으로 관리합니다.
 - 교보가 발급한 바코드를 뒷표지 흰색 영역에 넣습니다.
 - 최신성이 중요한 수치의 기준일과 원출처를 다시 확인합니다.
 - 전자책 미리보기에서 표, 수식, 이미지 대체텍스트와 목차 이동을 확인합니다.
