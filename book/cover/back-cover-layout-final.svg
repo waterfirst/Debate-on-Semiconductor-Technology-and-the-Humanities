@@ -1,20 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1748" height="2480" viewBox="0 0 1748 2480">
   <defs>
-    <linearGradient id="backFade" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#071423"/>
-      <stop offset="0.65" stop-color="#0b1c30"/>
-      <stop offset="1" stop-color="#06101d"/>
+    <linearGradient id="backPaper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8f3e6"/>
+      <stop offset="0.62" stop-color="#f3eee1"/>
+      <stop offset="1" stop-color="#e9edf0"/>
     </linearGradient>
     <pattern id="dies" width="42" height="42" patternUnits="userSpaceOnUse">
-      <path d="M42 0H0V42" fill="none" stroke="#8fb4cf" stroke-opacity="0.13" stroke-width="2"/>
+      <path d="M42 0H0V42" fill="none" stroke="#496b82" stroke-opacity="0.13" stroke-width="2"/>
     </pattern>
   </defs>
 
-  <rect width="1748" height="2480" fill="url(#backFade)"/>
-  <circle cx="1460" cy="350" r="610" fill="url(#dies)" stroke="#a8c8de" stroke-opacity="0.25" stroke-width="7"/>
-  <circle cx="1460" cy="350" r="540" fill="none" stroke="#8aaec9" stroke-opacity="0.1" stroke-width="2"/>
+  <rect width="1748" height="2480" fill="url(#backPaper)"/>
+  <circle cx="1460" cy="350" r="610" fill="url(#dies)" stroke="#53758b" stroke-opacity="0.24" stroke-width="7"/>
+  <circle cx="1460" cy="350" r="540" fill="none" stroke="#53758b" stroke-opacity="0.13" stroke-width="2"/>
+  <path d="M1100 0C1240 210 1370 380 1748 490" fill="none" stroke="#a94e32" stroke-opacity="0.20" stroke-width="3"/>
 
-  <g font-family="KoPub Dotum" fill="#f3f0e7">
+  <g font-family="KoPub Dotum" fill="#071b2d">
     <text x="130" y="300" font-family="KoPub Batang" font-size="66" font-weight="700">왕이 묻고,</text>
     <text x="130" y="390" font-family="KoPub Batang" font-size="66" font-weight="700">엔지니어가 답한다.</text>
 
@@ -28,11 +29,10 @@
       <tspan x="130" dy="68">근거를 세우고 판단하는 힘을 훈련한다.</tspan>
     </text>
 
-    <rect x="130" y="1285" width="1488" height="2" fill="#9fb8cb" opacity="0.45"/>
-    <text x="130" y="1390" fill="#b9cedd" font-size="34" font-weight="700" letter-spacing="1">30개의 질문  ·  데이터 근거  ·  찬반 토론  ·  면접 실전</text>
-
+    <rect x="130" y="1285" width="1488" height="2" fill="#52758d" opacity="0.42"/>
+    <text x="130" y="1390" fill="#31536a" font-size="34" font-weight="700" letter-spacing="1">30개의 질문  ·  데이터 근거  ·  찬반 토론  ·  면접 실전</text>
   </g>
 
-  <!-- Reserved ISBN/EAN-13 barcode area, safely inside the trim line. -->
-  <rect x="1168" y="2050" width="450" height="300" rx="7" fill="#ffffff" stroke="#d5d5d5" stroke-width="2"/>
+  <rect x="1168" y="2050" width="450" height="300" rx="7" fill="#ffffff" stroke="#aeb7bc" stroke-width="2"/>
+  <rect x="20" y="20" width="1708" height="2440" fill="none" stroke="#7890a0" stroke-opacity="0.30" stroke-width="2"/>
 </svg>
