@@ -111,6 +111,8 @@ uv run --with pypdf python scripts/verify_publish_artifacts.py
 
 ## 출판 전 최종 확인
 
+- 실행 일정과 단계별 완료기준: [PUBLISHING_EXECUTION_SCHEDULE_2026-08.md](PUBLISHING_EXECUTION_SCHEDULE_2026-08.md)
+
 - 교보 POD에서 제공하는 실제 종이 종류와 책등 계산식으로 책등 폭을 다시 확정합니다.
 - ISBN·가격·발행일을 확정한 뒤 판권면을 갱신합니다.
 - 추천사를 받으면 판권면 다음·서문 앞에 배치하고 목차, 본문 쪽수, 책등 폭, 펼침표지를 모두 다시 만듭니다.
