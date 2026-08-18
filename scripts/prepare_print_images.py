@@ -12,7 +12,16 @@ SYMBOLS = FIGURES / "symbols"
 
 def save_grayscale(source: Path, destination: Path, max_size: tuple[int, int] | None) -> None:
     with Image.open(source) as image:
-        rendered = image.convert("L")
+        # PNG charts have transparent pixels outside their rounded card.
+        # Converting RGBA straight to L discards alpha and makes those pixels
+        # black wedges at the four corners of the printed figure.
+        if "A" in image.getbands() or "transparency" in image.info:
+            rgba = image.convert("RGBA")
+            paper = Image.new("RGBA", rgba.size, (255, 255, 255, 255))
+            paper.alpha_composite(rgba)
+            rendered = paper.convert("L")
+        else:
+            rendered = image.convert("L")
         if max_size:
             rendered.thumbnail(max_size, Image.Resampling.LANCZOS)
         rendered.save(destination, optimize=True, compress_level=9)

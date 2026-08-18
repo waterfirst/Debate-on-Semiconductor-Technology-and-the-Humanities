@@ -152,6 +152,5 @@ categories: [반도체, 인문학, 집단토론, 데이터]
 - [U.S. CENTCOM, *SASC Posture Statement 2026* (2026)](https://www.centcom.mil/ABOUT-US/SASC-POSTURE-STATEMENT-2026/)
 - [U.S. Congressional Research Service, *Defense Primer: Emerging Technologies* (2026)](https://www.congress.gov/crs-product/IF11105)
 - [조선시대 책문 아카이브, 1568년 선조 「정벌인가 화친인가」](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#seonjo-1568/0)
-- [최낙초, 『AI 시대, 인간은 무엇으로 남는가』 10장 「인간을 루프에서 빼는 전쟁」(2026 열람)](https://waterfirst.quarto.pub/ai-era-humanity/chapters/chapter10.html)
 
 > 데이터 기준일: 2026년 8월 18일. 군사 작전의 전과·격추율·생산능력은 발표 주체의 이해관계를 함께 적었으며, 상업 발행 직전에 원문과 정정 여부를 다시 확인합니다.

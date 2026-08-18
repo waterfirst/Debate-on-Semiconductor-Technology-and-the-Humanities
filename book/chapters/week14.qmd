@@ -18,7 +18,7 @@ categories: [반도체, 자동화, 노동, 집단토론]
 
 ILO는 세계 노동자 네 명 중 한 명이 생성형 AI에 어느 정도 노출된 직업에 있다고 추정합니다. 그러나 노출은 해고율이 아닙니다. 과업 일부가 바뀔 가능성을 직업 전체가 사라지는 수치로 읽으면 자동화 투자도 인력계획도 왜곡됩니다. 회사는 설비와 모델에 자본을 댔고, 직원은 공정 데이터·예외처리·현장 숙련을 제공했습니다. 생산성 이익의 원천이 함께라면 배분 원칙도 사후 협상이 아니라 도입 전에 정해야 합니다.
 
-저자의 『AI 시대, 인간은 무엇으로 남는가』 5장 「교육의 열역학」은 자동화가 신입이 경험을 쌓던 반복업무부터 없앨 때 미래 숙련의 첫 사다리가 사라질 수 있다고 지적합니다. 신입사원의 현업 질문은 “AI가 일자리를 없애는가”보다 구체적입니다. 절약된 시간을 누가 소유하며, 다음 직무로 옮기는 유급 학습시간을 누가 부담하는가입니다.
+ILO가 전면 대체보다 직무 변형 가능성을 더 크게 보는 만큼, 신입사원의 현업 질문도 “AI가 일자리를 없애는가”보다 구체적이어야 합니다. 자동화로 절약된 시간을 누가 소유하며, 다음 직무로 옮기는 유급 학습시간과 현장 멘토링을 누가 부담할지 도입 전에 정해야 합니다.
 
 ## 데이터 렌즈
 
@@ -108,7 +108,6 @@ AI는 현장 직원이 남긴 데이터와 예외처리 지식으로 작동합�
 
 - [International Labour Organization, *Generative AI and Jobs: A Refined Global Index of Occupational Exposure*, Working Paper 140 (2025)](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure)
 - [International Labour Organization, *Generative AI and jobs: A 2025 update* (2025)](https://www.ilo.org/publications/generative-ai-and-jobs-2025-update)
-- [최낙초, 『AI 시대, 인간은 무엇으로 남는가』 5장 「교육의 열역학」](https://waterfirst.quarto.pub/ai-era-humanity/chapters/chapter05.html)
 - [조선시대 책문 아카이브, 명종대 「교육은 어디로 가야 하는가」 개별 항목](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#myeongjong-1558-education/0)
 
 > 데이터 기준일: 2026년 8월 18일. 25%와 3.3%는 ILO의 직업 노출 추정치이며, 생산성·감원·배치·배분 비율은 가상 사례의 조건 또는 제안값입니다.

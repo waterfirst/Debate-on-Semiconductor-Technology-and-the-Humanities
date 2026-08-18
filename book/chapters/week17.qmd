@@ -18,7 +18,7 @@ categories: [반도체, 팹보안, 개인정보, 집단토론]
 
 팹의 산업제어시스템은 정보 유출뿐 아니라 장비 가용성과 사람의 안전을 지켜야 합니다. 원격정비 계정, USB, 레시피 변경, 화면 캡처는 사고 조사에 도움이 될 수 있습니다. 그러나 전 직원의 화면과 통신을 오래 저장하면 목적과 무관한 개인정보가 쌓이고, 오탐이 인사평가나 징계에 흘러갈 위험도 커집니다. 신입 보안운영 담당자는 로그가 많을수록 좋다는 가정을 버리고 어떤 위험을 얼마나 빨리 찾는지부터 정의해야 합니다.
 
-NIST의 OT 보안 지침은 일반 IT와 달리 성능·신뢰성·안전을 함께 고려하라고 요구합니다. CISA도 산업제어시스템에서 원격접근 관리와 방어 심층화를 권고합니다. OECD 개인정보 가이드라인은 수집 제한, 목적 명시, 이용 제한, 정보주체 참여와 책임성을 기본 원칙으로 둡니다. 저자의 『AI 시대, 인간은 무엇으로 남는가』 7장 「에이전트의 제어실」은 로그를 책임 전가용 감시장치가 아니라 어떤 지침과 자료로 무엇을 실행했고 누가 중단했는지 배우는 기록으로 봅니다. 이 관점은 수집 최소화와 추적 가능성을 동시에 요구합니다.
+NIST의 OT 보안 지침은 일반 IT와 달리 성능·신뢰성·안전을 함께 고려하라고 요구합니다. CISA도 산업제어시스템에서 원격접근 관리와 방어 심층화를 권고합니다. OECD 개인정보 가이드라인은 수집 제한, 목적 명시, 이용 제한, 정보주체 참여와 책임성을 기본 원칙으로 둡니다. 이 기준들을 함께 적용하면 로그는 목적에 필요한 범위만 수집하되, 어떤 계정이 어떤 승인으로 무엇을 실행했고 누가 중단했는지는 추적할 수 있어야 합니다.
 
 ## 데이터 렌즈
 
@@ -111,7 +111,6 @@ NIST의 OT 보안 지침은 일반 IT와 달리 성능·신뢰성·안전을 함
 - [U.S. Cybersecurity and Infrastructure Security Agency, *ICS Recommended Practices* (2026 열람)](https://www.cisa.gov/resources-tools/resources/ics-recommended-practices)
 - [U.S. National Institute of Standards and Technology, *Guide to Operational Technology Security, SP 800-82 Rev. 3* (2023)](https://www.nist.gov/publications/guide-operational-technology-ot-security)
 - [Organisation for Economic Co-operation and Development, *Recommendation of the Council concerning Guidelines Governing the Protection of Privacy and Transborder Flows of Personal Data* (1980, 2013 개정)](https://legalinstruments.oecd.org/public/doc/114/body-text.en.html)
-- [최낙초, 『AI 시대, 인간은 무엇으로 남는가』 7장 「에이전트의 제어실」](https://waterfirst.quarto.pub/ai-era-humanity/chapters/chapter07.html)
 - [조선시대 책문 아카이브, 세종 「법의 폐단과 권력의 자리」 개별 항목](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447/0)
 - [국사편찬위원회, 세종실록 1447년 8월 5일 기록](https://sillok.history.go.kr/id/kda_12908005_001)
 

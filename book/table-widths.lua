@@ -23,6 +23,11 @@ function Table(tbl)
     apply_widths(tbl, { 0.07, 0.39, 0.16, 0.38 })
   elseif columns == 3 and (first == "근거" or first == "구분") then
     apply_widths(tbl, { 0.08, 0.53, 0.39 })
+  elseif columns == 3 and (first == "우선순위" or first == "순서") then
+    -- Data-acquisition tables use a short ordinal, a compact source name,
+    -- and a substantially longer verification checklist.  Equal columns
+    -- make the checklist wrap into four or five lines on the A5 page.
+    apply_widths(tbl, { 0.13, 0.34, 0.53 })
   elseif columns == 2 and (first == "판정축" or first == "항목") then
     apply_widths(tbl, { 0.30, 0.70 })
   end

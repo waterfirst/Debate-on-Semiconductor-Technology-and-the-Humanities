@@ -18,7 +18,7 @@ categories: [반도체, 이중용도, 수출준법, 집단토론]
 
 AI 가속기는 데이터센터, 의료, 제조, 대학 연구에 쓰이면서 군사 지휘·정보분석에도 전용될 수 있습니다. 제조사가 모든 최종용도를 알 수는 없지만, 이상한 주문 규모, 불투명한 유통사, 설치 거부, 군 연구기관과의 인적 연결 같은 경보를 보고도 거래하면 단순한 중립이라고 하기 어렵습니다. 반대로 근거가 약한 연계만으로 거래를 막으면 합법적 고객을 자의적으로 차별하고 영업현장의 예측 가능성을 해칩니다.
 
-2024년 세계 군사비는 2조7,180억 달러로 늘었습니다. 이 총액은 국제적 군사 수요의 크기를 보여줄 뿐, 특정 주문의 칩이 군사용이라는 증거가 아닙니다. 저자의 『AI 시대, 인간은 무엇으로 남는가』 10장 「인간을 루프에서 빼는 전쟁」은 속도 경쟁이 인간의 승인시간을 줄이고 책임을 개발자·운용자·지휘관 사이로 흩뜨릴 수 있다고 지적합니다. 기업에서는 그 책임을 고객확인·보류·공급중단 절차로 다시 묶어야 합니다.
+2024년 세계 군사비는 2조7,180억 달러로 늘었습니다. 이 총액은 국제적 군사 수요의 크기를 보여줄 뿐, 특정 주문의 칩이 군사용이라는 증거가 아닙니다. 미국 산업안보국의 고객확인 지침은 거래 상대방·최종사용자·최종용도를 확인하고 경보를 해소하지 못하면 거래를 자제하도록 요구합니다. 기업은 이 책임을 고객확인·보류·공급중단 절차와 결정 기록으로 구체화해야 합니다.
 
 ## 데이터 렌즈
 
@@ -109,7 +109,6 @@ AI 가속기는 데이터센터, 의료, 제조, 대학 연구에 쓰이면서 �
 - [Stockholm International Peace Research Institute, *Trends in World Military Expenditure, 2024* (2025)](https://www.sipri.org/publications/2025/sipri-fact-sheets/trends-world-military-expenditure-2024)
 - [Stockholm International Peace Research Institute, *Unprecedented rise in global military expenditure* (2025)](https://www.sipri.org/media/press-release/2025/unprecedented-rise-global-military-expenditure-european-and-middle-east-spending-surges)
 - [U.S. Bureau of Industry and Security, *Supplement No. 3 to Part 732—Know Your Customer Guidance and Red Flags* (2026 열람)](https://www.bis.gov/node/1533)
-- [최낙초, 『AI 시대, 인간은 무엇으로 남는가』 10장 「인간을 루프에서 빼는 전쟁」](https://waterfirst.quarto.pub/ai-era-humanity/chapters/chapter10.html)
 - [조선시대 책문 아카이브, 선조 「정벌인가 화친인가」 개별 항목](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#seonjo-1568/0)
 - [KRpia, 박광전 책문 항목](https://www.krpia.co.kr/product/detail?nodeId=NODE03961489&plctId=PLCT00004893)
 

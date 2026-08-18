@@ -76,9 +76,12 @@ def normalized(text: str) -> str:
 def qmd_title(path: Path) -> str:
     text = path.read_text(encoding="utf-8")
     match = re.search(r'^title:\s*["\'](.+?)["\']\s*$', text, flags=re.MULTILINE)
-    if not match:
-        raise RuntimeError(f"No title found in {path}")
-    return match.group(1)
+    if match:
+        return match.group(1)
+    heading = re.search(r"^#\s+(.+?)(?:\s+\{.*\})?\s*$", text, flags=re.MULTILINE)
+    if heading:
+        return heading.group(1)
+    raise RuntimeError(f"No title found in {path}")
 
 
 def first_page_with(reader: PdfReader, title: str, start: int) -> int:
@@ -90,8 +93,11 @@ def first_page_with(reader: PdfReader, title: str, start: int) -> int:
 
 
 def locate_sections(reader: PdfReader) -> tuple[dict[int, tuple[int, int]], tuple[int, int], tuple[int, int]]:
-    preface_title = qmd_title(BOOK / "index.qmd")
-    preface_start = first_page_with(reader, preface_title, 8)
+    # The preface title also appears in the TOC; anchor on its opening sentence.
+    preface_start = first_page_with(
+        reader, "조선의 과거시험에는 낯선 이름의 문제가 있었습니다", 0
+    )
+    copyright_start = first_page_with(reader, "판권", preface_start + 1)
 
     starts: dict[int, int] = {}
     cursor = preface_start + 1
@@ -110,7 +116,7 @@ def locate_sections(reader: PdfReader) -> tuple[dict[int, tuple[int, int]], tupl
         next_start = starts[chapter + 1] if chapter < 30 else epilogue_start
         ranges[chapter] = (starts[chapter], next_start - 1)
 
-    preface_range = (preface_start, starts[1] - 1)
+    preface_range = (preface_start, copyright_start - 1)
     epilogue_range = (epilogue_start, checklist_start - 1)
     return ranges, preface_range, epilogue_range
 

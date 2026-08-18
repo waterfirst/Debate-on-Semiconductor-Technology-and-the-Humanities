@@ -20,7 +20,7 @@ OECD가 국가 공식통계를 모아 비교한 자료에서 AI 사용률은 소
 
 그러나 기업규모별 사용률을 사내 GPU 배분 비율로 바로 옮길 수는 없습니다. 이 통계는 AI를 사용하는 기업의 비율이며 작업 성과, GPU 시간 또는 투자수익률을 뜻하지 않습니다. 국가·산업 구성도 섞여 있습니다. 사내 의사결정에는 팀별 대기시간, 예약 대비 실제 사용률, 실험 재현성, 고객 마감, 데이터 준비와 산출물의 후속 활용을 수집해야 합니다.
 
-최낙초의 『AI 시대, 인간은 무엇으로 남는가』 제6장 「무료 AI는 왜 불평등을 해결하지 못하는가」는 같은 도구를 나누어 주는 것과 같은 결과를 얻을 조건을 제공하는 일이 다르다는 문제를 제기합니다. 이 장은 그 통찰을 사내 GPU 대기열로 좁힙니다. 계정을 모두에게 주어도 데이터 정제, 멘토링, 검토시간과 실패 뒤 재시도 기회가 없다면 형식적 접근권에 그칠 수 있습니다.
+사내에서는 계정 보유 여부와 실제 실험기회를 구분해야 합니다. 계정을 모두에게 주어도 데이터 정제, 멘토링, 검토시간과 실패 뒤 재시도 기회가 없으면 결과를 만들 조건은 같지 않습니다. 그래서 배분 규칙은 GPU 시간뿐 아니라 준비 지원과 첫 실패 뒤 재도전 경로까지 함께 다뤄야 합니다.
 
 ## 데이터 렌즈
 
@@ -125,7 +125,6 @@ OECD가 국가 공식통계를 모아 비교한 자료에서 AI 사용률은 소
 
 - [OECD, *Generative AI and the SME Workforce: New Survey Evidence* (2025)](https://www.oecd.org/en/publications/generative-ai-and-the-sme-workforce_2d08b99d-en.html)
 - [OECD, *Introduction: Generative AI and the SME Workforce*—기업규모별 AI 사용률 (2025)](https://www.oecd.org/en/publications/generative-ai-and-the-sme-workforce_2d08b99d-en/full-report/component-3.html)
-- [최낙초, 『AI 시대, 인간은 무엇으로 남는가』 제6장 「무료 AI는 왜 불평등을 해결하지 못하는가」(2026 열람)](https://waterfirst.quarto.pub/ai-era-humanity/chapters/chapter06.html)
 - [조선시대 책문 아카이브, 「인재를 어떻게 구할 것인가」(세종대 기록, 2026 열람)](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447-talent/0)
 - [국사편찬위원회 우리역사넷, 「강희맹」(2026 열람)](https://contents.history.go.kr/mobile/kc/view.do?code=kc_age_30&levelId=kc_n300400)
 
