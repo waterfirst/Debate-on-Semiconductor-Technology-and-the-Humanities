@@ -127,6 +127,8 @@ python scripts/verify_publish_artifacts.py
 
 ## 출판 전 최종 확인
 
+- 실행 일정과 단계별 완료기준: [PUBLISHING_EXECUTION_SCHEDULE_2026-08.md](PUBLISHING_EXECUTION_SCHEDULE_2026-08.md)
+
 - 교보 POD에서 제공하는 실제 종이 종류와 책등 계산식으로 책등 폭을 다시 확정합니다.
 - 현재 22mm는 `354쪽 ÷ 2 × 0.12mm/장`을 올림한 제작용 추정값입니다. 교보가 다른 값을 제시하면 `python book/cover/build_cover_pdfs.py --spine-mm 값`으로 다시 조립하고 표지 SVG의 책등 폭도 같은 값으로 조정합니다.
 - ISBN·가격·발행일을 확정한 뒤 판권면을 갱신합니다.
