@@ -1,31 +1,31 @@
 ﻿week,title,question,chaekmun_motif,primary_source,source_url
-1,"우크라이나 전쟁, 네온·헬륨, 전장의 AI",전쟁이 공급망을 흔들 때 기업은 효율보다 회복탄력성을 우선해야 하는가,세종대의 법과 권한 책문—눈앞의 폐단을 고치다 다음 환란을 만들지 말라,World Bank Ukraine overview,https://www.worldbank.org/en/country/ukraine/overview
-2,미·중 수출통제와 기술의 국적,첨단 반도체 장비와 AI 칩의 수출을 안보를 이유로 제한할 수 있는가,신숙주의 언로론—두려운 말을 막으면 정책은 아첨만 듣는다,U.S. BIS semiconductor export controls,https://www.bis.gov/advanced-computing-semiconductor-manufacturing-items-controls-china
-3,대만해협과 세계의 단일 장애점,효율적으로 집중된 생산기지가 세계 경제를 인질로 만들 수 있는가,의정부와 육조의 권한 책문—직책이 있는 곳에 책임과 권력을 함께 두라,TSMC annual reports,https://investor.tsmc.com/english/annual-reports
-4,한일 소재 분쟁과 상호의존의 역설,상대국 의존을 줄이는 것이 언제 경제안보이고 언제 경제적 고립인가,광해군대 전후 복구 책문—원한과 생존 사이에서 백성을 먼저 보라,Japan METI trade control policy,https://www.meti.go.jp/english/policy/external_economy/trade_control/index.html
-5,칩 동맹과 보조금 경쟁,국가가 특정 반도체 기업의 공장에 세금을 지원해도 되는가,성삼문의 법치론—법을 백 번 고쳐도 사람과 운영이 바뀌지 않으면 헛되다,U.S. CHIPS Program Office,https://www.nist.gov/chips
-6,"제재, 민간 피해, 기업의 도덕적 거리",합법적인 제재가 민간인의 삶을 악화시킬 때 기업은 어디까지 책임져야 하는가,전쟁과 백성의 책문—국가의 명분이 백성의 굶주림을 덮을 수 있는가,UNHCR Ukraine emergency,https://www.unhcr.org/emergencies/ukraine-emergency
-7,환율 급등과 반도체 기업의 진짜 실력,원화 약세로 늘어난 이익을 경영 성과라고 볼 수 있는가,세종의 인재 책문—성과의 외양보다 원인을 가려 사람을 쓰라,Bank of Korea ECOS,https://ecos.bok.or.kr/
-8,HBM 호황과 AI 설비투자의 지속가능성,AI 수요가 빠르게 늘 때 공급자는 최대 증설로 답해야 하는가,고양이와 쥐의 책문—기능하지 않는 제도와 설비를 왜 유지하는가,SK hynix investor relations,https://news.skhynix.com/category/ir/
-9,메모리 사이클과 감산의 윤리,가격 폭락기에 공급을 줄이는 것은 합리적 경영인가 소비자에 대한 담합적 태도인가,법의 폐단 책문—질서를 위한 규칙이 누구의 고통을 감추는가,WSTS market data,https://www.wsts.org/
-10,산업정책은 실패할 권리가 있는가,국가 반도체 투자가 실패해도 장기 역량을 남겼다면 성공인가,정조의 지역 부담 책문—국가의 큰 계획이 고을의 작은 삶을 짓누르지 않는가,European Chips Act,https://digital-strategy.ec.europa.eu/en/policies/european-chips-act
-11,공공 AI는 양극화를 줄일 것인가,세금으로 만든 AI와 연산 인프라는 누구에게 우선 배분되어야 하는가,언로의 책문—말할 기회가 열려 있어도 들을 권력이 없으면 열린 것인가,OECD Digital Economy Outlook,https://www.oecd.org/digital/oecd-digital-economy-outlook-2017-9789264276284-en.htm
-12,주가는 기업의 미래를 얼마나 먼저 아는가,반도체 주가 상승을 산업 전망의 증거로 사용할 수 있는가,과거와 오늘의 이치 책문—같은 원리가 반복돼도 가격은 같은가,Korea Exchange data,https://data.krx.co.kr/
-13,공정 AI의 블랙박스를 믿을 수 있는가,수율을 높이는 AI가 이유를 설명하지 못해도 현장에 투입해야 하는가,책임과 권한 책문—결정권이 있는 곳에 설명책임도 따라야 한다,NIST AI Risk Management Framework,https://www.nist.gov/itl/ai-risk-management-framework
-14,자동화가 숙련을 없애는가 바꾸는가,AI와 로봇이 생산성을 높일 때 줄어든 노동시간의 이익은 누구에게 돌아가야 하는가,인재 등용 책문—사람을 쓰지 않고 자리만 두면 나라가 어찌 움직이는가,ILO future of work,https://www.ilo.org/topics-and-sectors/future-work
-15,안전과 생산량 사이의 침묵,납기 압박 속에서 작업 중단권은 실제 권리일 수 있는가,불편한 말을 한 관리를 좌천한 폐단—좋은 말은 사라지고 아첨만 남는다,ILO occupational safety and health,https://www.ilo.org/topics/safety-and-health-work
-16,"특허, 오픈소스, 지식의 담장",공공 연구비로 만든 반도체 기술은 얼마나 공개되어야 하는가,언로와 인재 책문—지식을 닫아 지키는 것과 열어 키우는 것 중 무엇이 나라를 이롭게 하는가,WIPO IP statistics,https://www.wipo.int/web/ip-statistics
-17,반도체 팹은 사이버 전쟁터인가,생산망 보안을 위해 직원의 행동과 통신을 어디까지 감시할 수 있는가,왕명 출납 책문—가까운 자의 권력이 커질 때 누가 그를 감시하는가,CISA industrial control systems,https://www.cisa.gov/topics/industrial-control-systems
-18,군사용 AI 칩과 이중용도 기술,민간 AI 칩이 무기에 쓰일 수 있을 때 제조사는 최종 사용을 통제할 책임이 있는가,무력의 중앙과 외부 책문—힘을 어디에 두어야 나라가 안전한가,SIPRI military expenditure database,https://www.sipri.org/databases/milex
-19,학벌 없는 채용은 가능한가,반도체 인재를 선발할 때 학력 대신 문제 해결력을 공정하게 측정할 수 있는가,과거시험의 이상과 폐단—문을 넓히는 시험이 또 다른 문벌을 만들지 않는가,OECD Education at a Glance,https://www.oecd.org/en/publications/education-at-a-glance-2025_1c0d9c79-en.html
-20,엔지니어에게 인문학이 왜 필요한가,기술자의 책임은 사양을 충족하는 데서 끝나는가,책문의 형식—경전 지식보다 시대의 문제에 답하는 능력을 보라,UNESCO Recommendation on the Ethics of AI,https://www.unesco.org/en/artificial-intelligence/recommendation-ethics
-21,조직의 언로와 실패의 조기경보,성과가 좋은 조직일수록 반대 의견을 더 보호해야 하는가,신숙주·이석형의 언로론—절실한 말을 두려워하면 아첨만 늘어난다,OECD Guidelines for Multinational Enterprises,https://mneguidelines.oecd.org/
-22,용인 반도체 클러스터의 물과 전기,국가 전략산업을 위해 지역이 자원과 생활비용을 더 부담해야 하는가,정조의 지역 책문—중앙의 이익을 위해 고을의 백성이 감당할 몫은 얼마인가,Korea Water Resources data,https://www.water.or.kr/
-23,다양성은 혁신의 비용인가 조건인가,반도체 조직의 성별·전공·세대 다양성을 성과지표로 관리해야 하는가,인재 등용 책문—같은 문벌의 익숙함과 낯선 인재의 가능성 중 무엇을 택할 것인가,UNESCO women in science data,https://uis.unesco.org/en/topic/women-science
-24,재교육의 책임은 누구에게 있는가,기술 변화로 직무가 사라질 때 교육비와 시간을 개인·기업·국가가 어떻게 나눠야 하는가,벼슬과 책임 책문—일을 맡긴 자가 사람을 기를 책임도 지는가,OECD skills outlook,https://www.oecd.org/en/publications/oecd-skills-outlook-2023_27452f29-en.html
-25,전자폐기물과 보이지 않는 식민지,첨단기기의 짧은 교체주기가 다른 지역의 환경·건강 비용을 전가하는가,백성의 부담 책문—도성의 편리함이 먼 고을의 고통으로 만들어지는가,Global E-waste Monitor,https://ewastemonitor.info/the-global-e-waste-monitor-2024/
-26,AI 전력수요와 제번스의 역설,칩의 에너지 효율이 높아지면 사회의 전력 사용은 줄어드는가,법을 고쳐도 폐단이 되풀이되는 책문—효율이 절약을 보장하는가,IEA Energy and AI,https://www.iea.org/reports/energy-and-ai
-27,연산 자본과 새로운 계급,최첨단 GPU에 접근할 수 있는 조직이 지식 생산까지 독점하게 되는가,권력의 소재 책문—권력이 관직이 아니라 연산에 있다면 누가 견제하는가,Stanford AI Index,https://aiindex.stanford.edu/report/
-28,데이터 주권과 국경을 넘는 팹,생산·고객·근로자 데이터는 국가 안보를 이유로 국경 안에 머물러야 하는가,중앙과 지방의 권한 책문—한곳에 모은 정보는 질서인가 위험인가,UNCTAD Digital Economy Report,https://unctad.org/topic/ecommerce-and-digital-economy/digital-economy-report
-29,기억 칩과 인간의 정체성,기억을 완벽히 저장·검색할 수 있다면 망각할 권리도 기술이 지켜야 하는가,시대와 이치 책문—기억이 많아지면 지혜도 많아지는가,UNESCO Memory of the World,https://www.unesco.org/en/memory-world
-30,더 빠른 칩은 더 나은 삶을 만드는가,반도체 성능 향상을 인간의 진보라고 부르려면 무엇을 증명해야 하는가,책문의 마지막—나라가 강해졌다는 수치와 백성이 잘 산다는 사실은 같은가,OECD Better Life Index,https://www.oecdbetterlifeindex.org/
+1,전쟁은 인류를 진보시키는가,"전쟁은 인류를 진보하게 하는가, 아니면 퇴보하게 하는가",정벌인가 화친인가,"KRpia, 박광전 책문 항목",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#seonjo-1568/0
+2,미·중 수출통제와 기술의 국적,"미국의 대중국 첨단 반도체 통제는 한국 산업에 기회인가, 장기적 위험인가",외교관은 어떤 자질을 갖춰야 하는가,"책문 아카이브, 김의정 대책 전승 해설",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#jungjong-diplomat/0
+3,두 번째 생산거점은 언제 필요한가,핵심 칩 생산이 한 지역에 집중돼 있다면 비용이 30% 늘어도 두 번째 생산거점을 확보해야 하는가,이 나라의 위기를 어떻게 구제할 것인가,"책문 아카이브, 조위한 대책 전승 해설",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#gwanghae-crisis/0
+4,수입액 감소는 국산화 성공인가,일본산 불화수소 수입액이 줄었다면 신입 구매 담당자는 이를 국산화 성공이라고 보고해도 되는가,호남의 일곱 폐단과 해법,"한국학중앙연구원 한국고문서자료관, 1798년 응제",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#jeongjo-1798/0
+5,보조금 받은 공장의 성과는 무엇인가,정부 지원을 받은 반도체 공장이 투자·고용 약속을 미달하면 보조금을 환수해야 하는가,법의 폐단과 권력의 자리,"국사편찬위원회, 세종실록 1447.08.05",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447/0
+6,민수용 주문과 제재의 경계,제재 대상국의 의료기기용 칩 주문을 은행이 거절하면 신입 영업·준법 담당자는 거래를 되살려야 하는가,정벌인가 화친인가,"KRpia, 박광전 책문 항목",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#seonjo-1568/0
+7,환율 이익은 팀의 성과인가,달러 매출은 그대로인데 원화 매출만 25% 늘었다면 그 증가분을 성과급 평가에 반영해야 하는가,인재를 어떻게 구할 것인가,"국사편찬위원회 우리역사넷, 강희맹",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447-talent/0
+8,HBM 증설은 어디까지 앞당길 것인가,5년 장기주문이 들어왔지만 설비 회수에 7년이 걸린다면 신입 분석가는 전면 증설을 제안해야 하는가,처음과 끝이 같은 정치,"책문 아카이브, 권벌 시권 해설",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#jungjong-1507/0
+9,재고가 두 배일 때 감산해도 되는가,재고가 목표의 두 배이고 가격이 원가 아래라면 경쟁사 움직임과 무관하게 감산을 제안해야 하는가,법의 폐단과 권력의 자리,"국사편찬위원회, 세종실록 1447.08.05",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447/0
+10,목표를 못 채운 프로젝트를 계속할 것인가,생산 목표는 미달했지만 인력과 특허가 남은 국책 팹 사업은 연장해야 하는가,처음과 끝이 같은 정치,"책문 아카이브, 권벌 시권 해설",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#jungjong-1507/0
+11,"GPU 대기시간 40일, 누구에게 먼저 줄 것인가",사내 공용 GPU가 부족할 때 매출 부서와 신입 실험팀 가운데 누구에게 먼저 배정해야 하는가,인재를 어떻게 구할 것인가,"국사편찬위원회 우리역사넷, 강희맹",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447-talent/0
+12,주가 30% 상승을 수요 증거로 써도 되는가,실적 발표 전 반도체 주가가 30% 올랐다면 다음 분기 수요 증가의 근거로 보고서에 써도 되는가,하늘의 이치와 인간의 정치,"한국학중앙연구원 실록위키, 천도책",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#myeongjong-1558/0
+13,수율 1%p 높인 블랙박스를 맡길 것인가,수율을 1%p 높였지만 이유를 설명하지 못하는 AI에 공정 자동운전을 맡겨도 되는가,하늘의 이치와 인간의 정치,"한국학중앙연구원 실록위키, 천도책",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#myeongjong-1558/0
+14,자동화로 줄어든 시간을 누가 갖는가,AI로 생산성이 20% 높아졌다면 줄어든 노동시간과 이익을 회사·팀·직원이 어떻게 나눠야 하는가,교육은 어디로 가야 하는가,"책문 아카이브, 조종도 대책 전승 해설",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#myeongjong-1558-education/0
+15,가스 경보 한 번에 라인을 세울 것인가,납기가 이틀 늦어져도 확증이 없는 가스 누출 경보만으로 신입 엔지니어가 라인 중단을 요청해야 하는가,임진왜란 뒤 가장 시급한 일,"한국학중앙연구원, 1611년 시험 기록",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#gwanghae-1611/0
+16,공공 연구 코드를 어디까지 열 것인가,정부 연구비로 만든 공정 소프트웨어를 회사가 독점하려 할 때 어느 범위까지 공개해야 하는가,교육은 어디로 가야 하는가,"책문 아카이브, 조종도 대책 전승 해설",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#myeongjong-1558-education/0
+17,보안을 위해 직원 화면을 1년 보관해도 되는가,팹 보안을 위해 모든 직원의 화면과 통신 기록을 1년 동안 보관해도 되는가,법의 폐단과 권력의 자리,"국사편찬위원회, 세종실록 1447.08.05",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447/0
+18,최종 사용자가 불분명한 AI 칩을 팔 것인가,민수용 AI 가속기의 최종 사용자가 군과 연계됐다는 경보가 뜨면 합법적인 계약도 멈춰야 하는가,정벌인가 화친인가,"KRpia, 박광전 책문 항목",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#seonjo-1568/0
+19,학력을 가린 직무시험은 더 공정한가,학력 대신 직무과제를 쓰면 반도체 신입 채용은 실제로 더 공정해지는가,인재를 어떻게 구할 것인가,"국사편찬위원회 우리역사넷, 강희맹",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447-talent/0
+20,사양을 만족한 제품을 윤리 문제로 늦출 것인가,기술 사양을 충족했지만 사용자 피해 우려가 남아 있다면 신입 엔지니어도 출시 연기를 요청해야 하는가,이상정치를 현실로 만드는 법,"한국학중앙연구원, 1515년 알성시 방목",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#jungjong-1515/0
+21,상사의 결론과 다른 수율 데이터를 보고할 것인가,분기 실적 발표 직전에 상사의 결론과 다른 수율 데이터를 발견하면 신입사원도 즉시 보고해야 하는가,임진왜란 뒤 가장 시급한 일,"한국학중앙연구원, 1611년 시험 기록",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#gwanghae-1611/0
+22,"10GW 전력과 107만m³의 물, 지역이 더 부담해야 하는가",국가 반도체 클러스터를 위해 특정 지역이 송전선·용수·생활비용을 더 부담해야 하는가,호남의 일곱 폐단과 해법,"한국학중앙연구원 한국고문서자료관, 1798년 응제",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#jeongjo-1798/0
+23,다양성 목표를 달성했는데 이탈률이 두 배라면,채용 다양성 목표를 달성했어도 특정 집단의 2년 이탈률이 두 배라면 성공이라고 평가할 수 있는가,인재를 어떻게 구할 것인가,"국사편찬위원회 우리역사넷, 강희맹",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447-talent/0
+24,600시간 재교육을 무급으로 받아야 하는가,자동화로 직무가 사라질 때 필요한 600시간의 재교육 비용과 시간을 개인이 부담해야 하는가,교육은 어디로 가야 하는가,"책문 아카이브, 조종도 대책 전승 해설",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#myeongjong-1558-education/0
+25,5% 비싼 수리 가능한 설계를 택할 것인가,제품 가격이 5% 오르더라도 교체주기를 2년 늘리는 수리 가능한 설계를 선택해야 하는가,호남의 일곱 폐단과 해법,"한국학중앙연구원 한국고문서자료관, 1798년 응제",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#jeongjo-1798/0
+26,"연산당 전력 40% 절감, 사용량 3배면 친환경인가",새 AI 칩이 연산당 전력을 40% 줄여도 서비스 사용량이 세 배가 되면 친환경이라고 평가할 수 있는가,술의 폐해를 논하라,"한국민족문화대백과사전, 김구",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#jungjong-1513-wine/0
+27,공용 GPU 70%를 최고 성과 팀에 줄 것인가,한 초거대 모델의 성능을 높이기 위해 공용 GPU의 70%를 최고 성과 팀에 배정해도 되는가,법의 폐단과 권력의 자리,"국사편찬위원회, 세종실록 1447.08.05",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447/0
+28,비용이 25% 늘어도 팹 데이터를 국내에 둘 것인가,팹 데이터를 국내에 저장하면 협력사의 클라우드 비용이 25% 늘어도 데이터 현지화를 해야 하는가,법의 폐단과 권력의 자리,"국사편찬위원회, 세종실록 1447.08.05",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447/0
+29,퇴사자의 업무기록을 언제 지울 것인가,프로젝트 기록에 퇴사자의 개인정보가 남아 있을 때 완전삭제·비가시화·보존 가운데 무엇을 택해야 하는가,섣달그믐밤은 왜 서글픈가,"책문 아카이브, 이명한 대책 전승 해설",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#gwanghae-1616/0
+30,성능이 두 배면 좋은 제품인가,새 칩의 성능은 두 배지만 전력·교체비용·업무강도도 늘어난다면 성공이라고 평가해야 하는가,이상정치를 현실로 만드는 법,"한국학중앙연구원, 1515년 알성시 방목",https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#jungjong-1515/0

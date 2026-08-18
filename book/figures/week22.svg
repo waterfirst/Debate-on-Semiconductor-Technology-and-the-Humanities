@@ -1,8 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" role="img" aria-labelledby="title desc">
-<title id="title">용인 반도체 클러스터의 물과 전기 판단 매트릭스</title><desc id="desc">문제, 사람, 지표, 수정 조건을 중앙 대칭으로 배열한 표</desc>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7C8994"/></marker></defs>
-<style>.bg{fill:#F7F4ED}.title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}.label{font:700 18px "Noto Sans KR",sans-serif;fill:#10283F}.note{font:14px "Noto Sans KR",sans-serif;fill:#675F58}.num{font:700 15px "Noto Sans KR",sans-serif;fill:#FFF}.badge{font:700 12px "Noto Sans KR",sans-serif;fill:#F7F4ED}</style>
-<rect class="bg" width="100%" height="100%" rx="18"/><text x="30" y="46" class="title">용인 반도체 클러스터의 물과 전기</text>
-<rect x="772" y="28" width="118" height="28" rx="14" fill="#10283F"/><text x="831" y="47" text-anchor="middle" class="badge">판단 매트릭스</text>
-<path d="M400 174H510M235 230V268M685 230V268M400 334H510" fill="none" stroke="#7C8994" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="70" y="118" width="330" height="112" rx="14" fill="#FCFAF5" stroke="#A94E32" stroke-width="2"/><circle cx="102" cy="152" r="17" fill="#A94E32"/><text x="102" y="158" text-anchor="middle" class="num">1</text><text x="132" y="156" class="label">문제 정의</text><text x="98" y="198" class="note">어떤 결정을 내려야 하는가</text><rect x="520" y="118" width="330" height="112" rx="14" fill="#FCFAF5" stroke="#1F5A75" stroke-width="2"/><circle cx="552" cy="152" r="17" fill="#1F5A75"/><text x="552" y="158" text-anchor="middle" class="num">2</text><text x="582" y="156" class="label">영향받는 사람</text><text x="548" y="198" class="note">편익과 비용은 누구에게 가는가</text><rect x="70" y="278" width="330" height="112" rx="14" fill="#FCFAF5" stroke="#1F5A75" stroke-width="2"/><circle cx="102" cy="312" r="17" fill="#1F5A75"/><text x="102" y="318" text-anchor="middle" class="num">3</text><text x="132" y="316" class="label">측정 지표</text><text x="98" y="358" class="note">무엇으로 결과를 확인할 것인가</text><rect x="520" y="278" width="330" height="112" rx="14" fill="#FCFAF5" stroke="#A94E32" stroke-width="2"/><circle cx="552" cy="312" r="17" fill="#A94E32"/><text x="552" y="318" text-anchor="middle" class="num">4</text><text x="582" y="316" class="label">중단·수정 조건</text><text x="548" y="358" class="note">언제 판단을 바꿀 것인가</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+<title id="title">10GW 전력과 107만m³의 물, 지역이 더 부담해야 하는가</title>
+<style>
+  .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
+  .label{font:700 18px "Noto Sans KR",sans-serif;fill:#10283F}
+  .small{font:14px "Noto Sans KR",sans-serif;fill:#675F58}
+  .big{font:700 31px "Noto Sans KR",sans-serif;fill:#A94E32}
+  .badge{font:700 12px "Noto Sans KR",sans-serif;fill:#F7F4ED}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="46" class="title">10GW 전력과 107만m³의 물, 지역이 더 부담해야 하는가</text><desc id="desc">용인 반도체 클러스터에 필요한 전력과 용수를 나란히 보여주는 데이터 계기판</desc>
+<rect x="70" y="120" width="365" height="230" rx="24" fill="#FCFAF5" stroke="#1F5A75" stroke-width="3"/>
+<text x="252" y="170" text-anchor="middle" class="label">신규 전력 수요</text><text x="252" y="242" text-anchor="middle" class="big" style="font-size:48px">10GW 이상</text><text x="252" y="294" text-anchor="middle" class="small">2053년까지 정부 전망</text>
+<rect x="485" y="120" width="365" height="230" rx="24" fill="#FCFAF5" stroke="#4D7C6F" stroke-width="3"/>
+<text x="667" y="170" text-anchor="middle" class="label">통합 용수 공급</text><text x="667" y="242" text-anchor="middle" class="big" style="font-size:43px">하루 107.2만㎥</text><text x="667" y="294" text-anchor="middle" class="small">약 300만 명 하루 사용량</text>
+<text x="70" y="400" class="small">비용뿐 아니라 입지별 송전·취수 한계와 지역 편익협약을 함께 판단합니다.</text>
+<rect x="752" y="28" width="138" height="28" rx="14" fill="#10283F"/><text x="821" y="47" text-anchor="middle" class="badge">지역 부담 계기판</text>
+</svg>

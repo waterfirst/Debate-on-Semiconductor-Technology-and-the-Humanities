@@ -15,7 +15,20 @@ chapters = sorted((BOOK / "chapters").glob("week*.qmd"))
 if len(chapters) != 30:
     fail(f"expected 30 chapters, found {len(chapters)}")
 
-required = ["[오늘의 책문]{.book-question-label}", "## 데이터 렌즈", "## 대립 답안", "## 판정 조건", "## 사례형 토론", "## 90초 발언 예시", "## 꼬리 질문", "## 출처"]
+required = [
+    "[오늘의 책문]{.book-question-label}",
+    "## 데이터 렌즈",
+    "## 대립 답안",
+    "## AI 조사 설계",
+    "### AI에게 물어볼 프롬프트",
+    "### 데이터 취득",
+    "### 정보 판정",
+    "### 토론의 핵심",
+    "## 사례형 토론",
+    "## 90초 발언 예시",
+    "## 꼬리 질문",
+    "## 출처",
+]
 for path in chapters:
     text = path.read_text(encoding="utf-8")
     for heading in required:
@@ -27,7 +40,7 @@ for path in chapters:
         fail(f"{path.name}: too few discussion questions")
     if len(text) < 3000:
         fail(f"{path.name}: manuscript is too short ({len(text)} chars)")
-    if "| 근거 번호 |" not in text:
+    if len(re.findall(r"^\|\s*\d+\s*\|", text, re.M)) < 3:
         fail(f"{path.name}: missing evidence table")
     if "../figures/week" not in text:
         fail(f"{path.name}: missing chart or decision-flow figure")
@@ -36,8 +49,8 @@ for path in chapters:
     if "`결론 → 데이터 2개 → 강한 반론 → 전환 조건`" in text:
         fail(f"{path.name}: Korean response sequence must not use code font")
 
-figures = sorted((BOOK / "figures").glob("week*.png"))
-symbols = sorted((BOOK / "figures" / "symbols").glob("week*-symbol.png"))
+figures = sorted((BOOK / "figures").glob("week*-print.png"))
+symbols = sorted((BOOK / "figures" / "symbols").glob("week*-symbol-print.png"))
 if len(figures) != 30:
     fail(f"expected 30 data charts, found {len(figures)}")
 if len(symbols) != 30:

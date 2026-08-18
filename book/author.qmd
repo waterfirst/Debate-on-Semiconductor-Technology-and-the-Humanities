@@ -1,7 +1,8 @@
 ---
-title: "저자 소개"
 description: "최낙초"
 ---
+
+# 저자 소개 {.unnumbered}
 
 ## 최낙초
 

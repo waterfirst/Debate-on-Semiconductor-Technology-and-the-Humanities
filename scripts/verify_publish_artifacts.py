@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+import math
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -7,10 +10,11 @@ from pypdf import PdfReader
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "book" / "output"
 PDF = OUTPUT / "pdf"
-EPUB = OUTPUT / "epub" / "반도체-면접-왕의-질문에-답하라.epub"
-INTERIOR = PDF / "반도체-면접-왕의-질문에-답하라-본문-A5.pdf"
-PREVIEW = PDF / "반도체-면접-왕의-질문에-답하라-최종본.pdf"
-WRAP = PDF / "반도체-면접-왕의-질문에-답하라-인쇄용-펼침표지.pdf"
+TITLE_SLUG = "반도체-면접-왕의-질문에-답하라"
+EPUB = OUTPUT / "epub" / f"{TITLE_SLUG}.epub"
+INTERIOR = PDF / f"{TITLE_SLUG}-본문-A5.pdf"
+PREVIEW = PDF / f"{TITLE_SLUG}-최종본.pdf"
+WRAP = PDF / f"{TITLE_SLUG}-인쇄용-펼침표지.pdf"
 
 PT_PER_MM = 72 / 25.4
 
@@ -27,7 +31,7 @@ interior = PdfReader(INTERIOR)
 preview = PdfReader(PREVIEW)
 wrap = PdfReader(WRAP)
 
-assert len(interior.pages) == 224
+assert len(interior.pages) == 364
 assert len(preview.pages) == len(interior.pages) + 2
 assert len(wrap.pages) == 1
 
@@ -35,8 +39,11 @@ interior_width, interior_height = size_mm(interior.pages[0])
 assert_close(interior_width, 148)
 assert_close(interior_height, 210)
 
+sheet_count = math.ceil(len(interior.pages) / 2)
+spine_mm = math.ceil(sheet_count * 0.12)
+expected_wrap_width = 148 + spine_mm + 148 + 80 * 2 + 12
 wrap_width, wrap_height = size_mm(wrap.pages[0])
-assert_close(wrap_width, 482)
+assert_close(wrap_width, expected_wrap_width)
 assert_close(wrap_height, 216)
 
 wrap_page = wrap.pages[0]
@@ -51,16 +58,18 @@ for page_number, page in enumerate(interior.pages, start=1):
         publisher_pages.append(page_number)
 assert publisher_pages, "Scholar Bridge publisher text is missing from the interior PDF"
 
-assert preview.metadata.get("/Publisher") == "스칼라브릿지(Scholar Bridge)"
+publisher = "스칼라브릿지(Scholar Bridge)"
+assert preview.metadata.get("/Publisher") == publisher
 
 with ZipFile(EPUB) as archive:
     package_name = next(name for name in archive.namelist() if name.endswith(".opf"))
     package = archive.read(package_name).decode("utf-8")
-assert "<dc:publisher>스칼라브릿지(Scholar Bridge)</dc:publisher>" in package
+assert f"<dc:publisher>{publisher}</dc:publisher>" in package
 
 print(f"interior_pages={len(interior.pages)} size={interior_width:.0f}x{interior_height:.0f}mm")
 print(f"preview_pages={len(preview.pages)} publisher={preview.metadata.get('/Publisher')}")
+print(f"spine={spine_mm}mm")
 print(f"wrap_pages={len(wrap.pages)} size={wrap_width:.0f}x{wrap_height:.0f}mm trim_inset=3mm")
 print(f"publisher_text_pages={publisher_pages}")
-print("epub_publisher=스칼라브릿지(Scholar Bridge)")
+print(f"epub_publisher={publisher}")
 print("verification=PASS")

@@ -1,0 +1,22 @@
+* text=auto
+
+*.md text eol=lf
+*.qmd text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.py text eol=lf
+*.mjs text eol=lf
+*.js text eol=lf
+*.lua text eol=lf
+*.tex text eol=lf
+*.svg text eol=lf
+
+*.pdf binary
+*.epub binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.otf binary
+*.ttf binary
+*.ttc binary

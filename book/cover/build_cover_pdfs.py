@@ -1,6 +1,9 @@
-from pathlib import Path
+from __future__ import annotations
+
+import argparse
 import math
 import shutil
+from pathlib import Path
 
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import RectangleObject
@@ -13,14 +16,22 @@ BOOK = Path(__file__).resolve().parents[1]
 COVER = BOOK / "cover"
 OUTPUT = BOOK / "output" / "pdf"
 TMP = BOOK / "tmp" / "pdfs"
+TITLE_SLUG = "반도체-면접-왕의-질문에-답하라"
 
 FRONT = COVER / "front-cover-final.png"
 BACK = COVER / "back-cover-final.png"
 WRAP = COVER / "full-wrap-cover-final.png"
-INTERIOR = next((BOOK / "_book").glob("*.pdf"))
 
-OUTPUT.mkdir(parents=True, exist_ok=True)
-TMP.mkdir(parents=True, exist_ok=True)
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="A5 본문·날개 표지 PDF를 조립합니다.")
+    parser.add_argument(
+        "--spine-mm",
+        type=float,
+        help="인쇄소가 확정한 책등 폭. 생략하면 백색모조 100g 0.12mm/장으로 계산합니다.",
+    )
+    parser.add_argument("--wing-mm", type=float, default=80.0, help="한쪽 날개 폭")
+    return parser.parse_args()
 
 
 def image_pdf(image: Path, output: Path, size: tuple[float, float]) -> None:
@@ -31,7 +42,7 @@ def image_pdf(image: Path, output: Path, size: tuple[float, float]) -> None:
 
 
 def print_ready_wrap(input_pdf: Path, output_pdf: Path, size: tuple[float, float]) -> None:
-    """Set 3 mm bleed and the centered A5-spread trim area explicitly."""
+    """바깥쪽 3mm 재단 여유와 최종 펼침면 TrimBox를 명시합니다."""
     reader = PdfReader(input_pdf)
     writer = PdfWriter()
     writer.add_page(reader.pages[0])
@@ -46,47 +57,64 @@ def print_ready_wrap(input_pdf: Path, output_pdf: Path, size: tuple[float, float
         writer.write(stream)
 
 
-interior_reader = PdfReader(INTERIOR)
-interior_pages = len(interior_reader.pages)
-sheet_count = math.ceil(interior_pages / 2)
-paper_caliper_mm = 0.12  # white woodfree 100 gsm
-spine_mm = math.ceil(sheet_count * paper_caliper_mm)
-wing_mm = 80
+def main() -> None:
+    args = parse_args()
+    output_candidates = sorted((BOOK / "_book").glob("*.pdf"))
+    if not output_candidates:
+        raise FileNotFoundError("먼저 Quarto PDF를 렌더링하십시오: book/_book/*.pdf")
+    interior_source = output_candidates[0]
 
-front_pdf = TMP / "front-final.pdf"
-back_pdf = TMP / "back-final.pdf"
-image_pdf(FRONT, front_pdf, A5)
-image_pdf(BACK, back_pdf, A5)
+    OUTPUT.mkdir(parents=True, exist_ok=True)
+    TMP.mkdir(parents=True, exist_ok=True)
 
-preview_path = OUTPUT / "반도체-면접-왕의-질문에-답하라-최종본.pdf"
-writer = PdfWriter()
-writer.add_page(PdfReader(front_pdf).pages[0])
-for page in interior_reader.pages:
-    writer.add_page(page)
-writer.add_page(PdfReader(back_pdf).pages[0])
-writer.add_metadata(
-    {
-        "/Title": "반도체 면접, 왕의 질문에 답하라",
-        "/Author": "최낙초",
-        "/Publisher": "스칼라브릿지(Scholar Bridge)",
-    }
-)
-with preview_path.open("wb") as stream:
-    writer.write(stream)
+    interior_reader = PdfReader(interior_source)
+    interior_pages = len(interior_reader.pages)
+    sheet_count = math.ceil(interior_pages / 2)
+    calculated_spine = math.ceil(sheet_count * 0.12)  # 백색모조 100g의 제작용 보수 추정치
+    spine_mm = args.spine_mm if args.spine_mm is not None else calculated_spine
+    wing_mm = args.wing_mm
 
-interior_path = OUTPUT / "반도체-면접-왕의-질문에-답하라-본문-A5.pdf"
-shutil.copy2(INTERIOR, interior_path)
+    front_pdf = TMP / "front-final.pdf"
+    back_pdf = TMP / "back-final.pdf"
+    image_pdf(FRONT, front_pdf, A5)
+    image_pdf(BACK, back_pdf, A5)
 
-wrap_path = OUTPUT / "반도체-면접-왕의-질문에-답하라-인쇄용-펼침표지.pdf"
-# Kyobo wing cover: outer 3 mm + wing + inner 3 mm on both sides.
-wrap_size = ((148 + spine_mm + 148 + (wing_mm * 2) + 12) * mm, (210 + 6) * mm)
-wrap_raw = TMP / "full-wrap-final-raw.pdf"
-image_pdf(WRAP, wrap_raw, wrap_size)
-print_ready_wrap(wrap_raw, wrap_path, wrap_size)
+    preview_path = OUTPUT / f"{TITLE_SLUG}-최종본.pdf"
+    writer = PdfWriter()
+    writer.add_page(PdfReader(front_pdf).pages[0])
+    for page in interior_reader.pages:
+        writer.add_page(page)
+    writer.add_page(PdfReader(back_pdf).pages[0])
+    writer.add_metadata(
+        {
+            "/Title": "반도체 면접, 왕의 질문에 답하라",
+            "/Author": "최낙초",
+            "/Publisher": "스칼라브릿지(Scholar Bridge)",
+        }
+    )
+    with preview_path.open("wb") as stream:
+        writer.write(stream)
 
-print(f"interior={interior_path}")
-print(f"preview={preview_path}")
-print(f"wrap={wrap_path}")
-print(f"interior_pages={interior_pages}")
-print(f"preview_pages={len(PdfReader(preview_path).pages)}")
-print(f"spine_mm={spine_mm}")
+    interior_path = OUTPUT / f"{TITLE_SLUG}-본문-A5.pdf"
+    shutil.copy2(interior_source, interior_path)
+
+    wrap_path = OUTPUT / f"{TITLE_SLUG}-인쇄용-펼침표지.pdf"
+    # 바깥 3mm + 80mm 날개 + 3mm 접지 안전폭 + 뒤표지 + 책등 +
+    # 앞표지 + 3mm 접지 안전폭 + 80mm 날개 + 바깥 3mm
+    wrap_width_mm = 148 + spine_mm + 148 + (wing_mm * 2) + 12
+    wrap_size = (wrap_width_mm * mm, 216 * mm)
+    wrap_raw = TMP / "full-wrap-final-raw.pdf"
+    image_pdf(WRAP, wrap_raw, wrap_size)
+    print_ready_wrap(wrap_raw, wrap_path, wrap_size)
+
+    print(f"interior={interior_path}")
+    print(f"preview={preview_path}")
+    print(f"wrap={wrap_path}")
+    print(f"interior_pages={interior_pages}")
+    print(f"preview_pages={len(PdfReader(preview_path).pages)}")
+    print(f"spine_mm={spine_mm:g}")
+    print(f"wrap_mm={wrap_width_mm:g}x216")
+
+
+if __name__ == "__main__":
+    main()

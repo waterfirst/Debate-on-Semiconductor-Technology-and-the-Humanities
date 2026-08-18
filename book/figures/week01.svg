@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
-<title id="title">우크라이나 전쟁, 네온·헬륨, 전장의 AI</title>
+<title id="title">전쟁은 인류를 진보시키는가</title>
 <style>
   .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
   .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
@@ -7,7 +7,23 @@
   .axis{stroke:#768594;stroke-width:1.4} .note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
 </style>
 <rect class="bg" width="100%" height="100%" rx="18"/>
-<text x="30" y="44" class="title">우크라이나 전쟁, 네온·헬륨, 전장의 AI</text>
-<text x="30" y="72" class="unit">단위: 백만 명</text><desc id="desc">범주별 세로 비교 차트</desc><line x1="78" y1="350" x2="850" y2="350" class="axis"/><rect x="157.3" y="232.9" width="112.0" height="117.1" rx="7" fill="#A94E32"/><text x="213.3" y="219.9" text-anchor="middle" class="value">5.75</text><text x="213.3" y="380" text-anchor="middle" class="label">해외 피란민</text><rect x="404.0" y="273.6" width="112.0" height="76.4" rx="7" fill="#1F5A75"/><text x="460.0" y="260.6" text-anchor="middle" class="value">3.75</text><text x="460.0" y="380" text-anchor="middle" class="label">국내 실향민</text><rect x="650.7" y="130.0" width="112.0" height="220.0" rx="7" fill="#4D7C6F"/><text x="706.7" y="117.0" text-anchor="middle" class="value">10.8</text><text x="706.7" y="380" text-anchor="middle" class="label">인도지원 필요</text>
-<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">세로 비교</text>
+<text x="30" y="44" class="title">전쟁은 인류를 진보시키는가</text>
+<text x="30" y="72" class="unit">단위: 공격 무인기 수(대)</text><desc id="desc">러시아의 Shahed 계열 공격 무인기 규모와 우크라이나의 드론 생산능력을 분리해 보여주는 데이터 카드</desc>
+<rect x="42" y="105" width="515" height="238" rx="18" fill="#FCFAF5" stroke="#D8CEC0" stroke-width="2"/>
+<text x="70" y="141" class="label" style="font-weight:700">러시아의 Shahed 계열 공격 무인기</text>
+<text x="96" y="205" class="value" style="font-size:30px;fill:#A94E32">약 700대</text>
+<text x="108" y="238" class="unit">2022년</text>
+<path d="M255 204H357" stroke="#768594" stroke-width="3" marker-end="url(#arrow-week01)"/>
+<text x="306" y="187" text-anchor="middle" class="value">약 76배</text>
+<text x="389" y="205" class="value" style="font-size:30px;fill:#10283F">5.3만 대+</text>
+<text x="435" y="238" class="unit">2025년</text>
+<text x="70" y="300" class="note">2025년 격추 표적 중 약 40%는 전자전으로 무력화</text>
+<rect x="587" y="105" width="291" height="238" rx="18" fill="#10283F"/>
+<text x="615" y="145" style="font:700 17px 'Noto Sans KR',sans-serif;fill:#F7F4ED">우크라이나 드론 산업</text>
+<text x="615" y="215" style="font:700 34px 'Noto Sans KR',sans-serif;fill:#F4C7A8">약 2,000만 대</text>
+<text x="615" y="250" style="font:15px 'Noto Sans KR',sans-serif;fill:#F7F4ED">2025년 말 발표한 연간 생산능력</text>
+<text x="615" y="302" style="font:13px 'Noto Sans KR',sans-serif;fill:#CAD5DF">생산능력은 실제 생산량·전과와 다름</text>
+<text x="42" y="396" class="note">규모와 반복 속도는 기술 발전을 보여주지만, 인류의 진보를 증명하지는 않는다.</text>
+<defs><marker id="arrow-week01" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#768594"/></marker></defs>
+<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">전쟁 기술 데이터</text>
 </svg>

@@ -20,7 +20,7 @@ book:
   chapters:
     - index.qmd
     - copyright.qmd
-    - part: "1부 전쟁과 공급망"
+    - part: "전쟁과 공급망"
       chapters:
         - chapters/week01.qmd
         - chapters/week02.qmd
@@ -28,7 +28,7 @@ book:
         - chapters/week04.qmd
         - chapters/week05.qmd
         - chapters/week06.qmd
-    - part: "2부 경제와 시장"
+    - part: "경제와 시장"
       chapters:
         - chapters/week07.qmd
         - chapters/week08.qmd
@@ -36,7 +36,7 @@ book:
         - chapters/week10.qmd
         - chapters/week11.qmd
         - chapters/week12.qmd
-    - part: "3부 기술과 윤리"
+    - part: "기술과 윤리"
       chapters:
         - chapters/week13.qmd
         - chapters/week14.qmd
@@ -44,7 +44,7 @@ book:
         - chapters/week16.qmd
         - chapters/week17.qmd
         - chapters/week18.qmd
-    - part: "4부 노동과 사회"
+    - part: "노동과 사회"
       chapters:
         - chapters/week19.qmd
         - chapters/week20.qmd
@@ -52,7 +52,7 @@ book:
         - chapters/week22.qmd
         - chapters/week23.qmd
         - chapters/week24.qmd
-    - part: "5부 문명과 미래"
+    - part: "문명과 미래"
       chapters:
         - chapters/week25.qmd
         - chapters/week26.qmd
@@ -76,6 +76,7 @@ format:
     smooth-scroll: true
   epub:
     toc: true
+    toc-depth: 1
     number-sections: true
   pdf:
     documentclass: scrbook
@@ -99,11 +100,14 @@ format:
       - top=18mm
       - bottom=20mm
     toc: true
+    toc-depth: 1
     number-sections: true
     colorlinks: false
 
 filters:
   - book-question.lua
+  - table-widths.lua
+  - hanja-font.lua
 
 execute:
   freeze: auto

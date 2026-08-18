@@ -7,13 +7,15 @@ Every release still requires source review and human approval.
 from pathlib import Path
 import csv
 
+from chapter_blueprints import ARCHIVE_CASES, BLUEPRINTS
+
 ROOT = Path(__file__).resolve().parents[1]
 CHAPTERS = ROOT / "book" / "chapters"
 DATA = ROOT / "data"
 
 TOPICS = [
-    (1, "우크라이나 전쟁, 네온·헬륨, 전장의 AI", "전쟁이 공급망을 흔들 때 기업은 효율보다 회복탄력성을 우선해야 하는가", "세종대의 법과 권한 책문—눈앞의 폐단을 고치다 다음 환란을 만들지 말라", "World Bank Ukraine overview", "https://www.worldbank.org/en/country/ukraine/overview", "우크라이나 GDP·재건비용, 초고순도 네온 가격 충격, 헬륨 생산국 집중도, 전장 AI의 운용 범위를 서로 다른 축으로 본다. 네온과 헬륨을 같은 가스로 뭉뚱그리지 않는다.", "다중 공급처와 안전재고에 비용을 쓰는 것은 평시 수익률을 낮추더라도 생존을 사는 보험이다.", "과잉 재고와 국산화 집착은 혁신 투자를 잠식한다. 가격 신호와 장기계약이 정부 주도 자급보다 효율적이다.", "핵심은 자급률이 아니라 대체까지 걸리는 시간, 품질 인증 기간, 단일 장애점의 크기를 공개하는 것이다."),
-    (2, "미·중 수출통제와 기술의 국적", "첨단 반도체 장비와 AI 칩의 수출을 안보를 이유로 제한할 수 있는가", "신숙주의 언로론—두려운 말을 막으면 정책은 아첨만 듣는다", "U.S. BIS semiconductor export controls", "https://www.bis.gov/advanced-computing-semiconductor-manufacturing-items-controls-china", "통제품목 범위, 허가 건수, 장비기업의 지역별 매출, 중국의 국산화 투자와 우회무역 징후를 같은 시계열에 둔다.", "군사 전용 가능성이 큰 기술은 시장재보다 전략자산이다. 통제의 지연 효과만으로도 안보 편익이 있다.", "광범위한 통제는 동맹 기업에 비용을 전가하고 경쟁국의 자립을 촉진한다. 좁고 검증 가능한 통제가 낫다.", "통제의 정당성은 목적, 범위, 일몰조항, 동맹 간 비용분담, 민간 피해를 측정할 지표가 있을 때 강해진다."),
+    (1, "전쟁은 인류를 진보시키는가", "전쟁은 인류를 진보하게 하는가, 아니면 퇴보하게 하는가", "전쟁 뒤의 백성을 묻는 책문—강해진 병기가 백성의 삶도 나아지게 했는가", "NATO JALLC Ukraine Insights 2026", "https://nllp.jallc.nato.int/iks/sharing%20public/20260409_u_q2-26%20sagu%20nsatu%20ukraine%20insights%20newsletter.pdf", "세계대전이 항공·무선·레이더의 개발과 양산을 가속한 역사, 냉전기 ARPANET·GPS의 민간 확산, 우크라이나 전쟁과 미국–이란 무력충돌의 드론·전자전·반도체 이중용도를 구분해 본다.", "전쟁은 자원과 현장 피드백을 집중해 기술 능력의 발전을 가속하고, 일부 성과는 민간 기반시설로 확산된다.", "전쟁은 살상·감시·통제의 효율을 먼저 높이며 인명·인프라·교육·자유의 손실을 기술 편익으로 상쇄할 수 없다.", "기술 능력과 인간의 진보를 분리하고 생명 보호, 민간 전환, 책임 추적, 오용 통제, 평화적 대안을 함께 평가해야 한다."),
+    (2, "미·중 수출통제와 기술의 국적", "미국의 대중국 첨단 반도체 통제는 한국 산업에 기회인가, 장기적 위험인가", "강대국 사이의 책문—동맹의 이익과 나라의 기술 자율성을 함께 지킬 방도는 무엇인가", "U.S. BIS semiconductor export controls", "https://www.bis.gov/press-release/bis-updated-public-information-page-export-controls-imposed-advanced-computing-semiconductor", "통제품목과 허가 범위, ASML의 중국 출하 매출, 한국 장비사의 중국 의존도, 중국의 양산 장비 채택과 공정 자동화를 서로 다른 지표로 본다.", "통제는 중국의 첨단 장비·AI 칩 확보를 늦춰 한국 기업이 기술 격차와 동맹 시장을 활용할 시간을 준다.", "통제는 한국 장비사의 수출·서비스를 제한하고 중국의 국산 장비·공정 자동화·우회 혁신을 촉진할 수 있다.", "통제로 번 시간을 독보적 기술과 고객 다변화로 바꾸고, 허가 범위 안에서 매출 집중도·기술 격차·인증기간을 관리해야 한다."),
     (3, "대만해협과 세계의 단일 장애점", "효율적으로 집중된 생산기지가 세계 경제를 인질로 만들 수 있는가", "의정부와 육조의 권한 책문—직책이 있는 곳에 책임과 권력을 함께 두라", "TSMC annual reports", "https://investor.tsmc.com/english/annual-reports", "첨단공정 생산 비중, 해외 팹 투자, 고객 집중도, 지진·가뭄·해협 위험 시나리오의 손실 범위를 비교한다.", "지역 분산은 보험이다. 정부 보조금은 시장이 과소평가하는 시스템 위험을 교정한다.", "첨단 생태계는 장비·인재·협력사가 함께 있어야 한다. 정치적 분산은 비용만 늘리고 진짜 복원력을 보장하지 않는다.", "공장 수가 아니라 대체 가능한 수율, 인력, 장비 정비, 전력·물, 물류까지 포함한 복원 시간을 측정해야 한다."),
     (4, "한일 소재 분쟁과 상호의존의 역설", "상대국 의존을 줄이는 것이 언제 경제안보이고 언제 경제적 고립인가", "광해군대 전후 복구 책문—원한과 생존 사이에서 백성을 먼저 보라", "Japan METI trade control policy", "https://www.meti.go.jp/english/policy/external_economy/trade_control/index.html", "불화수소·포토레지스트·플루오린 폴리이미드의 무역액, 국산화율, 재고일수, 품질 인증 기간을 사건 전후로 본다.", "핵심소재의 최소 자립역량은 협상력을 지키는 공공재다.", "국산화율 목표는 더 비싼 공급자를 보호할 수 있다. 상호의존 자체가 갈등 억지 장치일 수 있다.", "품목별 대체시간과 실패비용을 기준으로 다변화, 공동비축, 국내 역량을 다르게 조합해야 한다."),
     (5, "칩 동맹과 보조금 경쟁", "국가가 특정 반도체 기업의 공장에 세금을 지원해도 되는가", "성삼문의 법치론—법을 백 번 고쳐도 사람과 운영이 바뀌지 않으면 헛되다", "U.S. CHIPS Program Office", "https://www.nist.gov/chips", "보조금·세액공제 규모, 유발된 민간투자, 일자리의 질, 지역 전력·물 비용, 공급능력 증가를 추적한다.", "첨단 팹의 안보·지식 파급효과는 기업이 혼자 회수할 수 없어 공공투자가 정당하다.", "이익은 사유화하고 손실은 사회화할 위험이 있다. 보조금은 정치적으로 강한 기업에 집중된다.", "환수조항, 초과이익 공유, 노동·환경 조건, 성과 공개가 있을 때 보조금은 산업정책이 되고 없으면 특혜가 된다."),
@@ -90,9 +92,12 @@ categories: [반도체, 인문학, 토론, 데이터]
 
 {condition}
 
-## 판정 조건
+## AI 조사 설계
 
-좋은 답은 A와 B를 절충해 가운데에 서는 답이 아니다. 어떤 조건에서는 A가, 다른 조건에서는 B가 옳다고 말하고 그 경계를 측정 가능하게 만드는 답이다. 최소한 **효율, 회복탄력성, 분배, 가역성, 설명책임** 가운데 세 축을 사용해 선택을 검증하라.
+- **프롬프트:** 질문의 정의, 당사자와 확인할 지표를 먼저 요청한다.
+- **데이터 취득:** 기관·연도·단위·직접 URL을 함께 기록한다.
+- **정보 판정:** 사실·전망·가상 조건과 이해관계가 있는 발표를 분리한다.
+- **토론의 핵심:** 어떤 지표가 어느 수준이면 결론을 바꿀지 정한다.
 
 면접에서라면 ① 결론 한 문장, ② 근거 데이터 두 개, ③ 가장 강한 반론, ④ 결론이 바뀌는 조건 순서로 90초 안에 말한다. 모르는 숫자를 지어내지 말고 어떤 자료를 확인하겠다고 답한다.
 
@@ -110,17 +115,38 @@ categories: [반도체, 인문학, 토론, 데이터]
 
 
 def main():
-    CHAPTERS.mkdir(parents=True, exist_ok=True)
+    """Refresh the editorial catalog without overwriting finished manuscripts."""
     DATA.mkdir(parents=True, exist_ok=True)
-    for topic in TOPICS:
-        week = topic[0]
-        (CHAPTERS / f"week{week:02d}.qmd").write_text(render(topic), encoding="utf-8")
 
     with (DATA / "topic-catalog.csv").open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.writer(handle)
         writer.writerow(["week", "title", "question", "chaekmun_motif", "primary_source", "source_url"])
-        for week, title, question, motif, source, url, *_ in TOPICS:
-            writer.writerow([week, title, question, motif, source, url])
+        writer.writerow([
+            1,
+            "전쟁은 인류를 진보시키는가",
+            "전쟁은 인류를 진보하게 하는가, 아니면 퇴보하게 하는가",
+            ARCHIVE_CASES["war"]["title"],
+            ARCHIVE_CASES["war"]["record_label"],
+            ARCHIVE_CASES["war"]["url"],
+        ])
+        writer.writerow([
+            2,
+            "미·중 수출통제와 기술의 국적",
+            "미국의 대중국 첨단 반도체 통제는 한국 산업에 기회인가, 장기적 위험인가",
+            ARCHIVE_CASES["diplomacy"]["title"],
+            ARCHIVE_CASES["diplomacy"]["record_label"],
+            ARCHIVE_CASES["diplomacy"]["url"],
+        ])
+        for week, item in BLUEPRINTS.items():
+            archive = ARCHIVE_CASES[item["archive"]]
+            writer.writerow([
+                week,
+                item["title"],
+                item["question"],
+                archive["title"],
+                archive["record_label"],
+                archive["url"],
+            ])
 
 
 if __name__ == "__main__":

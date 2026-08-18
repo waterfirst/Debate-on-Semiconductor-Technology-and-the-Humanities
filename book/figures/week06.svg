@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
-<title id="title">제재, 민간 피해, 기업의 도덕적 거리</title>
+<title id="title">민수용 주문과 제재의 경계</title>
 <style>
   .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
   .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
@@ -7,7 +7,7 @@
   .axis{stroke:#768594;stroke-width:1.4} .note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
 </style>
 <rect class="bg" width="100%" height="100%" rx="18"/>
-<text x="30" y="44" class="title">제재, 민간 피해, 기업의 도덕적 거리</text>
+<text x="30" y="44" class="title">민수용 주문과 제재의 경계</text>
 <text x="30" y="72" class="unit">단위: 백만 명</text><desc id="desc">범주별 세로 비교 차트</desc><line x1="78" y1="350" x2="850" y2="350" class="axis"/><rect x="157.3" y="319.6" width="112.0" height="30.4" rx="7" fill="#A94E32"/><text x="213.3" y="306.6" text-anchor="middle" class="value">5.75</text><text x="213.3" y="380" text-anchor="middle" class="label">우크라이나 피란민</text><rect x="404.0" y="330.2" width="112.0" height="19.8" rx="7" fill="#1F5A75"/><text x="460.0" y="317.2" text-anchor="middle" class="value">3.75</text><text x="460.0" y="380" text-anchor="middle" class="label">우크라이나 실향민</text><rect x="650.7" y="130.0" width="112.0" height="220.0" rx="7" fill="#4D7C6F"/><text x="706.7" y="117.0" text-anchor="middle" class="value">41.6</text><text x="706.7" y="380" text-anchor="middle" class="label">세계 난민</text>
 <rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">세로 비교</text>
 </svg>

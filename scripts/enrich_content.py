@@ -12,7 +12,7 @@ import html
 import math
 from pathlib import Path
 
-from scaffold_content import TOPICS
+from chapter_blueprints import BLUEPRINTS
 
 ROOT = Path(__file__).resolve().parents[1]
 CHAPTERS = ROOT / "book" / "chapters"
@@ -21,8 +21,8 @@ DATA = ROOT / "data"
 
 # chart values in a row always share one unit. facts may use other units.
 EVIDENCE = {
-    1: dict(unit="백만 명", chart=[("해외 피란민", 5.75), ("국내 실향민", 3.75), ("인도지원 필요", 10.8)], facts=["2025년 9월 기준 우크라이나 피란민은 세계 575만 명, 국내 실향민은 375만 명이었다(UNHCR).", "2026년 우크라이나 국내 인도지원 필요 인구는 1,080만 명으로 추산됐다(UNHCR).", "2014년 러시아·우크라이나 충격 때 반도체용 네온 가격은 600% 상승했다(USITC).", "우크라이나 정부는 2024년 AI·Palantir를 활용한 인도적 지뢰 제거를 추진하며 잠재 오염 면적을 15.6만km²로 제시했다.", "미 USGS에 따르면 2020년 미국은 세계 헬륨 생산의 약 44%를 담당했다. 우크라이나 직접 충격은 주로 네온이고 헬륨은 천연가스 생산국 집중 문제다."], source="https://www.unhcr.org/emergencies/ukraine-emergency", source_name="UNHCR Ukraine emergency", extra_sources=[("USITC 반도체 공급망 보고서", "https://www.usitc.gov/publications/332/working_papers/semiconductor_working_paper_corrected_103119.pdf"), ("우크라이나 경제부 AI 지뢰제거", "https://me.gov.ua/News/Detail?lang=en-GB&id=0669a1d8-8c2d-4d66-bb86-a579ed8e628a"), ("USGS helium statistics", "https://www.usgs.gov/centers/national-minerals-information-center/helium-statistics-and-information")]),
-    2: dict(unit="누적 주요 통제 조치", chart=[("2022", 1), ("2023", 2), ("2024", 4), ("2025", 5)], facts=["미국 BIS는 2022년 10월 7일 첨단 컴퓨팅·반도체 제조 통제를 시작했다.", "2023년 10월, 2024년 4월·12월, 2025년 1월에 통제 보완과 우회 차단 조치가 이어졌다.", "2026년 1월에는 H200·MI325X급 제품을 일정 보안 요건 아래 건별 심사하는 정책이 발표됐다."], source="https://www.bis.gov/press-release/department-commerce-revises-license-review-policy-semiconductors-exported-china", source_name="U.S. BIS 2026 license policy"),
+    1: dict(unit="공격 무인기 수(대)", chart=[("2022 Shahed", 700), ("2025 Shahed", 53000)], facts=["NATO의 2026년 우크라이나 전훈 자료는 Shahed 계열 공격 무인기가 2022년 약 700대에서 2025년 5만3천 대 이상으로 늘었다고 제시했다.", "같은 자료는 2025년 격추된 Shahed 계열 표적 가운데 약 40%가 전자전으로 무력화됐다고 제시했다.", "우크라이나 국방부는 2025년 말 자국의 연간 드론 생산능력을 약 2천만 대로 발표했다."], source="https://nllp.jallc.nato.int/iks/sharing%20public/20260409_u_q2-26%20sagu%20nsatu%20ukraine%20insights%20newsletter.pdf", source_name="NATO JALLC Ukraine Insights 2026", extra_sources=[("우크라이나 국방부 드론 생산능력 발표", "https://mod.gov.ua/en/news/denys-shmyhal-the-fastest-way-to-strengthen-europe-s-security-is-to-support-ukraine")]),
+    2: dict(unit="ASML 시스템 매출 중 중국 출하 비중(%)", chart=[("2023", 29), ("2024", 41)], facts=["ASML의 시스템 매출에서 중국 출하 비중은 2023년 29%에서 2024년 41%로 상승했다.", "미국 BIS는 2024년 12월 24종 장비와 3종 소프트웨어 도구, HBM에 통제를 추가했다.", "네덜란드는 2024년 9월 일부 첨단 DUV 노광장비의 국가 허가 범위를 확대했으며, 전면 금지가 아닌 건별 심사라고 밝혔다."], source="https://ourbrand.asml.com/m/62a213cac2117ee6/original/2025_01_29-Presentation-Investor-Relations-Q4-FY-2024.pdf", source_name="ASML Q4 and FY 2024 Investor Presentation", extra_sources=[("U.S. BIS 2024년 12월 통제", "https://media.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military"), ("네덜란드 정부 DUV 허가 확대", "https://www.government.nl/latest/news/2024/09/06/the-netherlands-expands-export-control-measure-advanced-semiconductor-manufacturing-equipment")]),
     3: dict(unit="첨단공정 매출 비중(%)", chart=[("2023", 58), ("2024", 69)], facts=["TSMC의 7nm 이하 첨단공정 매출 비중은 2023년 58%에서 2024년 69%로 늘었다.", "2024년 TSMC는 12인치 환산 웨이퍼 1,290만 장을 출하했다.", "같은 해 288개 공정기술로 522개 고객의 11,878개 제품을 생산했다."], source="https://investor.tsmc.com/static/annualReports/2024/english/index.html", source_name="TSMC 2024 Annual Report"),
     4: dict(unit="일본산 불화수소 수입액(백만 달러)", chart=[("2019", 36.3), ("2021", 12.5), ("2022", 8.3)], facts=["산업통상자원부는 일본산 불화수소 수입액이 2019년 3,630만 달러에서 2021년 1,250만 달러로 66% 감소했다고 밝혔다.", "무역통계 기반 보도에서 2022년 반도체용 불화수소 일본 수입액은 830만 달러로 집계됐다.", "규제 직전 고순도 불화수소의 일본 의존도는 43.9%로 제시됐다."], source="https://www.korea.kr/news/policyNewsView.do?newsId=148899420", source_name="산업통상자원부 소부장 정책자료"),
     5: dict(unit="미 CHIPS 재원(십억 달러)", chart=[("제조 인센티브", 39), ("R&D", 11), ("국방", 2), ("인력", 0.2)], facts=["미 CHIPS and Science Act는 5년간 527억 달러의 연방 재원을 배정했다.", "제조 인센티브 약 390억 달러와 연구개발 약 110억 달러가 핵심 축이다.", "국방부 Microelectronics Commons 20억 달러, NSF 인력·교육기금 2억 달러도 포함된다."], source="https://www.nist.gov/document/chips-america-fact-sheet-federal-incentives", source_name="NIST CHIPS for America fact sheet"),
@@ -46,7 +46,7 @@ EVIDENCE = {
     23: dict(unit="여성 비중(%)", chart=[("연구자", 31.7), ("STEM 졸업", 35), ("G20 STEM 일자리", 22), ("STEM 리더", 10)], facts=["UNESCO는 여성 연구자 비중을 31.7%로 제시했다.", "세계 STEM 졸업자의 여성 비중은 35%, G20 STEM 일자리에서는 22%다.", "STEM 리더 중 여성은 10명 중 1명 수준이다."], source="https://www.unesco.org/en/science-technology-and-innovation/cta", source_name="UNESCO gender gap in science"),
     24: dict(unit="", chart=[], facts=["OECD 2023 성인역량조사에서 다수 국가의 성인학습 참여는 정체하거나 감소했다.", "고용주의 재정지원은 성인학습 참여율과 강하게 연관된다.", "교육 참여의 누적우위, 이른바 매튜 효과 때문에 가장 필요한 사람이 가장 적게 참여할 수 있다."], source="https://www.oecd.org/en/publications/trends-in-adult-learning_ec0624a6-en.html", source_name="OECD Trends in Adult Learning"),
     25: dict(unit="전자폐기물 발생량(백만 톤)", chart=[("2022", 62), ("2030 전망", 82)], facts=["2022년 세계 전자폐기물은 6,200만 톤으로 2010년보다 82% 늘었다.", "공식 수거·재활용률은 22.3%에 그쳤다.", "2030년 발생량은 8,200만 톤, 공식 재활용률은 20%로 낮아질 전망이다."], source="https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling", source_name="UNITAR Global E-waste Monitor 2024"),
-    26: dict(unit="데이터센터 전력소비(TWh)", chart=[("2024", 460), ("2030", 945), ("2035", 1200)], facts=["IEA 기본 시나리오에서 데이터센터 전력소비는 2024년 약 460TWh에서 2030년 945TWh로 두 배가 된다.", "2030년에는 세계 전력소비의 약 3%다.", "가속 서버 전력소비는 2030년까지 연 30% 증가해 순증분의 거의 절반을 차지한다."], source="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai", source_name="IEA Energy and AI"),
+    26: dict(unit="데이터센터 전력소비(TWh)", chart=[("2024 소비", 415), ("2030 소비", 945), ("2035 소비", 1200)], facts=["IEA 기본 시나리오에서 데이터센터 전력소비는 2024년 약 415TWh에서 2030년 945TWh로 두 배 이상 늘어난다.", "2030년에는 세계 전력소비의 약 3%다.", "가속 서버 전력소비는 2030년까지 연 30% 증가해 순증분의 거의 절반을 차지한다."], source="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai", source_name="IEA Energy and AI"),
     27: dict(unit="산업계가 만든 주목할 AI 모델 비중(%)", chart=[("2023", 60), ("2024", 90), ("2025", 91.2)], facts=["산업계가 만든 주목할 AI 모델 비중은 2023년 60%에서 2024년 약 90%로 상승했다.", "2025년에는 산업 93개, 학계 2개로 산업 비중이 91.2%였다.", "2025년 미국은 59개, 중국은 35개의 주목할 모델을 배출했다."], source="https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_1_research_development.pdf", source_name="Stanford AI Index 2026"),
     28: dict(unit="상위 5개 디지털 다국적기업 매출 점유율(%)", chart=[("2017", 21), ("2025", 48)], facts=["UNCTAD는 상위 5개 디지털 다국적기업의 매출 점유율이 2017년 21%에서 2025년 48%로 두 배 이상 늘었다고 밝혔다.", "43개국 기업 전자상거래 매출은 2016~2022년 약 60% 증가했다.", "데이터 현지화는 통제권을 높일 수 있지만 중소기업의 클라우드 접근 비용도 키운다."], source="https://unctad.org/news/highly-concentrated-digital-markets-put-consumers-risk-heres-how-change-course", source_name="UNCTAD digital market concentration"),
     29: dict(unit="", chart=[], facts=["기억의 보존은 저장용량 문제가 아니라 접근권·삭제권·유족권의 충돌이다.", "완전삭제, 검색 비노출, 접근 제한, 기간 만료는 서로 다른 정책 수단이다.", "공익적 기록과 개인의 재출발 권리를 한 개의 보존기간으로 해결할 수 없다."], source="https://www.unesco.org/en/memory-world", source_name="UNESCO Memory of the World"),
@@ -74,7 +74,46 @@ def svg_chart(week: int, title: str, unit: str, rows: list[tuple[str, float]]) -
 <text x="30" y="44" class="title">{html.escape(title)}</text>
 <text x="30" y="72" class="unit">단위: {html.escape(unit)}</text>'''
 
-    if week == 5:
+    if week == 1:
+        body = '''<desc id="desc">러시아의 Shahed 계열 공격 무인기 규모와 우크라이나의 드론 생산능력을 분리해 보여주는 데이터 카드</desc>
+<rect x="42" y="105" width="515" height="238" rx="18" fill="#FCFAF5" stroke="#D8CEC0" stroke-width="2"/>
+<text x="70" y="141" class="label" style="font-weight:700">러시아의 Shahed 계열 공격 무인기</text>
+<text x="96" y="205" class="value" style="font-size:30px;fill:#A94E32">약 700대</text>
+<text x="108" y="238" class="unit">2022년</text>
+<path d="M255 204H357" stroke="#768594" stroke-width="3" marker-end="url(#arrow-week01)"/>
+<text x="306" y="187" text-anchor="middle" class="value">약 76배</text>
+<text x="389" y="205" class="value" style="font-size:30px;fill:#10283F">5.3만 대+</text>
+<text x="435" y="238" class="unit">2025년</text>
+<text x="70" y="300" class="note">2025년 격추 표적 중 약 40%는 전자전으로 무력화</text>
+<rect x="587" y="105" width="291" height="238" rx="18" fill="#10283F"/>
+<text x="615" y="145" style="font:700 17px 'Noto Sans KR',sans-serif;fill:#F7F4ED">우크라이나 드론 산업</text>
+<text x="615" y="215" style="font:700 34px 'Noto Sans KR',sans-serif;fill:#F4C7A8">약 2,000만 대</text>
+<text x="615" y="250" style="font:15px 'Noto Sans KR',sans-serif;fill:#F7F4ED">2025년 말 발표한 연간 생산능력</text>
+<text x="615" y="302" style="font:13px 'Noto Sans KR',sans-serif;fill:#CAD5DF">생산능력은 실제 생산량·전과와 다름</text>
+<text x="42" y="396" class="note">규모와 반복 속도는 기술 발전을 보여주지만, 인류의 진보를 증명하지는 않는다.</text>
+<defs><marker id="arrow-week01" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#768594"/></marker></defs>'''
+        chart_name = "전쟁 기술 데이터"
+    elif week == 2:
+        body = '''<desc id="desc">ASML 시스템 매출의 중국 출하 비중과 주요 수출통제 일정을 함께 보여주는 막대 및 시간표</desc>
+<text x="52" y="112" class="label" style="font-weight:700">ASML 시스템 매출 중 중국 출하 비중</text>
+<rect x="73" y="225" width="118" height="116" rx="8" fill="#1F5A75"/>
+<text x="132" y="208" text-anchor="middle" class="value" style="font-size:27px">29%</text>
+<text x="132" y="370" text-anchor="middle" class="label">2023</text>
+<rect x="240" y="177" width="118" height="164" rx="8" fill="#A94E32"/>
+<text x="299" y="160" text-anchor="middle" class="value" style="font-size:27px">41%</text>
+<text x="299" y="370" text-anchor="middle" class="label">2024</text>
+<text x="54" y="407" class="note">고객 공장 소재지 기준 · 첨단 EUV 확보를 뜻하지 않음</text>
+<line x1="443" y1="136" x2="443" y2="345" stroke="#D9D1C5" stroke-width="2"/>
+<text x="485" y="112" class="label" style="font-weight:700">통제 범위가 넓어진 과정</text>
+<circle cx="488" cy="161" r="8" fill="#1F5A75"/><text x="512" y="166" class="value">2022.10</text>
+<text x="617" y="166" class="label">미 첨단 칩·제조장비 통제</text>
+<circle cx="488" cy="231" r="8" fill="#4D7C6F"/><text x="512" y="236" class="value">2024.09</text>
+<text x="617" y="236" class="label">네덜란드 일부 DUV 허가 확대</text>
+<circle cx="488" cy="301" r="8" fill="#A94E32"/><text x="512" y="306" class="value">2024.12</text>
+<text x="617" y="306" class="label">미 24종 장비·3종 SW·HBM</text>
+<text x="485" y="365" class="note">비중 상승은 통제 실패의 증거가 아니라 DUV 수요·출하 시차를 함께 보라는 신호</text>'''
+        chart_name = "매출과 규제"
+    elif week == 5:
         total = sum(value for _, value in rows)
         radius, circumference, offset = 98, 2 * math.pi * 98, 0.0
         segments = []
@@ -194,6 +233,98 @@ def svg_matrix(title: str) -> str:
 {''.join(items)}</svg>'''
 
 
+def svg_qualitative(week: int, title: str) -> str:
+    """Render a chapter-specific framework when a numeric series is unsuitable."""
+    common = f'''<title id="title">{html.escape(title)}</title>
+<style>
+  .bg{{fill:#F7F4ED}} .title{{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}}
+  .label{{font:700 18px "Noto Sans KR",sans-serif;fill:#10283F}}
+  .small{{font:14px "Noto Sans KR",sans-serif;fill:#675F58}}
+  .big{{font:700 31px "Noto Sans KR",sans-serif;fill:#A94E32}}
+  .badge{{font:700 12px "Noto Sans KR",sans-serif;fill:#F7F4ED}}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="46" class="title">{html.escape(title)}</text>'''
+
+    if week == 13:
+        desc = "NIST AI 위험관리의 거버넌스와 세 실행 기능을 연결한 구조도"
+        body = '''
+<circle cx="460" cy="245" r="78" fill="#10283F"/><text x="460" y="251" text-anchor="middle" class="badge" style="font-size:18px">거버넌스</text>
+<circle cx="215" cy="245" r="66" fill="#FCFAF5" stroke="#A94E32" stroke-width="3"/><text x="215" y="239" text-anchor="middle" class="label">맥락 파악</text><text x="215" y="267" text-anchor="middle" class="small">MAP</text>
+<circle cx="705" cy="165" r="66" fill="#FCFAF5" stroke="#1F5A75" stroke-width="3"/><text x="705" y="159" text-anchor="middle" class="label">위험 측정</text><text x="705" y="187" text-anchor="middle" class="small">MEASURE</text>
+<circle cx="705" cy="325" r="66" fill="#FCFAF5" stroke="#4D7C6F" stroke-width="3"/><text x="705" y="319" text-anchor="middle" class="label">위험 관리</text><text x="705" y="347" text-anchor="middle" class="small">MANAGE</text>
+<path d="M284 245H374M535 221L639 184M535 269L639 306" stroke="#7C8994" stroke-width="3"/>
+<text x="38" y="410" class="small">블랙박스 승인 여부는 정확도 하나가 아니라 관측·중단·책임 구조로 판단합니다.</text>'''
+        badge = "AI RMF 구조"
+    elif week == 17:
+        desc = "직원 모니터링을 안전, 최소수집, 독립재심의 세 축으로 나눈 통제표"
+        body = '''
+<rect x="65" y="125" width="240" height="220" rx="18" fill="#FCFAF5" stroke="#1F5A75" stroke-width="3"/>
+<text x="185" y="170" text-anchor="middle" class="label">가용성·안전</text><text x="185" y="215" text-anchor="middle" class="big">왜 수집합니까</text><text x="185" y="266" text-anchor="middle" class="small">사고 예방에 필요한 신호</text><text x="185" y="294" text-anchor="middle" class="small">보안 목적을 문서화</text>
+<rect x="340" y="125" width="240" height="220" rx="18" fill="#FCFAF5" stroke="#A94E32" stroke-width="3"/>
+<text x="460" y="170" text-anchor="middle" class="label">최소수집·목적제한</text><text x="460" y="215" text-anchor="middle" class="big">무엇을 뺍니까</text><text x="460" y="266" text-anchor="middle" class="small">직무와 무관한 개인신호</text><text x="460" y="294" text-anchor="middle" class="small">목적 밖 재사용 차단</text>
+<rect x="615" y="125" width="240" height="220" rx="18" fill="#FCFAF5" stroke="#4D7C6F" stroke-width="3"/>
+<text x="735" y="170" text-anchor="middle" class="label">보존기한·독립재심</text><text x="735" y="215" text-anchor="middle" class="big">누가 이의합니까</text><text x="735" y="266" text-anchor="middle" class="small">접근기록과 삭제시점</text><text x="735" y="294" text-anchor="middle" class="small">노동자 이의제기 절차</text>
+<text x="65" y="399" class="small">탐지율이 높아도 목적·범위·구제 절차가 없으면 정당한 감시가 아닙니다.</text>'''
+        badge = "통제 3축"
+    elif week == 20:
+        desc = "AI 제품 출시 전에 차례로 통과해야 할 네 개의 안전 게이트"
+        body = '''
+<path d="M126 238H792" stroke="#7C8994" stroke-width="5"/>
+<circle cx="150" cy="238" r="47" fill="#A94E32"/><circle cx="355" cy="238" r="47" fill="#1F5A75"/><circle cx="560" cy="238" r="47" fill="#4D7C6F"/><circle cx="765" cy="238" r="47" fill="#10283F"/>
+<text x="150" y="244" text-anchor="middle" class="badge" style="font-size:18px">1</text><text x="355" y="244" text-anchor="middle" class="badge" style="font-size:18px">2</text><text x="560" y="244" text-anchor="middle" class="badge" style="font-size:18px">3</text><text x="765" y="244" text-anchor="middle" class="badge" style="font-size:18px">4</text>
+<text x="150" y="155" text-anchor="middle" class="label">영향평가</text><text x="355" y="155" text-anchor="middle" class="label">독립검토</text><text x="560" y="155" text-anchor="middle" class="label">제한출시</text><text x="765" y="155" text-anchor="middle" class="label">확대·중단</text>
+<text x="150" y="315" text-anchor="middle" class="small">피해와 사용자</text><text x="355" y="315" text-anchor="middle" class="small">출하 전 반론</text><text x="560" y="315" text-anchor="middle" class="small">가역성 확인</text><text x="765" y="315" text-anchor="middle" class="small">증거로 전환</text>
+<text x="46" y="405" class="small">검토 전에 제한출시부터 하지 않습니다. 게이트의 순서 자체가 책임 설계입니다.</text>'''
+        badge = "출시 게이트"
+    elif week == 21:
+        desc = "신입사원이 이상 수율을 발견한 뒤 시간 제한을 두고 보고하는 절차"
+        body = '''
+<line x1="105" y1="234" x2="815" y2="234" stroke="#7C8994" stroke-width="4"/>
+<circle cx="130" cy="234" r="34" fill="#A94E32"/><circle cx="350" cy="234" r="34" fill="#1F5A75"/><circle cx="570" cy="234" r="34" fill="#4D7C6F"/><circle cx="790" cy="234" r="34" fill="#10283F"/>
+<text x="130" y="155" text-anchor="middle" class="label">이상 발견</text><text x="350" y="155" text-anchor="middle" class="label">원자료 재검증</text><text x="570" y="155" text-anchor="middle" class="label">동시 보고</text><text x="790" y="155" text-anchor="middle" class="label">수정·공시 판단</text>
+<text x="130" y="240" text-anchor="middle" class="badge">발견</text><text x="350" y="240" text-anchor="middle" class="badge">시한</text><text x="570" y="240" text-anchor="middle" class="badge">기록</text><text x="790" y="240" text-anchor="middle" class="badge">책임</text>
+<text x="130" y="314" text-anchor="middle" class="small">숨기지 않기</text><text x="350" y="314" text-anchor="middle" class="small">무기한 지연 금지</text><text x="570" y="314" text-anchor="middle" class="small">상사·독립채널</text><text x="790" y="314" text-anchor="middle" class="small">근거 보존</text>
+<text x="68" y="402" class="small">즉시 보고와 선검증의 충돌은 ‘검증 시한’과 ‘독립 보고선’을 함께 두어 해결합니다.</text>'''
+        badge = "보고 타임라인"
+    elif week == 22:
+        desc = "용인 반도체 클러스터에 필요한 전력과 용수를 나란히 보여주는 데이터 계기판"
+        body = '''
+<rect x="70" y="120" width="365" height="230" rx="24" fill="#FCFAF5" stroke="#1F5A75" stroke-width="3"/>
+<text x="252" y="170" text-anchor="middle" class="label">신규 전력 수요</text><text x="252" y="242" text-anchor="middle" class="big" style="font-size:48px">10GW 이상</text><text x="252" y="294" text-anchor="middle" class="small">2053년까지 정부 전망</text>
+<rect x="485" y="120" width="365" height="230" rx="24" fill="#FCFAF5" stroke="#4D7C6F" stroke-width="3"/>
+<text x="667" y="170" text-anchor="middle" class="label">통합 용수 공급</text><text x="667" y="242" text-anchor="middle" class="big" style="font-size:43px">하루 107.2만㎥</text><text x="667" y="294" text-anchor="middle" class="small">약 300만 명 하루 사용량</text>
+<text x="70" y="400" class="small">비용뿐 아니라 입지별 송전·취수 한계와 지역 편익협약을 함께 판단합니다.</text>'''
+        badge = "지역 부담 계기판"
+    elif week == 24:
+        desc = "자동화 재교육에 필요한 시간과 비용을 원인과 편익에 따라 나누는 분담 구조"
+        body = '''
+<text x="72" y="128" class="label">재교육이 실제 직무전환이 되려면</text>
+<rect x="72" y="162" width="188" height="160" rx="16" fill="#A94E32"/><text x="166" y="215" text-anchor="middle" class="badge" style="font-size:18px">유급 학습시간</text><text x="166" y="258" text-anchor="middle" class="badge">생계 장벽 제거</text>
+<rect x="274" y="162" width="188" height="160" rx="16" fill="#1F5A75"/><text x="368" y="215" text-anchor="middle" class="badge" style="font-size:18px">교육비 지원</text><text x="368" y="258" text-anchor="middle" class="badge">고용주·공공 분담</text>
+<rect x="476" y="162" width="188" height="160" rx="16" fill="#4D7C6F"/><text x="570" y="215" text-anchor="middle" class="badge" style="font-size:18px">전환 배치</text><text x="570" y="258" text-anchor="middle" class="badge">수료 뒤 일자리</text>
+<rect x="678" y="162" width="170" height="160" rx="16" fill="#10283F"/><text x="763" y="215" text-anchor="middle" class="badge" style="font-size:18px">개인 선택</text><text x="763" y="258" text-anchor="middle" class="badge">경력 방향 참여</text>
+<text x="72" y="388" class="small">수료율이 아니라 직무 이동률·임금 유지율·중도탈락의 원인을 봅니다.</text>'''
+        badge = "전환 분담표"
+    elif week == 29:
+        desc = "퇴사자 업무기록을 필드별로 나누고 보존 기한 뒤 재심하는 생애주기"
+        body = '''
+<rect x="62" y="145" width="180" height="170" rx="18" fill="#FCFAF5" stroke="#A94E32" stroke-width="3"/><text x="152" y="195" text-anchor="middle" class="label">1. 수집</text><text x="152" y="240" text-anchor="middle" class="small">업무 목적 명시</text><text x="152" y="270" text-anchor="middle" class="small">불필요 항목 제외</text>
+<rect x="267" y="145" width="180" height="170" rx="18" fill="#FCFAF5" stroke="#1F5A75" stroke-width="3"/><text x="357" y="195" text-anchor="middle" class="label">2. 필드 분리</text><text x="357" y="240" text-anchor="middle" class="small">품질·개인정보 분리</text><text x="357" y="270" text-anchor="middle" class="small">접근권 차등</text>
+<rect x="472" y="145" width="180" height="170" rx="18" fill="#FCFAF5" stroke="#4D7C6F" stroke-width="3"/><text x="562" y="195" text-anchor="middle" class="label">3. 기간 만료</text><text x="562" y="240" text-anchor="middle" class="small">자동 비가시화</text><text x="562" y="270" text-anchor="middle" class="small">보존 사유 재심</text>
+<rect x="677" y="145" width="180" height="170" rx="18" fill="#FCFAF5" stroke="#10283F" stroke-width="3"/><text x="767" y="195" text-anchor="middle" class="label">4. 삭제·보존</text><text x="767" y="240" text-anchor="middle" class="small">근거 있는 최소보존</text><text x="767" y="270" text-anchor="middle" class="small">감사 기록 남김</text>
+<path d="M242 230H260M447 230H465M652 230H670" stroke="#7C8994" stroke-width="4"/>
+<text x="62" y="395" class="small">‘전부 삭제’와 ‘영구 보존’ 사이를 필드·접근권·기한으로 나눕니다.</text>'''
+        badge = "기록 생애주기"
+    else:
+        return svg_matrix(title)
+
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+{common}<desc id="desc">{desc}</desc>{body}
+<rect x="752" y="28" width="138" height="28" rx="14" fill="#10283F"/><text x="821" y="47" text-anchor="middle" class="badge">{badge}</text>
+</svg>'''
+
+
 def render(topic) -> str:
     week, title, question, motif, source_name, source_url, data_lens, pro, con, condition = topic
     ev = EVIDENCE[week]
@@ -259,9 +390,12 @@ categories: [반도체, 인문학, 집단토론, 데이터]
 
 {condition}
 
-## 판정 조건
+## AI 조사 설계
 
-조건부론은 가운데에 서는 타협이 아니다. 무엇을 측정해 어느 임계값에서 A에서 B로, 또는 B에서 A로 전환할지 정하는 답이다. 의사결정자는 효율·회복탄력성·분배·가역성·설명책임 가운데 최소 세 축을 공개해야 한다.
+- **프롬프트:** 찬반 결론을 먼저 요구하지 말고 핵심 용어의 정의와 확인할 지표부터 질문한다.
+- **데이터 취득:** 정부·국제기구·기업 공시의 직접 URL, 기준연도, 단위와 모집단을 함께 기록한다.
+- **정보 판정:** 실측과 전망, 공식 발표와 독립 검증, 사실과 토론용 가정을 분리한다.
+- **토론의 핵심:** 무엇을 측정해 어느 임계값에서 A·B·C 사이의 결정을 바꿀지 정한다.
 
 ## 사례형 토론
 
@@ -301,23 +435,29 @@ categories: [반도체, 인문학, 집단토론, 데이터]
 
 
 def main() -> None:
-    CHAPTERS.mkdir(parents=True, exist_ok=True)
+    """Rebuild data figures without overwriting the edited chapter manuscripts."""
     FIGURES.mkdir(parents=True, exist_ok=True)
     DATA.mkdir(parents=True, exist_ok=True)
+    titles = {
+        1: "전쟁은 인류를 진보시키는가",
+        2: "미·중 수출통제와 기술의 국적",
+        **{week: item["title"] for week, item in BLUEPRINTS.items()},
+    }
     records = []
-    for topic in TOPICS:
-        week, title = topic[0], topic[1]
+    for week in range(1, 31):
+        title = titles[week]
         ev = EVIDENCE[week]
-        (CHAPTERS / f"week{week:02d}.qmd").write_text(render(topic), encoding="utf-8")
         if ev["chart"]:
             (FIGURES / f"week{week:02d}.svg").write_text(svg_chart(week, title, ev["unit"], ev["chart"]), encoding="utf-8")
+        else:
+            (FIGURES / f"week{week:02d}.svg").write_text(svg_qualitative(week, title), encoding="utf-8")
         for label, value in ev["chart"]:
             records.append([week, title, label, value, ev["unit"], ev["source"]])
     with (DATA / "evidence.csv").open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.writer(handle)
         writer.writerow(["week", "topic", "label", "value", "unit", "source_url"])
         writer.writerows(records)
-    print(f"wrote 30 chapters, {len(list(FIGURES.glob('week*.svg')))} charts, {len(records)} evidence rows")
+    print(f"preserved 30 edited chapters, rebuilt {len(list(FIGURES.glob('week*.svg')))} charts and {len(records)} evidence rows")
 
 
 if __name__ == "__main__":
