@@ -111,4 +111,4 @@ NIST AI 위험관리 프레임워크는 GOVERN·MAP·MEASURE·MANAGE 네 기능�
 - [NIST, *Concept Note: AI RMF Profile on Trustworthy AI in Critical Infrastructure* (2026)](https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure)
 - [조선시대 책문 아카이브, 명종 「하늘의 이치와 인간의 정치」 개별 항목](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#myeongjong-1558/0)
 
-> 데이터 기준일: 2026년 8월 18일. NIST의 네 기능은 공공 문서의 근거이며, 수율·오탐·개입·복귀 수치는 사례를 위해 만든 가정입니다.
+> **자료 메모:** NIST의 네 기능은 공공 문서의 근거이며, 수율·오탐·개입·복귀 수치는 사례를 위해 만든 가정입니다.

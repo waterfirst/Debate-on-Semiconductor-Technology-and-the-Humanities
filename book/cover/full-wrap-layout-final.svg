@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="5788" height="2551" viewBox="0 0 5788 2551">
+<svg xmlns="http://www.w3.org/2000/svg" width="5741" height="2551" viewBox="0 0 5741 2551">
   <!--
     A5 wing cover at 300 dpi.
     3 mm outer bleed + 80 mm back flap + 3 mm fold allowance +
-    148 mm back + 22 mm spine + 148 mm front +
+    148 mm back + 18 mm spine + 148 mm front +
     3 mm fold allowance + 80 mm front flap + 3 mm outer bleed.
   -->
   <defs>
@@ -22,7 +22,7 @@
     <clipPath id="backFlapClip"><rect x="0" y="0" width="1015" height="2551"/></clipPath>
   </defs>
 
-  <rect width="5788" height="2551" fill="#f5f0e3"/>
+  <rect width="5741" height="2551" fill="#f5f0e3"/>
 
   <!-- Back flap: daytime gwageo-on-wafer illustration and first-book message. -->
   <g clip-path="url(#backFlapClip)">
@@ -49,38 +49,38 @@
   <!-- Back cover, spine, and front cover. -->
   <image href="back-cover-final.png" x="1015" y="0" width="1748" height="2551"
          preserveAspectRatio="xMidYMid slice"/>
-  <rect x="2763" y="0" width="260" height="2551" fill="#e4e8e8"/>
-  <path d="M2763 0V2551M3023 0V2551" stroke="#6f8797" stroke-opacity="0.46" stroke-width="2"/>
-  <text x="0" y="0" transform="translate(2921 178) rotate(90)" fill="#071b2d"
+  <rect x="2763" y="0" width="213" height="2551" fill="#e4e8e8"/>
+  <path d="M2763 0V2551M2976 0V2551" stroke="#6f8797" stroke-opacity="0.46" stroke-width="2"/>
+  <text x="0" y="0" transform="translate(2898 178) rotate(90)" fill="#071b2d"
         font-family="KoPub Batang, serif" font-weight="700" font-size="38" letter-spacing="1">반도체 면접, 왕의 질문에 답하라</text>
-  <text x="0" y="0" transform="translate(2921 2110) rotate(90)" fill="#31536a"
+  <text x="0" y="0" transform="translate(2898 2110) rotate(90)" fill="#31536a"
         font-family="KoPub Dotum, sans-serif" font-weight="700" font-size="18" letter-spacing="2">SCHOLAR BRIDGE</text>
-  <image href="front-cover-final.png" x="3023" y="0" width="1748" height="2551"
+  <image href="front-cover-final.png" x="2976" y="0" width="1748" height="2551"
          preserveAspectRatio="xMidYMid slice"/>
 
   <!-- Front flap: a short note to applicants. -->
-  <rect x="4771" y="0" width="1017" height="2551" fill="url(#flapFade)"/>
-  <rect x="4771" y="0" width="1017" height="2551" fill="url(#flapGrid)"/>
-  <circle cx="5680" cy="220" r="420" fill="none" stroke="#53758b" stroke-opacity="0.20" stroke-width="5"/>
+  <rect x="4724" y="0" width="1017" height="2551" fill="url(#flapFade)"/>
+  <rect x="4724" y="0" width="1017" height="2551" fill="url(#flapGrid)"/>
+  <circle cx="5633" cy="220" r="420" fill="none" stroke="#53758b" stroke-opacity="0.20" stroke-width="5"/>
   <g font-family="KoPub Dotum, sans-serif" fill="#071b2d">
-    <text x="4900" y="250" font-family="KoPub Batang, serif" font-size="54" font-weight="700">지원자에게</text>
-    <rect x="4900" y="315" width="108" height="7" fill="#a94e32"/>
-    <text x="4900" y="420" font-size="33" font-weight="500">
-      <tspan x="4900" dy="0">면접은 정답을 맞히는 자리가</tspan>
-      <tspan x="4900" dy="53">아닙니다. 복잡한 문제 앞에서</tspan>
-      <tspan x="4900" dy="53">무엇을 보고, 어떤 근거로</tspan>
-      <tspan x="4900" dy="53">판단하는지를 보여주는 자리입니다.</tspan>
+    <text x="4853" y="250" font-family="KoPub Batang, serif" font-size="54" font-weight="700">지원자에게</text>
+    <rect x="4853" y="315" width="108" height="7" fill="#a94e32"/>
+    <text x="4853" y="420" font-size="33" font-weight="500">
+      <tspan x="4853" dy="0">면접은 정답을 맞히는 자리가</tspan>
+      <tspan x="4853" dy="53">아닙니다. 복잡한 문제 앞에서</tspan>
+      <tspan x="4853" dy="53">무엇을 보고, 어떤 근거로</tspan>
+      <tspan x="4853" dy="53">판단하는지를 보여주는 자리입니다.</tspan>
 
-      <tspan x="4900" dy="90">이 책은 산업의 숫자를 외우게 하지</tspan>
-      <tspan x="4900" dy="53">않습니다. 데이터를 읽고 반론을 세우며,</tspan>
-      <tspan x="4900" dy="53">조건이 달라질 때 결론을 바꾸는</tspan>
-      <tspan x="4900" dy="53">연습을 돕습니다.</tspan>
+      <tspan x="4853" dy="90">이 책은 산업의 숫자를 외우게 하지</tspan>
+      <tspan x="4853" dy="53">않습니다. 데이터를 읽고 반론을 세우며,</tspan>
+      <tspan x="4853" dy="53">조건이 달라질 때 결론을 바꾸는</tspan>
+      <tspan x="4853" dy="53">연습을 돕습니다.</tspan>
 
-      <tspan x="4900" dy="90">면접장 문 앞에서 여러분의 답이</tspan>
-      <tspan x="4900" dy="53">남의 문장이 아니라 자기 판단이기를</tspan>
-      <tspan x="4900" dy="53">바랍니다.</tspan>
+      <tspan x="4853" dy="90">면접장 문 앞에서 여러분의 답이</tspan>
+      <tspan x="4853" dy="53">남의 문장이 아니라 자기 판단이기를</tspan>
+      <tspan x="4853" dy="53">바랍니다.</tspan>
     </text>
-    <text x="4900" y="2190" font-family="KoPub Batang, serif" font-size="38" font-weight="700">최낙초</text>
-    <text x="4900" y="2250" fill="#31536a" font-size="29" font-weight="500">반도체·디스플레이 제조업 25년차 엔지니어</text>
+    <text x="4853" y="2190" font-family="KoPub Batang, serif" font-size="38" font-weight="700">최낙초</text>
+    <text x="4853" y="2250" fill="#31536a" font-size="29" font-weight="500">반도체·디스플레이 제조업 25년차 엔지니어</text>
   </g>
 </svg>

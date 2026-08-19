@@ -1,13 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
-<title id="title">민수용 주문과 제재의 경계</title>
-<style>
-  .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
-  .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
-  .value{font:700 15px "Noto Sans KR",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
-  .axis{stroke:#768594;stroke-width:1.4} .note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
-</style>
-<rect class="bg" width="100%" height="100%" rx="18"/>
-<text x="30" y="44" class="title">민수용 주문과 제재의 경계</text>
-<text x="30" y="72" class="unit">단위: 백만 명</text><desc id="desc">범주별 세로 비교 차트</desc><line x1="78" y1="350" x2="850" y2="350" class="axis"/><rect x="157.3" y="319.6" width="112.0" height="30.4" rx="7" fill="#A94E32"/><text x="213.3" y="306.6" text-anchor="middle" class="value">5.75</text><text x="213.3" y="380" text-anchor="middle" class="label">우크라이나 피란민</text><rect x="404.0" y="330.2" width="112.0" height="19.8" rx="7" fill="#1F5A75"/><text x="460.0" y="317.2" text-anchor="middle" class="value">3.75</text><text x="460.0" y="380" text-anchor="middle" class="label">우크라이나 실향민</text><rect x="650.7" y="130.0" width="112.0" height="220.0" rx="7" fill="#4D7C6F"/><text x="706.7" y="117.0" text-anchor="middle" class="value">41.6</text><text x="706.7" y="380" text-anchor="middle" class="label">세계 난민</text>
-<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">세로 비교</text>
+  <title id="title">경고의 개수보다 라벨과 기준율</title>
+  <desc id="desc">UCI SECOM의 라인 시험 합격과 불합격 수, 면접 가정에서 실제 고장과 오탐 및 미탐의 기대 건수를 구분한다.</desc>
+  <style>
+    .bg{fill:#F7F4ED}.panel{fill:#FCFAF5;stroke:#D9D1C5;stroke-width:1.2}.title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}.sub{font:14px "Noto Sans KR",sans-serif;fill:#6A625A}.head{font:700 18px "Noto Sans KR",sans-serif;fill:#10283F}.label{font:15px "Noto Sans KR",sans-serif;fill:#253443}.value{font:700 20px "Noto Sans KR",sans-serif;fill:#10283F}.small{font:13px "Noto Sans KR",sans-serif;fill:#6A625A}.track{fill:#E4DDD2}.pass{fill:#4D7C6F}.fail{fill:#A94E32}.tp{fill:#DCE8E3}.fp{fill:#F1DED8}.fn{fill:#EFE7D1}.tn{fill:#E7E9E8}
+  </style>
+  <rect class="bg" width="920" height="440" rx="18"/>
+  <text x="30" y="42" class="title">경고의 개수보다 라벨과 기준율</text>
+  <text x="30" y="68" class="sub">공개 원자료와 면접용 가정을 분리해 읽습니다</text>
+  <rect x="30" y="92" width="390" height="300" rx="14" class="panel"/>
+  <rect x="440" y="92" width="450" height="300" rx="14" class="panel"/>
+  <text x="52" y="124" class="head">UCI SECOM · 공식 원자료</text>
+  <text x="52" y="148" class="sub">1,567건 · 591개 변수 · 결측 있음</text>
+  <text x="52" y="194" class="label">합격</text>
+  <rect x="112" y="178" width="274" height="22" rx="8" class="track"/>
+  <rect x="112" y="178" width="256" height="22" rx="8" class="pass"/>
+  <text x="386" y="196" text-anchor="end" class="value">1,463</text>
+  <text x="52" y="253" class="label">불합격</text>
+  <rect x="112" y="237" width="274" height="22" rx="8" class="track"/>
+  <rect x="112" y="237" width="18" height="22" rx="8" class="fail"/>
+  <text x="386" y="255" text-anchor="end" class="value">104</text>
+  <rect x="52" y="291" width="346" height="72" rx="10" fill="#E9E3D9"/>
+  <text x="225" y="319" text-anchor="middle" class="label">불합격 비율 6.64%</text>
+  <text x="225" y="344" text-anchor="middle" class="small">라인 시험 라벨 ≠ 장비 고장 라벨</text>
+  <text x="462" y="124" class="head">면접 가정 · 1,000구간</text>
+  <text x="462" y="148" class="sub">고장률 1% · 민감도 90% · 특이도 95%</text>
+  <rect x="462" y="168" width="193" height="78" rx="10" class="tp"/>
+  <rect x="667" y="168" width="201" height="78" rx="10" class="fp"/>
+  <rect x="462" y="258" width="193" height="78" rx="10" class="fn"/>
+  <rect x="667" y="258" width="201" height="78" rx="10" class="tn"/>
+  <text x="478" y="192" class="small">실제 고장 · 경고</text>
+  <text x="638" y="226" text-anchor="end" class="value">9건</text>
+  <text x="683" y="192" class="small">실제 정상 · 오탐</text>
+  <text x="851" y="226" text-anchor="end" class="value">약 50건</text>
+  <text x="478" y="282" class="small">실제 고장 · 미탐</text>
+  <text x="638" y="316" text-anchor="end" class="value">1건</text>
+  <text x="683" y="282" class="small">실제 정상 · 무경고</text>
+  <text x="851" y="316" text-anchor="end" class="value">약 940건</text>
+  <text x="665" y="367" text-anchor="middle" class="label">경고 약 59건 중 실제 고장 약 15%</text>
 </svg>

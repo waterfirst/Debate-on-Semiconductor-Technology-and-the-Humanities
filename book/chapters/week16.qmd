@@ -113,4 +113,4 @@ categories: [반도체, 지식재산, 오픈소스, 집단토론]
 - [World Intellectual Property Organization, *Technology Transfer Agreements* (2026 열람)](https://www.wipo.int/en/web/technology-transfer/agreements)
 - [조선시대 책문 아카이브, 명종대 「교육은 어디로 가야 하는가」 개별 항목](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#myeongjong-1558-education/0)
 
-> 데이터 기준일: 2026년 8월 18일. 특허출원 수·증가율·지역 비중은 WIPO 자료이며, 공공·기업 비용 비율, 독점 요구기간과 모범답안의 기간은 가상 조건 또는 제안값입니다.
+> **자료 메모:** 특허출원 수·증가율·지역 비중은 WIPO 자료이며, 공공·기업 비용 비율, 독점 요구기간과 모범답안의 기간은 가상 조건 또는 제안값입니다.

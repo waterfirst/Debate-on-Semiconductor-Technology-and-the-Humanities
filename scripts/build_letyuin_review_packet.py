@@ -87,7 +87,7 @@ def cover_page() -> PdfReader:
     page.setFont("Review-Regular", 9.2)
     page.drawString(18 * mm, y, "조선의 책문으로 훈련하는")
     y -= 6 * mm
-    page.drawString(18 * mm, y, "AI·전쟁·환율·공급망 데이터 토론 30")
+    page.drawString(18 * mm, y, "AI·공정·설계·공급망 데이터 토론")
 
     box_y = 48 * mm
     box_h = 39 * mm

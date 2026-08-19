@@ -20,17 +20,17 @@
     <text x="130" y="390" font-family="KoPub Batang" font-size="66" font-weight="700">엔지니어가 답한다.</text>
 
     <text x="130" y="580" font-size="42" font-weight="500">
-      <tspan x="130" dy="0">조선의 책문은 왕이 인재에게 던진</tspan>
-      <tspan x="130" dy="68">국가의 질문이었다.</tspan>
-      <tspan x="130" dy="96">이 책은 그 질문의 형식을 오늘의</tspan>
-      <tspan x="130" dy="68">반도체 산업으로 옮긴다.</tspan>
-      <tspan x="130" dy="96">AI, 전쟁, 환율, 공급망, 기술윤리의</tspan>
-      <tspan x="130" dy="68">충돌 앞에서 정답을 암기하는 대신,</tspan>
-      <tspan x="130" dy="68">근거를 세우고 판단하는 힘을 훈련한다.</tspan>
+      <tspan x="130" dy="0">2026년, 반도체는 국가전략과 안보,</tspan>
+      <tspan x="130" dy="68">증시와 자본, 빅테크와 제조업,</tspan>
+      <tspan x="130" dy="68">전력과 일자리를 동시에 흔든다.</tspan>
+      <tspan x="130" dy="96">이 책은 그 현실을 조선의 책문처럼 묻는다.</tspan>
+      <tspan x="130" dy="68">AI로 자료를 찾고 출처를 검증하며,</tspan>
+      <tspan x="130" dy="68">강한 반론과 결론이 바뀌는 조건까지</tspan>
+      <tspan x="130" dy="68">말하는 힘을 훈련한다.</tspan>
     </text>
 
     <rect x="130" y="1285" width="1488" height="2" fill="#52758d" opacity="0.42"/>
-    <text x="130" y="1390" fill="#31536a" font-size="34" font-weight="700" letter-spacing="1">30개의 질문  ·  데이터 근거  ·  찬반 토론  ·  면접 실전</text>
+    <text x="130" y="1390" fill="#31536a" font-size="34" font-weight="700" letter-spacing="1">핵심 질문  ·  데이터 근거  ·  찬반 토론  ·  면접 실전</text>
   </g>
 
   <!-- Publisher lockup: balances the ISBN/EAN barcode box without competing with the cover copy. -->

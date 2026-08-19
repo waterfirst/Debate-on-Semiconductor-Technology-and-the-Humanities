@@ -1,13 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
-<title id="title">학력을 가린 직무시험은 더 공정한가</title>
-<style>
-  .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
-  .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
-  .value{font:700 15px "Noto Sans KR",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
-  .axis{stroke:#768594;stroke-width:1.4} .note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
-</style>
-<rect class="bg" width="100%" height="100%" rx="18"/>
-<text x="30" y="44" class="title">학력을 가린 직무시험은 더 공정한가</text>
-<text x="30" y="72" class="unit">단위: 교육수준별 상대임금 지수</text><desc id="desc">범주별 세로 비교 차트</desc><line x1="78" y1="350" x2="850" y2="350" class="axis"/><rect x="157.3" y="240.0" width="112.0" height="110.0" rx="7" fill="#A94E32"/><text x="213.3" y="227.0" text-anchor="middle" class="value">100</text><text x="213.3" y="380" text-anchor="middle" class="label">중등 미만</text><rect x="404.0" y="220.2" width="112.0" height="129.8" rx="7" fill="#1F5A75"/><text x="460.0" y="207.2" text-anchor="middle" class="value">118</text><text x="460.0" y="380" text-anchor="middle" class="label">중등</text><rect x="650.7" y="130.0" width="112.0" height="220.0" rx="7" fill="#4D7C6F"/><text x="706.7" y="117.0" text-anchor="middle" class="value">200</text><text x="706.7" y="380" text-anchor="middle" class="label">고등교육</text>
-<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">세로 비교</text>
+  <title id="title">반도체 팹의 물은 어디에 쓰이는가</title>
+  <desc id="desc">반도체 공정 48퍼센트, 시설 지원 23퍼센트, 배출가스 저감 20퍼센트, 초순수 처리 손실 9퍼센트를 비교한 막대그래프</desc>
+  <style>
+    .bg{fill:#F7F4ED}.title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
+    .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A}.label{font:15px "Noto Sans KR",sans-serif;fill:#253443}
+    .value{font:700 17px "Noto Sans KR",sans-serif;fill:#10283F}.axis{stroke:#768594;stroke-width:1.4}
+    .grid{stroke:#D9D1C5;stroke-width:1}.note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
+  </style>
+  <rect class="bg" width="100%" height="100%" rx="18"/>
+  <text x="30" y="44" class="title">반도체 팹의 물은 어디에 쓰이는가</text>
+  <text x="30" y="72" class="unit">단위: 대표 물 용도 비중(%)</text>
+  <line x1="70" y1="345" x2="855" y2="345" class="axis"/>
+  <line x1="70" y1="235" x2="855" y2="235" class="grid"/>
+  <line x1="70" y1="125" x2="855" y2="125" class="grid"/>
+  <rect x="112" y="134" width="112" height="211" rx="7" fill="#A94E32"/>
+  <text x="168" y="120" text-anchor="middle" class="value">48%</text>
+  <text x="168" y="376" text-anchor="middle" class="label">반도체 공정</text>
+  <rect x="305" y="244" width="112" height="101" rx="7" fill="#1F5A75"/>
+  <text x="361" y="230" text-anchor="middle" class="value">23%</text>
+  <text x="361" y="376" text-anchor="middle" class="label">시설 지원</text>
+  <rect x="498" y="257" width="112" height="88" rx="7" fill="#4D7C6F"/>
+  <text x="554" y="243" text-anchor="middle" class="value">20%</text>
+  <text x="554" y="376" text-anchor="middle" class="label">배출가스 저감</text>
+  <rect x="691" y="305" width="112" height="40" rx="7" fill="#C18A3D"/>
+  <text x="747" y="291" text-anchor="middle" class="value">9%</text>
+  <text x="747" y="376" text-anchor="middle" class="label">UPW 처리 손실</text>
+  <text x="70" y="414" class="note">NIST 2024 환경평가의 대표 구성. 반올림되었으며 비산업 용도 1% 미만은 생략했습니다.</text>
+  <rect x="790" y="28" width="100" height="28" rx="14" fill="#10283F"/>
+  <text x="840" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">용도 비교</text>
 </svg>

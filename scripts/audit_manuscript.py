@@ -1,10 +1,12 @@
-"""Fail-fast structural and editorial checks for the 30 chapter manuscripts."""
+"""Fail-fast structural and editorial checks for the curated manuscript."""
 
 from __future__ import annotations
 
 import re
 from collections import Counter
 from pathlib import Path
+
+from book_config import selected_chapters
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,7 +43,8 @@ def main() -> None:
     questions: list[str] = []
     long_paragraphs: list[tuple[str, int]] = []
 
-    for week in range(1, 31):
+    published = selected_chapters()
+    for week in published:
         path = CHAPTERS / f"week{week:02d}.qmd"
         if not path.exists():
             errors.append(f"week{week:02d}: file missing")
@@ -109,7 +112,10 @@ def main() -> None:
             print(f"- {error}")
         raise SystemExit(1)
 
-    print("MANUSCRIPT AUDIT PASSED: 30 chapters, required sections, footnotes, figures, sources, and unique questions")
+    print(
+        f"MANUSCRIPT AUDIT PASSED: {len(published)} curated chapters, required sections, "
+        "footnotes, figures, sources, and unique questions"
+    )
 
 
 if __name__ == "__main__":

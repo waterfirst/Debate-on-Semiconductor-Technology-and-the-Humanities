@@ -2,6 +2,8 @@ from pathlib import Path
 import re
 import sys
 
+from book_config import selected_chapters
+
 ROOT = Path(__file__).resolve().parents[1]
 BOOK = ROOT / "book"
 
@@ -11,9 +13,11 @@ def fail(message: str) -> None:
     raise SystemExit(1)
 
 
-chapters = sorted((BOOK / "chapters").glob("week*.qmd"))
-if len(chapters) != 30:
-    fail(f"expected 30 chapters, found {len(chapters)}")
+published = selected_chapters()
+chapters = [BOOK / "chapters" / f"week{week:02d}.qmd" for week in published]
+missing_chapters = [path.name for path in chapters if not path.exists()]
+if missing_chapters:
+    fail(f"missing curated chapters: {missing_chapters}")
 
 required = [
     "[오늘의 책문]{.book-question-label}",
@@ -49,12 +53,14 @@ for path in chapters:
     if "`결론 → 데이터 2개 → 강한 반론 → 전환 조건`" in text:
         fail(f"{path.name}: Korean response sequence must not use code font")
 
-figures = sorted((BOOK / "figures").glob("week*-print.png"))
-symbols = sorted((BOOK / "figures" / "symbols").glob("week*-symbol-print.png"))
-if len(figures) != 30:
-    fail(f"expected 30 data charts, found {len(figures)}")
-if len(symbols) != 30:
-    fail(f"expected 30 symbolic illustrations, found {len(symbols)}")
+figures = [BOOK / "figures" / f"week{week:02d}-print.png" for week in published]
+symbols = [
+    BOOK / "figures" / "symbols" / f"week{week:02d}-symbol-print.png"
+    for week in published
+]
+for asset in (*figures, *symbols):
+    if not asset.exists():
+        fail(f"missing curated visual asset: {asset.relative_to(ROOT)}")
 
 evidence = ROOT / "data" / "evidence.csv"
 if not evidence.exists() or sum(1 for _ in evidence.open(encoding="utf-8-sig")) < 61:
@@ -64,4 +70,7 @@ for needed in [BOOK / "index.qmd", BOOK / "interview-checklist.qmd", ROOT / "PUB
     if not needed.exists():
         fail(f"missing {needed.relative_to(ROOT)}")
 
-print(f"OK: 30 chapters, {len(figures)} charts, {len(symbols)} illustrations and evidence data passed validation")
+print(
+    f"OK: {len(chapters)} curated chapters, {len(figures)} charts, "
+    f"{len(symbols)} illustrations and evidence data passed validation"
+)

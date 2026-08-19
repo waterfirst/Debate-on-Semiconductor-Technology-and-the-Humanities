@@ -112,4 +112,4 @@ UNESCO의 AI 윤리 권고는 2021년 193개 회원국이 채택했습니다. �
 - [조선시대 책문 아카이브, 중종 「이상정치를 현실로 만드는 법」 개별 항목](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#jungjong-1515/0)
 - [한국학중앙연구원, 1515년 알성시 방목](https://dh.aks.ac.kr/~sonamu5/wiki/index.php/SEDB%3A1515%EB%85%84%28%E4%B8%AD%E5%AE%97_10%29_%E4%B9%99%E4%BA%A5_%EC%95%8C%EC%84%B1%EC%8B%9C%28%E8%AC%81%E8%81%96%E8%A9%A6%29_%EB%AC%B8%EA%B3%BC%28%E6%96%87%E7%A7%91%29)
 
-> 데이터 기준일: 2026년 8월 18일. 193개 회원국 채택은 UNESCO 근거이며, 오작동 배수·출시 지연·매출 이연은 가상 사례입니다.
+> **자료 메모:** 193개 회원국 채택은 UNESCO 근거이며, 오작동 배수·출시 지연·매출 이연은 가상 사례입니다.

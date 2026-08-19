@@ -71,7 +71,7 @@ def main() -> None:
                 "--toc-depth=1",
                 "--split-level=1",
                 "--metadata=title:반도체 면접, 왕의 질문에 답하라",
-                "--metadata=subtitle:조선의 과거시험으로 푸는 AI·전쟁·환율·공급망 토론 30",
+                "--metadata=subtitle:조선의 책문으로 훈련하는 AI·공정·설계·공급망 데이터 토론",
                 "--metadata=author:waterfirst",
                 "--metadata=lang:ko-KR",
                 f"--css={BOOK / 'styles.css'}",

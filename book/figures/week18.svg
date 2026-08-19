@@ -1,13 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
-<title id="title">최종 사용자가 불분명한 AI 칩을 팔 것인가</title>
-<style>
-  .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
-  .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
-  .value{font:700 15px "Noto Sans KR",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
-  .axis{stroke:#768594;stroke-width:1.4} .note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
-</style>
-<rect class="bg" width="100%" height="100%" rx="18"/>
-<text x="30" y="44" class="title">최종 사용자가 불분명한 AI 칩을 팔 것인가</text>
-<text x="30" y="72" class="unit">단위: 2024 군사비(십억 달러)</text><desc id="desc">범주별 세로 비교 차트</desc><line x1="78" y1="350" x2="850" y2="350" class="axis"/><rect x="128.8" y="130.0" width="107.3" height="220.0" rx="7" fill="#A94E32"/><text x="182.5" y="117.0" text-anchor="middle" class="value">2,718</text><text x="182.5" y="380" text-anchor="middle" class="label">세계</text><rect x="313.9" y="217.7" width="107.3" height="132.3" rx="7" fill="#1F5A75"/><text x="367.5" y="204.7" text-anchor="middle" class="value">1,635</text><text x="367.5" y="380" text-anchor="middle" class="label">상위 5개국</text><rect x="498.9" y="293.9" width="107.3" height="56.1" rx="7" fill="#4D7C6F"/><text x="552.5" y="280.9" text-anchor="middle" class="value">693</text><text x="552.5" y="380" text-anchor="middle" class="label">유럽</text><rect x="683.9" y="344.8" width="107.3" height="5.2" rx="7" fill="#C18A3D"/><text x="737.5" y="331.8" text-anchor="middle" class="value">64.7</text><text x="737.5" y="380" text-anchor="middle" class="label">우크라이나</text>
-<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">세로 비교</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="440" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+  <title id="title">기술보호 통제 사다리</title>
+  <desc id="desc">접근권한과 업무 로그에서 시작해 퇴직 전 표적 점검, 비밀유지, 유상 경업제한, 개인기기 표적 포렌식으로 갈수록 침해 강도와 요구 증거가 함께 높아지는 분석 틀</desc>
+  <rect width="920" height="440" rx="18" fill="#F7F4ED"/>
+
+  <g font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" fill="#10283F">
+    <text x="50" y="48" font-size="27" font-weight="700">기술보호 통제 사다리</text>
+    <text x="50" y="77" font-size="15" fill="#52616E">증거가 한 단계 높아질 때 통제도 한 단계만 높입니다</text>
+
+    <g transform="translate(50 108)">
+      <rect width="252" height="236" rx="15" fill="#E9EFEA" stroke="#4D7C6F" stroke-width="2"/>
+      <rect width="252" height="38" rx="15" fill="#4D7C6F"/>
+      <rect y="23" width="252" height="15" fill="#4D7C6F"/>
+      <text x="18" y="26" font-size="16" font-weight="700" fill="#FFFFFF">평시 기본 통제</text>
+
+      <circle cx="30" cy="78" r="16" fill="#4D7C6F"/>
+      <text x="30" y="84" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">1</text>
+      <text x="58" y="76" font-size="17" font-weight="700">직무별 접근권한</text>
+      <text x="58" y="98" font-size="13" fill="#52616E">회사 저장소 · 필요한 폴더</text>
+
+      <line x1="20" y1="120" x2="232" y2="120" stroke="#BFCBC5"/>
+
+      <circle cx="30" cy="158" r="16" fill="#1F5A75"/>
+      <text x="30" y="164" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">2</text>
+      <text x="58" y="156" font-size="17" font-weight="700">다운로드·접속 로그</text>
+      <text x="58" y="178" font-size="13" fill="#52616E">회사 시스템의 메타데이터</text>
+
+      <rect x="19" y="200" width="214" height="24" rx="12" fill="#FFFFFF"/>
+      <text x="126" y="217" text-anchor="middle" font-size="12" font-weight="700" fill="#4D7C6F">모든 취급자에게 같은 기본선</text>
+    </g>
+
+    <g transform="translate(334 108)">
+      <rect width="252" height="236" rx="15" fill="#F3ECDD" stroke="#C18A3D" stroke-width="2"/>
+      <rect width="252" height="38" rx="15" fill="#C18A3D"/>
+      <rect y="23" width="252" height="15" fill="#C18A3D"/>
+      <text x="18" y="26" font-size="16" font-weight="700" fill="#10283F">구체 정황이 있을 때</text>
+
+      <circle cx="30" cy="78" r="16" fill="#C18A3D"/>
+      <text x="30" y="84" text-anchor="middle" font-size="15" font-weight="700" fill="#10283F">3</text>
+      <text x="58" y="76" font-size="17" font-weight="700">퇴직 전 표적 점검</text>
+      <text x="58" y="98" font-size="13" fill="#52616E">특정 기간 · 계정 · 파일</text>
+
+      <line x1="20" y1="120" x2="232" y2="120" stroke="#D7C9AC"/>
+
+      <circle cx="30" cy="158" r="16" fill="#1F5A75"/>
+      <text x="30" y="164" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">4</text>
+      <text x="58" y="156" font-size="17" font-weight="700">비밀유지·반환 확인</text>
+      <text x="58" y="178" font-size="13" fill="#52616E">정의된 정보 · 회사 자산</text>
+
+      <rect x="19" y="200" width="214" height="24" rx="12" fill="#FFFFFF"/>
+      <text x="126" y="217" text-anchor="middle" font-size="12" font-weight="700" fill="#A56E27">범위·승인자·종료일을 기록</text>
+    </g>
+
+    <g transform="translate(618 108)">
+      <rect width="252" height="236" rx="15" fill="#F1E5E0" stroke="#A94E32" stroke-width="2"/>
+      <rect width="252" height="38" rx="15" fill="#A94E32"/>
+      <rect y="23" width="252" height="15" fill="#A94E32"/>
+      <text x="18" y="26" font-size="16" font-weight="700" fill="#FFFFFF">높은 증거 문턱</text>
+
+      <circle cx="30" cy="78" r="16" fill="#A94E32"/>
+      <text x="30" y="84" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">5</text>
+      <text x="58" y="76" font-size="17" font-weight="700">유상·한정 경업제한</text>
+      <text x="58" y="98" font-size="13" fill="#52616E">기술 · 직무 · 기간 · 대가</text>
+
+      <line x1="20" y1="120" x2="232" y2="120" stroke="#D3B7AE"/>
+
+      <circle cx="30" cy="158" r="16" fill="#A94E32"/>
+      <text x="30" y="164" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">6</text>
+      <text x="58" y="156" font-size="17" font-weight="700">개인기기 표적 포렌식</text>
+      <text x="58" y="178" font-size="13" fill="#52616E">특정 파일 · 기간 · 영역</text>
+
+      <rect x="19" y="200" width="214" height="24" rx="12" fill="#FFFFFF"/>
+      <text x="126" y="217" text-anchor="middle" font-size="12" font-weight="700" fill="#A94E32">구체 증거·합의·적법 절차</text>
+    </g>
+
+    <path d="M92 384 H811" fill="none" stroke="#10283F" stroke-width="3" stroke-linecap="round"/>
+    <path d="M811 376 L831 384 L811 392 Z" fill="#10283F"/>
+    <text x="460" y="417" text-anchor="middle" font-size="15" font-weight="700">침해 강도 ↑  ·  필요한 증거와 승인도 ↑</text>
+    <text x="870" y="417" text-anchor="end" font-size="11" fill="#6F777D">법정 등급이 아닌 분석 틀</text>
+  </g>
 </svg>

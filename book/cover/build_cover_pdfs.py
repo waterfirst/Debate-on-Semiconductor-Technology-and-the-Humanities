@@ -5,6 +5,7 @@ import math
 import shutil
 from pathlib import Path
 
+from PIL import Image
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import RectangleObject
 from reportlab.lib.pagesizes import A5
@@ -103,6 +104,14 @@ def main() -> None:
     # 앞표지 + 3mm 접지 안전폭 + 80mm 날개 + 바깥 3mm
     wrap_width_mm = 148 + spine_mm + 148 + (wing_mm * 2) + 12
     wrap_size = (wrap_width_mm * mm, 216 * mm)
+    with Image.open(WRAP) as wrap_image:
+        actual_ratio = wrap_image.width / wrap_image.height
+    expected_ratio = wrap_width_mm / 216
+    if abs(actual_ratio - expected_ratio) > 0.002:
+        raise ValueError(
+            "펼침표지 PNG와 현재 본문 쪽수의 비율이 다릅니다. "
+            "책등 폭에 맞춰 full-wrap-layout-final.svg를 다시 렌더링하십시오."
+        )
     wrap_raw = TMP / "full-wrap-final-raw.pdf"
     image_pdf(WRAP, wrap_raw, wrap_size)
     print_ready_wrap(wrap_raw, wrap_path, wrap_size)

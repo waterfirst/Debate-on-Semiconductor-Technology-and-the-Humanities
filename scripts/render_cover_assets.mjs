@@ -2,14 +2,28 @@ import { createRequire } from "node:module";
 import path from "node:path";
 
 const require = createRequire(import.meta.url);
-const sharp = require("sharp");
+let sharp;
+try {
+  sharp = require("sharp");
+} catch {
+  const bundledModules = path.join(
+    process.env.USERPROFILE,
+    ".cache",
+    "codex-runtimes",
+    "codex-primary-runtime",
+    "dependencies",
+    "node",
+    "node_modules",
+  );
+  sharp = createRequire(path.join(bundledModules, "sharp", "package.json"))("sharp");
+}
 const root = path.resolve(import.meta.dirname, "..");
 const cover = path.join(root, "book", "cover");
 
 const assets = [
   ["front-cover-layout-final.svg", "front-cover-final.png", 1748, 2480],
   ["back-cover-layout-final.svg", "back-cover-final.png", 1748, 2480],
-  ["full-wrap-layout-final.svg", "full-wrap-cover-final.png", 5788, 2551],
+  ["full-wrap-layout-final.svg", "full-wrap-cover-final.png", 5741, 2551],
 ];
 
 for (const [source, output, width, height] of assets) {

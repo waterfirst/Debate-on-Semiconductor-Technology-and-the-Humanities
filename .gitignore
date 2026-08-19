@@ -10,6 +10,7 @@ book/output/archive/
 book/figures/symbols/source-sheets-color/
 _extensions/
 dist/
+tmp/
 __pycache__/
 *.pyc
 .DS_Store

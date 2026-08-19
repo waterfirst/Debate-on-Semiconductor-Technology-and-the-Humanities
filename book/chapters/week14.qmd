@@ -110,4 +110,4 @@ AI는 현장 직원이 남긴 데이터와 예외처리 지식으로 작동합�
 - [International Labour Organization, *Generative AI and jobs: A 2025 update* (2025)](https://www.ilo.org/publications/generative-ai-and-jobs-2025-update)
 - [조선시대 책문 아카이브, 명종대 「교육은 어디로 가야 하는가」 개별 항목](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#myeongjong-1558-education/0)
 
-> 데이터 기준일: 2026년 8월 18일. 25%와 3.3%는 ILO의 직업 노출 추정치이며, 생산성·감원·배치·배분 비율은 가상 사례의 조건 또는 제안값입니다.
+> **자료 메모:** 25%와 3.3%는 ILO의 직업 노출 추정치이며, 생산성·감원·배치·배분 비율은 가상 사례의 조건 또는 제안값입니다.

@@ -15,6 +15,8 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
 
+from book_config import display_number, selected_chapters
+
 
 ROOT = Path(__file__).resolve().parents[1]
 BOOK = ROOT / "book"
@@ -45,7 +47,7 @@ PACKETS = (
     Packet(
         recipient="김영철 교수님",
         affiliation="서강대학교 경제학부",
-        chapters=(5, 10),
+        chapters=(7, 2),
         filename="김영철-교수님-추천사-검토용.pdf",
     ),
     Packet(
@@ -57,7 +59,7 @@ PACKETS = (
     Packet(
         recipient="이승우 교수님",
         affiliation="경희대학교 정보디스플레이학과",
-        chapters=(14, 20),
+        chapters=(9, 12),
         filename="이승우-교수님-추천사-검토용.pdf",
     ),
     Packet(
@@ -101,19 +103,20 @@ def locate_sections(reader: PdfReader) -> tuple[dict[int, tuple[int, int]], tupl
 
     starts: dict[int, int] = {}
     cursor = preface_start + 1
-    for chapter in range(1, 31):
+    published = selected_chapters()
+    for chapter in published:
         title = qmd_title(BOOK / "chapters" / f"week{chapter:02d}.qmd")
         starts[chapter] = first_page_with(reader, title, cursor)
         cursor = starts[chapter] + 1
 
     epilogue_title = qmd_title(BOOK / "epilogue.qmd")
-    epilogue_start = first_page_with(reader, epilogue_title, starts[30] + 1)
+    epilogue_start = first_page_with(reader, epilogue_title, starts[published[-1]] + 1)
     checklist_title = qmd_title(BOOK / "interview-checklist.qmd")
     checklist_start = first_page_with(reader, checklist_title, epilogue_start + 1)
 
     ranges: dict[int, tuple[int, int]] = {}
-    for chapter in range(1, 31):
-        next_start = starts[chapter + 1] if chapter < 30 else epilogue_start
+    for index, chapter in enumerate(published):
+        next_start = starts[published[index + 1]] if index + 1 < len(published) else epilogue_start
         ranges[chapter] = (starts[chapter], next_start - 1)
 
     preface_range = (preface_start, copyright_start - 1)
@@ -192,7 +195,7 @@ def request_cover(packet: Packet, chapter_titles: dict[int, str]) -> PdfReader:
     y -= 8.5 * mm
     y = draw_paragraph(
         page,
-        "조선의 책문으로 훈련하는 AI·전쟁·환율·공급망 데이터 토론 30",
+        "조선의 책문으로 훈련하는 AI·공정·설계·공급망 데이터 토론",
         18 * mm,
         y,
         width - 36 * mm,
@@ -216,8 +219,8 @@ def request_cover(packet: Packet, chapter_titles: dict[int, str]) -> PdfReader:
     y -= 7 * mm
     items = (
         "서문",
-        f"제{packet.chapters[0]}장  {chapter_titles[packet.chapters[0]]}",
-        f"제{packet.chapters[1]}장  {chapter_titles[packet.chapters[1]]}",
+        f"제{display_number(packet.chapters[0])}장  {chapter_titles[packet.chapters[0]]}",
+        f"제{display_number(packet.chapters[1])}장  {chapter_titles[packet.chapters[1]]}",
         "에필로그",
     )
     page.setFont("Pretendard-Regular", 9.1)
@@ -290,7 +293,7 @@ def main() -> None:
     chapter_ranges, preface_range, epilogue_range = locate_sections(reader)
     chapter_titles = {
         chapter: qmd_title(BOOK / "chapters" / f"week{chapter:02d}.qmd")
-        for chapter in range(1, 31)
+        for chapter in selected_chapters()
     }
 
     for packet in PACKETS:

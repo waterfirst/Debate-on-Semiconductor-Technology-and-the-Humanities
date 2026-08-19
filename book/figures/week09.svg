@@ -1,13 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
-<title id="title">재고가 두 배일 때 감산해도 되는가</title>
-<style>
-  .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
-  .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
-  .value{font:700 15px "Noto Sans KR",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
-  .axis{stroke:#768594;stroke-width:1.4} .note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
-</style>
-<rect class="bg" width="100%" height="100%" rx="18"/>
-<text x="30" y="44" class="title">재고가 두 배일 때 감산해도 되는가</text>
-<text x="30" y="72" class="unit">단위: 세계 반도체 매출(십억 달러)</text><desc id="desc">시간과 시나리오의 변화를 보여주는 추세선</desc><line x1="82" y1="118.0" x2="842" y2="118.0" class="grid"/><line x1="82" y1="174.2" x2="842" y2="174.2" class="grid"/><line x1="82" y1="230.5" x2="842" y2="230.5" class="grid"/><line x1="82" y1="286.8" x2="842" y2="286.8" class="grid"/><line x1="82" y1="343.0" x2="842" y2="343.0" class="grid"/><polyline points="82.0,249.6 462.0,224.5 842.0,118.0" fill="none" stroke="#1F5A75" stroke-width="5" stroke-linejoin="round"/><circle cx="82.0" cy="249.6" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><circle cx="462.0" cy="224.5" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><circle cx="842.0" cy="118.0" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><text x="82.0" y="375" text-anchor="middle" class="label">2024</text><text x="82.0" y="234.6" text-anchor="middle" class="value">627</text><text x="462.0" y="375" text-anchor="middle" class="label">2025</text><text x="462.0" y="209.5" text-anchor="middle" class="value">795.6</text><text x="842.0" y="375" text-anchor="middle" class="label">2026 전망</text><text x="842.0" y="104.0" text-anchor="middle" class="value">1,510</text><text x="82" y="410" class="note">첫 값 대비 마지막 값 변화: +140.8%</text>
-<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">추세선</text>
+  <title id="title">표본을 줄이면 무고장 관측의 상한이 넓어진다</title>
+  <desc id="desc">관측 불량이 0개일 때 표본 77개, 154개, 231개의 실제 불량확률에 대한 90퍼센트 단측 상한을 비교한다.</desc>
+  <style>
+    .bg{fill:#F7F4ED}.title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}.sub{font:14px "Noto Sans KR",sans-serif;fill:#6A625A}.label{font:16px "Noto Sans KR",sans-serif;fill:#253443}.value{font:700 18px "Noto Sans KR",sans-serif;fill:#10283F}.tick{font:12px "Noto Sans KR",sans-serif;fill:#756C63}.note{font:13px "Noto Sans KR",sans-serif;fill:#6A625A}.grid{stroke:#D9D1C5;stroke-width:1}.axis{stroke:#768594;stroke-width:1.4}.bar1{stroke:#A94E32;stroke-width:13;stroke-linecap:round}.bar2{stroke:#C18A3D;stroke-width:13;stroke-linecap:round}.bar3{stroke:#4D7C6F;stroke-width:13;stroke-linecap:round}.dot1{fill:#A94E32}.dot2{fill:#C18A3D}.dot3{fill:#4D7C6F}
+  </style>
+  <rect class="bg" width="920" height="440" rx="18"/>
+  <text x="30" y="42" class="title">표본을 줄이면 ‘0건’의 상한이 넓어진다</text>
+  <text x="30" y="68" class="sub">관측 불량 0개 · 실제 불량확률의 90% 단측 정확 상한</text>
+  <line x1="240" y1="104" x2="240" y2="338" class="axis"/>
+  <line x1="440" y1="104" x2="440" y2="338" class="grid"/>
+  <line x1="640" y1="104" x2="640" y2="338" class="grid"/>
+  <line x1="840" y1="104" x2="840" y2="338" class="grid"/>
+  <text x="240" y="92" text-anchor="middle" class="tick">0%</text>
+  <text x="440" y="92" text-anchor="middle" class="tick">1%</text>
+  <text x="640" y="92" text-anchor="middle" class="tick">2%</text>
+  <text x="840" y="92" text-anchor="middle" class="tick">3%</text>
+  <text x="54" y="155" class="label">표본 77개</text>
+  <line x1="240" y1="150" x2="830" y2="150" class="bar1"/>
+  <circle cx="830" cy="150" r="9" class="dot1"/>
+  <text x="864" y="132" text-anchor="end" class="value">2.95%</text>
+  <text x="54" y="230" class="label">표본 154개</text>
+  <line x1="240" y1="225" x2="536" y2="225" class="bar2"/>
+  <circle cx="536" cy="225" r="9" class="dot2"/>
+  <text x="864" y="231" text-anchor="end" class="value">1.48%</text>
+  <text x="54" y="305" class="label">표본 231개</text>
+  <line x1="240" y1="300" x2="438" y2="300" class="bar3"/>
+  <circle cx="438" cy="300" r="9" class="dot3"/>
+  <text x="864" y="306" text-anchor="end" class="value">0.99%</text>
+  <rect x="30" y="355" width="860" height="60" rx="12" fill="#E9E3D9"/>
+  <text x="460" y="380" text-anchor="middle" class="note">계산: 1 − 0.1^(1/n) · 표본수 기준: AEC-Q100 Rev J · 계산 원리: NIST 정확 이항구간</text>
+  <text x="460" y="401" text-anchor="middle" class="note">154개·77개는 규격이 허용한 축소안이 아니라 정보 손실을 설명하는 비교값입니다</text>
 </svg>
