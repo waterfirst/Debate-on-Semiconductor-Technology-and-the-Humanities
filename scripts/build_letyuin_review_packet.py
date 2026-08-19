@@ -1,4 +1,4 @@
-"""Build a compact Letuin review PDF containing the preface and table of contents."""
+"""Build a Letuin review PDF with the preface, contents, and two sample chapters."""
 
 from __future__ import annotations
 
@@ -14,11 +14,14 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
 
+from book_config import display_number, selected_chapters
+
 
 ROOT = Path(__file__).resolve().parents[1]
 BOOK = ROOT / "book"
 SOURCE = BOOK / "output" / "pdf" / "반도체-면접-왕의-질문에-답하라-본문-A5.pdf"
 OUTPUT = BOOK / "output" / "pdf" / "렛유인-검토용-서문-목차.pdf"
+SAMPLE_CHAPTERS = (7, 9)
 
 FONT_DIR = Path(r"C:\Windows\Fonts")
 REGULAR_FONT = FONT_DIR / "KoPubDotumMedium.ttf"
@@ -41,6 +44,34 @@ def first_page_with(reader: PdfReader, needle: str, start: int = 0) -> int:
         if target in normalized(reader.pages[index].extract_text() or ""):
             return index
     raise RuntimeError(f"Could not locate section in source PDF: {needle}")
+
+
+def qmd_title(chapter: int) -> str:
+    text = (BOOK / "chapters" / f"week{chapter:02d}.qmd").read_text(encoding="utf-8")
+    match = re.search(r'^title:\s*["\'](.+?)["\']\s*$', text, flags=re.MULTILINE)
+    if not match:
+        raise RuntimeError(f"Could not read chapter title: week{chapter:02d}.qmd")
+    return match.group(1)
+
+
+def chapter_ranges(reader: PdfReader, start: int) -> dict[int, tuple[int, int]]:
+    published = selected_chapters()
+    starts: dict[int, int] = {}
+    cursor = start
+    for chapter in published:
+        starts[chapter] = first_page_with(reader, qmd_title(chapter), cursor)
+        cursor = starts[chapter] + 1
+
+    epilogue_start = first_page_with(reader, "에필로그 — 데이터가 문장이 되는 순간", cursor)
+    return {
+        chapter: (
+            starts[chapter],
+            starts[published[index + 1]] - 1
+            if index + 1 < len(published)
+            else epilogue_start - 1,
+        )
+        for index, chapter in enumerate(published)
+    }
 
 
 def toc_start_page(reader: PdfReader, preface_start: int) -> int:
@@ -73,7 +104,7 @@ def cover_page() -> PdfReader:
     page.setFont("Review-Semibold", 10)
     page.drawString(18 * mm, height - 18 * mm, "렛유인 검토용 자료")
     page.setFont("Review-Regular", 7.6)
-    page.drawRightString(width - 18 * mm, height - 18 * mm, "PREFACE · CONTENTS")
+    page.drawRightString(width - 18 * mm, height - 18 * mm, "PREFACE · CONTENTS · 2 CHAPTERS")
 
     y = height - 67 * mm
     page.setFillColor(NAVY)
@@ -89,18 +120,21 @@ def cover_page() -> PdfReader:
     y -= 6 * mm
     page.drawString(18 * mm, y, "AI·공정·설계·공급망 데이터 토론")
 
-    box_y = 48 * mm
-    box_h = 39 * mm
+    box_y = 40 * mm
+    box_h = 52 * mm
     page.setFillColor(HexColor("#FBF8F2"))
     page.setStrokeColor(HexColor("#D7CCBC"))
     page.roundRect(16 * mm, box_y, width - 32 * mm, box_h, 2.5 * mm, stroke=1, fill=1)
     page.setFillColor(NAVY)
     page.setFont("Review-Semibold", 10)
-    page.drawString(21 * mm, box_y + 27 * mm, "수록 내용")
+    page.drawString(21 * mm, box_y + 40 * mm, "수록 내용")
     page.setFillColor(INK)
     page.setFont("Review-Regular", 9.2)
-    page.drawString(21 * mm, box_y + 17 * mm, "01  서문")
-    page.drawString(21 * mm, box_y + 9 * mm, "02  목차")
+    page.drawString(21 * mm, box_y + 30 * mm, "01  서문")
+    page.drawString(21 * mm, box_y + 22 * mm, "02  목차")
+    page.setFont("Review-Regular", 8.4)
+    page.drawString(21 * mm, box_y + 14 * mm, "03  제1장  AI 호황의 이익은 누구의 몫인가")
+    page.drawString(21 * mm, box_y + 6 * mm, "04  제6장  예지보전 경고에 장비를 세울 것인가")
 
     page.setFillColor(MUTED)
     page.setFont("Review-Regular", 7.6)
@@ -136,15 +170,18 @@ def main() -> None:
     copyright_start = first_page_with(reader, "판권", preface_start + 1)
     toc_start = toc_start_page(reader, preface_start)
     toc_end = preface_start - 1
+    ranges = chapter_ranges(reader, copyright_start + 1)
 
     writer = PdfWriter()
     writer.add_page(cover_page().pages[0])
     add_nonblank_range(writer, reader, preface_start, copyright_start - 1)
     add_nonblank_range(writer, reader, toc_start, toc_end)
+    for chapter in SAMPLE_CHAPTERS:
+        add_nonblank_range(writer, reader, *ranges[chapter])
     writer.add_metadata(
         {
-            "/Title": "렛유인 검토용 - 반도체 면접, 왕의 질문에 답하라 - 서문과 목차",
-            "/Subject": "서문과 목차 검토용 발췌본",
+            "/Title": "렛유인 검토용 - 반도체 면접, 왕의 질문에 답하라",
+            "/Subject": "서문·목차·대표 장 2편 검토용 발췌본",
             "/Creator": "스칼라브릿지",
         }
     )
@@ -156,7 +193,8 @@ def main() -> None:
     print(
         f"created={OUTPUT.name.encode('unicode_escape').decode()} "
         f"pages={len(writer.pages)} preface={preface_start}:{copyright_start - 1} "
-        f"toc={toc_start}:{toc_end}"
+        f"toc={toc_start}:{toc_end} "
+        f"samples={[(display_number(chapter), ranges[chapter]) for chapter in SAMPLE_CHAPTERS]}"
     )
 
 

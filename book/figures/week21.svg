@@ -2,10 +2,10 @@
 <title id="title">상사의 결론과 다른 수율 데이터를 보고할 것인가</title>
 <style>
   .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
-  .label{font:700 18px "Noto Sans KR",sans-serif;fill:#10283F}
-  .small{font:14px "Noto Sans KR",sans-serif;fill:#675F58}
+  .label{font:700 20px "Noto Sans KR",sans-serif;fill:#10283F}
+  .small{font:20px "Noto Sans KR",sans-serif;fill:#675F58}
   .big{font:700 31px "Noto Sans KR",sans-serif;fill:#A94E32}
-  .badge{font:700 12px "Noto Sans KR",sans-serif;fill:#F7F4ED}
+  .badge{font:700 20px "Noto Sans KR",sans-serif;fill:#F7F4ED}
 </style>
 <rect class="bg" width="100%" height="100%" rx="18"/>
 <text x="30" y="46" class="title">상사의 결론과 다른 수율 데이터를 보고할 것인가</text><desc id="desc">신입사원이 이상 수율을 발견한 뒤 시간 제한을 두고 보고하는 절차</desc>

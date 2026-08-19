@@ -3,9 +3,9 @@
   <desc id="desc">UCIe 2.0의 최고 32 GT/s와 UCIe 3.0의 48 GT/s 및 64 GT/s 선택지를 비교한 막대그래프</desc>
   <style>
     .bg{fill:#F7F4ED}.title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
-    .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A}.label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
-    .value{font:700 18px "Noto Sans KR",sans-serif;fill:#10283F}.axis{stroke:#768594;stroke-width:1.4}
-    .grid{stroke:#D9D1C5;stroke-width:1}.note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
+    .unit{font:20px "Noto Sans KR",sans-serif;fill:#6A625A}.label{font:20px "Noto Sans KR",sans-serif;fill:#253443}
+    .value{font:700 20px "Noto Sans KR",sans-serif;fill:#10283F}.axis{stroke:#768594;stroke-width:1.4}
+    .grid{stroke:#D9D1C5;stroke-width:1}.note{font:20px "Noto Sans KR",sans-serif;fill:#756C63}
   </style>
   <rect class="bg" width="100%" height="100%" rx="18"/>
   <text x="30" y="44" class="title">UCIe 표준의 데이터율 선택지</text>
@@ -24,5 +24,5 @@
   <text x="707" y="380" text-anchor="middle" class="label">UCIe 3.0 최고</text>
   <text x="78" y="414" class="note">GT/s는 유효 GB/s가 아니며 레인 수·오버헤드·패키지 조건이 추가로 필요합니다.</text>
   <rect x="790" y="28" width="100" height="28" rx="14" fill="#10283F"/>
-  <text x="840" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">규격 비교</text>
+  <text x="840" y="47" text-anchor="middle" style="font:700 20px 'Noto Sans KR',sans-serif;fill:#F7F4ED">규격 비교</text>
 </svg>

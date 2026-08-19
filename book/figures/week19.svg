@@ -3,9 +3,9 @@
   <desc id="desc">반도체 공정 48퍼센트, 시설 지원 23퍼센트, 배출가스 저감 20퍼센트, 초순수 처리 손실 9퍼센트를 비교한 막대그래프</desc>
   <style>
     .bg{fill:#F7F4ED}.title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
-    .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A}.label{font:15px "Noto Sans KR",sans-serif;fill:#253443}
-    .value{font:700 17px "Noto Sans KR",sans-serif;fill:#10283F}.axis{stroke:#768594;stroke-width:1.4}
-    .grid{stroke:#D9D1C5;stroke-width:1}.note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
+    .unit{font:20px "Noto Sans KR",sans-serif;fill:#6A625A}.label{font:20px "Noto Sans KR",sans-serif;fill:#253443}
+    .value{font:700 20px "Noto Sans KR",sans-serif;fill:#10283F}.axis{stroke:#768594;stroke-width:1.4}
+    .grid{stroke:#D9D1C5;stroke-width:1}.note{font:20px "Noto Sans KR",sans-serif;fill:#756C63}
   </style>
   <rect class="bg" width="100%" height="100%" rx="18"/>
   <text x="30" y="44" class="title">반도체 팹의 물은 어디에 쓰이는가</text>
@@ -27,5 +27,5 @@
   <text x="747" y="376" text-anchor="middle" class="label">UPW 처리 손실</text>
   <text x="70" y="414" class="note">NIST 2024 환경평가의 대표 구성. 반올림되었으며 비산업 용도 1% 미만은 생략했습니다.</text>
   <rect x="790" y="28" width="100" height="28" rx="14" fill="#10283F"/>
-  <text x="840" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">용도 비교</text>
+  <text x="840" y="47" text-anchor="middle" style="font:700 20px 'Noto Sans KR',sans-serif;fill:#F7F4ED">용도 비교</text>
 </svg>

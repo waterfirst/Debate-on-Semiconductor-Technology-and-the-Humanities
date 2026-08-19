@@ -1,5 +1,8 @@
 % A5 print typography: modern Korean sans serif with editorial hierarchy.
 \usepackage[most]{tcolorbox}
+\usepackage{needspace}
+\usepackage{etoolbox}
+\usepackage[automark]{scrlayer-scrpage}
 \definecolor{questionnavy}{HTML}{10283F}
 \definecolor{questionaccent}{HTML}{A94E32}
 \definecolor{questioncream}{HTML}{F6F1E7}
@@ -21,6 +24,12 @@
 \setkomafont{chapter}{\sffamily\bfseries\color{questionnavy}\fontsize{15.5pt}{20pt}\selectfont}
 \setkomafont{section}{\sffamily\bfseries\fontsize{13.5pt}{18pt}\selectfont}
 \setkomafont{subsection}{\sffamily\bfseries\fontsize{11.5pt}{16pt}\selectfont}
+\clearpairofpagestyles
+\automark[chapter]{chapter}
+\ohead{\headmark}
+\ofoot*{\pagemark}
+\setkomafont{pageheadfoot}{\sffamily\fontsize{8.5pt}{11pt}\selectfont}
+\pagestyle{scrheadings}
 \RedeclareSectionCommand[
   beforeskip=0pt,
   afterskip=1.15em
@@ -51,4 +60,12 @@
 \setlength{\emergencystretch}{1.5em}
 \widowpenalty=10000
 \clubpenalty=10000
+\brokenpenalty=10000
+\interfootnotelinepenalty=10000
+\interlinepenalty=2500
 \raggedbottom
+
+% Keep a heading with enough of its first paragraph.  This prevents a heading
+% or a one-word paragraph tail from becoming the only item on the next page.
+\pretocmd{\section}{\Needspace{6\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{5\baselineskip}}{}{}

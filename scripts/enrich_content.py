@@ -21,7 +21,7 @@ DATA = ROOT / "data"
 
 # chart values in a row always share one unit. facts may use other units.
 EVIDENCE = {
-    1: dict(unit="공격 무인기 수(대)", chart=[("2022 Shahed", 700), ("2025 Shahed", 53000)], facts=["NATO의 2026년 우크라이나 전훈 자료는 Shahed 계열 공격 무인기가 2022년 약 700대에서 2025년 5만3천 대 이상으로 늘었다고 제시했다.", "같은 자료는 2025년 격추된 Shahed 계열 표적 가운데 약 40%가 전자전으로 무력화됐다고 제시했다.", "우크라이나 국방부는 2025년 말 자국의 연간 드론 생산능력을 약 2천만 대로 발표했다."], source="https://nllp.jallc.nato.int/iks/sharing%20public/20260409_u_q2-26%20sagu%20nsatu%20ukraine%20insights%20newsletter.pdf", source_name="NATO JALLC Ukraine Insights 2026", extra_sources=[("우크라이나 국방부 드론 생산능력 발표", "https://mod.gov.ua/en/news/denys-shmyhal-the-fastest-way-to-strengthen-europe-s-security-is-to-support-ukraine")]),
+    1: dict(unit="개발 시작 시점(연도)", chart=[("비행기", 1903), ("레이더", 1937), ("ARPANET", 1969), ("GPS", 1973)], facts=["비행기는 1차 세계대전 전에 존재했고 전쟁 중 임무·성능·생산이 빠르게 발전했다.", "레이더는 1937년 시연됐고 2차 세계대전에서 급속히 발전한 뒤 민간 항공과 기상관측으로 확산됐다.", "ARPANET은 1969년, 통합 NAVSTAR GPS 사업은 1973년 시작돼 두 세계대전의 직접 발명품이 아니다."], source="https://airandspace.si.edu/explore/stories/world-war-i-laboratory-air", source_name="Smithsonian National Air and Space Museum", extra_sources=[("U.S. Army 레이더 기술사", "https://www.army.mil/article/285662/radar_demonstration_transforms_the_army"), ("DARPA ARPANET", "https://www.darpa.mil/news/features/arpanet"), ("GPS.gov 기술사", "https://www.gps.gov/sites/default/files/2025-07/gps_finalreport618.pdf")]),
     2: dict(unit="ASML 시스템 매출 중 중국 출하 비중(%)", chart=[("2023", 29), ("2024", 41)], facts=["ASML의 시스템 매출에서 중국 출하 비중은 2023년 29%에서 2024년 41%로 상승했다.", "미국 BIS는 2024년 12월 24종 장비와 3종 소프트웨어 도구, HBM에 통제를 추가했다.", "네덜란드는 2024년 9월 일부 첨단 DUV 노광장비의 국가 허가 범위를 확대했으며, 전면 금지가 아닌 건별 심사라고 밝혔다."], source="https://ourbrand.asml.com/m/62a213cac2117ee6/original/2025_01_29-Presentation-Investor-Relations-Q4-FY-2024.pdf", source_name="ASML Q4 and FY 2024 Investor Presentation", extra_sources=[("U.S. BIS 2024년 12월 통제", "https://media.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military"), ("네덜란드 정부 DUV 허가 확대", "https://www.government.nl/latest/news/2024/09/06/the-netherlands-expands-export-control-measure-advanced-semiconductor-manufacturing-equipment")]),
     3: dict(unit="첨단공정 매출 비중(%)", chart=[("2023", 58), ("2024", 69)], facts=["TSMC의 7nm 이하 첨단공정 매출 비중은 2023년 58%에서 2024년 69%로 늘었다.", "2024년 TSMC는 12인치 환산 웨이퍼 1,290만 장을 출하했다.", "같은 해 288개 공정기술로 522개 고객의 11,878개 제품을 생산했다."], source="https://investor.tsmc.com/static/annualReports/2024/english/index.html", source_name="TSMC 2024 Annual Report"),
     4: dict(unit="일본산 불화수소 수입액(백만 달러)", chart=[("2019", 36.3), ("2021", 12.5), ("2022", 8.3)], facts=["산업통상자원부는 일본산 불화수소 수입액이 2019년 3,630만 달러에서 2021년 1,250만 달러로 66% 감소했다고 밝혔다.", "무역통계 기반 보도에서 2022년 반도체용 불화수소 일본 수입액은 830만 달러로 집계됐다.", "규제 직전 고순도 불화수소의 일본 의존도는 43.9%로 제시됐다."], source="https://www.korea.kr/news/policyNewsView.do?newsId=148899420", source_name="산업통상자원부 소부장 정책자료"),
@@ -65,34 +65,35 @@ def svg_chart(week: int, title: str, unit: str, rows: list[tuple[str, float]]) -
 
     common = f'''<title id="title">{html.escape(title)}</title>
 <style>
-  .bg{{fill:#F7F4ED}} .title{{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}}
-  .unit{{font:15px "Noto Sans KR",sans-serif;fill:#6A625A}} .label{{font:16px "Noto Sans KR",sans-serif;fill:#253443}}
-  .value{{font:700 15px "Noto Sans KR",sans-serif;fill:#10283F}} .grid{{stroke:#D9D1C5;stroke-width:1}}
-  .axis{{stroke:#768594;stroke-width:1.4}} .note{{font:13px "Noto Sans KR",sans-serif;fill:#756C63}}
+  .bg{{fill:#F7F4ED}} .title{{font:700 28px "Noto Sans KR",sans-serif;fill:#10283F}}
+  .unit{{font:21px "Noto Sans KR",sans-serif;fill:#6A625A}} .label{{font:21px "Noto Sans KR",sans-serif;fill:#253443}}
+  .value{{font:700 21px "Noto Sans KR",sans-serif;fill:#10283F}} .grid{{stroke:#D9D1C5;stroke-width:1}}
+  .axis{{stroke:#768594;stroke-width:1.4}} .note{{font:20px "Noto Sans KR",sans-serif;fill:#756C63}}
 </style>
 <rect class="bg" width="100%" height="100%" rx="18"/>
 <text x="30" y="44" class="title">{html.escape(title)}</text>
 <text x="30" y="72" class="unit">단위: {html.escape(unit)}</text>'''
 
     if week == 1:
-        body = '''<desc id="desc">러시아의 Shahed 계열 공격 무인기 규모와 우크라이나의 드론 생산능력을 분리해 보여주는 데이터 카드</desc>
-<rect x="42" y="105" width="515" height="238" rx="18" fill="#FCFAF5" stroke="#D8CEC0" stroke-width="2"/>
-<text x="70" y="141" class="label" style="font-weight:700">러시아의 Shahed 계열 공격 무인기</text>
-<text x="96" y="205" class="value" style="font-size:30px;fill:#A94E32">약 700대</text>
-<text x="108" y="238" class="unit">2022년</text>
-<path d="M255 204H357" stroke="#768594" stroke-width="3" marker-end="url(#arrow-week01)"/>
-<text x="306" y="187" text-anchor="middle" class="value">약 76배</text>
-<text x="389" y="205" class="value" style="font-size:30px;fill:#10283F">5.3만 대+</text>
-<text x="435" y="238" class="unit">2025년</text>
-<text x="70" y="300" class="note">2025년 격추 표적 중 약 40%는 전자전으로 무력화</text>
-<rect x="587" y="105" width="291" height="238" rx="18" fill="#10283F"/>
-<text x="615" y="145" style="font:700 17px 'Noto Sans KR',sans-serif;fill:#F7F4ED">우크라이나 드론 산업</text>
-<text x="615" y="215" style="font:700 34px 'Noto Sans KR',sans-serif;fill:#F4C7A8">약 2,000만 대</text>
-<text x="615" y="250" style="font:15px 'Noto Sans KR',sans-serif;fill:#F7F4ED">2025년 말 발표한 연간 생산능력</text>
-<text x="615" y="302" style="font:13px 'Noto Sans KR',sans-serif;fill:#CAD5DF">생산능력은 실제 생산량·전과와 다름</text>
-<text x="42" y="396" class="note">규모와 반복 속도는 기술 발전을 보여주지만, 인류의 진보를 증명하지는 않는다.</text>
-<defs><marker id="arrow-week01" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#768594"/></marker></defs>'''
-        chart_name = "전쟁 기술 데이터"
+        body = '''<desc id="desc">비행기와 레이더는 세계대전 전에, ARPANET과 GPS는 두 세계대전 뒤에 시작됐음을 보여주는 기술 연표</desc>
+<rect x="218" y="103" width="38" height="238" fill="#A94E32" opacity="0.12"/><text x="237" y="126" text-anchor="middle" class="unit">1차대전</text>
+<rect x="455" y="103" width="57" height="238" fill="#1F5A75" opacity="0.12"/><text x="484" y="126" text-anchor="middle" class="unit">2차대전</text>
+<line x1="86" y1="260" x2="842" y2="260" class="axis"/>
+<line x1="86" y1="251" x2="86" y2="269" class="axis"/><text x="86" y="300" text-anchor="middle" class="unit">1900</text>
+<line x1="275" y1="251" x2="275" y2="269" class="axis"/><text x="275" y="300" text-anchor="middle" class="unit">1920</text>
+<line x1="464" y1="251" x2="464" y2="269" class="axis"/><text x="464" y="300" text-anchor="middle" class="unit">1940</text>
+<line x1="653" y1="251" x2="653" y2="269" class="axis"/><text x="653" y="300" text-anchor="middle" class="unit">1960</text>
+<line x1="842" y1="251" x2="842" y2="269" class="axis"/><text x="842" y="300" text-anchor="middle" class="unit">1980</text>
+<circle cx="114" cy="260" r="10" fill="#A94E32"/><line x1="114" y1="250" x2="114" y2="178" stroke="#A94E32" stroke-width="2"/>
+<text x="114" y="151" text-anchor="middle" class="value">1903</text><text x="114" y="176" text-anchor="middle" class="label">비행기</text>
+<rect x="425" y="250" width="20" height="20" fill="#1F5A75"/><line x1="435" y1="250" x2="435" y2="178" stroke="#1F5A75" stroke-width="2"/>
+<text x="435" y="151" text-anchor="middle" class="value">1937</text><text x="435" y="176" text-anchor="middle" class="label">레이더</text>
+<path d="M738 248L750 260L738 272L726 260Z" fill="#4D7C6F"/><line x1="738" y1="272" x2="738" y2="333" stroke="#4D7C6F" stroke-width="2"/>
+<text x="704" y="360" text-anchor="middle" class="value">1969</text><text x="704" y="385" text-anchor="middle" class="label">ARPANET</text>
+<path d="M776 248L789 272H763Z" fill="#C18A3D"/><line x1="776" y1="272" x2="776" y2="333" stroke="#C18A3D" stroke-width="2"/>
+<text x="813" y="360" text-anchor="middle" class="value">1973</text><text x="813" y="385" text-anchor="middle" class="label">GPS</text>
+<text x="86" y="424" class="note">발명·전시 가속·냉전기 국방 연구·민간 전환을 같은 말로 묶지 않습니다.</text>'''
+        chart_name = "기술 연표"
     elif week == 2:
         body = '''<desc id="desc">ASML 시스템 매출의 중국 출하 비중과 주요 수출통제 일정을 함께 보여주는 막대 및 시간표</desc>
 <text x="52" y="112" class="label" style="font-weight:700">ASML 시스템 매출 중 중국 출하 비중</text>
@@ -102,7 +103,7 @@ def svg_chart(week: int, title: str, unit: str, rows: list[tuple[str, float]]) -
 <rect x="240" y="177" width="118" height="164" rx="8" fill="#A94E32"/>
 <text x="299" y="160" text-anchor="middle" class="value" style="font-size:27px">41%</text>
 <text x="299" y="370" text-anchor="middle" class="label">2024</text>
-<text x="54" y="407" class="note">고객 공장 소재지 기준 · 첨단 EUV 확보를 뜻하지 않음</text>
+<text x="54" y="420" class="note">고객 공장 소재지 기준 · EUV 확보와 다름</text>
 <line x1="443" y1="136" x2="443" y2="345" stroke="#D9D1C5" stroke-width="2"/>
 <text x="485" y="112" class="label" style="font-weight:700">통제 범위가 넓어진 과정</text>
 <circle cx="488" cy="161" r="8" fill="#1F5A75"/><text x="512" y="166" class="value">2022.10</text>
@@ -111,8 +112,9 @@ def svg_chart(week: int, title: str, unit: str, rows: list[tuple[str, float]]) -
 <text x="617" y="236" class="label">네덜란드 일부 DUV 허가 확대</text>
 <circle cx="488" cy="301" r="8" fill="#A94E32"/><text x="512" y="306" class="value">2024.12</text>
 <text x="617" y="306" class="label">미 24종 장비·3종 SW·HBM</text>
-<text x="485" y="365" class="note">비중 상승은 통제 실패의 증거가 아니라 DUV 수요·출하 시차를 함께 보라는 신호</text>'''
-        chart_name = "매출과 규제"
+<text x="485" y="365" class="note">비중 상승만으로 통제 실패를 뜻하지 않음</text>
+<text x="485" y="393" class="note">DUV 수요와 출하 시차를 함께 확인</text>'''
+        chart_name = "규제 연표"
     elif week == 5:
         total = sum(value for _, value in rows)
         radius, circumference, offset = 98, 2 * math.pi * 98, 0.0
@@ -141,7 +143,32 @@ def svg_chart(week: int, title: str, unit: str, rows: list[tuple[str, float]]) -
             + '<text x="430" y="385" class="note">구성비는 항목 합계 기준이며 반올림할 수 있음</text>'
         )
         chart_name = "도넛 차트"
-    elif week in {2, 4, 8, 9, 12, 16, 25, 26, 27, 28}:
+    elif week == 4:
+        body = '''<desc id="desc">2019·2021·2022년 일본산 불화수소 수입액을 실제 연도 간격으로 비교한 그림</desc>
+<line x1="92" y1="338" x2="842" y2="338" class="axis"/>
+<line x1="92" y1="118" x2="92" y2="338" class="axis"/>
+<line x1="92" y1="118" x2="842" y2="118" class="grid"/><line x1="92" y1="228" x2="842" y2="228" class="grid"/>
+<text x="78" y="344" text-anchor="end" class="unit">0</text><text x="78" y="234" text-anchor="end" class="unit">20</text><text x="78" y="124" text-anchor="end" class="unit">40</text>
+<polyline points="92,138.4 592,269.3 842,292.4" fill="none" stroke="#1F5A75" stroke-width="5"/>
+<circle cx="92" cy="138.4" r="8" fill="#A94E32"/><circle cx="592" cy="269.3" r="8" fill="#4D7C6F"/><circle cx="842" cy="292.4" r="8" fill="#C18A3D"/>
+<text x="108" y="130" class="value">36.3</text><text x="592" y="254" text-anchor="middle" class="value">12.5</text><text x="842" y="277" text-anchor="middle" class="value">8.3</text>
+<text x="92" y="374" text-anchor="middle" class="label">2019</text><text x="342" y="374" text-anchor="middle" class="unit">2020 자료 미표기</text><text x="592" y="374" text-anchor="middle" class="label">2021</text><text x="842" y="374" text-anchor="middle" class="label">2022</text>'''
+        chart_name = "연도 비교"
+    elif week == 26:
+        body = '''<desc id="desc">2024년 데이터센터 전력소비 기준연도 추정과 2030·2035년 IEA 기본 시나리오 전망을 구분한 그림</desc>
+<line x1="92" y1="338" x2="842" y2="338" class="axis"/><line x1="92" y1="108" x2="92" y2="338" class="axis"/>
+<line x1="92" y1="108" x2="842" y2="108" class="grid"/><line x1="92" y1="223" x2="842" y2="223" class="grid"/>
+<text x="78" y="344" text-anchor="end" class="unit">0</text><text x="78" y="229" text-anchor="end" class="unit">600</text><text x="78" y="114" text-anchor="end" class="unit">1,200</text>
+<circle cx="92" cy="258.5" r="9" fill="#1F5A75"/><text x="112" y="250" class="value">415</text>
+<line x1="92" y1="258.5" x2="842" y2="108" stroke="#A94E32" stroke-width="5" stroke-dasharray="13 9"/>
+<circle cx="542" cy="156.9" r="9" fill="#F7F4ED" stroke="#A94E32" stroke-width="5"/><circle cx="842" cy="108" r="9" fill="#F7F4ED" stroke="#A94E32" stroke-width="5"/>
+<text x="542" y="142" text-anchor="middle" class="value">945</text><text x="842" y="93" text-anchor="end" class="value">약 1,200</text>
+<text x="92" y="374" text-anchor="middle" class="label">2024</text><text x="542" y="374" text-anchor="middle" class="label">2030</text><text x="842" y="374" text-anchor="middle" class="label">2035</text>
+<rect x="300" y="78" width="20" height="20" rx="10" fill="#1F5A75"/><text x="330" y="95" class="unit">기준연도 추정</text>
+<line x1="516" y1="88" x2="552" y2="88" stroke="#A94E32" stroke-width="5" stroke-dasharray="10 7"/><text x="565" y="95" class="unit">기본 시나리오 전망</text>
+<text x="92" y="416" class="note">2030년 이후에는 수요·효율·정책에 따른 전망 불확실성이 더 커집니다.</text>'''
+        chart_name = "추정·전망"
+    elif week in {2, 8, 9, 12, 16, 25, 27, 28}:
         left, top, chart_width, chart_height = 82, 118, 760, 225
         step = chart_width / max(1, len(rows) - 1)
         points = []
@@ -163,9 +190,11 @@ def svg_chart(week: int, title: str, unit: str, rows: list[tuple[str, float]]) -
             + grid
             + f'<polyline points="{" ".join(points)}" fill="none" stroke="#1F5A75" stroke-width="5" stroke-linejoin="round"/>'
             + ''.join(circles + labels)
-            + f'<text x="82" y="410" class="note">첫 값 대비 마지막 값 변화: {((rows[-1][1] / rows[0][1]) - 1) * 100:+.1f}%</text>'
+            + f'<text x="72" y="140" text-anchor="end" class="unit">{shown(max_value)}</text>'
+            + '<text x="72" y="350" text-anchor="end" class="unit">0</text>'
+            + f'<text x="82" y="410" class="note">첫 시점 대비 마지막 시점 변화: {((rows[-1][1] / rows[0][1]) - 1) * 100:+.1f}%</text>'
         )
-        chart_name = "추세선"
+        chart_name = "시점 비교"
     elif week in {1, 6, 11, 18, 19, 23, 30}:
         left, base, chart_height = 90, 350, 220
         slot = 740 / len(rows)
@@ -201,7 +230,7 @@ def svg_chart(week: int, title: str, unit: str, rows: list[tuple[str, float]]) -
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
 {common}{body}
-<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">{chart_name}</text>
+<rect x="752" y="24" width="138" height="36" rx="18" fill="#10283F"/><text x="821" y="49" text-anchor="middle" style="font:700 20px 'Noto Sans KR',sans-serif;fill:#F7F4ED">{chart_name}</text>
 </svg>'''
 
 

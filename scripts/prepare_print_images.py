@@ -7,6 +7,7 @@ therefore mapped to four deliberately separated gray levels before conversion.
 Illustrations keep their original monochrome tonal range.
 """
 
+import argparse
 from pathlib import Path
 
 import numpy as np
@@ -86,8 +87,16 @@ def save_grayscale(
         rendered.save(destination, optimize=True, compress_level=9)
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--weeks", nargs="*", type=int, help="Only rebuild these weeks")
+    return parser.parse_args()
+
+
 def main() -> None:
-    for week in range(1, 31):
+    args = parse_args()
+    weeks = sorted(set(args.weeks or range(1, 31)))
+    for week in weeks:
         save_grayscale(
             FIGURES / f"week{week:02d}.png",
             FIGURES / f"week{week:02d}-print.png",
@@ -102,7 +111,10 @@ def main() -> None:
             SYMBOLS / f"week{week:02d}-symbol-print.png",
             (720, 720),
         )
-    print("prepared 30 grayscale data figures and 30 grayscale 720px symbols")
+    print(
+        f"prepared {len(weeks)} grayscale data figures and "
+        f"{len(weeks)} grayscale 720px symbols"
+    )
 
 
 if __name__ == "__main__":

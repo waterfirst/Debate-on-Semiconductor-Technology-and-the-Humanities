@@ -1,13 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
-<title id="title">연산당 전력 40% 절감, 사용량 3배면 친환경인가</title>
+<title id="title">연산 효율과 총전력의 역설</title>
 <style>
-  .bg{fill:#F7F4ED} .title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}
-  .unit{font:15px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:16px "Noto Sans KR",sans-serif;fill:#253443}
-  .value{font:700 15px "Noto Sans KR",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
-  .axis{stroke:#768594;stroke-width:1.4} .note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}
+  .bg{fill:#F7F4ED} .title{font:700 28px "Noto Sans KR",sans-serif;fill:#10283F}
+  .unit{font:21px "Noto Sans KR",sans-serif;fill:#6A625A} .label{font:21px "Noto Sans KR",sans-serif;fill:#253443}
+  .value{font:700 21px "Noto Sans KR",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
+  .axis{stroke:#768594;stroke-width:1.4} .note{font:20px "Noto Sans KR",sans-serif;fill:#756C63}
 </style>
 <rect class="bg" width="100%" height="100%" rx="18"/>
-<text x="30" y="44" class="title">연산당 전력 40% 절감, 사용량 3배면 친환경인가</text>
-<text x="30" y="72" class="unit">단위: 데이터센터 전력소비(TWh)</text><desc id="desc">시간과 시나리오의 변화를 보여주는 추세선</desc><line x1="82" y1="118.0" x2="842" y2="118.0" class="grid"/><line x1="82" y1="174.2" x2="842" y2="174.2" class="grid"/><line x1="82" y1="230.5" x2="842" y2="230.5" class="grid"/><line x1="82" y1="286.8" x2="842" y2="286.8" class="grid"/><line x1="82" y1="343.0" x2="842" y2="343.0" class="grid"/><polyline points="82.0,265.2 462.0,165.8 842.0,118.0" fill="none" stroke="#1F5A75" stroke-width="5" stroke-linejoin="round"/><circle cx="82.0" cy="265.2" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><circle cx="462.0" cy="165.8" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><circle cx="842.0" cy="118.0" r="7" fill="#A94E32" stroke="#F7F4ED" stroke-width="3"/><text x="82.0" y="375" text-anchor="middle" class="label">2024 소비</text><text x="82.0" y="250.2" text-anchor="middle" class="value">415</text><text x="462.0" y="375" text-anchor="middle" class="label">2030 소비</text><text x="462.0" y="150.8" text-anchor="middle" class="value">945</text><text x="842.0" y="375" text-anchor="middle" class="label">2035 소비</text><text x="842.0" y="104.0" text-anchor="middle" class="value">1,200</text><text x="82" y="410" class="note">첫 값 대비 마지막 값 변화: +189.2%</text>
-<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 12px 'Noto Sans KR',sans-serif;fill:#F7F4ED">추세선</text>
+<text x="30" y="44" class="title">연산 효율과 총전력의 역설</text>
+<text x="30" y="72" class="unit">단위: 데이터센터 전력소비(TWh)</text><desc id="desc">2024년 데이터센터 전력소비 기준연도 추정과 2030·2035년 IEA 기본 시나리오 전망을 구분한 그림</desc>
+<line x1="92" y1="338" x2="842" y2="338" class="axis"/><line x1="92" y1="108" x2="92" y2="338" class="axis"/>
+<line x1="92" y1="108" x2="842" y2="108" class="grid"/><line x1="92" y1="223" x2="842" y2="223" class="grid"/>
+<text x="78" y="344" text-anchor="end" class="unit">0</text><text x="78" y="229" text-anchor="end" class="unit">600</text><text x="78" y="114" text-anchor="end" class="unit">1,200</text>
+<circle cx="92" cy="258.5" r="9" fill="#1F5A75"/><text x="112" y="250" class="value">415</text>
+<line x1="92" y1="258.5" x2="842" y2="108" stroke="#A94E32" stroke-width="5" stroke-dasharray="13 9"/>
+<circle cx="542" cy="156.9" r="9" fill="#F7F4ED" stroke="#A94E32" stroke-width="5"/><circle cx="842" cy="108" r="9" fill="#F7F4ED" stroke="#A94E32" stroke-width="5"/>
+<text x="542" y="142" text-anchor="middle" class="value">945</text><text x="842" y="93" text-anchor="end" class="value">약 1,200</text>
+<text x="92" y="374" text-anchor="middle" class="label">2024</text><text x="542" y="374" text-anchor="middle" class="label">2030</text><text x="842" y="374" text-anchor="middle" class="label">2035</text>
+<rect x="300" y="78" width="20" height="20" rx="10" fill="#1F5A75"/><text x="330" y="95" class="unit">기준연도 추정</text>
+<line x1="516" y1="88" x2="552" y2="88" stroke="#A94E32" stroke-width="5" stroke-dasharray="10 7"/><text x="565" y="95" class="unit">기본 시나리오 전망</text>
+<text x="92" y="416" class="note">2030년 이후에는 수요·효율·정책에 따른 전망 불확실성이 더 커집니다.</text>
+<rect x="752" y="24" width="138" height="36" rx="18" fill="#10283F"/><text x="821" y="49" text-anchor="middle" style="font:700 20px 'Noto Sans KR',sans-serif;fill:#F7F4ED">추정·전망</text>
 </svg>

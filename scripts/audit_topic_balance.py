@@ -14,17 +14,17 @@ from book_config import BOOK, selected_chapters
 
 
 DIRECT_ENGINEERING = {
-    3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 18, 19, 21, 22, 24, 25, 26, 28, 30
+    3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15, 18, 19, 21, 25, 26, 28, 30
 }
 
 DOMAINS = {
     "research": {5, 10, 11, 13, 24},
     "process": {4, 8, 9, 13, 15, 19, 21},
     "design": {12, 25, 30},
-    "equipment": {6, 15},
-    "infrastructure": {3, 19, 22, 26},
-    "security_and_talent": {2, 18, 24, 28},
-    "organization": {7, 14, 21, 24},
+    "equipment": {15},
+    "infrastructure": {3, 19, 26},
+    "security_and_talent": {2, 18, 28},
+    "organization": {7, 14, 21},
 }
 
 
@@ -40,11 +40,11 @@ def main() -> None:
     selected = selected_chapters()
     selected_set = set(selected)
     direct = selected_set & DIRECT_ENGINEERING
-    if len(selected) != 22:
-        raise SystemExit(f"expected 22 published chapters, found {len(selected)}")
-    if len(direct) < 19:
+    if len(selected) != 19:
+        raise SystemExit(f"expected 19 published chapters, found {len(selected)}")
+    if len(direct) < 16:
         raise SystemExit(
-            f"engineering/workplace relevance fell below target: {len(direct)}/22"
+            f"engineering/workplace relevance fell below target: {len(direct)}/19"
         )
 
     coverage = Counter()
@@ -57,7 +57,7 @@ def main() -> None:
     if len(titles) != len(set(titles)):
         raise SystemExit("duplicate published chapter titles")
 
-    print(f"PASS: {len(direct)}/22 chapters are direct engineering/workplace judgments")
+    print(f"PASS: {len(direct)}/19 chapters are direct engineering/workplace judgments")
     print("domain coverage: " + ", ".join(f"{k}={v}" for k, v in coverage.items()))
     for number, (chapter_id, title) in enumerate(zip(selected, titles), 1):
         marker = "engineering" if chapter_id in DIRECT_ENGINEERING else "current-affairs"

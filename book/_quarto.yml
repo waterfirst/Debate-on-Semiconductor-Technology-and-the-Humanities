@@ -24,30 +24,27 @@ book:
       chapters:
         - chapters/week07.qmd
         - chapters/week01.qmd
+        - chapters/week05.qmd
         - chapters/week02.qmd
         - chapters/week04.qmd
     - part: "연구·설계·공정의 판단"
       chapters:
-        - chapters/week05.qmd
-        - chapters/week06.qmd
-        - chapters/week08.qmd
         - chapters/week09.qmd
+        - chapters/week08.qmd
         - chapters/week10.qmd
+        - chapters/week15.qmd
         - chapters/week11.qmd
         - chapters/week12.qmd
         - chapters/week13.qmd
-        - chapters/week15.qmd
     - part: "조직·보안·인재"
       chapters:
-        - chapters/week14.qmd
         - chapters/week18.qmd
+        - chapters/week14.qmd
         - chapters/week21.qmd
-        - chapters/week24.qmd
         - chapters/week28.qmd
     - part: "인프라와 지속가능성"
       chapters:
         - chapters/week19.qmd
-        - chapters/week22.qmd
         - chapters/week26.qmd
         - chapters/week30.qmd
     - epilogue.qmd
@@ -97,6 +94,7 @@ format:
 filters:
   - book-question.lua
   - table-widths.lua
+  - korean-word-guard.lua
   - hanja-font.lua
 
 execute:

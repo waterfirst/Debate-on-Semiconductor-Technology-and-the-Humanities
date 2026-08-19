@@ -130,13 +130,15 @@ def make_symbol_sheets() -> None:
 
 def main() -> None:
     PROOF.mkdir(parents=True, exist_ok=True)
+    # Build proof sheets before assertions so a failed audit still leaves a
+    # visual diagnostic for the editor.
+    make_chart_sheets("", "charts-color")
+    make_chart_sheets("-print", "charts-print")
+    make_symbol_sheets()
     for week in range(1, 31):
         print(audit_chart(week))
     for week in range(1, 31):
         print(audit_symbol(week))
-    make_chart_sheets("", "charts-color")
-    make_chart_sheets("-print", "charts-print")
-    make_symbol_sheets()
     print(f"PASS: 30 charts and 30 symbols; proof sheets: {PROOF}")
 
 

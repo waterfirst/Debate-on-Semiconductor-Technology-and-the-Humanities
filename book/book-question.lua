@@ -33,6 +33,10 @@ function Image(element)
   if not FORMAT:match("latex") or not has_class(element, "book-question-image") then
     return nil
   end
+  -- The former 30 mm size reduced the illustration to a decorative stamp.
+  -- A 52 mm print width keeps the quiet hanji aesthetic while making the
+  -- chapter symbol readable on an A5 page.
+  element.attributes["width"] = "52mm"
   return pandoc.List({
     pandoc.RawInline("latex", "\\hfill{}"),
     element,

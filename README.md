@@ -2,26 +2,27 @@
 
 > 조선의 책문으로 훈련하는 AI·공정·설계·공급망 데이터 토론
 
-조선시대 과거시험의 `책문(策問)`을 오늘의 반도체 산업 질문으로 다시 쓴 스칼라브릿지의 첫 단행본 프로젝트입니다. 30개 초고 가운데 반도체·디스플레이 지원자의 토론 훈련과 직접 연결되는 22개 핵심 질문을 선별하고, 데이터·대립 답안·AI 조사 설계·90초 발언·꼬리 질문으로 훈련하도록 설계했습니다.
+조선시대 과거시험의 `책문(策問)`을 오늘의 반도체 산업 질문으로 다시 쓴 스칼라브릿지의 첫 단행본 프로젝트입니다. 30개 초고 가운데 반도체·디스플레이 지원자의 토론 훈련과 직접 연결되는 19개 핵심 질문을 선별하고, 데이터·대립 답안·AI 조사 설계·90초 발언·꼬리 질문으로 훈련하도록 설계했습니다.
 
 이 책은 특정 기업의 공식 채용 자료가 아니며 기업의 후원·검수·승인을 받지 않았습니다.
 
 ## 현재 출간 상태
 
-PDF·EPUB·인쇄용 날개 펼침표지까지 만든 **출간 후보본**입니다. 추천사, 종이책·전자책 ISBN, 정가, 발행일과 실제 바코드가 확정되면 해당 정보를 반영해 최종 판본을 다시 출력합니다. 추천사가 추가되면 본문 쪽수와 책등 폭도 반드시 다시 계산합니다.
+PDF·EPUB·인쇄용 날개 펼침표지까지 만든 **출간 후보본**입니다. 종이책 ISBN `979-11-220895-8-5 (03500)`과 정가 15,000원을 반영했습니다. 초판은 추천사·서평 없이 발행하며, 전자책 ISBN·발행일이 확정되면 판권면과 메타데이터를 갱신합니다.
 
 - 교보 제출 절차와 체크리스트: [KYOBO_PUBLISHING_GUIDE.md](KYOBO_PUBLISHING_GUIDE.md)
-- 22개 출간 장 선별 기준과 정가 판단: [EDITORIAL_CURATION.md](EDITORIAL_CURATION.md)
+- 19개 출간 장 선별 기준과 정가 판단: [EDITORIAL_CURATION.md](EDITORIAL_CURATION.md)
 - Claude 등 외부 감수자 전달용 점검표: [EXTERNAL_REVIEW_BRIEF.md](EXTERNAL_REVIEW_BRIEF.md)
 - 이 프로젝트의 재현 가능한 편집·출판 절차: [SKILL.md](SKILL.md)
+- 다른 Quarto 책에도 설치해 쓰는 재사용 스킬: [skills/quarto-korean-pod-book/SKILL.md](skills/quarto-korean-pod-book/SKILL.md)
 - 렛유인 전달 메일: [LETYOUIN_REVIEW_EMAIL.md](LETYOUIN_REVIEW_EMAIL.md)
-- 렛유인 검토용 서문·목차: `book/output/pdf/렛유인-검토용-서문-목차.pdf`
+- 렛유인 검토용 서문·목차·대표 장 2편: `book/output/pdf/렛유인-검토용-서문-목차.pdf`
 
 ## 하루 만에 출판 교정쇄까지 만든 방식
 
 짧은 시간에 출판 수준을 확보한 핵심은 글을 한 번에 길게 생성하는 것이 아니라, 원고·데이터·삽화·조판·검수를 서로 독립된 공정으로 나눈 것입니다.
 
-1. 30개 책문 초고의 제목과 판단 구조를 만든 뒤, 산업 연관성·주제 중복·가격을 함께 검토해 22개 핵심 장만 본문에 남겼습니다.
+1. 30개 책문 초고의 제목과 판단 구조를 만든 뒤, 산업 연관성·주제 중복·가격을 함께 검토해 19개 핵심 장만 본문에 남겼습니다.
 2. 모든 장을 `오늘의 책문 → 맥락 → 데이터 렌즈 → 근거 표 → 대립 답안 A·B·C → AI 조사 설계 → 신입사원 사례 → 90초 모범 발언 → 장별 꼬리 질문`의 동일한 편집 규칙으로 만들었습니다.
 3. 숫자에는 단위·기준 연도·출처를 붙이고, 비교할 수 없는 수치를 한 그래프에 억지로 합치지 않았습니다.
 4. 막대그래프만 반복하지 않고 세로 막대, 추세선, 도넛, 롤리팝, 판단 매트릭스를 주제에 맞게 배치했습니다.
@@ -40,10 +41,10 @@ PDF·EPUB·인쇄용 날개 펼침표지까지 만든 **출간 후보본**입니
 - 책문: KoPub바탕 Medium, 한문 인용: Noto Serif KR
 - 장 제목: Pretendard SemiBold, 남색과 구리색 편집선
 - 책문 상자: 미색 바탕, 남색 외곽선, 구리색 표제
-- 삽화: 출간 장별 22점, 단색 연필·수묵화 계열(제외 초고의 자산은 저장소에 보존)
+- 삽화: 출간 장별 19점, 단색 연필·수묵화 계열(제외 초고의 자산은 저장소에 보존)
 - 표지: 밝은 한지와 낮의 수묵화 위에서 갓의 창을 실리콘 웨이퍼로 재해석한 전면 디자인
-- 인쇄용 표지: 좌우 80mm 책날개, 본문 290쪽·백색모조 100g 기준 18mm 책등, 사방 3mm 도련을 반영한 486 × 216mm 펼침표지
-- 후면 왼쪽 하단에는 Scholar Bridge 로고를, 우측 하단 흰 상자에는 출판 등록 뒤 ISBN/EAN-13 바코드를 배치합니다.
+- 인쇄용 표지: 좌우 80mm 책날개, 본문 262쪽·백색모조 100g 기준 16mm 책등, 사방 3mm 도련과 접지 여유를 반영한 484 × 216mm 펼침표지
+- 후면 왼쪽 하단에는 Scholar Bridge 로고를, 우측 하단에는 배정된 ISBN/EAN-13 바코드를 배치합니다.
 - 제작 사양: 표지 컬러·무광 코팅, 내지 흑백, 백색모조 100g. 표지 용지는 제작처가 지원하면 스노우 250g을 사용하고, 교보 POD에서는 선택 화면에 제공되는 250g 표지 용지를 확인합니다.
 - 발행처: 스칼라브릿지(Scholar Bridge). 표지 전면에는 미표기하고, 뒤표지 왼쪽 아래·책등 아래·판권면에 표기합니다.
 
@@ -66,7 +67,7 @@ book/
   book-question.lua           책문 상자 필터
   table-widths.lua            근거 표 열 폭 최적화 필터
   hanja-font.lua              한문 인용 전용 글꼴 라우팅
-  chapters/week01.qmd ...     30개 초고(출간 목차에는 22개 선별)
+  chapters/week01.qmd ...     30개 초고(출간 목차에는 19개 선별)
   figures/                    장별 데이터 시각화 원본·인쇄본
   figures/symbols/            수묵 연필 삽화의 고해상도 원본·흑백 인쇄본
   cover/                      앞·뒤·책등·책날개·펼침표지 원본과 렌더링
@@ -81,9 +82,10 @@ scripts/
   activate_print_images.py    원고 이미지 경로를 인쇄본으로 전환
   render_cover_assets.mjs     표지 SVG를 인쇄용 PNG로 렌더링
   verify_publish_artifacts.py PDF·EPUB 쪽수·판형·도련·발행처 검증
-  build_recommendation_packets.py 추천사 요청용 서문·관련 장·에필로그 발췌본 생성
+  build_recommendation_packets.py 과거 추천사 요청용 도구(초판에서는 사용하지 않음)
   build_letyuin_review_packet.py 렛유인 전달용 서문·목차 발췌본 생성
 SKILL.md                      이 출판 공정을 재사용하는 작업 지침
+skills/quarto-korean-pod-book/ 다른 Quarto 책에 설치해 쓰는 범용 출판 스킬
 ```
 
 ## 재현 방법
@@ -102,7 +104,7 @@ node scripts/render_chapter_figures.mjs
 python scripts/prepare_print_images.py
 python scripts/activate_print_images.py
 
-# 3. 290쪽·18mm 책등의 표지 자산 렌더링
+# 3. 최종 쪽수로 계산한 책등의 표지 자산 렌더링
 node scripts/render_cover_assets.mjs
 
 # 4. EPUB을 먼저 만들고 안정된 출력 폴더에 보존
@@ -132,16 +134,19 @@ python scripts/verify_publish_artifacts.py
 - 실행 일정과 단계별 완료기준: [PUBLISHING_EXECUTION_SCHEDULE_2026-08.md](PUBLISHING_EXECUTION_SCHEDULE_2026-08.md)
 
 - 교보 POD에서 제공하는 실제 종이 종류와 책등 계산식으로 책등 폭을 다시 확정합니다.
-- 현재 18mm는 `290쪽 ÷ 2 × 0.12mm/장`을 올림한 제작용 추정값입니다. 교보가 다른 값을 제시하면 `python book/cover/build_cover_pdfs.py --spine-mm 값`으로 다시 조립하고 표지 SVG의 책등 폭도 같은 값으로 조정합니다.
-- ISBN·가격·발행일을 확정한 뒤 판권면을 갱신합니다.
-- 추천사를 받으면 판권면 다음·서문 앞에 배치하고 목차, 본문 쪽수, 책등 폭, 펼침표지를 모두 다시 만듭니다.
-- 판매 승인 뒤에는 추천사 추가로 쪽수를 바꾸기 어려우므로 추천사 마감 전 파일은 출간 후보본으로 관리합니다.
+- 현재 16mm는 `262쪽 ÷ 2 × 0.12mm/장`을 올림한 제작용 추정값입니다. 교보가 다른 값을 제시하면 `python book/cover/build_cover_pdfs.py --spine-mm 값`으로 다시 조립하고 표지 SVG의 책등 폭도 같은 값으로 조정합니다.
+- 전자책 ISBN·발행일을 확정한 뒤 판권면을 갱신합니다.
+- 초판은 추천사·서평 없이 확정했으므로 관련 빈 페이지나 유보 문구를 넣지 않습니다.
 - 교보가 발급한 바코드를 뒷표지 흰색 영역에 넣습니다.
 - 최신성이 중요한 수치의 기준일과 원출처를 다시 확인합니다.
 - 전자책 미리보기에서 표, 수식, 이미지 대체텍스트와 목차 이동을 확인합니다.
 - 생성형 AI 활용 여부는 유통사 입력 화면에서 사실대로 표시합니다.
 
 다음 단행본으로 `waterfirst/insight-lab`을 옮겨 제작할 때의 작업 인계서는 [INSIGHT_LAB_BOOK_BATON.md](INSIGHT_LAB_BOOK_BATON.md)에 있습니다.
+
+## 다음 책에서 재사용하는 방법
+
+범용 스킬은 `skills/quarto-korean-pod-book`에 있습니다. 새 PC에서는 이 폴더를 `%USERPROFILE%\.codex\skills\quarto-korean-pod-book`으로 복사한 뒤 Codex에 `$quarto-korean-pod-book`을 명시해 호출합니다. 스킬은 목차 선별, 근거 검증, 90초 발언 균형, 장별 삽화, A5 조판, PDF·EPUB 검수, 책등·날개 표지 계산과 GitHub 인계까지 같은 순서로 안내합니다.
 
 ## 라이선스
 

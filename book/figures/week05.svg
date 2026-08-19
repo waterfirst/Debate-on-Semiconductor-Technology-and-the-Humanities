@@ -2,7 +2,7 @@
   <title id="title">반복 산포와 확장불확도는 다른 값이다</title>
   <desc id="desc">NIST의 약 150 sccm 반복시험 표준편차와 SLowFlowS의 95퍼센트 확장불확도를 서로 다른 패널로 표시한다.</desc>
   <style>
-    .bg{fill:#F7F4ED}.panel{fill:#FCFAF5;stroke:#D9D1C5;stroke-width:1.2}.title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}.sub{font:14px "Noto Sans KR",sans-serif;fill:#6A625A}.head{font:700 18px "Noto Sans KR",sans-serif;fill:#10283F}.label{font:15px "Noto Sans KR",sans-serif;fill:#253443}.value{font:700 17px "Noto Sans KR",sans-serif;fill:#10283F}.note{font:13px "Noto Sans KR",sans-serif;fill:#756C63}.track{stroke:#DDD6CB;stroke-width:12;stroke-linecap:round}.rep{stroke:#4D7C6F;stroke-width:12;stroke-linecap:round}.unc{stroke:#A94E32;stroke-width:12;stroke-linecap:round}.dot1{fill:#4D7C6F}.dot2{fill:#A94E32}.rule{stroke:#BDB4A8;stroke-width:1}
+    .bg{fill:#F7F4ED}.panel{fill:#FCFAF5;stroke:#D9D1C5;stroke-width:1.2}.title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}.sub{font:20px "Noto Sans KR",sans-serif;fill:#6A625A}.head{font:700 20px "Noto Sans KR",sans-serif;fill:#10283F}.label{font:20px "Noto Sans KR",sans-serif;fill:#253443}.value{font:700 20px "Noto Sans KR",sans-serif;fill:#10283F}.note{font:20px "Noto Sans KR",sans-serif;fill:#756C63}.track{stroke:#DDD6CB;stroke-width:12;stroke-linecap:round}.rep{stroke:#4D7C6F;stroke-width:12;stroke-linecap:round}.unc{stroke:#A94E32;stroke-width:12;stroke-linecap:round}.dot1{fill:#4D7C6F}.dot2{fill:#A94E32}.rule{stroke:#BDB4A8;stroke-width:1}
   </style>
   <rect class="bg" width="920" height="440" rx="18"/>
   <text x="30" y="42" class="title">반복 산포와 확장불확도는 다른 값이다</text>

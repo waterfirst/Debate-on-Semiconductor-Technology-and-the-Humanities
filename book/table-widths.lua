@@ -20,9 +20,16 @@ function Table(tbl)
   local columns = #tbl.colspecs
 
   if columns == 4 and (first == "근거" or first == "구분") then
-    apply_widths(tbl, { 0.07, 0.39, 0.16, 0.38 })
+    -- The classification column needs enough room for terms such as
+    -- "조건부 전망"; the prior 16% column wrapped almost every word.
+    apply_widths(tbl, { 0.10, 0.32, 0.22, 0.36 })
+  elseif columns == 4 and first == "단계" then
+    -- Control-ladder tables have one short ordinal and three prose columns.
+    -- Giving equal quarters to all four columns wastes A5 width on the ordinal
+    -- and forces Korean terms in the evidence columns to break character by character.
+    apply_widths(tbl, { 0.09, 0.29, 0.30, 0.32 })
   elseif columns == 3 and (first == "근거" or first == "구분") then
-    apply_widths(tbl, { 0.08, 0.53, 0.39 })
+    apply_widths(tbl, { 0.10, 0.51, 0.39 })
   elseif columns == 3 and (first == "우선순위" or first == "순서") then
     -- Data-acquisition tables use a short ordinal, a compact source name,
     -- and a substantially longer verification checklist.  Equal columns

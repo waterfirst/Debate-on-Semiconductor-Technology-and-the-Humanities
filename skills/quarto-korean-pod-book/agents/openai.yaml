@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quarto 한국어 POD 출판"
+  short_description: "한국어 Quarto 원고를 POD·EPUB 출간본으로 완성"
+  default_prompt: "Use $quarto-korean-pod-book to turn this Quarto manuscript into a validated Korean POD interior, full-wrap cover, and EPUB."

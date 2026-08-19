@@ -31,7 +31,7 @@ interior = PdfReader(INTERIOR)
 preview = PdfReader(PREVIEW)
 wrap = PdfReader(WRAP)
 
-assert 260 <= len(interior.pages) < 300, "interior PDF is outside the curated 260–299 page target"
+assert 220 <= len(interior.pages) < 290, "interior PDF is outside the curated 220–289 page target"
 assert len(interior.pages) % 2 == 0, "interior PDF must have an even page count"
 assert len(preview.pages) == len(interior.pages) + 2
 assert len(wrap.pages) == 1

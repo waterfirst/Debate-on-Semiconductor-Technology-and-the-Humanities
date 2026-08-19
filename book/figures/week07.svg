@@ -12,21 +12,21 @@
     </pattern>
     <style>
       .bg{fill:#F7F4ED}.panel{fill:#FCFAF5;stroke:#D8D0C5;stroke-width:1.2}
-      .title{font:700 24px "Noto Sans KR",sans-serif;fill:#10283F}.subtitle{font:13px "Noto Sans KR",sans-serif;fill:#6A625A}
-      .panel-title{font:700 14px "Noto Sans KR",sans-serif;fill:#253443}.label{font:600 13px "Noto Sans KR",sans-serif;fill:#3E4A55}
-      .value{font:700 19px "Noto Sans KR",sans-serif;fill:#10283F}.unit{font:12px "Noto Sans KR",sans-serif;fill:#756C63}
-      .card-title{font:700 13px "Noto Sans KR",sans-serif;fill:#253443}.card-value{font:700 17px "Noto Sans KR",sans-serif;fill:#10283F}
-      .card-note{font:11.5px "Noto Sans KR",sans-serif;fill:#625B54}.warning{font:700 13px "Noto Sans KR",sans-serif;fill:#F7F4ED}
+      .title{font:700 24px "Noto Sans KR",sans-serif;fill:#10283F}.subtitle{font:20px "Noto Sans KR",sans-serif;fill:#6A625A}
+      .panel-title{font:700 20px "Noto Sans KR",sans-serif;fill:#253443}.label{font:600 20px "Noto Sans KR",sans-serif;fill:#3E4A55}
+      .value{font:700 20px "Noto Sans KR",sans-serif;fill:#10283F}.unit{font:20px "Noto Sans KR",sans-serif;fill:#756C63}
+      .card-title{font:700 20px "Noto Sans KR",sans-serif;fill:#253443}.card-value{font:700 20px "Noto Sans KR",sans-serif;fill:#10283F}
+      .card-note{font:20px "Noto Sans KR",sans-serif;fill:#625B54}.warning{font:700 20px "Noto Sans KR",sans-serif;fill:#F7F4ED}
     </style>
   </defs>
 
   <rect class="bg" width="920" height="440" rx="18"/>
   <text id="title-text" x="28" y="38" class="title">이익·현금·주식·투자계획은 같은 숫자가 아닙니다</text>
-  <text x="28" y="62" class="subtitle">SK하이닉스 회사 발표와 정부·공공기관 계획 · 금액 단위: 조 원</text>
+  <text x="28" y="62" class="subtitle">회사 발표·정부 계획 | 단위·기간·회계 성격 분리</text>
 
   <rect x="28" y="82" width="536" height="150" rx="13" class="panel"/>
   <text x="47" y="107" class="panel-title">연간 연결 영업이익</text>
-  <text x="47" y="128" class="unit">본업의 회계성과 · 현금 잔액이 아님</text>
+  <text x="47" y="130" class="unit">회계성과 · 현금 잔액 아님</text>
   <text x="47" y="158" class="label">2024</text>
   <rect x="104" y="144" width="195" height="20" rx="4" fill="#C9C2B8" stroke="#6F6A64" stroke-width="1"/>
   <text x="311" y="159" class="value">23.4673</text>
@@ -35,42 +35,35 @@
   <text x="480" y="199" text-anchor="end" class="value" style="fill:#F7F4ED">47.2063</text>
 
   <rect x="576" y="82" width="316" height="150" rx="13" fill="#FCFAF5" stroke="#8C5A3C" stroke-width="1.8"/>
-  <rect x="593" y="96" width="123" height="22" rx="11" fill="#8C5A3C"/>
-  <text x="654.5" y="111" text-anchor="middle" style="font:700 11.5px 'Noto Sans KR',sans-serif;fill:#F7F4ED">분기 잠정 실적</text>
-  <text x="734" y="111" class="unit">2026년 2분기</text>
-  <text x="734" y="153" text-anchor="middle" class="value" style="font-size:27px">60.5426</text>
-  <text x="734" y="174" text-anchor="middle" class="unit">영업이익 · 조 원</text>
-  <line x1="604" y1="188" x2="864" y2="188" stroke="#D8D0C5" stroke-width="1"/>
-  <text x="734" y="207" text-anchor="middle" class="label">영업이익률 76%</text>
-  <text x="734" y="224" text-anchor="middle" class="unit">연간 실적과 직접 합산·연율화 금지</text>
+  <rect x="603" y="96" width="142" height="28" rx="14" fill="#8C5A3C"/>
+  <text x="674" y="116" text-anchor="middle" style="font:700 20px 'Noto Sans KR',sans-serif;fill:#F7F4ED">2Q26 잠정</text>
+  <text x="734" y="160" text-anchor="middle" class="value" style="font-size:27px">60.5426조 원</text>
+  <text x="734" y="198" text-anchor="middle" class="label">영업이익률 76%</text>
+  <text x="734" y="222" text-anchor="middle" class="unit">연간 실적과 합산 금지</text>
 
   <rect x="28" y="246" width="205" height="133" rx="12" class="panel"/>
   <rect x="28" y="246" width="205" height="8" rx="4" fill="#2D6278"/>
   <text x="45" y="278" class="card-title">현금배당</text>
   <text x="45" y="307" class="card-value">2.1조 원</text>
-  <text x="45" y="332" class="card-note">2025 회계연도 · 현금 지급</text>
-  <text x="45" y="354" class="card-note">주당 3,000원</text>
+  <text x="45" y="342" class="card-note">FY25 · 현금</text>
 
   <rect x="247" y="246" width="205" height="133" rx="12" fill="url(#sharePattern)" stroke="#B8A999" stroke-width="1.2"/>
   <rect x="247" y="246" width="205" height="8" rx="4" fill="#8C5A3C"/>
   <text x="264" y="278" class="card-title">자사주 소각</text>
-  <text x="264" y="304" class="card-value">1,530만 주 · 2.1%</text>
-  <text x="264" y="329" class="card-note">시장가치 약 12.2조 원</text>
-  <text x="264" y="352" class="card-note">주식 수 감소 · 비현금 평가</text>
+  <text x="264" y="307" class="card-value">1,530만 주</text>
+  <text x="264" y="342" class="card-note">2.1% · 비현금</text>
 
   <rect x="466" y="246" width="205" height="133" rx="12" class="panel"/>
   <rect x="466" y="246" width="205" height="8" rx="4" fill="#537569"/>
   <text x="483" y="278" class="card-title">용인 1기 팹 추가 투자</text>
   <text x="483" y="307" class="card-value">21.6조 원</text>
-  <text x="483" y="332" class="card-note">2030년까지 · 다년 계획</text>
-  <text x="483" y="354" class="card-note">장비비 제외</text>
+  <text x="483" y="342" class="card-note">2030년 계획</text>
 
   <rect x="685" y="246" width="207" height="133" rx="12" fill="url(#infraPattern)" stroke="#9CA6A0" stroke-width="1.2"/>
   <rect x="685" y="246" width="207" height="8" rx="4" fill="#6E7773"/>
-  <text x="702" y="278" class="card-title">용인 공동 용수 인프라</text>
+  <text x="702" y="278" class="card-title">공동 용수 인프라</text>
   <text x="702" y="307" class="card-value">약 2.2조 원</text>
-  <text x="702" y="332" class="card-note">2034년까지 · 107.2만㎥/일</text>
-  <text x="702" y="354" class="card-note">정부·공공기관 공동 인프라</text>
+  <text x="702" y="342" class="card-note">2034년 계획</text>
 
   <rect x="176" y="395" width="568" height="29" rx="14.5" fill="#10283F"/>
   <text x="460" y="414.5" text-anchor="middle" class="warning">기간 · 단위 · 회계 성격이 다르므로 서로 더하지 않습니다</text>
