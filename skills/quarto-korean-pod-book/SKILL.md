@@ -90,7 +90,7 @@ Read [references/red-team-checklist.md](references/red-team-checklist.md) for th
 Calculate the spine only after the interior PDF is final. Run:
 
 ```powershell
-python scripts/calc_cover_geometry.py --pages 262 --paper-thickness-mm 0.12 --wing-mm 80
+python scripts/calc_cover_geometry.py --pages 258 --paper-thickness-mm 0.12 --wing-mm 80
 ```
 
 Use the printer or POD platform’s value when it differs from the estimate. Rebuild the full-wrap cover whenever page count, paper, binding, wing size, or bleed changes. Put the assigned barcode in a quiet white area at least as large as the platform requirement, and place author and publisher legibly on the spine when its width permits.

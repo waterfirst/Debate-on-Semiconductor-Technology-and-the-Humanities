@@ -94,7 +94,6 @@ format:
 filters:
   - book-question.lua
   - table-widths.lua
-  - korean-word-guard.lua
   - hanja-font.lua
 
 execute:

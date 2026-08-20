@@ -7,6 +7,20 @@ local function has_class(element, name)
   return false
 end
 
+local function keep_prompt_words_together(inlines)
+  local output = pandoc.List()
+  for _, inline in ipairs(inlines) do
+    if inline.t == "Str" then
+      output:insert(pandoc.RawInline("latex", "\\mbox{"))
+      output:insert(inline)
+      output:insert(pandoc.RawInline("latex", "}"))
+    else
+      output:insert(inline)
+    end
+  end
+  return output
+end
+
 function Span(element)
   if not FORMAT:match("latex") then
     return nil
@@ -17,6 +31,7 @@ function Span(element)
     opening = "\\BookQuestionLabel{"
   elseif has_class(element, "book-question-prompt") then
     opening = "\\BookQuestionPrompt{"
+    element.content = keep_prompt_words_together(element.content)
   end
 
   if opening == nil then
@@ -52,7 +67,7 @@ function Div(element)
   local blocks = pandoc.List({
     pandoc.RawBlock(
       "latex",
-      "\\begin{tcolorbox}[enhanced,breakable,colback=questioncream,colframe=questionnavy,boxrule=0.7pt,leftrule=3.5pt,arc=2mm,left=4mm,right=4mm,top=3mm,bottom=3mm,before skip=10pt,after skip=12pt]"
+      "\\begin{tcolorbox}[enhanced,breakable,colback=questioncream,colframe=questionnavy,boxrule=0.7pt,leftrule=3.5pt,arc=2mm,left=4mm,right=4mm,top=3mm,bottom=3mm,before upper={\\raggedright\\rightskip=0pt plus 2em},before skip=10pt,after skip=12pt]"
     )
   })
   blocks:extend(element.content)
