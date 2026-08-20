@@ -1,113 +1,90 @@
 ---
 name: quarto-korean-pod-book
-description: Transform a Korean Quarto manuscript into a publication-ready A5 POD interior, EPUB, full-wrap wing cover, review packet, and reproducible GitHub handoff. Use for book-scale writing, editing, evidence verification, data charts, chapter illustrations, Korean typography, PDF/EPUB rendering, ISBN/barcode placement, spine calculation, POD preflight, or adapting an existing Quarto repository into a new independently published book.
+description: Plan, write, typeset, preflight, and publish a Korean book with R/Quarto, including Kyobo Purple POD submission, ISBN and publisher administration, print-ready interior and cover PDFs, proof-copy review, Korean trademark filing, and regional small-business IP support. Use when someone wants to write or self-publish a Korean book, convert manuscripts to Quarto, solve Korean PDF typography, calculate a POD cover, prepare Kyobo files, register a publisher or ISBN, protect a book or publisher brand, or preserve evidence of trademark use.
 ---
 
-# Quarto Korean POD Book
+# Korean Quarto POD Publishing
 
-Treat the repository as the source of truth. Preserve user work, keep source and generated artifacts separate, and never infer ISBN, price, publication date, printer specifications, endorsements, or page count.
+Turn an idea into a reproducible publishing project and print-ready submission. Treat platform specifications, fees, forms, deadlines, and support programs as changeable facts: verify them from official sources at the time of action.
 
-## 1. Establish the publication contract
+## Route the request
 
-Read the project instructions and inspect `_quarto.yml`, chapter files, styles, filters, build scripts, output folders, cover assets, and Git status. Record:
+1. Identify the stage: idea, manuscript, edit, Quarto conversion, PDF production, POD submission, ISBN, trademark, support application, or post-publication.
+2. Ask only for decisions that materially change the result: target reader, format, color/B&W, page count, owner, business region, and deadline.
+3. Read only the references needed:
+   - Entire order and gates: `references/end-to-end-workflow.md`
+   - R/Quarto manuscript and typesetting: `references/quarto-typesetting.md`
+   - Kyobo Purple POD and PDFs: `references/kyobo-pod-and-preflight.md`
+   - Trademark and small-business support: `references/trademark-and-support.md`
+4. Preserve source files and generate reproducibly. Never hand-edit a generated PDF when the source can be corrected.
 
-- trim size, paper, binding, color mode, wings, coating, bleed, and target price;
-- title, subtitle, author, publisher, print ISBN, ebook ISBN, and publication date;
-- intended reader, training outcome, chapter template, and citation standard;
-- final deliverables and whether a review packet is required.
+## Apply the sequence
 
-Mark undecided metadata as pending. Do not place placeholder identifiers in final artifacts. Treat print and ebook ISBNs as separate identifiers.
+1. Define the reader problem and one-sentence promise.
+2. Build the table of contents and sample chapter before drafting the whole book.
+3. Establish sources, citation rules, AI-use rules, permissions, and an asset ledger.
+4. Draft in Markdown/QMD; separate content from layout.
+5. Perform structural edit, fact-check, rights review, copyedit, and proofread in that order.
+6. Freeze trim, paper, color, binding, flaps, and printer template before final pagination.
+7. Render the interior; preflight size, fonts, images, color spaces, links, blanks, and overflows.
+8. Calculate the spine from the printer's current formula; build the cover after final page count.
+9. Complete publisher, ISBN, POD, and metadata administration.
+10. Order and inspect a physical proof. Correct source and regenerate.
+11. Approve sale only after proof sign-off.
+12. Search and design trademark filings early. Apply for support before self-filing when programs may exclude already-filed applications.
 
-Read [references/publishing-specs.md](references/publishing-specs.md) when calculating print geometry or preparing POD files.
+## Work with R and Quarto
 
-## 2. Edit before illustrating
+- Keep `_quarto.yml`, chapter QMDs, bibliography, CSL, images, fonts, filters, and scripts under version control.
+- Use Quarto Book with XeLaTeX for Korean PDF output. Verify the fonts actually used and embedded.
+- Use semantic Markdown: headings, figures, tables, citations, cross-references, callouts, and parts.
+- Keep print and EPUB/HTML differences in profiles or conditional content.
+- Render with `quarto render` or `quarto::quarto_render()`.
+- Run source audits before rendering and PDF preflight afterward. Use `scripts/preflight_print_pdf.py` when Poppler is available.
+- For the reference A5 setup and commands, read `references/quarto-typesetting.md`.
 
-Freeze the selected table of contents before final layout. Remove weak or overlapping chapters instead of shrinking type to meet a price target. For a debate-training book, make every chapter carry a distinct decision:
+## Produce print PDFs safely
 
-1. one concrete question;
-2. historical or conceptual framing;
-3. attributable evidence with denominator, unit, year, and status;
-4. genuinely opposed answers rather than two straw men and one universal compromise;
-5. an AI research plan that separates acquisition, verification, judgment, and debate;
-6. a role-specific case with clearly labelled hypothetical values;
-7. a 90-second answer that makes an actual choice and names reversal conditions;
-8. topic-specific follow-up questions and direct sources.
+- B&W interior: require true grayscale unless the current printer specification says otherwise.
+- Color interior and cover: require actual CMYK.
+- Never describe a generic CMYK conversion as `Japan Color 2001 Coated`.
+- If an exact ICC is required but unavailable, request a licensed profile or printer-approved conversion. Record the profile and command.
+- Verify with `pdfinfo -box`, `pdffonts`, and `pdfimages -list`; visual rendering alone is insufficient.
+- Use bleed and trim/crop boxes exactly as required by the current template.
+- Never reuse an old spine width. Recalculate after pagination is frozen.
 
-Audit all model answers as a set. Do not teach “always choose the conditional answer.” Allow stop, proceed, reject, and bounded decisions when the evidence supports them.
+## Handle Kyobo Purple POD
 
-When the user requests multi-agent work, assign non-overlapping roles: manuscript editor, independent red team, and illustration art director. Keep one lead agent responsible for final integration, rendering, and release.
+- Verify the current Kyobo notice, template, PDF version, bleed, paper, binding, finish, AI disclosure, ISBN handling, and replacement policy before final files.
+- Submit interior and cover as separate PDFs when required.
+- Treat project values—A5 148×210 mm, 3 mm bleed, 80 mm flaps, 258 pages, 16 mm spine, 484×216 mm wrap—as examples, not universal specifications.
+- Save upload receipt, order record, proof approval, and product page.
 
-## 3. Verify evidence
+## Handle trademarks and support
 
-Prefer primary institutional, regulatory, standards, corporate filing, or peer-reviewed sources. For every number, label it as one of:
+- Search Korean, English, spacing, pronunciation, and meaning variants in KIPRIS.
+- Choose owner, mark type, Nice classes, and designated goods/services from actual use. Books often raise classes 16, 41, and sometimes 9, but confirm official classification rather than filing automatically.
+- Korean word, English word, and composite logo filings protect different subject matter.
+- Before registration, never use `®`, `등록상표`, or `상표등록 완료`. Plain use of the mark is acceptable.
+- Check the current regional IP center and Bizinfo notice before filing. Eligibility, region, self-payment, VAT, exclusions, quantity, and prior-filing rules vary.
+- Preserve dated source/PDFs, POD orders, invoices, product-page captures, and physical-book photos.
+- Track application number, deadlines, office actions, publication/opposition, registration payment, and renewal.
 
-- observed historical fact;
-- estimate;
-- forecast;
-- scenario or sensitivity;
-- interview-only hypothetical value.
+## Quality gates
 
-Do not mix different periods, accounting concepts, denominators, or valuation types in one total. Replace unstable casualty, combat-performance, breaking-news, or ongoing-conflict numbers with durable historical evidence unless the current date is essential and verified immediately before release.
+Do not call the book ready until:
 
-Do not use the author’s essay as authority for an external fact. Author essays may supply voice and motivation in a preface or epilogue, with the platform and URL identified.
+- audience, promise, manuscript, and metadata agree;
+- every quotation, image, table, and font has a source and permission basis;
+- citations resolve and no TODO/placeholder remains;
+- size, page count, blanks, links, bookmarks, and image resolution are checked;
+- fonts are embedded or intentionally outlined/rasterized;
+- barcode/ISBN zone, spine, safe areas, bleed, and folds match the template;
+- the physical proof is checked for color, binding, gutter, crop, thin lines, and Korean text;
+- trademark/support claims are backed by a current official notice.
 
-## 4. Build charts and illustrations
+## Deliver the handoff
 
-Finish a chapter’s text before commissioning its illustration.
+Provide source project, render command, final PDFs and checksums, preflight report, proof correction log, POD metadata/upload checklist, ISBN/publisher records, and a trademark search/class/support/evidence checklist.
 
-For charts:
-
-- use restrained color plus shape, pattern, direct labels, or line style so categories remain distinct in grayscale;
-- show actual years at proportionate positions on time axes;
-- distinguish actual, estimate, and forecast visually;
-- keep labels readable at final A5 size and avoid relying on a legend alone;
-- export screen color and print grayscale variants, then inspect both.
-
-For illustrations, use the image-generation capability only after reading its applicable skill. Keep a consistent brief: warm white hanji, monochrome ink and graphite, pale gray wash, bright negative space, two or three symbolic objects, no text, numbers, logos, watermark, decorative border, or photorealism. Compare every result with the final chapter question before accepting it.
-
-## 5. Typeset for Korean A5 reading
-
-Start from a comfortable mobile-reading layout: about 10.5pt body type, 1.3–1.4 line spacing, generous paragraph rhythm, and an A5 text block near 110–115mm. Keep tables and figures inside the text block.
-
-Prevent split footnotes, single-character page starts, stranded final words, and headings at the bottom of a page. Give ordinal table columns minimal width and distribute the remainder by actual sentence length. Use a different but compatible face and a bordered box for the book-question prompt.
-
-Render after structural edits. Do not claim layout quality from source inspection alone.
-
-## 6. Render and preflight
-
-Render PDF and EPUB from the same frozen sources. Then:
-
-1. confirm trim dimensions, page count, even/odd page logic, embedded fonts, metadata, and link behavior;
-2. render representative and suspicious PDF pages to PNG and inspect title pages, question boxes, charts, dense tables, footnotes, chapter endings, and page transitions;
-3. inspect the EPUB navigation, chapter count, cover, images, and reflow;
-4. run source, manuscript, visual, and artifact audits supplied by the repository;
-5. rerender every dependent artifact after any source change.
-
-Read [references/red-team-checklist.md](references/red-team-checklist.md) for the independent final pass.
-
-## 7. Calculate the cover last
-
-Calculate the spine only after the interior PDF is final. Run:
-
-```powershell
-python scripts/calc_cover_geometry.py --pages 258 --paper-thickness-mm 0.12 --wing-mm 80
-```
-
-Use the printer or POD platform’s value when it differs from the estimate. Rebuild the full-wrap cover whenever page count, paper, binding, wing size, or bleed changes. Put the assigned barcode in a quiet white area at least as large as the platform requirement, and place author and publisher legibly on the spine when its width permits.
-
-## 8. Package and hand off
-
-Keep these outputs distinct:
-
-- interior PDF at trim size;
-- print full-wrap cover PDF with bleed and TrimBox;
-- reader preview PDF;
-- EPUB;
-- optional reviewer PDF and email text;
-- README, project SKILL, publication guide, and reproducibility notes.
-
-If endorsements are absent, do not leave endorsement headings, blank pages, or metadata promises in the publication files.
-
-Before Git publication, inspect the diff, preserve unrelated user files, run all validations, commit intentionally, and push the intended branch. Report exact page count, spine assumption, ISBN status, outputs, tests, and remaining printer-dependent checks.
-
-Use `scripts/audit_quarto_book.py` for a portable structural audit and `scripts/calc_cover_geometry.py` for deterministic cover geometry.
+State assumptions, exact color profile, unresolved risks, and next blocker. This is operational guidance, not a substitute for a patent attorney, tax professional, or printer approval.
