@@ -55,8 +55,8 @@
         font-family="KoPub Batang, serif" font-weight="700" font-size="38" letter-spacing="1">반도체 면접, 왕의 질문에 답하라</text>
   <text x="0" y="0" transform="translate(2886 1860) rotate(90)" fill="#31536a"
         font-family="KoPub Dotum, sans-serif" font-weight="700" font-size="25" letter-spacing="2">최낙초</text>
-  <text x="0" y="0" transform="translate(2886 2110) rotate(90)" fill="#31536a"
-        font-family="KoPub Dotum, sans-serif" font-weight="700" font-size="23" letter-spacing="2">SCHOLAR BRIDGE</text>
+  <image href="scholarbridge-korean-wordmark.png" x="0" y="-20" width="220" height="40"
+         transform="translate(2886 2110) rotate(90)" preserveAspectRatio="xMidYMid meet"/>
   <image href="front-cover-final.png" x="2952" y="0" width="1748" height="2551"
          preserveAspectRatio="xMidYMid slice"/>
 

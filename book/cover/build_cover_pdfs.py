@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import argparse
 import math
+import os
 import shutil
+import subprocess
 from pathlib import Path
 
 from PIL import Image
@@ -32,6 +34,11 @@ def parse_args() -> argparse.Namespace:
         help="인쇄소가 확정한 책등 폭. 생략하면 백색모조 100g 0.12mm/장으로 계산합니다.",
     )
     parser.add_argument("--wing-mm", type=float, default=80.0, help="한쪽 날개 폭")
+    parser.add_argument(
+        "--cmyk-profile",
+        type=Path,
+        help="JapanColor2001Coated.icc 경로. 생략하면 환경변수와 표준 설치 위치를 확인합니다.",
+    )
     return parser.parse_args()
 
 
@@ -57,6 +64,58 @@ def print_ready_wrap(input_pdf: Path, output_pdf: Path, size: tuple[float, float
     with output_pdf.open("wb") as stream:
         writer.write(stream)
 
+
+
+def resolve_cmyk_profile(explicit: Path | None) -> tuple[Path, bool]:
+    candidates = [
+        explicit,
+        Path(os.environ["JAPAN_COLOR_2001_COATED_ICC"])
+        if os.environ.get("JAPAN_COLOR_2001_COATED_ICC")
+        else None,
+        Path(r"C:\\Windows\\System32\\spool\\drivers\\color\\JapanColor2001Coated.icc"),
+        Path("/usr/share/color/icc/JapanColor2001Coated.icc"),
+    ]
+    for candidate in candidates:
+        if candidate and candidate.is_file():
+            return candidate, True
+
+    generic = Path("/usr/share/color/icc/ghostscript/default_cmyk.icc")
+    if generic.is_file():
+        return generic, False
+    raise FileNotFoundError(
+        "CMYK ICC 프로필이 없습니다. --cmyk-profile 또는 "
+        "JAPAN_COLOR_2001_COATED_ICC로 JapanColor2001Coated.icc를 지정하십시오."
+    )
+
+
+def convert_cover_to_cmyk(input_pdf: Path, output_pdf: Path, profile: Path) -> None:
+    ghostscript = shutil.which("gswin64c") or shutil.which("gs")
+    if not ghostscript:
+        raise FileNotFoundError("Ghostscript(gswin64c 또는 gs)가 필요합니다.")
+    temp_dir = TMP / "ghostscript"
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    env = os.environ.copy()
+    env["TMPDIR"] = str(temp_dir)
+    subprocess.run(
+        [
+            ghostscript,
+            "-q",
+            "-dSAFER",
+            "-dBATCH",
+            "-dNOPAUSE",
+            "-sDEVICE=pdfwrite",
+            "-dCompatibilityLevel=1.6",
+            "-dPDFSETTINGS=/prepress",
+            "-sColorConversionStrategy=CMYK",
+            "-sProcessColorModel=DeviceCMYK",
+            "-dOverrideICC",
+            f"-sOutputICCProfile={profile}",
+            f"-sOutputFile={output_pdf}",
+            str(input_pdf),
+        ],
+        check=True,
+        env=env,
+    )
 
 def main() -> None:
     args = parse_args()
@@ -113,8 +172,11 @@ def main() -> None:
             "책등 폭에 맞춰 full-wrap-layout-final.svg를 다시 렌더링하십시오."
         )
     wrap_raw = TMP / "full-wrap-final-raw.pdf"
+    wrap_print_rgb = TMP / "full-wrap-final-print-rgb.pdf"
     image_pdf(WRAP, wrap_raw, wrap_size)
-    print_ready_wrap(wrap_raw, wrap_path, wrap_size)
+    print_ready_wrap(wrap_raw, wrap_print_rgb, wrap_size)
+    cmyk_profile, exact_japan_profile = resolve_cmyk_profile(args.cmyk_profile)
+    convert_cover_to_cmyk(wrap_print_rgb, wrap_path, cmyk_profile)
 
     print(f"interior={interior_path}")
     print(f"preview={preview_path}")
@@ -123,6 +185,8 @@ def main() -> None:
     print(f"preview_pages={len(PdfReader(preview_path).pages)}")
     print(f"spine_mm={spine_mm:g}")
     print(f"wrap_mm={wrap_width_mm:g}x216")
+    print(f"cmyk_profile={cmyk_profile}")
+    print(f"japan_color_2001_coated={exact_japan_profile}")
 
 
 if __name__ == "__main__":

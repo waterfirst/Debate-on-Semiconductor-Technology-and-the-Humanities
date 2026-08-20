@@ -36,7 +36,9 @@
 
   <!-- Publisher lockup: balances the ISBN/EAN barcode box without competing with the cover copy. -->
   <rect x="130" y="2160" width="650" height="190" rx="7" fill="#ffffff" stroke="#aeb7bc" stroke-width="2"/>
-  <image href="scholarbridge-logo.png" x="170" y="2200" width="570" height="110"
+  <image href="scholarbridge-logo.png" x="170" y="2172" width="570" height="95"
+         preserveAspectRatio="xMidYMid meet"/>
+  <image href="scholarbridge-korean-wordmark.png" x="348" y="2273" width="214" height="42"
          preserveAspectRatio="xMidYMid meet"/>
 
   <!-- Assigned ISBN/EAN-13 barcode with Korean five-digit add-on. -->
