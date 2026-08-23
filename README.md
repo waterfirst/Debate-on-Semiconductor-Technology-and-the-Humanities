@@ -11,6 +11,7 @@
 PDF·EPUB·인쇄용 날개 펼침표지까지 만든 **출간 후보본**입니다. 종이책 ISBN `979-11-220895-8-5 (03500)`과 정가 15,000원을 반영했습니다. 초판은 추천사·서평 없이 발행하며, 전자책 ISBN·발행일이 확정되면 판권면과 메타데이터를 갱신합니다.
 
 - 교보 제출 절차와 체크리스트: [KYOBO_PUBLISHING_GUIDE.md](KYOBO_PUBLISHING_GUIDE.md)
+- 8월 24~30일 POD 출시·가격·홍보 실행안: [POD_LAUNCH_SPRINT_2026-08-24_30.md](POD_LAUNCH_SPRINT_2026-08-24_30.md)
 - 19개 출간 장 선별 기준과 정가 판단: [EDITORIAL_CURATION.md](EDITORIAL_CURATION.md)
 - Claude 등 외부 감수자 전달용 점검표: [EXTERNAL_REVIEW_BRIEF.md](EXTERNAL_REVIEW_BRIEF.md)
 - 이 프로젝트의 재현 가능한 편집·출판 절차: [SKILL.md](SKILL.md)
