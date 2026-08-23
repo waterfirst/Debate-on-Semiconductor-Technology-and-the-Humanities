@@ -119,10 +119,17 @@ def convert_cover_to_cmyk(input_pdf: Path, output_pdf: Path, profile: Path) -> N
 
 def main() -> None:
     args = parse_args()
+    interior_path = OUTPUT / f"{TITLE_SLUG}-본문-A5.pdf"
     output_candidates = sorted((BOOK / "_book").glob("*.pdf"))
-    if not output_candidates:
-        raise FileNotFoundError("먼저 Quarto PDF를 렌더링하십시오: book/_book/*.pdf")
-    interior_source = output_candidates[0]
+    if output_candidates:
+        interior_source = output_candidates[0]
+    elif interior_path.is_file():
+        # Quarto가 임시 _book 폴더를 정리한 뒤에도 확정한 A5 본문을 재사용한다.
+        interior_source = interior_path
+    else:
+        raise FileNotFoundError(
+            "Quarto PDF(book/_book/*.pdf) 또는 기존 A5 본문 PDF가 필요합니다."
+        )
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
     TMP.mkdir(parents=True, exist_ok=True)
@@ -155,8 +162,8 @@ def main() -> None:
     with preview_path.open("wb") as stream:
         writer.write(stream)
 
-    interior_path = OUTPUT / f"{TITLE_SLUG}-본문-A5.pdf"
-    shutil.copy2(interior_source, interior_path)
+    if interior_source.resolve() != interior_path.resolve():
+        shutil.copy2(interior_source, interior_path)
 
     wrap_path = OUTPUT / f"{TITLE_SLUG}-인쇄용-펼침표지.pdf"
     # 바깥 3mm + 80mm 날개 + 3mm 접지 안전폭 + 뒤표지 + 책등 +

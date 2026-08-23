@@ -19,6 +19,18 @@
     <pattern id="flapGrid" width="42" height="42" patternUnits="userSpaceOnUse">
       <path d="M42 0H0V42" fill="none" stroke="#496b82" stroke-opacity="0.10" stroke-width="1.5"/>
     </pattern>
+    <linearGradient id="spineNavy" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0a1b2a"/>
+      <stop offset="0.48" stop-color="#102d42"/>
+      <stop offset="1" stop-color="#081925"/>
+    </linearGradient>
+    <pattern id="spineCircuit" width="48" height="72" patternUnits="userSpaceOnUse">
+      <path d="M7 0V24H25V48H41V72M0 55H16V35H34V14H48"
+            fill="none" stroke="#d1a063" stroke-opacity="0.13" stroke-width="2"/>
+      <circle cx="7" cy="24" r="2.7" fill="#d1a063" fill-opacity="0.20"/>
+      <circle cx="25" cy="48" r="2.7" fill="#d1a063" fill-opacity="0.20"/>
+      <circle cx="34" cy="14" r="2.7" fill="#d1a063" fill-opacity="0.20"/>
+    </pattern>
     <clipPath id="backFlapClip"><rect x="0" y="0" width="1015" height="2551"/></clipPath>
   </defs>
 
@@ -49,14 +61,43 @@
   <!-- Back cover, spine, and front cover. -->
   <image href="back-cover-final.png" x="1015" y="0" width="1748" height="2551"
          preserveAspectRatio="xMidYMid slice"/>
-  <rect x="2763" y="0" width="189" height="2551" fill="#f5f0e3"/>
-  <path d="M2763 0V2551M2952 0V2551" stroke="#6f8797" stroke-opacity="0.32" stroke-width="2"/>
-  <text x="0" y="0" transform="translate(2886 178) rotate(90)" fill="#071b2d"
-        font-family="KoPub Batang, serif" font-weight="700" font-size="38" letter-spacing="1">반도체 면접, 왕의 질문에 답하라</text>
-  <text x="0" y="0" transform="translate(2886 1860) rotate(90)" fill="#31536a"
-        font-family="KoPub Dotum, sans-serif" font-weight="700" font-size="25" letter-spacing="2">최낙초</text>
-  <image href="scholarbridge-korean-wordmark.png" x="0" y="-20" width="220" height="40"
-         transform="translate(2886 2110) rotate(90)" preserveAspectRatio="xMidYMid meet"/>
+  <!-- 16 mm spine: royal question seal → semiconductor wafer. -->
+  <rect x="2763" y="0" width="189" height="2551" fill="url(#spineNavy)"/>
+  <rect x="2763" y="0" width="189" height="2551" fill="url(#spineCircuit)"/>
+  <path d="M2766 0V2551M2949 0V2551" stroke="#c88a4a" stroke-opacity="0.72" stroke-width="3"/>
+
+  <!-- Royal-book-question seal. The 問 character links the historical chaekmun to judgment. -->
+  <g transform="translate(2857.5 176)">
+    <circle r="57" fill="#f3ead8" stroke="#c88a4a" stroke-width="5"/>
+    <circle r="45" fill="none" stroke="#31536a" stroke-opacity="0.55" stroke-width="2"/>
+    <path d="M-30 -32L-15 -43L0 -31L15 -43L30 -32L24 -20H-24Z"
+          fill="#c88a4a" stroke="#8e502e" stroke-width="2"/>
+    <text x="0" y="22" text-anchor="middle" fill="#0b2638"
+          font-family="KoPub Batang, Noto Serif KR, serif" font-weight="700" font-size="48">問</text>
+  </g>
+
+  <!-- Larger title, optically and geometrically centered on the spine. -->
+  <text x="0" y="0" transform="translate(2857.5 330) rotate(90)" dominant-baseline="middle"
+        fill="#fff9ea" font-family="KoPub Batang, Noto Serif KR, serif"
+        font-weight="700" font-size="50" letter-spacing="1.4">반도체 면접, 왕의 질문에 답하라</text>
+
+  <!-- Semiconductor wafer/circuit medallion. -->
+  <g transform="translate(2857.5 1515)" fill="none" stroke="#d5a363">
+    <circle r="55" fill="#0a1c2a" stroke-width="4"/>
+    <ellipse rx="39" ry="31" stroke-width="3"/>
+    <path d="M-31 -18H31M-38 0H38M-31 18H31M-20 -26V26M0 -31V31M20 -26V26"
+          stroke-width="2" stroke-opacity="0.78"/>
+    <path d="M-55 0H-40M40 0H55M0 -55V-32M0 32V55" stroke-width="4"/>
+    <circle r="5" fill="#d5a363" stroke="none"/>
+  </g>
+
+  <text x="0" y="0" transform="translate(2857.5 1712) rotate(90)" dominant-baseline="middle"
+        fill="#f6e9d1" font-family="KoPub Dotum, Pretendard, sans-serif"
+        font-weight="700" font-size="30" letter-spacing="3">최낙초</text>
+  <path d="M2805 1990H2910" stroke="#c88a4a" stroke-width="4" stroke-linecap="round"/>
+  <text x="0" y="0" transform="translate(2857.5 2070) rotate(90)" dominant-baseline="middle"
+        fill="#d8b47b" font-family="KoPub Dotum, Pretendard, sans-serif"
+        font-weight="700" font-size="24" letter-spacing="2.5">스칼라브릿지</text>
   <image href="front-cover-final.png" x="2952" y="0" width="1748" height="2551"
          preserveAspectRatio="xMidYMid slice"/>
 
