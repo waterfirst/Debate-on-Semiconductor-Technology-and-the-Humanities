@@ -2,6 +2,8 @@
 
 > 조선의 책문으로 훈련하는 AI·공정·설계·공급망 데이터 토론
 
+> **저작권 고지:** 책 원고·고유한 질문과 해설·편집 구성·도표·삽화·표지는 별도 표시가 없는 한 © 2026 최낙초. All rights reserved. 저장소 공개는 무단 복제·배포·번역·상업적 재사용이나 AI 학습용 데이터셋 편입을 허락한다는 뜻이 아닙니다. 제작 코드는 별도의 MIT 라이선스를 따릅니다. 자세한 범위는 [COPYRIGHT_NOTICE.md](COPYRIGHT_NOTICE.md)를 확인하세요.
+
 조선시대 과거시험의 `책문(策問)`을 오늘의 반도체 산업 질문으로 다시 쓴 스칼라브릿지의 첫 단행본 프로젝트입니다. 30개 초고 가운데 반도체·디스플레이 지원자의 토론 훈련과 직접 연결되는 19개 핵심 질문을 선별하고, 데이터·대립 답안·AI 조사 설계·90초 발언·꼬리 질문으로 훈련하도록 설계했습니다.
 
 이 책은 특정 기업의 공식 채용 자료가 아니며 기업의 후원·검수·승인을 받지 않았습니다.
@@ -12,7 +14,6 @@ PDF·EPUB·인쇄용 날개 펼침표지까지 만든 **출간 후보본**입니
 
 - 교보 제출 절차와 체크리스트: [KYOBO_PUBLISHING_GUIDE.md](KYOBO_PUBLISHING_GUIDE.md)
 - 개인정보를 제거한 POD 7일 출시·가격·홍보 템플릿: [POD_LAUNCH_SPRINT_TEMPLATE.md](POD_LAUNCH_SPRINT_TEMPLATE.md)
-- 법제처 현행법으로 확인한 출판·세금·저작권·상표·통신판매 가이드: [PUBLISHING_LEGAL_TAX_IP_GUIDE.md](PUBLISHING_LEGAL_TAX_IP_GUIDE.md)
 - 19개 출간 장 선별 기준과 정가 판단: [EDITORIAL_CURATION.md](EDITORIAL_CURATION.md)
 - Claude 등 외부 감수자 전달용 점검표: [EXTERNAL_REVIEW_BRIEF.md](EXTERNAL_REVIEW_BRIEF.md)
 - 이 프로젝트의 재현 가능한 편집·출판 절차: [SKILL.md](SKILL.md)
@@ -134,7 +135,6 @@ python scripts/verify_publish_artifacts.py
 ## 출판 전 최종 확인
 
 - 개인정보를 제거한 단계별 실행 체크리스트: [PUBLISHING_EXECUTION_CHECKLIST.md](PUBLISHING_EXECUTION_CHECKLIST.md)
-- 출판·세금·지식재산권 법률 프리플라이트: [PUBLISHING_LEGAL_TAX_IP_GUIDE.md](PUBLISHING_LEGAL_TAX_IP_GUIDE.md)
 
 - 교보 POD에서 제공하는 실제 종이 종류와 책등 계산식으로 책등 폭을 다시 확정합니다.
 - 현재 16mm는 `258쪽 ÷ 2 × 0.12mm/장`을 올림한 제작용 추정값입니다. 교보가 다른 값을 제시하면 `python book/cover/build_cover_pdfs.py --spine-mm 값`으로 다시 조립하고 표지 SVG의 책등 폭도 같은 값으로 조정합니다.
@@ -153,5 +153,6 @@ python scripts/verify_publish_artifacts.py
 
 ## 라이선스
 
-- 원고·도표 설명·편집 구성: `LICENSE-CONTENT.md`
+- 책 콘텐츠 저작권 범위: [COPYRIGHT_NOTICE.md](COPYRIGHT_NOTICE.md)
+- 원고·도표 설명·편집 구성: [LICENSE-CONTENT.md](LICENSE-CONTENT.md)
 - 코드: `LICENSE-CODE` (MIT)
