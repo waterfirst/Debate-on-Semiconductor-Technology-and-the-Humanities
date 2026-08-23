@@ -11,12 +11,12 @@
 PDF·EPUB·인쇄용 날개 펼침표지까지 만든 **출간 후보본**입니다. 종이책 ISBN `979-11-220895-8-5 (03500)`과 정가 15,000원을 반영했습니다. 초판은 추천사·서평 없이 발행하며, 전자책 ISBN·발행일이 확정되면 판권면과 메타데이터를 갱신합니다.
 
 - 교보 제출 절차와 체크리스트: [KYOBO_PUBLISHING_GUIDE.md](KYOBO_PUBLISHING_GUIDE.md)
-- 8월 24~30일 POD 출시·가격·홍보 실행안: [POD_LAUNCH_SPRINT_2026-08-24_30.md](POD_LAUNCH_SPRINT_2026-08-24_30.md)
+- 개인정보를 제거한 POD 7일 출시·가격·홍보 템플릿: [POD_LAUNCH_SPRINT_TEMPLATE.md](POD_LAUNCH_SPRINT_TEMPLATE.md)
 - 19개 출간 장 선별 기준과 정가 판단: [EDITORIAL_CURATION.md](EDITORIAL_CURATION.md)
 - Claude 등 외부 감수자 전달용 점검표: [EXTERNAL_REVIEW_BRIEF.md](EXTERNAL_REVIEW_BRIEF.md)
 - 이 프로젝트의 재현 가능한 편집·출판 절차: [SKILL.md](SKILL.md)
 - 다른 Quarto 책에도 설치해 쓰는 재사용 스킬: [skills/quarto-korean-pod-book/SKILL.md](skills/quarto-korean-pod-book/SKILL.md)
-- 렛유인 전달 메일: [LETYOUIN_REVIEW_EMAIL.md](LETYOUIN_REVIEW_EMAIL.md)
+- 개인정보를 제거한 교육기관 검토 요청 메일 템플릿: [EDUCATION_PARTNER_REVIEW_EMAIL_TEMPLATE.md](EDUCATION_PARTNER_REVIEW_EMAIL_TEMPLATE.md)
 - 렛유인 검토용 서문·목차·대표 장 2편: `book/output/pdf/렛유인-검토용-서문-목차.pdf`
 
 ## 하루 만에 출판 교정쇄까지 만든 방식
@@ -132,7 +132,7 @@ python scripts/verify_publish_artifacts.py
 
 ## 출판 전 최종 확인
 
-- 실행 일정과 단계별 완료기준: [PUBLISHING_EXECUTION_SCHEDULE_2026-08.md](PUBLISHING_EXECUTION_SCHEDULE_2026-08.md)
+- 개인정보를 제거한 단계별 실행 체크리스트: [PUBLISHING_EXECUTION_CHECKLIST.md](PUBLISHING_EXECUTION_CHECKLIST.md)
 
 - 교보 POD에서 제공하는 실제 종이 종류와 책등 계산식으로 책등 폭을 다시 확정합니다.
 - 현재 16mm는 `258쪽 ÷ 2 × 0.12mm/장`을 올림한 제작용 추정값입니다. 교보가 다른 값을 제시하면 `python book/cover/build_cover_pdfs.py --spine-mm 값`으로 다시 조립하고 표지 SVG의 책등 폭도 같은 값으로 조정합니다.
