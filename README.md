@@ -12,6 +12,7 @@ PDF·EPUB·인쇄용 날개 펼침표지까지 만든 **출간 후보본**입니
 
 - 교보 제출 절차와 체크리스트: [KYOBO_PUBLISHING_GUIDE.md](KYOBO_PUBLISHING_GUIDE.md)
 - 개인정보를 제거한 POD 7일 출시·가격·홍보 템플릿: [POD_LAUNCH_SPRINT_TEMPLATE.md](POD_LAUNCH_SPRINT_TEMPLATE.md)
+- 법제처 현행법으로 확인한 출판·세금·저작권·상표·통신판매 가이드: [PUBLISHING_LEGAL_TAX_IP_GUIDE.md](PUBLISHING_LEGAL_TAX_IP_GUIDE.md)
 - 19개 출간 장 선별 기준과 정가 판단: [EDITORIAL_CURATION.md](EDITORIAL_CURATION.md)
 - Claude 등 외부 감수자 전달용 점검표: [EXTERNAL_REVIEW_BRIEF.md](EXTERNAL_REVIEW_BRIEF.md)
 - 이 프로젝트의 재현 가능한 편집·출판 절차: [SKILL.md](SKILL.md)
@@ -133,6 +134,7 @@ python scripts/verify_publish_artifacts.py
 ## 출판 전 최종 확인
 
 - 개인정보를 제거한 단계별 실행 체크리스트: [PUBLISHING_EXECUTION_CHECKLIST.md](PUBLISHING_EXECUTION_CHECKLIST.md)
+- 출판·세금·지식재산권 법률 프리플라이트: [PUBLISHING_LEGAL_TAX_IP_GUIDE.md](PUBLISHING_LEGAL_TAX_IP_GUIDE.md)
 
 - 교보 POD에서 제공하는 실제 종이 종류와 책등 계산식으로 책등 폭을 다시 확정합니다.
 - 현재 16mm는 `258쪽 ÷ 2 × 0.12mm/장`을 올림한 제작용 추정값입니다. 교보가 다른 값을 제시하면 `python book/cover/build_cover_pdfs.py --spine-mm 값`으로 다시 조립하고 표지 SVG의 책등 폭도 같은 값으로 조정합니다.
