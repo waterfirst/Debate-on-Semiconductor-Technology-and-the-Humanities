@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
-  <title id="title">반복 산포와 확장불확도는 다른 값이다</title>
-  <desc id="desc">NIST의 약 150 sccm 반복시험 표준편차와 SLowFlowS의 95퍼센트 확장불확도를 서로 다른 패널로 표시한다.</desc>
+  <title id="title">반복 측정값과 95% 측정 불확도는 다른 값이다</title>
+  <desc id="desc">NIST의 약 150 sccm 반복시험 표준편차와 SLowFlowS의 95퍼센트 측정 불확도를 서로 다른 패널로 표시한다.</desc>
   <style>
     .bg{fill:#F7F4ED}.panel{fill:#FCFAF5;stroke:#D9D1C5;stroke-width:1.2}.title{font:700 25px "Noto Sans KR",sans-serif;fill:#10283F}.sub{font:20px "Noto Sans KR",sans-serif;fill:#6A625A}.head{font:700 20px "Noto Sans KR",sans-serif;fill:#10283F}.label{font:20px "Noto Sans KR",sans-serif;fill:#253443}.value{font:700 20px "Noto Sans KR",sans-serif;fill:#10283F}.note{font:20px "Noto Sans KR",sans-serif;fill:#756C63}.track{stroke:#DDD6CB;stroke-width:12;stroke-linecap:round}.rep{stroke:#4D7C6F;stroke-width:12;stroke-linecap:round}.unc{stroke:#A94E32;stroke-width:12;stroke-linecap:round}.dot1{fill:#4D7C6F}.dot2{fill:#A94E32}.rule{stroke:#BDB4A8;stroke-width:1}
   </style>
   <rect class="bg" width="920" height="440" rx="18"/>
-  <text x="30" y="42" class="title">반복 산포와 확장불확도는 다른 값이다</text>
+  <text x="30" y="42" class="title">반복 측정값과 95% 측정 불확도는 다른 값이다</text>
   <text x="30" y="68" class="sub">NIST 2025 · 수치는 모두 유량 대비 백분율</text>
   <rect x="30" y="92" width="420" height="275" rx="14" class="panel"/>
   <rect x="470" y="92" width="420" height="275" rx="14" class="panel"/>
   <text x="52" y="124" class="head">제한된 반복시험</text>
-  <text x="52" y="147" class="sub">약 150 sccm · 계기계수 표준편차</text>
+  <text x="52" y="147" class="sub">약 150 sccm · 계기 보정계수 표준편차</text>
   <text x="52" y="199" class="label">질소 · 10회</text>
   <line x1="170" y1="194" x2="366" y2="194" class="track"/>
   <line x1="170" y1="194" x2="327" y2="194" class="rep"/>
@@ -24,7 +24,7 @@
   <line x1="52" y1="303" x2="428" y2="303" class="rule"/>
   <text x="52" y="329" class="note">같은 조건에서 값이 모인 정도</text>
   <text x="492" y="124" class="head">SLowFlowS 불확도</text>
-  <text x="492" y="147" class="sub">95% 신뢰수준 · 확장불확도</text>
+  <text x="492" y="147" class="sub">95% 신뢰수준의 측정 불확도</text>
   <text x="492" y="199" class="label">대형 탱크</text>
   <line x1="610" y1="194" x2="806" y2="194" class="track"/>
   <line x1="610" y1="194" x2="710" y2="194" class="unc"/>

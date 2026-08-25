@@ -21,7 +21,7 @@ if missing_chapters:
 
 required = [
     "[오늘의 책문]{.book-question-label}",
-    "## 데이터 렌즈",
+    "## 데이터로 보기",
     "## 대립 답안",
     "## AI 조사 설계",
     "### AI에게 물어볼 프롬프트",

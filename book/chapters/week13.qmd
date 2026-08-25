@@ -20,7 +20,7 @@ categories: [반도체, 공정AI, 안전, 집단토론]
 
 NIST AI 위험관리 프레임워크는 GOVERN·MAP·MEASURE·MANAGE 네 기능으로 위험관리를 구성하며, GOVERN을 다른 기능을 관통하는 층으로 둡니다. GOVERN 기능은 역할과 책임, 정책, 조직 문화와 지속적인 검토를 요구합니다. 공정 자동운전의 핵심은 사람이 화면 앞에 앉아 있다는 문구가 아니라, 독립된 관측경로와 실행 로그를 바탕으로 실제 이상을 보고 멈추고 되돌릴 수 있는 구조입니다.
 
-## 데이터 렌즈
+## 데이터로 보기
 
 ![](../figures/week13-print.png){fig-alt="공정 AI를 GOVERN, MAP, MEASURE, MANAGE의 순환으로 검증하는 판단 구조"}
 

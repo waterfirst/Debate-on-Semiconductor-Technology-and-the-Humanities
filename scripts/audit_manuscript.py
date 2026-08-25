@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CHAPTERS = ROOT / "book" / "chapters"
 REQUIRED = (
     "## 왜 지금 이 질문인가",
-    "## 데이터 렌즈",
+    "## 데이터로 보기",
     "## 대립 답안",
     "## AI 조사 설계",
     "### AI에게 물어볼 프롬프트",

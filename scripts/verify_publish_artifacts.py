@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import math
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -17,6 +16,7 @@ PREVIEW = PDF / f"{TITLE_SLUG}-최종본.pdf"
 WRAP = PDF / f"{TITLE_SLUG}-인쇄용-펼침표지.pdf"
 
 PT_PER_MM = 72 / 25.4
+FINAL_SPINE_MM = 12.4  # 교보 POD: 258쪽, 미색모조 80g
 
 
 def size_mm(page) -> tuple[float, float]:
@@ -40,8 +40,7 @@ interior_width, interior_height = size_mm(interior.pages[0])
 assert_close(interior_width, 148)
 assert_close(interior_height, 210)
 
-sheet_count = math.ceil(len(interior.pages) / 2)
-spine_mm = math.ceil(sheet_count * 0.12)
+spine_mm = FINAL_SPINE_MM
 expected_wrap_width = 148 + spine_mm + 148 + 80 * 2 + 12
 wrap_width, wrap_height = size_mm(wrap.pages[0])
 assert_close(wrap_width, expected_wrap_width)
