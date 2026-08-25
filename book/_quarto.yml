@@ -70,7 +70,7 @@ format:
     pdf-engine: xelatex
     papersize: a5
     fontsize: 10.5pt
-    linestretch: 1.36
+    linestretch: 1.30
     include-in-header:
       - print-style.tex
     geometry:
