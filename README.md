@@ -10,7 +10,7 @@
 
 ## 현재 출간 상태
 
-PDF·EPUB·인쇄용 날개 펼침표지까지 만든 **출간 후보본**입니다. 종이책 ISBN `979-11-220895-8-5 (03500)`과 정가 15,000원을 반영했습니다. 초판은 추천사·서평 없이 발행하며, 전자책 ISBN·발행일이 확정되면 판권면과 메타데이터를 갱신합니다.
+PDF·EPUB·인쇄용 날개 펼침표지까지 만든 **POD 제출 최종본**입니다. 종이책 ISBN `979-11-220895-8-5 (03500)`, 정가 15,000원과 발행예정일 2026년 8월 30일을 반영했습니다. 초판은 추천사·서평 없이 발행합니다.
 
 - 교보 제출 절차와 체크리스트: [KYOBO_PUBLISHING_GUIDE.md](KYOBO_PUBLISHING_GUIDE.md)
 - 개인정보를 제거한 POD 7일 출시·가격·홍보 템플릿: [POD_LAUNCH_SPRINT_TEMPLATE.md](POD_LAUNCH_SPRINT_TEMPLATE.md)
@@ -137,7 +137,7 @@ python scripts/verify_publish_artifacts.py
 - 개인정보를 제거한 단계별 실행 체크리스트: [PUBLISHING_EXECUTION_CHECKLIST.md](PUBLISHING_EXECUTION_CHECKLIST.md)
 
 - 교보 POD에서 제공하는 실제 종이 종류와 책등 계산식으로 책등 폭을 다시 확정합니다.
-- 현재 16mm는 `258쪽 ÷ 2 × 0.12mm/장`을 올림한 제작용 추정값입니다. 교보가 다른 값을 제시하면 `python book/cover/build_cover_pdfs.py --spine-mm 값`으로 다시 조립하고 표지 SVG의 책등 폭도 같은 값으로 조정합니다.
+- 현재 17mm는 `272쪽 ÷ 2 × 0.12mm/장`을 올림한 제작용 추정값입니다. 교보가 다른 값을 제시하면 `python book/cover/build_cover_pdfs.py --spine-mm 값`으로 다시 조립하고 표지 SVG의 책등 폭도 같은 값으로 조정합니다.
 - 전자책 ISBN·발행일을 확정한 뒤 판권면을 갱신합니다.
 - 초판은 추천사·서평 없이 확정했으므로 관련 빈 페이지나 유보 문구를 넣지 않습니다.
 - 교보가 발급한 바코드를 뒷표지 흰색 영역에 넣습니다.
