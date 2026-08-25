@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="5717" height="2551" viewBox="0 0 5717 2551">
+<svg xmlns="http://www.w3.org/2000/svg" width="5711" height="2551" viewBox="0 0 5711 2551">
   <!--
     A5 wing cover at 300 dpi.
     3 mm outer bleed + 80 mm back flap + 3 mm fold allowance +
-    148 mm back + 16 mm spine + 148 mm front +
+    148 mm back + 15.5 mm spine + 148 mm front +
     3 mm fold allowance + 80 mm front flap + 3 mm outer bleed.
   -->
   <defs>
@@ -34,7 +34,7 @@
     <clipPath id="backFlapClip"><rect x="0" y="0" width="1015" height="2551"/></clipPath>
   </defs>
 
-  <rect width="5717" height="2551" fill="#f5f0e3"/>
+  <rect width="5711" height="2551" fill="#f5f0e3"/>
 
   <!-- Back flap: daytime gwageo-on-wafer illustration and first-book message. -->
   <g clip-path="url(#backFlapClip)">
@@ -61,13 +61,13 @@
   <!-- Back cover, spine, and front cover. -->
   <image href="back-cover-final.png" x="1015" y="0" width="1748" height="2551"
          preserveAspectRatio="xMidYMid slice"/>
-  <!-- 16 mm spine: royal question seal → semiconductor wafer. -->
-  <rect x="2763" y="0" width="189" height="2551" fill="url(#spineNavy)"/>
-  <rect x="2763" y="0" width="189" height="2551" fill="url(#spineCircuit)"/>
-  <path d="M2766 0V2551M2949 0V2551" stroke="#c88a4a" stroke-opacity="0.72" stroke-width="3"/>
+  <!-- 15.5 mm spine: royal question seal → semiconductor wafer. -->
+  <rect x="2763" y="0" width="183" height="2551" fill="url(#spineNavy)"/>
+  <rect x="2763" y="0" width="183" height="2551" fill="url(#spineCircuit)"/>
+  <path d="M2766 0V2551M2943 0V2551" stroke="#c88a4a" stroke-opacity="0.72" stroke-width="3"/>
 
   <!-- Royal-book-question seal. The 問 character links the historical chaekmun to judgment. -->
-  <g transform="translate(2857.5 176)">
+  <g transform="translate(2854.5 176)">
     <circle r="57" fill="#f3ead8" stroke="#c88a4a" stroke-width="5"/>
     <circle r="45" fill="none" stroke="#31536a" stroke-opacity="0.55" stroke-width="2"/>
     <path d="M-30 -32L-15 -43L0 -31L15 -43L30 -32L24 -20H-24Z"
@@ -77,12 +77,12 @@
   </g>
 
   <!-- Larger title, optically and geometrically centered on the spine. -->
-  <text x="0" y="0" transform="translate(2857.5 330) rotate(90)" dominant-baseline="middle"
+  <text x="0" y="0" transform="translate(2854.5 330) rotate(90)" dominant-baseline="middle"
         fill="#fff9ea" font-family="KoPub Batang, Noto Serif KR, serif"
         font-weight="700" font-size="50" letter-spacing="1.4">반도체 면접, 왕의 질문에 답하라</text>
 
   <!-- Semiconductor wafer/circuit medallion. -->
-  <g transform="translate(2857.5 1515)" fill="none" stroke="#d5a363">
+  <g transform="translate(2854.5 1515)" fill="none" stroke="#d5a363">
     <circle r="55" fill="#0a1c2a" stroke-width="4"/>
     <ellipse rx="39" ry="31" stroke-width="3"/>
     <path d="M-31 -18H31M-38 0H38M-31 18H31M-20 -26V26M0 -31V31M20 -26V26"
@@ -91,39 +91,39 @@
     <circle r="5" fill="#d5a363" stroke="none"/>
   </g>
 
-  <text x="0" y="0" transform="translate(2857.5 1712) rotate(90)" dominant-baseline="middle"
+  <text x="0" y="0" transform="translate(2854.5 1712) rotate(90)" dominant-baseline="middle"
         fill="#f6e9d1" font-family="KoPub Dotum, Pretendard, sans-serif"
         font-weight="700" font-size="30" letter-spacing="3">최낙초</text>
-  <path d="M2805 1990H2910" stroke="#c88a4a" stroke-width="4" stroke-linecap="round"/>
-  <text x="0" y="0" transform="translate(2857.5 2070) rotate(90)" dominant-baseline="middle"
+  <path d="M2802 1990H2907" stroke="#c88a4a" stroke-width="4" stroke-linecap="round"/>
+  <text x="0" y="0" transform="translate(2854.5 2070) rotate(90)" dominant-baseline="middle"
         fill="#d8b47b" font-family="KoPub Dotum, Pretendard, sans-serif"
         font-weight="700" font-size="24" letter-spacing="2.5">스칼라브릿지</text>
-  <image href="front-cover-final.png" x="2952" y="0" width="1748" height="2551"
+  <image href="front-cover-final.png" x="2946" y="0" width="1748" height="2551"
          preserveAspectRatio="xMidYMid slice"/>
 
   <!-- Front flap: a short note to applicants. -->
-  <rect x="4700" y="0" width="1017" height="2551" fill="url(#flapFade)"/>
-  <rect x="4700" y="0" width="1017" height="2551" fill="url(#flapGrid)"/>
-  <circle cx="5609" cy="220" r="420" fill="none" stroke="#53758b" stroke-opacity="0.20" stroke-width="5"/>
+  <rect x="4694" y="0" width="1017" height="2551" fill="url(#flapFade)"/>
+  <rect x="4694" y="0" width="1017" height="2551" fill="url(#flapGrid)"/>
+  <circle cx="5603" cy="220" r="420" fill="none" stroke="#53758b" stroke-opacity="0.20" stroke-width="5"/>
   <g font-family="KoPub Dotum, sans-serif" fill="#071b2d">
-    <text x="4829" y="250" font-family="KoPub Batang, serif" font-size="54" font-weight="700">지원자에게</text>
-    <rect x="4829" y="315" width="108" height="7" fill="#a94e32"/>
-    <text x="4829" y="420" font-size="33" font-weight="500">
-      <tspan x="4829" dy="0">면접은 정답을 맞히는 자리가</tspan>
-      <tspan x="4829" dy="53">아닙니다. 복잡한 문제 앞에서</tspan>
-      <tspan x="4829" dy="53">무엇을 보고, 어떤 근거로</tspan>
-      <tspan x="4829" dy="53">판단하는지를 보여주는 자리입니다.</tspan>
+    <text x="4823" y="250" font-family="KoPub Batang, serif" font-size="54" font-weight="700">지원자에게</text>
+    <rect x="4823" y="315" width="108" height="7" fill="#a94e32"/>
+    <text x="4823" y="420" font-size="33" font-weight="500">
+      <tspan x="4823" dy="0">면접은 정답을 맞히는 자리가</tspan>
+      <tspan x="4823" dy="53">아닙니다. 복잡한 문제 앞에서</tspan>
+      <tspan x="4823" dy="53">무엇을 보고, 어떤 근거로</tspan>
+      <tspan x="4823" dy="53">판단하는지를 보여주는 자리입니다.</tspan>
 
-      <tspan x="4829" dy="90">이 책은 산업의 숫자를 외우게 하지</tspan>
-      <tspan x="4829" dy="53">않습니다. 데이터를 읽고 반론을 세우며,</tspan>
-      <tspan x="4829" dy="53">조건이 달라질 때 결론을 바꾸는</tspan>
-      <tspan x="4829" dy="53">연습을 돕습니다.</tspan>
+      <tspan x="4823" dy="90">이 책은 산업의 숫자를 외우게 하지</tspan>
+      <tspan x="4823" dy="53">않습니다. 데이터를 읽고 반론을 세우며,</tspan>
+      <tspan x="4823" dy="53">조건이 달라질 때 결론을 바꾸는</tspan>
+      <tspan x="4823" dy="53">연습을 돕습니다.</tspan>
 
-      <tspan x="4829" dy="90">면접장 문 앞에서 여러분의 답이</tspan>
-      <tspan x="4829" dy="53">남의 문장이 아니라 자기 판단이기를</tspan>
-      <tspan x="4829" dy="53">바랍니다.</tspan>
+      <tspan x="4823" dy="90">면접장 문 앞에서 여러분의 답이</tspan>
+      <tspan x="4823" dy="53">남의 문장이 아니라 자기 판단이기를</tspan>
+      <tspan x="4823" dy="53">바랍니다.</tspan>
     </text>
-    <text x="4829" y="2190" font-family="KoPub Batang, serif" font-size="38" font-weight="700">최낙초</text>
-    <text x="4829" y="2250" fill="#31536a" font-size="29" font-weight="500">반도체·디스플레이 제조업 26년차 엔지니어</text>
+    <text x="4823" y="2190" font-family="KoPub Batang, serif" font-size="38" font-weight="700">최낙초</text>
+    <text x="4823" y="2250" fill="#31536a" font-size="29" font-weight="500">반도체·디스플레이 제조업 26년차 엔지니어</text>
   </g>
 </svg>
