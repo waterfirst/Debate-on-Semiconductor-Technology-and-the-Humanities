@@ -52,9 +52,10 @@
 \newcommand{\BookQuestionPrompt}[1]{{\BookQuestionSerif\bfseries\color{questionink}\fontsize{11.5pt}{17pt}\selectfont #1}}
 
 \setkomafont{disposition}{\sffamily\bfseries}
-\setkomafont{chapter}{\sffamily\bfseries\color{questionnavy}\fontsize{15.5pt}{20pt}\selectfont}
-\setkomafont{section}{\sffamily\bfseries\fontsize{13.5pt}{18pt}\selectfont}
-\setkomafont{subsection}{\sffamily\bfseries\fontsize{11.5pt}{16pt}\selectfont}
+% Headings break only at spaces; body copy below remains fully justified.
+\setkomafont{chapter}{\sffamily\bfseries\color{questionnavy}\XeTeXlinebreaklocale "en"\fontsize{15.5pt}{20pt}\selectfont}
+\setkomafont{section}{\sffamily\bfseries\XeTeXlinebreaklocale "en"\fontsize{13.5pt}{18pt}\selectfont}
+\setkomafont{subsection}{\sffamily\bfseries\XeTeXlinebreaklocale "en"\fontsize{11.5pt}{16pt}\selectfont}
 \clearpairofpagestyles
 \automark[chapter]{chapter}
 \ohead{\headmark}
@@ -69,34 +70,31 @@
 \renewcommand{\chapterlinesformat}[3]{%
   \parbox{\textwidth}{%
     \color{questionnavy}\rule{\textwidth}{0.8pt}\par\vspace{7pt}%
-    \raggedright #2#3\par\vspace{7pt}%
+    \raggedright\XeTeXlinebreaklocale "en" #2#3\par\vspace{7pt}%
     \color{questionaccent}\rule{30mm}{2.4pt}%
   }%
 }
 
 % Korean line breaking and print readability.
 \XeTeXlinebreaklocale "ko"
-\XeTeXlinebreakskip=0pt plus 0.1pt
-% Pandoc wraps every whitespace-delimited Korean/CJK word with this command.
-% It prevents an 어절 or a Hanja term from splitting between glyphs.
-% PDF bookmarks receive the unboxed original text.
-\DeclareRobustCommand{\keepkoreanword}[1]{\mbox{#1}}
-\AtBeginDocument{%
-  \pdfstringdefDisableCommands{\def\keepkoreanword#1{#1}}%
-}
+\XeTeXlinebreakskip=0pt plus 1pt minus 0.1pt
 % Keep author/date metadata in the PDF, but omit them from the interior title page.
 \makeatletter
 \AtBeginDocument{\gdef\@author{}\gdef\@date{}}
 \makeatother
+% Keep the body aligned to both margins. Korean syllable-level line breaking
+% prevents a long whitespace-delimited phrase from protruding into the trim.
 \AtBeginDocument{%
-  \raggedright
-  \rightskip=0pt plus 2em
-  \spaceskip=0.32em
-  \xspaceskip=0.32em
+  \XeTeXlinebreaklocale "ko"
+  \rightskip=0pt
+  \spaceskip=0pt
+  \xspaceskip=0pt
 }
 \setlength{\parindent}{1em}
 \setlength{\parskip}{0.45em plus 0.08em minus 0.04em}
-\setlength{\emergencystretch}{1.5em}
+\setlength{\emergencystretch}{2em}
+\tolerance=1800
+\hbadness=1800
 \widowpenalty=10000
 \clubpenalty=10000
 \brokenpenalty=10000

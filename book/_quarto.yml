@@ -70,7 +70,7 @@ format:
     pdf-engine: xelatex
     papersize: a5
     fontsize: 10.5pt
-    linestretch: 1.36
+    linestretch: 1.3475
     include-in-header:
       - print-style.tex
     geometry:
@@ -85,7 +85,6 @@ format:
 
 filters:
   - keep-sentence-ends.lua
-  - keep-korean-words.lua
   - book-question.lua
   - table-widths.lua
   - hanja-font.lua
