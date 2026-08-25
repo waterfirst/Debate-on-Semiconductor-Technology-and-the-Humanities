@@ -7,16 +7,47 @@
 \definecolor{questionaccent}{HTML}{A94E32}
 \definecolor{questioncream}{HTML}{F6F1E7}
 \definecolor{questionink}{HTML}{18212B}
-\newfontfamily\BookQuestionSerif{KoPubBatang Medium}
-% Noto Serif KR contains every CJK code point used in the 30 book-question notes.
-\newfontfamily\HanjaFont[
-  Path=C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/,
-  BoldFont=NotoSerifKR-Bold.otf
-]{NotoSerifKR-Regular.otf}
-\newfontfamily\BookQuestionSans[
-  Path=C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/,
-  BoldFont=Pretendard-SemiBold.otf
-]{Pretendard-Regular.otf}
+% Keep the approved Windows typography and provide a Linux proof fallback.
+% The fallback makes reproducible QA possible; the POD master still uses the
+% approved Pretendard/KoPub/Noto Serif KR files when they are installed.
+\IfFileExists{C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/Pretendard-Regular.otf}{%
+  \setmainfont[
+    Path=C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/,
+    BoldFont=Pretendard-SemiBold.otf
+  ]{Pretendard-Regular.otf}%
+  \setsansfont[
+    Path=C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/,
+    BoldFont=Pretendard-SemiBold.otf
+  ]{Pretendard-Regular.otf}%
+  \newfontfamily\BookQuestionSans[
+    Path=C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/,
+    BoldFont=Pretendard-SemiBold.otf
+  ]{Pretendard-Regular.otf}%
+}{%
+  \setmainfont[BoldFont={Noto Sans CJK KR Bold}]{Noto Sans CJK KR}%
+  \setsansfont[BoldFont={Noto Sans CJK KR Bold}]{Noto Sans CJK KR}%
+  \newfontfamily\BookQuestionSans[
+    BoldFont={Noto Sans CJK KR Bold}
+  ]{Noto Sans CJK KR}%
+}
+\IfFontExistsTF{KoPubBatang Medium}{%
+  \newfontfamily\BookQuestionSerif{KoPubBatang Medium}%
+}{%
+  \newfontfamily\BookQuestionSerif[
+    BoldFont={Noto Serif CJK KR Bold}
+  ]{Noto Serif CJK KR}%
+}
+% Noto Serif KR contains every CJK code point used in the book-question notes.
+\IfFileExists{C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/NotoSerifKR-Regular.otf}{%
+  \newfontfamily\HanjaFont[
+    Path=C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/,
+    BoldFont=NotoSerifKR-Bold.otf
+  ]{NotoSerifKR-Regular.otf}%
+}{%
+  \newfontfamily\HanjaFont[
+    BoldFont={Noto Serif CJK KR Bold}
+  ]{Noto Serif CJK KR}%
+}
 \newcommand{\BookQuestionLabel}[1]{{\BookQuestionSans\bfseries\color{questionaccent}\fontsize{9.5pt}{12pt}\selectfont #1}}
 \newcommand{\BookQuestionPrompt}[1]{{\BookQuestionSerif\bfseries\color{questionink}\fontsize{11.5pt}{17pt}\selectfont #1}}
 
@@ -32,7 +63,8 @@
 \pagestyle{scrheadings}
 \RedeclareSectionCommand[
   beforeskip=0pt,
-  afterskip=1.15em
+  afterskip=1.15em,
+  tocnumwidth=2.8em
 ]{chapter}
 \renewcommand{\chapterlinesformat}[3]{%
   \parbox{\textwidth}{%
@@ -45,6 +77,13 @@
 % Korean line breaking and print readability.
 \XeTeXlinebreaklocale "ko"
 \XeTeXlinebreakskip=0pt plus 0.1pt
+% Pandoc wraps every whitespace-delimited Korean/CJK word with this command.
+% It prevents an 어절 or a Hanja term from splitting between glyphs.
+% PDF bookmarks receive the unboxed original text.
+\DeclareRobustCommand{\keepkoreanword}[1]{\mbox{#1}}
+\AtBeginDocument{%
+  \pdfstringdefDisableCommands{\def\keepkoreanword#1{#1}}%
+}
 % Keep author/date metadata in the PDF, but omit them from the interior title page.
 \makeatletter
 \AtBeginDocument{\gdef\@author{}\gdef\@date{}}

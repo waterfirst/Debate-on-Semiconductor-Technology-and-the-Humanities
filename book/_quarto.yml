@@ -69,14 +69,6 @@ format:
     documentclass: scrbook
     pdf-engine: xelatex
     papersize: a5
-    mainfont: "Pretendard-Regular.otf"
-    mainfontoptions:
-      - "Path=C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/"
-      - "BoldFont=Pretendard-SemiBold.otf"
-    sansfont: "Pretendard-Regular.otf"
-    sansfontoptions:
-      - "Path=C:/Users/soonb/AppData/Local/Microsoft/Windows/Fonts/"
-      - "BoldFont=Pretendard-SemiBold.otf"
     fontsize: 10.5pt
     linestretch: 1.36
     include-in-header:
@@ -92,6 +84,8 @@ format:
     colorlinks: false
 
 filters:
+  - keep-sentence-ends.lua
+  - keep-korean-words.lua
   - book-question.lua
   - table-widths.lua
   - hanja-font.lua
