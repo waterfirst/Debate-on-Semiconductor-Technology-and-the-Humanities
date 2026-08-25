@@ -91,6 +91,17 @@ def main() -> None:
         for phrase in FORBIDDEN:
             if phrase in text:
                 errors.append(f"week{week:02d}: forbidden phrase {phrase!r}")
+        if week == 12:
+            required_abbreviation_notes = (
+                "UCIe^[UCIe는 **Universal Chiplet Interconnect Express**",
+                "PHY^[PHY는 **Physical Layer**",
+                "DFx^[DFx는 **Design for X**",
+            )
+            for marker in required_abbreviation_notes:
+                if marker not in text:
+                    errors.append(
+                        f"week12: missing first-use abbreviation footnote {marker!r}"
+                    )
         for line_number, line in enumerate(text.splitlines(), start=1):
             # 올바른 인라인·블록 수식, URL, Pandoc 각주 표시는 검사 대상에서 뺀다.
             plain = re.sub(r"\$[^$]*\$", "", line)
