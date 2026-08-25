@@ -35,6 +35,15 @@ FORBIDDEN = (
     "중단가",
     "□",
 )
+PLAIN_FORMULA_PATTERNS = (
+    re.compile(r"(?<!\$)\^\{?"),
+    re.compile(r"×"),
+    re.compile(r"`[^`]*(?:=|×|÷|\^|≈)[^`]*`"),
+    re.compile(r"\b\d+(?:\.\d+)?\s*[×÷]\s*\d+(?:\.\d+)?\s*(?:=|≈)"),
+    re.compile(r"\bP\s*/\s*\d"),
+    re.compile(r"\b\d+(?:\.\d+)?\s*/\s*\([^)]*\)"),
+    re.compile(r"\b\d+(?:\.\d+)?\s*/\s*\d+(?:\.\d+)?\s*≈"),
+)
 
 
 def main() -> None:
@@ -82,6 +91,14 @@ def main() -> None:
         for phrase in FORBIDDEN:
             if phrase in text:
                 errors.append(f"week{week:02d}: forbidden phrase {phrase!r}")
+        for line_number, line in enumerate(text.splitlines(), start=1):
+            # 올바른 인라인·블록 수식, URL, Pandoc 각주 표시는 검사 대상에서 뺀다.
+            plain = re.sub(r"\$[^$]*\$", "", line)
+            plain = re.sub(r"https?://\S+", "", plain).replace("^[", "")
+            if any(pattern.search(plain) for pattern in PLAIN_FORMULA_PATTERNS):
+                errors.append(
+                    f"week{week:02d}:{line_number}: formula needs $...$ delimiters"
+                )
         for paragraph in re.split(r"\n\s*\n", text):
             normalized = re.sub(r"\s+", " ", paragraph).strip()
             if (
@@ -114,7 +131,7 @@ def main() -> None:
 
     print(
         f"MANUSCRIPT AUDIT PASSED: {len(published)} curated chapters, required sections, "
-        "footnotes, figures, sources, and unique questions"
+        "footnotes, figures, sources, formulas, and unique questions"
     )
 
 
