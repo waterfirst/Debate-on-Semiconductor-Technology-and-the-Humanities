@@ -4,7 +4,7 @@
 - 기준 커밋: `7ed41cf` 이후 258쪽 복원 교정
 - 검수 브랜치: `server/trim-to-258-pages`
 - 대상: `book/output/pdf/반도체-면접-왕의-질문에-답하라-본문-A5.pdf`
-- 본문 PDF SHA-256: `af071a319ebb75b248530bff36a4ff2471513afa6dd3e1a6733e086463b030c0`
+- 본문 PDF SHA-256: `b5fdd0abbd03ec5bce6d01cd899babb5b47fd7b984f5b7299a81774f4099a715`
 
 ## 판정
 
@@ -69,14 +69,14 @@
 
 ## 최종 산출물 해시
 
-- 본문 A5 PDF: `af071a319ebb75b248530bff36a4ff2471513afa6dd3e1a6733e086463b030c0`
-- 인쇄용 펼침표지 PDF: `73ac7a2e28fa3d94c4c1562338ccac3e03b41d133847dcb38a419d765ac29926`
-- 교정용 최종본 PDF: `9c7eb3ba1d5aeecc35cc95ae1a8f3593ee0048c926ee09f33569196e689eaf13`
-- EPUB: `58058ca0b83d0273f66290a3947f60a8ac3b3fe89710780b8405974d3283f03e`
+- 본문 A5 PDF: `b5fdd0abbd03ec5bce6d01cd899babb5b47fd7b984f5b7299a81774f4099a715`
+- 인쇄용 펼침표지 PDF: `a5ef7c81bb0f833a46b6eed443388b2c870563def51d72344542bbefdad20df1`
+- 교정용 최종본 PDF: `385347511bb0b6eb003be3ddc3de89f4c5bfb02c15cbf3d4dde3d9fd1fa0f346`
+- EPUB: `be0447bdec66654fa3e93520317ebddba59fead5d2c30e1d3c871584d784f820`
 
 ## POD 등록 화면에서 마지막으로 대조할 항목
 
-1. 판권의 발행예정일 `2026년 8월 30일`과 ISBN 완료 통보서가 일치하는지
+1. 판권의 초판 1쇄 발행일 `2026년 8월 30일`과 ISBN 완료 통보서가 일치하는지
    확인한다.
 2. 258쪽·백색모조 100g 기준 계산 책등은 16mm다. 교보문고 등록 화면이
    다른 폭을 제시하면 그 값이 최종 기준이다.

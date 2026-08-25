@@ -55,11 +55,11 @@ assert_close(trim_height, wrap_height - 6)
 
 publisher_pages = []
 for page_number, page in enumerate(interior.pages, start=1):
-    if "Scholar Bridge" in (page.extract_text() or ""):
+    if "스칼라브릿지" in (page.extract_text() or ""):
         publisher_pages.append(page_number)
-assert publisher_pages, "Scholar Bridge publisher text is missing from the interior PDF"
+assert publisher_pages, "스칼라브릿지 publisher text is missing from the interior PDF"
 
-publisher = "스칼라브릿지(Scholar Bridge)"
+publisher = "스칼라브릿지"
 assert preview.metadata.get("/Publisher") == publisher
 
 with ZipFile(EPUB) as archive:
