@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="754" height="12000" viewBox="0 0 754 12000">
+  <defs>
+    <style>
+      .sans{font-family:'NanumSquare','NanumGothic',sans-serif;fill:#10283f}
+      .serif{font-family:'NanumMyeongjo',serif;fill:#10283f}
+      .brush{font-family:'Nanum Brush Script','NanumMyeongjo',serif;fill:#a94e32}
+      .white{fill:#fffdf7}.paper{fill:#f6f1e7}.navy{fill:#10283f}.copper{fill:#a94e32}
+      .kicker{font-size:20px;font-weight:700;letter-spacing:4px;fill:#a94e32}
+      .h1{font-size:56px;font-weight:800}.h2{font-size:42px;font-weight:800}.h3{font-size:28px;font-weight:800}
+      .body{font-size:23px}.small{font-size:18px}.quote{font-size:31px;font-weight:700}
+      .muted{fill:#526576}.rule{stroke:#a94e32;stroke-width:3}
+      .pale{fill:#d9e2e8}.mist{fill:#cfdbe2}.accent{fill:#d18a65}.soft{fill:#9db1be}
+    </style>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0b1f33" flood-opacity=".24"/></filter>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#d7cdbd" stroke-width="1" opacity=".3"/></pattern>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1f33"/><stop offset="1" stop-color="#163d59"/></linearGradient>
+  </defs>
+
+  <!-- HERO -->
+  <rect width="754" height="1510" fill="url(#hero)"/>
+  <circle cx="82" cy="110" r="6" fill="#d18a65"/><path d="M105 110H650" stroke="#d18a65" stroke-width="2"/>
+  <text x="82" y="170" class="sans kicker">SCHOLAR BRIDGE BOOKS</text>
+  <text x="82" y="275" class="serif white" font-size="62" font-weight="800">왕은 지식을</text>
+  <text x="82" y="355" class="serif white" font-size="62" font-weight="800">묻지 않았다.</text>
+  <text x="82" y="430" class="brush" font-size="50">판단을 물었다.</text>
+  <image x="214" y="545" width="326" height="463" xlink:href="/book/cover/front-cover-final.png" filter="url(#shadow)"/>
+  <text x="377" y="1100" text-anchor="middle" class="sans white" font-size="26" font-weight="700">반도체 면접, 왕의 질문에 답하라</text>
+  <text x="377" y="1150" text-anchor="middle" class="sans pale" font-size="19">조선의 책문으로 훈련하는</text>
+  <text x="377" y="1184" text-anchor="middle" class="sans pale" font-size="19">AI·공정·설계·공급망 데이터 토론</text>
+  <rect x="182" y="1244" width="390" height="64" rx="32" fill="#a94e32"/>
+  <text x="377" y="1287" text-anchor="middle" class="sans white" font-size="23" font-weight="800">열아홉 개 질문, 당신의 한 문장</text>
+  <text x="377" y="1390" text-anchor="middle" class="sans mist" font-size="20">최낙초 지음 · 스칼라브릿지</text>
+
+  <!-- POSITIONING -->
+  <rect y="1510" width="754" height="1150" class="paper"/>
+  <rect y="1510" width="754" height="1150" fill="url(#grid)"/>
+  <text x="70" y="1640" class="sans kicker">WHY THIS BOOK</text>
+  <text x="70" y="1740" class="serif h2">정답을 외우는 면접에서</text>
+  <text x="70" y="1805" class="serif h2">판단을 설명하는 면접으로</text>
+  <line x1="70" y1="1860" x2="684" y2="1860" class="rule"/>
+  <g class="sans body">
+    <circle cx="95" cy="1985" r="30" fill="#10283f"/><text x="95" y="1994" text-anchor="middle" class="white" font-size="25" font-weight="800">1</text>
+    <text x="150" y="1978" class="h3">질문을 한 문장으로 세운다</text><text x="150" y="2020" class="body muted">피할 수 없는 가치의 충돌부터 찾습니다.</text>
+    <circle cx="95" cy="2145" r="30" fill="#10283f"/><text x="95" y="2154" text-anchor="middle" class="white" font-size="25" font-weight="800">2</text>
+    <text x="150" y="2138" class="h3">숫자의 출처와 단위를 확인한다</text><text x="150" y="2180" class="body muted">최신성보다 먼저 비교 가능한 근거를 만듭니다.</text>
+    <circle cx="95" cy="2305" r="30" fill="#10283f"/><text x="95" y="2314" text-anchor="middle" class="white" font-size="25" font-weight="800">3</text>
+    <text x="150" y="2298" class="h3">강한 반론을 견디며 선택한다</text><text x="150" y="2340" class="body muted">결론과 함께 생각이 바뀔 조건까지 말합니다.</text>
+  </g>
+  <text x="70" y="2490" class="serif quote">“데이터를 근거로 생각하고, 반론을 견디며,</text>
+  <text x="70" y="2540" class="serif quote">책임 있는 선택을 문장으로 만드는 힘”</text>
+
+  <!-- QUESTIONS -->
+  <rect y="2660" width="754" height="1660" class="white"/>
+  <text x="70" y="2790" class="sans kicker">19 QUESTIONS</text>
+  <text x="70" y="2890" class="serif h2">실리콘 위에 새겨진</text>
+  <text x="70" y="2955" class="serif h2">오늘의 책문</text>
+  <g class="sans">
+    <rect x="70" y="3050" width="614" height="215" rx="18" fill="#10283f"/>
+    <text x="105" y="3110" class="small" fill="#d18a65" font-weight="800">산업과 분배</text>
+    <text x="105" y="3170" class="white" font-size="27" font-weight="800">AI 호황의 이익은</text><text x="105" y="3210" class="white" font-size="27" font-weight="800">누구의 몫인가?</text>
+
+    <rect x="70" y="3300" width="614" height="215" rx="18" fill="#efe6d9"/>
+    <text x="105" y="3360" class="small copper" font-weight="800">기술과 윤리</text>
+    <text x="105" y="3420" class="navy" font-size="27" font-weight="800">전쟁에서 발전한 기술을</text><text x="105" y="3460" class="navy" font-size="27" font-weight="800">재난 구조에 적용할 것인가?</text>
+
+    <rect x="70" y="3550" width="614" height="215" rx="18" fill="#10283f"/>
+    <text x="105" y="3610" class="small" fill="#d18a65" font-weight="800">품질과 납기</text>
+    <text x="105" y="3670" class="white" font-size="27" font-weight="800">납기 때문에 신뢰성 시험을</text><text x="105" y="3710" class="white" font-size="27" font-weight="800">줄일 것인가?</text>
+
+    <rect x="70" y="3800" width="614" height="215" rx="18" fill="#efe6d9"/>
+    <text x="105" y="3860" class="small copper" font-weight="800">안전과 생산</text>
+    <text x="105" y="3920" class="navy" font-size="27" font-weight="800">가스 경보 하나에</text><text x="105" y="3960" class="navy" font-size="27" font-weight="800">라인을 세울 것인가?</text>
+  </g>
+  <text x="377" y="4125" text-anchor="middle" class="sans body muted">공정 · 설계 · 공급망 · 보안 · 노동 · 환경</text>
+
+  <!-- DATA VISUAL -->
+  <rect y="4320" width="754" height="1270" class="paper"/>
+  <text x="70" y="4450" class="sans kicker">DATA, NOT DECORATION</text>
+  <text x="70" y="4550" class="serif h2">주장은 숫자 앞에서</text>
+  <text x="70" y="4615" class="serif h2">다시 질문이 된다</text>
+  <image x="70" y="4725" width="614" height="294" xlink:href="/book/figures/week01.png"/>
+  <g class="sans body muted">
+    <text x="70" y="5105">발표일과 기준연도를 구분하고,</text>
+    <text x="70" y="5150">기업의 주장은 기업의 주장이라고 표시합니다.</text>
+    <text x="70" y="5195">출처 없는 숫자는 결론을 지탱할 수 없습니다.</text>
+  </g>
+  <rect x="70" y="5280" width="614" height="180" rx="18" fill="#fffdf7" stroke="#cfc3b2" stroke-width="2"/>
+  <text x="105" y="5340" class="sans copper" font-size="19" font-weight="800">AI의 자리</text>
+  <text x="105" y="5395" class="sans navy" font-size="25" font-weight="800">자료 후보를 찾고 반론을 확장한다.</text>
+  <text x="105" y="5434" class="sans body muted">최종 판단과 책임은 인간에게 남긴다.</text>
+
+  <!-- BOOK STRUCTURE -->
+  <rect y="5590" width="754" height="1420" class="navy"/>
+  <text x="70" y="5720" class="sans kicker">HOW EACH CHAPTER WORKS</text>
+  <text x="70" y="5820" class="serif white h2">한 장을 읽고</text>
+  <text x="70" y="5885" class="serif white h2">90초로 답하는 구조</text>
+  <g class="sans">
+    <path d="M110 6030V6720" stroke="#547188" stroke-width="4"/>
+    <g><circle cx="110" cy="6060" r="20" fill="#d18a65"/><text x="155" y="6070" class="white h3">오늘의 책문</text><text x="155" y="6110" fill="#c9d7e0" class="body">쟁점을 한 문장으로 붙잡는다</text></g>
+    <g><circle cx="110" cy="6220" r="20" fill="#d18a65"/><text x="155" y="6230" class="white h3">데이터 렌즈</text><text x="155" y="6270" fill="#c9d7e0" class="body">숫자와 사례의 범위를 확인한다</text></g>
+    <g><circle cx="110" cy="6380" r="20" fill="#d18a65"/><text x="155" y="6390" class="white h3">세 개의 답안</text><text x="155" y="6430" fill="#c9d7e0" class="body">찬성·반대·조건부 논거를 맞세운다</text></g>
+    <g><circle cx="110" cy="6540" r="20" fill="#d18a65"/><text x="155" y="6550" class="white h3">90초 발언</text><text x="155" y="6590" fill="#c9d7e0" class="body">결론과 기준을 자기 말로 압축한다</text></g>
+    <g><circle cx="110" cy="6700" r="20" fill="#d18a65"/><text x="155" y="6710" class="white h3">전환 조건</text><text x="155" y="6750" fill="#c9d7e0" class="body">무엇이 확인되면 생각을 바꿀지 말한다</text></g>
+  </g>
+  <rect x="70" y="6830" width="614" height="88" rx="44" fill="#a94e32"/>
+  <text x="377" y="6886" text-anchor="middle" class="sans white" font-size="24" font-weight="800">외우지 말고, 덮고, 자기 말로 답해 보십시오.</text>
+
+  <!-- EXCERPT -->
+  <rect y="7010" width="754" height="1430" class="white"/>
+  <text x="70" y="7140" class="sans kicker">FROM THE BOOK</text>
+  <text x="70" y="7240" class="serif h2">책속으로</text>
+  <path d="M70 7310H684" class="rule"/>
+  <text x="70" y="7425" class="serif quote">“그래프를 그렸다고</text>
+  <text x="70" y="7480" class="serif quote">일이 끝나는 것은 아니었다.”</text>
+  <g class="serif body muted">
+    <text x="70" y="7600">통계적 유의성을 확인했어도 동료가 그 의미를</text>
+    <text x="70" y="7645">이해하지 못하면 분석은 개인의 컴퓨터 안에 갇힌다.</text>
+    <text x="70" y="7690">데이터가 조직의 판단으로 이동하려면 문장이 필요했다.</text>
+  </g>
+  <text x="70" y="7770" class="sans small copper">에필로그, 245~246쪽</text>
+  <rect x="70" y="7860" width="614" height="400" rx="20" fill="#f6f1e7"/>
+  <text x="105" y="7940" class="serif navy" font-size="28" font-weight="800">쓰지 않은 경험은 한 사람의 기억으로 끝난다.</text>
+  <text x="105" y="8000" class="serif navy" font-size="25">기록된 경험은 동료가 검토할 수 있는 지식이 된다.</text>
+  <text x="105" y="8050" class="serif navy" font-size="25">함께 읽고 토론한 지식은</text>
+  <text x="105" y="8100" class="serif navy" font-size="25">조직과 사회의 문화가 된다.</text>
+  <text x="105" y="8195" class="sans small copper">에필로그, 250쪽</text>
+
+  <!-- READER -->
+  <rect y="8440" width="754" height="1260" class="paper"/>
+  <text x="70" y="8570" class="sans kicker">FOR THE READER</text>
+  <text x="70" y="8670" class="serif h2">이런 독자에게 권합니다</text>
+  <g class="sans">
+    <rect x="70" y="8760" width="614" height="170" rx="18" fill="#fffdf7"/>
+    <text x="105" y="8825" class="h3">반도체·디스플레이 기업 지원자</text><text x="105" y="8870" class="body muted">인문학·시사형 집단토론을 실전처럼 연습하고 싶은 사람</text>
+    <rect x="70" y="8970" width="614" height="170" rx="18" fill="#fffdf7"/>
+    <text x="105" y="9035" class="h3">공정·설계·품질 엔지니어</text><text x="105" y="9080" class="body muted">숫자를 조직의 판단으로 바꾸는 문장을 훈련할 사람</text>
+    <rect x="70" y="9180" width="614" height="170" rx="18" fill="#fffdf7"/>
+    <text x="105" y="9245" class="h3">기술과 사회를 함께 보는 독자</text><text x="105" y="9290" class="body muted">AI 시대의 성장·안전·노동·환경을 함께 묻고 싶은 사람</text>
+  </g>
+  <text x="70" y="9500" class="sans small muted">※ 특정 기업의 공식 채용 교재가 아닌 독립적인 교육·토론서입니다.</text>
+
+  <!-- AUTHOR -->
+  <rect y="9700" width="754" height="1050" class="white"/>
+  <text x="70" y="9830" class="sans kicker">AUTHOR</text>
+  <text x="70" y="9930" class="serif h2">기술을 인간의 언어로</text>
+  <text x="70" y="9995" class="serif h2">번역해 온 엔지니어</text>
+  <text x="70" y="10090" class="sans navy" font-size="31" font-weight="800">최낙초</text>
+  <g class="sans body muted">
+    <text x="70" y="10165">반도체·디스플레이 현장의 기술과 사람, 조직과 미래를</text>
+    <text x="70" y="10210">오랫동안 관찰하고 기록해 왔습니다. 데이터 분석과 글쓰기,</text>
+    <text x="70" y="10255">역사적 질문과 현대 산업을 연결해 독자가 스스로 판단하는</text>
+    <text x="70" y="10300">방법을 탐구합니다.</text>
+  </g>
+  <path d="M70 10375H684" stroke="#d7cdbd" stroke-width="2"/>
+  <text x="70" y="10445" class="serif navy" font-size="26">“기술을 만드는 사람은 결국</text>
+  <text x="70" y="10490" class="serif navy" font-size="26">그 기술이 놓이는 사회도 함께 다뤄야 한다.”</text>
+
+  <!-- CTA -->
+  <rect y="10750" width="754" height="1250" fill="url(#hero)"/>
+  <circle cx="377" cy="10910" r="52" fill="none" stroke="#d18a65" stroke-width="3"/>
+  <text x="377" y="10927" text-anchor="middle" class="serif accent" font-size="58">問</text>
+  <text x="377" y="11060" text-anchor="middle" class="serif white" font-size="42" font-weight="800">그대는 기술로</text>
+  <text x="377" y="11120" text-anchor="middle" class="serif white" font-size="42" font-weight="800">무엇을 만들 것인가?</text>
+  <text x="377" y="11230" text-anchor="middle" class="sans pale" font-size="23">그리고 그 기술이 만들어갈 세상을</text>
+  <text x="377" y="11270" text-anchor="middle" class="sans pale" font-size="23">어떤 문장으로 설명할 것인가?</text>
+  <image x="287" y="11355" width="180" height="255" xlink:href="/book/cover/front-cover-final.png" filter="url(#shadow)"/>
+  <text x="377" y="11720" text-anchor="middle" class="sans white" font-size="25" font-weight="800">반도체 면접, 왕의 질문에 답하라</text>
+  <text x="377" y="11770" text-anchor="middle" class="sans accent" font-size="20">2026. 08. 30 · 스칼라브릿지</text>
+  <text x="377" y="11875" text-anchor="middle" class="sans soft" font-size="18">ISBN 979-11-220895-8-5</text>
+</svg>
