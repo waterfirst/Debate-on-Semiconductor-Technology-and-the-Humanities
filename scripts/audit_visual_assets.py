@@ -7,7 +7,13 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
-from prepare_print_images import CHART_GRAY_LEVELS, PALETTE_MATCH_DISTANCE, flatten_on_white
+from prepare_print_images import (
+    CHART_GRAY_LEVELS,
+    CHART_MUTED_TEXT_MAX_GRAY,
+    CHART_PALETTE_MIN_CHROMA,
+    PALETTE_MATCH_DISTANCE,
+    flatten_on_white,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,6 +24,7 @@ PROOF = ROOT / "tmp" / "proof" / "visual-assets"
 
 def palette_masks(image: Image.Image) -> list[tuple[int, np.ndarray]]:
     rgb = np.asarray(flatten_on_white(image), dtype=np.int32)
+    chroma = np.max(rgb, axis=2) - np.min(rgb, axis=2)
     max_distance_sq = PALETTE_MATCH_DISTANCE**2
     distances: list[np.ndarray] = []
     levels: list[int] = []
@@ -29,7 +36,12 @@ def palette_masks(image: Image.Image) -> list[tuple[int, np.ndarray]]:
     nearest = np.argmin(distance_stack, axis=2)
     nearest_distance = np.min(distance_stack, axis=2)
     return [
-        (level, (nearest == index) & (nearest_distance <= max_distance_sq))
+        (
+            level,
+            (nearest == index)
+            & (nearest_distance <= max_distance_sq)
+            & (chroma >= CHART_PALETTE_MIN_CHROMA),
+        )
         for index, level in enumerate(levels)
     ]
 
@@ -46,6 +58,8 @@ def audit_chart(index: int) -> str:
         assert source.size == (1840, 880), f"unexpected source size: {source_path}"
         assert printed.size == (1840, 880), f"unexpected print size: {print_path}"
         gray = np.asarray(printed.convert("L"), dtype=np.uint8)
+        source_rgb = np.asarray(flatten_on_white(source), dtype=np.uint8)
+        source_gray = np.asarray(flatten_on_white(source).convert("L"), dtype=np.uint8)
         levels: list[int] = []
         for expected, mask in palette_masks(source):
             if int(mask.sum()) < 80:
@@ -57,6 +71,19 @@ def audit_chart(index: int) -> str:
             levels.append(median)
         for left, right in zip(sorted(set(levels)), sorted(set(levels))[1:]):
             assert right - left >= 45, f"week{index:02d}: gray levels too close: {levels}"
+        # 작은 단위·주석처럼 채도가 낮은 회색 글씨는 원래 농도를 유지해야
+        # 한다. 팔레트 오인으로 더 밝아지면 흑백 POD에서 획이 사라진다.
+        source_chroma = np.max(source_rgb, axis=2) - np.min(source_rgb, axis=2)
+        gray_text = (
+            (source_chroma < CHART_PALETTE_MIN_CHROMA)
+            & (source_gray >= 75)
+            & (source_gray <= 160)
+        )
+        assert int(gray_text.sum()) >= 80, f"week{index:02d}: no gray text sample"
+        printed_gray_text = gray[gray_text]
+        assert int(np.percentile(printed_gray_text, 95)) <= CHART_MUTED_TEXT_MAX_GRAY, (
+            f"week{index:02d}: gray text is too light for print"
+        )
         border = edge_dark_ratio(gray)
         assert border == 0.0, f"week{index:02d}: dark pixels touch chart edge ({border:.4%})"
         return f"week{index:02d}: levels={sorted(set(levels)) or ['n/a']} edge={border:.1%}"

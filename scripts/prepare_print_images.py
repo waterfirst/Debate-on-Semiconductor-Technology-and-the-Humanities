@@ -37,6 +37,11 @@ CHART_GRAY_LEVELS = {
     (193, 138, 61): 200,  # ochre
 }
 PALETTE_MATCH_DISTANCE = 48
+# 회색 본문·단위·주석은 팔레트 색과 RGB 거리가 가깝더라도 색상 계열이
+# 아니다. 채도가 낮은 픽셀을 제외해야 작은 회색 글씨가 150단계 회색으로
+# 밝아지는 일을 막을 수 있다.
+CHART_PALETTE_MIN_CHROMA = 40
+CHART_MUTED_TEXT_MAX_GRAY = 80
 
 
 def flatten_on_white(image: Image.Image) -> Image.Image:
@@ -66,7 +71,20 @@ def chart_to_print_grayscale(image: Image.Image) -> Image.Image:
         mapped_levels[nearer] = gray_level
 
     matched = nearest_distance_sq <= max_distance_sq
+    chroma = np.max(rgb_array, axis=2) - np.min(rgb_array, axis=2)
+    matched &= chroma >= CHART_PALETTE_MIN_CHROMA
     gray_array[matched] = mapped_levels[matched]
+    # 밝은 회색 바탕 위의 단위·주석·축 글씨는 인쇄 축소 시 획이 약해진다.
+    # 저채도 글씨의 중심부만 진하게 하고 밝은 안티앨리어싱 가장자리는
+    # 유지해, 선명도를 높이되 글자가 뭉개지지 않게 한다.
+    muted_text = (
+        (chroma < CHART_PALETTE_MIN_CHROMA)
+        & (gray_array >= 75)
+        & (gray_array <= 170)
+    )
+    gray_array[muted_text] = np.minimum(
+        gray_array[muted_text], CHART_MUTED_TEXT_MAX_GRAY
+    )
     return Image.fromarray(gray_array, mode="L")
 
 
