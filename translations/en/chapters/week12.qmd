@@ -9,7 +9,7 @@ categories: [semiconductors, chiplets, design, group discussion, data]
 
 ![](../figures/symbols/week12-symbol-print.png){.book-question-image width=30mm fig-alt="An ink-wash illustration of two interlocking standards-based chiplets, a faster isolated proprietary chiplet, and a magnifying glass for verification between them"}
 
-[Should the next AI accelerator use UCIe for every chiplet connection, or use a proprietary interface in selected segments to improve performance and power?]{.book-question-prompt}
+[Should the next AI accelerator standardize every chiplet connection on UCIe^[UCIe stands for **Universal Chiplet Interconnect Express**, an open die-to-die interface standard for connecting chiplets within one package. See the [UCIe Consortium's official overview](https://www.uciexpress.org/why-choose-us).], or use a proprietary interface in selected segments to improve performance and power?]{.book-question-prompt}
 :::
 
 King Sejong's 1447 chaekmun on law and authority^[The actual chaekmun ([策問]{.hanja}) connected to this chapter asked about the cycle in which rules create abuses and new rules are then established, as well as where responsibility should reside. The Chaekmun Archive condenses and reconstructs the question in Classical Chinese as “[法立而弊生，弊生而法又立。其所以救之者何歟？政權當歸於何所歟？]{.hanja}”; this is not a literal translation of the complete original. It asks, “When laws are established, abuses arise, and when abuses arise, new laws are established. How can this be remedied, and where should authority reside?” Today's question does not translate Joseon's governing institutions into chiplet specifications. It borrows the question's structure to ask who verifies and reverses a design when shared rules and engineered exceptions each create new costs. See the [individual entry in the Joseon Dynasty Chaekmun Archive](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/#sejong-1447/0).] did not assume that establishing a standard ended the problem. An interface standard can broaden the supplier base and provide a common language for verification, but it does not guarantee optimal performance in every package. A proprietary link can be tailored to a specific workload, but it can also lock design knowledge and the supply chain to one source.
@@ -47,7 +47,7 @@ At a minimum, a standards-based design and a proprietary design must be measured
 
 - Effective bandwidth and both the mean and tail of round-trip latency
 - Energy per transfer, link power, package temperature, and time spent throttling
-- Traceability of PHY, protocol, and DFx requirements, and fault-injection pass rate
+- Traceability of PHY^[PHY stands for **Physical Layer**, the circuits and electrical interface that physically transmit signals between chiplets.], protocol, and DFx^[DFx is shorthand for **Design for X**. In the UCIe context, it groups the activities that incorporate testability, manageability, and debugging across multiple chiplets from the design stage. See the [UCIe Consortium specification overview](https://www.uciexpress.org/specifications).] requirements, and fault-injection pass rate
 - Known-good-die screening rate, assembly yield, and probability of a first-silicon redesign
 - Weeks required to replace an IP vendor, foundry, or OSAT, and the scope of qualification that must be repeated
 
