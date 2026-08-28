@@ -61,6 +61,11 @@
 \ohead{\headmark}
 \ofoot*{\pagemark}
 \setkomafont{pageheadfoot}{\sffamily\fontsize{8.5pt}{11pt}\selectfont}
+% Kyobo POD trims 3 mm from every edge.  Keep the page-number baseline well
+% inside that minimum instead of relying on the class default, which placed
+% the glyph box against (and partly beyond) the lower trim edge.
+% Changing \footskip does not change the text block or the pagination.
+\setlength{\footskip}{8mm}
 \pagestyle{scrheadings}
 \RedeclareSectionCommand[
   beforeskip=0pt,
