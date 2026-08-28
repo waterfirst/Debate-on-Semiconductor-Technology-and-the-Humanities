@@ -28,8 +28,10 @@ EPUB files should also be checked with the current production release of [W3C EP
 
 ## Google Play Books handoff
 
-Upload the final EPUB and final PDF for each language. The standalone cover PNG may be supplied separately if the Partner Center requests a cover file. Do not upload the `-interior-a5.pdf` intermediate.
+Create one Book Catalog entry per language. Use the reflowable EPUB 3.0 file as the primary reading format and upload the complete PDF to the same language entry so readers can also use the original-page view. The standalone cover PNG may be supplied separately if the Partner Center requests a cover file. Do not upload the `-interior-a5.pdf` intermediate.
 
 Google accepts both EPUB and PDF, recommends supplying both, and requires a complete, unencrypted PDF. EPUB must contain its front cover. Covers must be at least 640 pixels and no more than 7200 pixels on either dimension; embedded EPUB images must not exceed 3200 pixels. See Google’s [EPUB guidance](https://support.google.com/books/partner/answer/3316879?hl=en), [file guidelines](https://support.google.com/books/partner/answer/3424254?hl=en), and [PDF configuration guidance](https://support.google.com/books/partner/answer/107073?hl=en).
 
-No translated-edition ISBN or release date has been invented. Assign those identifiers in the publisher account before publication; do not reuse the Korean print ISBN for either translated edition.
+The publication plan uses formal ISBNs rather than Google-only GGKEYs. Because the English and Japanese editions are different language editions, and EPUB and PDF are different publicly distributed electronic formats, request four ISBNs: English EPUB, English PDF, Japanese EPUB, and Japanese PDF. In each Google entry, use the EPUB ISBN as the primary identifier and connect the PDF ISBN as a related identifier. See the [ISBN application packet](ISBN_APPLICATION.md).
+
+No translated-edition ISBN or release date has been invented. Add issued identifiers to the sources and rebuild all deliverables before publication; do not reuse the Korean print ISBN for either translated edition.
