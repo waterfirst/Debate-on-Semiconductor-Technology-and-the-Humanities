@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+:root {
+  color-scheme: light;
+  --ink: #202124;
+  --muted: #5f6368;
+  --accent: #8b2f24;
+  --paper: #ffffff;
+  --soft: #f7f1e7;
+  --line: #d8cbb8;
+}
+
+html,
+body {
+  background: #ffffff;
+  background: var(--paper);
+  color: #202124;
+  color: var(--ink);
+  font-family: "Noto Serif KR", "KoPub Batang", "Malgun Gothic", serif;
+  line-height: 1.72;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+body {
+  margin: 0 4%;
+}
+
+p {
+  margin: 0.82em 0;
+  orphans: 2;
+  widows: 2;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #10283f;
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+  line-height: 1.35;
+  page-break-after: avoid;
+  break-after: avoid-page;
+}
+
+h1 {
+  margin: 1.2em 0 0.75em;
+  font-size: 1.75em;
+}
+
+h2 {
+  margin: 1.45em 0 0.55em;
+  border-bottom: 1px solid #d8cbb8;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.2em;
+  font-size: 1.35em;
+}
+
+h3 {
+  margin: 1.2em 0 0.45em;
+  font-size: 1.12em;
+}
+
+a {
+  color: #1a5fb4;
+  text-decoration: underline;
+}
+
+a,
+code {
+  overflow-wrap: anywhere;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 1.15em auto;
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 0.45em;
+  color: #5f6368;
+  color: var(--muted);
+  font-size: 0.82em;
+  line-height: 1.5;
+}
+
+blockquote {
+  margin: 1em 0;
+  border-left: 0.28em solid var(--accent);
+  padding: 0.15em 0.9em;
+  background: #fbf7ef;
+}
+
+table {
+  display: table;
+  width: 100%;
+  margin: 1em 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.86em;
+  line-height: 1.48;
+}
+
+th,
+td {
+  border: 1px solid #b9b0a4;
+  padding: 0.42em;
+  vertical-align: top;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+th {
+  background: #f0ece4;
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+  text-align: left;
+}
+
+ol,
+ul {
+  margin: 0.75em 0 0.9em 1.35em;
+  padding: 0;
+}
+
+li {
+  margin: 0.35em 0;
+}
+
+.book-question {
+  margin: 1.2em 0 1.5em;
+  border: 1px solid #d8cbb8;
+  border: 1px solid var(--line);
+  border-left: 0.38em solid #8b2f24;
+  border-left: 0.38em solid var(--accent);
+  padding: 1em;
+  background: #f7f1e7;
+  background: var(--soft);
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+}
+
+.book-question-label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: #8b2f24;
+  color: var(--accent);
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-size: 0.82em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.book-question-prompt {
+  display: block;
+  font-size: 1.08em;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.book-question-image {
+  display: block;
+  width: 8.5em;
+  margin: 0.2em auto 0.75em;
+}
+
+.callout,
+.callout-body,
+.callout-content {
+  display: block !important;
+}
+
+.callout {
+  margin: 1em 0;
+  border: 1px solid #b8c7d9;
+  border-left: 0.3em solid #3f6f9f;
+  padding: 0.55em 0.8em;
+  background: #f4f8fc;
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+}
+
+.callout-icon {
+  display: none !important;
+}
+
+.callout-title {
+  display: block !important;
+  margin-bottom: 0.35em;
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-weight: 700;
+}
+
+.hanja {
+  font-family: "Noto Serif CJK KR", "Malgun Gothic", serif;
+}
+
+sup,
+sub {
+  line-height: 0;
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 0 3%;
+  }
+
+  table {
+    font-size: 0.78em;
+  }
+
+  th,
+  td {
+    padding: 0.32em;
+  }
+}

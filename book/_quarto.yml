@@ -8,7 +8,14 @@ subtitle: "조선의 책문으로 훈련하는 AI·공정·설계·공급망 데
 author: "최낙초"
 publisher: "스칼라브릿지"
 rights: "© 2026 최낙초. All rights reserved."
-date: last-modified
+date: "2026-08-30"
+identifier: "urn:uuid:1929a370-0363-43dc-8750-b7f44f8bdc2c"
+description: "조선의 책문 형식을 현대 반도체 산업의 19개 딜레마에 적용해 데이터, 대립 답안, 90초 발언과 꼬리 질문으로 판단력을 훈련하는 독립 토론서"
+keywords:
+  - 반도체
+  - 취업·면접
+  - 기술과 인문학
+  - 데이터 토론
 
 book:
   cover-image: cover/front-cover-final.png
@@ -62,6 +69,14 @@ format:
     number-sections: true
     smooth-scroll: true
   epub:
+    css: styles-epub.css
+    html-math-method: plain
+    toc: true
+    toc-depth: 1
+    number-sections: true
+  epub2:
+    css: styles-epub2.css
+    html-math-method: plain
     toc: true
     toc-depth: 1
     number-sections: true

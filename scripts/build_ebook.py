@@ -1,85 +1,86 @@
-"""Build a review EPUB3 with Pandoc when Quarto is unavailable.
+"""Build the publication EPUB3, legacy EPUB2, and upload cover.
 
-This is a fast preflight builder. The canonical publication path remains
-`quarto render book --to epub`.
+The curated 19-chapter reading order and metadata come from ``book/_quarto.yml``.
+Quarto renders EPUB3 with its ``epub`` target and EPUB2 with ``epub2``.
 """
 
 from __future__ import annotations
 
-import re
 import shutil
 import subprocess
-import tempfile
 from pathlib import Path
+
+from PIL import Image
+
 
 ROOT = Path(__file__).resolve().parents[1]
 BOOK = ROOT / "book"
-DIST = ROOT / "dist"
-OUTPUT = DIST / "semiconductor-chaekmun-review.epub"
+BOOK_OUT = BOOK / "_book"
+OUTPUT = BOOK / "output" / "epub"
+SLUG = "반도체-면접-왕의-질문에-답하라"
+EPUB3 = OUTPUT / f"{SLUG}-EPUB3.epub"
+EPUB2 = OUTPUT / f"{SLUG}-EPUB2.epub"
+CANONICAL = OUTPUT / f"{SLUG}.epub"
+COVER_PNG = BOOK / "cover" / "front-cover-final.png"
+COVER_JPG = OUTPUT / f"{SLUG}-전자책-표지.jpg"
 
 
-def split_front_matter(text: str) -> tuple[dict[str, str], str]:
-    match = re.match(r"^---\n(.*?)\n---\n(.*)$", text, flags=re.DOTALL)
-    if not match:
-        return {}, text
-    meta: dict[str, str] = {}
-    for line in match.group(1).splitlines():
-        if ":" not in line:
-            continue
-        key, value = line.split(":", 1)
-        meta[key.strip()] = value.strip().strip('"')
-    return meta, match.group(2).strip()
+def find_quarto() -> Path:
+    executable = shutil.which("quarto") or shutil.which("quarto.exe")
+    if executable:
+        return Path(executable)
+
+    windows_fallback = (
+        Path.home()
+        / "AppData"
+        / "Local"
+        / "Programs"
+        / "Quarto"
+        / "bin"
+        / "quarto.exe"
+    )
+    if windows_fallback.exists():
+        return windows_fallback
+    raise SystemExit("Quarto is required: https://quarto.org/docs/get-started/")
 
 
-def source_files() -> list[Path]:
-    return [
-        BOOK / "index.qmd",
-        *sorted((BOOK / "chapters").glob("week*.qmd")),
-        BOOK / "publishing-guide.qmd",
-        BOOK / "references.qmd",
-    ]
+def render(quarto: Path, output_format: str) -> Path:
+    subprocess.run(
+        [str(quarto), "render", ".", "--to", output_format],
+        cwd=BOOK,
+        check=True,
+    )
+    candidates = list(BOOK_OUT.glob("*.epub"))
+    if not candidates:
+        raise SystemExit(f"Quarto produced no EPUB for {output_format}")
+    return max(candidates, key=lambda path: path.stat().st_mtime_ns)
+
+
+def export_cover() -> None:
+    with Image.open(COVER_PNG) as source:
+        source.convert("RGB").save(
+            COVER_JPG,
+            "JPEG",
+            quality=95,
+            optimize=True,
+            dpi=(300, 300),
+        )
 
 
 def main() -> None:
-    if shutil.which("pandoc") is None:
-        raise SystemExit("pandoc is required; use `quarto render book --to epub` instead")
+    quarto = find_quarto()
+    OUTPUT.mkdir(parents=True, exist_ok=True)
 
-    chunks = []
-    for path in source_files():
-        meta, body = split_front_matter(path.read_text(encoding="utf-8"))
-        title = meta.get("title", path.stem)
-        body = body.replace("../figures/", f"{(BOOK / 'figures').as_posix()}/")
-        body = re.sub(
-            r"```\{mermaid\}.*?```",
-            "> **의사결정 흐름**: 문제 정의 → 영향받는 사람 → 측정 지표 → 중단·수정 조건",
-            body,
-            flags=re.DOTALL,
-        )
-        chunks.append(f"# {title}\n\n{body}\n")
+    epub3_source = render(quarto, "epub")
+    shutil.copy2(epub3_source, EPUB3)
+    shutil.copy2(epub3_source, CANONICAL)
 
-    DIST.mkdir(exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix="chaekmun-epub-", dir=DIST) as tmp:
-        manuscript = Path(tmp) / "manuscript.md"
-        manuscript.write_text("\n\n".join(chunks), encoding="utf-8")
-        subprocess.run(
-            [
-                "pandoc",
-                str(manuscript),
-                "--from=markdown+fenced_divs",
-                "--to=epub3",
-                "--toc",
-                "--toc-depth=1",
-                "--split-level=1",
-                "--metadata=title:반도체 면접, 왕의 질문에 답하라",
-                "--metadata=subtitle:조선의 책문으로 훈련하는 AI·공정·설계·공급망 데이터 토론",
-                "--metadata=author:waterfirst",
-                "--metadata=lang:ko-KR",
-                f"--css={BOOK / 'styles.css'}",
-                f"--output={OUTPUT}",
-            ],
-            check=True,
-        )
-    print(OUTPUT)
+    epub2_source = render(quarto, "epub2")
+    shutil.copy2(epub2_source, EPUB2)
+    export_cover()
+
+    for path in (EPUB3, EPUB2, CANONICAL, COVER_JPG):
+        print(path)
 
 
 if __name__ == "__main__":

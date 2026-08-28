@@ -10,7 +10,7 @@
 
 ## 현재 출간 상태
 
-PDF·EPUB·인쇄용 날개 펼침표지까지 만든 **POD 제출 최종본**입니다. 종이책 ISBN `979-11-220895-8-5 (03500)`, 정가 15,000원과 발행예정일 2026년 8월 30일을 반영했습니다. 초판은 추천사·서평 없이 발행합니다.
+PDF·EPUB3·EPUB 2.0.1·인쇄용 날개 펼침표지까지 만든 **POD·전자책 제출 최종본**입니다. 종이책 ISBN `979-11-220895-8-5 (03500)`, 정가 15,000원과 발행예정일 2026년 8월 30일을 반영했습니다. 전자책에는 종이책 ISBN을 식별자로 재사용하지 않고 별도 UUID를 사용합니다. 초판은 추천사·서평 없이 발행합니다.
 
 - 교보 제출 절차와 체크리스트: [KYOBO_PUBLISHING_GUIDE.md](KYOBO_PUBLISHING_GUIDE.md)
 - 개인정보를 제거한 POD 7일 출시·가격·홍보 템플릿: [POD_LAUNCH_SPRINT_TEMPLATE.md](POD_LAUNCH_SPRINT_TEMPLATE.md)
@@ -75,6 +75,7 @@ book/
   figures/symbols/            수묵 연필 삽화의 고해상도 원본·흑백 인쇄본
   cover/                      앞·뒤·책등·책날개·펼침표지 원본과 렌더링
   output/pdf/                 최종 PDF 산출물
+  output/epub/                EPUB3·EPUB2·전자책 표지 산출물
 scripts/
   audit_manuscript.py         출간 장 구조·출처·꼬리질문 자동 감사
   audit_hanja_fonts.py        원고 한자와 인쇄 글꼴의 전수 대조
@@ -85,6 +86,8 @@ scripts/
   activate_print_images.py    원고 이미지 경로를 인쇄본으로 전환
   render_cover_assets.mjs     표지 SVG를 인쇄용 PNG로 렌더링
   verify_publish_artifacts.py PDF·EPUB 쪽수·판형·도련·발행처 검증
+  build_ebook.py              EPUB3·EPUB2·업로드용 JPEG 표지 빌드
+  validate_epub_editions.py   전자책 구조·메타데이터·본문·링크 검증
   build_recommendation_packets.py 과거 추천사 요청용 도구(초판에서는 사용하지 않음)
   build_letyuin_review_packet.py 렛유인 전달용 서문·목차 발췌본 생성
 SKILL.md                      이 출판 공정을 재사용하는 작업 지침
@@ -93,7 +96,7 @@ skills/quarto-korean-pod-book/ 다른 Quarto 책에 설치해 쓰는 범용 출�
 
 ## 재현 방법
 
-Quarto와 TinyTeX, Python 3, Node.js가 필요합니다. Python에는 `pypdf`, `pypdfium2`, `reportlab`을, Node.js에는 `sharp`를 준비합니다.
+Quarto와 TinyTeX, Python 3, Node.js가 필요합니다. Python에는 `Pillow`, `pypdf`, `pypdfium2`, `reportlab`을, Node.js에는 `sharp`를 준비합니다.
 
 ```powershell
 # 1. 원고·출처·한자 구조 감사
@@ -110,12 +113,12 @@ python scripts/activate_print_images.py
 # 3. 최종 쪽수로 계산한 책등의 표지 자산 렌더링
 node scripts/render_cover_assets.mjs
 
-# 4. EPUB을 먼저 만들고 안정된 출력 폴더에 보존
-cd book
-quarto render . --to epub
-Copy-Item "_book/*.epub" "output/epub/반도체-면접-왕의-질문에-답하라.epub" -Force
+# 4. EPUB3·EPUB2와 업로드용 JPEG 표지 생성·검증
+python scripts/build_ebook.py
+python scripts/validate_epub_editions.py
 
 # 5. A5 본문 PDF와 POD 제출 파일
+cd book
 quarto render . --to pdf
 python cover/build_cover_pdfs.py
 
@@ -130,7 +133,9 @@ python scripts/verify_publish_artifacts.py
 - `본문-A5.pdf`: POD 내지 업로드용
 - `인쇄용-펼침표지.pdf`: 왼쪽 책날개+뒤표지+책등+앞표지+오른쪽 책날개 업로드용
 - `최종본.pdf`: 앞뒤를 포함해 독자가 전체 책을 확인하는 교정용
-- `.epub`: 전자책 업로드 후보
+- `*-EPUB3.epub`: Google Play 북·교보 제출 기본본
+- `*-EPUB2.epub`: 구형 리더 호환본
+- `*-전자책-표지.jpg`: 유통사 별도 표지 업로드용
 
 ## 출판 전 최종 확인
 
