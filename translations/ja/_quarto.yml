@@ -1,0 +1,91 @@
+project:
+  type: book
+  output-dir: _book
+
+lang: ja-JP
+title: "半導体面接――王の問いに答えよ"
+subtitle: "朝鮮王朝の策問で鍛える、AI・製造工程・設計・サプライチェーンのデータ討論"
+author: "チェ・ナクチョ（Nakcho Choi）"
+publisher: "スカラーブリッジ（Scholar Bridge）"
+rights: "© 2026 Nakcho Choi. All rights reserved."
+
+book:
+  cover-image: cover/front-cover-ja.png
+  title: "半導体面接――王の問いに答えよ"
+  subtitle: "朝鮮王朝の策問で鍛える、AI・製造工程・設計・サプライチェーンのデータ討論"
+  author: "チェ・ナクチョ（Nakcho Choi）"
+  page-navigation: true
+  search: true
+  chapters:
+    - index.qmd
+    - copyright.qmd
+    - part: "産業を動かす力"
+      chapters:
+        - chapters/week07.qmd
+        - chapters/week01.qmd
+        - chapters/week05.qmd
+        - chapters/week02.qmd
+        - chapters/week04.qmd
+    - part: "研究・設計・製造工程の判断"
+      chapters:
+        - chapters/week09.qmd
+        - chapters/week08.qmd
+        - chapters/week10.qmd
+        - chapters/week15.qmd
+        - chapters/week11.qmd
+        - chapters/week12.qmd
+        - chapters/week13.qmd
+    - part: "組織・セキュリティ・人材"
+      chapters:
+        - chapters/week18.qmd
+        - chapters/week14.qmd
+        - chapters/week21.qmd
+        - chapters/week28.qmd
+    - part: "インフラと持続可能性"
+      chapters:
+        - chapters/week19.qmd
+        - chapters/week26.qmd
+        - chapters/week30.qmd
+    - epilogue.qmd
+    - interview-checklist.qmd
+    - author.qmd
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    smooth-scroll: true
+  epub:
+    css: styles.css
+    toc: true
+    toc-depth: 1
+    number-sections: true
+  pdf:
+    documentclass: scrbook
+    classoption:
+      - open=any
+    pdf-engine: xelatex
+    papersize: a5
+    fontsize: 10.5pt
+    linestretch: 1.42
+    include-in-header:
+      - print-style.tex
+    geometry:
+      - inner=18mm
+      - outer=16mm
+      - top=18mm
+      - bottom=20mm
+    toc: true
+    toc-depth: 1
+    number-sections: true
+    colorlinks: false
+
+filters:
+  - book-question.lua
+  - table-widths.lua
+
+execute:
+  freeze: auto

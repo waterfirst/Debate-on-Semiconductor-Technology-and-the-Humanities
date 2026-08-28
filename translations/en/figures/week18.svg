@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="440" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+  <title id="title">Technology-Protection Control Ladder</title>
+  <desc id="desc">An analytical framework in which intrusiveness and required evidence rise together, from access controls and work logs through targeted predeparture review, confidentiality, compensated noncompetes, and targeted personal-device forensics</desc>
+  <rect width="920" height="440" rx="18" fill="#F7F4ED"/>
+
+  <g font-family="Arial, sans-serif" fill="#10283F">
+    <text x="50" y="48" font-size="27px" font-weight="700">Technology-Protection Control Ladder</text>
+    <text x="50" y="77" font-size="20px" fill="#52616E">Raise controls only one step when the evidence rises one step</text>
+
+    <g transform="translate(50 108)">
+      <rect width="252" height="236" rx="15" fill="#E9EFEA" stroke="#4D7C6F" stroke-width="2"/>
+      <rect width="252" height="38" rx="15" fill="#4D7C6F"/>
+      <rect y="23" width="252" height="15" fill="#4D7C6F"/>
+      <text x="18" y="26" font-size="20px" font-weight="700" fill="#FFFFFF">Routine Controls</text>
+
+      <circle cx="30" cy="78" r="16" fill="#4D7C6F"/>
+      <text x="30" y="84" text-anchor="middle" font-size="20px" font-weight="700" fill="#FFFFFF">1</text>
+      <text x="58" y="76" font-size="20px" font-weight="700">Role-Based Access</text>
+      <text x="58" y="98" font-size="17px" fill="#52616E">Required work folders</text>
+
+      <line x1="20" y1="120" x2="232" y2="120" stroke="#BFCBC5"/>
+
+      <circle cx="30" cy="158" r="16" fill="#1F5A75"/>
+      <text x="30" y="164" text-anchor="middle" font-size="20px" font-weight="700" fill="#FFFFFF">2</text>
+      <text x="58" y="156" font-size="16px" font-weight="700">Access / Download Logs</text>
+      <text x="58" y="178" font-size="17px" fill="#52616E">System metadata</text>
+
+      <rect x="19" y="200" width="214" height="24" rx="12" fill="#FFFFFF"/>
+      <text x="126" y="217" text-anchor="middle" font-size="16px" font-weight="700" fill="#4D7C6F">Same baseline for all users</text>
+    </g>
+
+    <g transform="translate(334 108)">
+      <rect width="252" height="236" rx="15" fill="#F3ECDD" stroke="#C18A3D" stroke-width="2"/>
+      <rect width="252" height="38" rx="15" fill="#C18A3D"/>
+      <rect y="23" width="252" height="15" fill="#C18A3D"/>
+      <text x="18" y="26" font-size="20px" font-weight="700" fill="#10283F">Specific Evidence</text>
+
+      <circle cx="30" cy="78" r="16" fill="#C18A3D"/>
+      <text x="30" y="84" text-anchor="middle" font-size="20px" font-weight="700" fill="#10283F">3</text>
+      <text x="58" y="76" font-size="18px" font-weight="700">Targeted Exit Review</text>
+      <text x="58" y="98" font-size="17px" fill="#52616E">Period / account / files</text>
+
+      <line x1="20" y1="120" x2="232" y2="120" stroke="#D7C9AC"/>
+
+      <circle cx="30" cy="158" r="16" fill="#1F5A75"/>
+      <text x="30" y="164" text-anchor="middle" font-size="20px" font-weight="700" fill="#FFFFFF">4</text>
+      <text x="58" y="156" font-size="16px" font-weight="700">Confidentiality / Return</text>
+      <text x="58" y="178" font-size="16px" fill="#52616E">Defined data / assets</text>
+
+      <rect x="19" y="200" width="214" height="24" rx="12" fill="#FFFFFF"/>
+      <text x="126" y="217" text-anchor="middle" font-size="16px" font-weight="700" fill="#A56E27">Scope / approver / end</text>
+    </g>
+
+    <g transform="translate(618 108)">
+      <rect width="252" height="236" rx="15" fill="#F1E5E0" stroke="#A94E32" stroke-width="2"/>
+      <rect width="252" height="38" rx="15" fill="#A94E32"/>
+      <rect y="23" width="252" height="15" fill="#A94E32"/>
+      <text x="18" y="26" font-size="17px" font-weight="700" fill="#FFFFFF">High Evidence Threshold</text>
+
+      <circle cx="30" cy="78" r="16" fill="#A94E32"/>
+      <text x="30" y="84" text-anchor="middle" font-size="20px" font-weight="700" fill="#FFFFFF">5</text>
+      <text x="58" y="76" font-size="15px" font-weight="700">Paid, Limited Noncompete</text>
+      <text x="58" y="98" font-size="16px" fill="#52616E">Tech / role / term / pay</text>
+
+      <line x1="20" y1="120" x2="232" y2="120" stroke="#D3B7AE"/>
+
+      <circle cx="30" cy="158" r="16" fill="#A94E32"/>
+      <text x="30" y="164" text-anchor="middle" font-size="20px" font-weight="700" fill="#FFFFFF">6</text>
+      <text x="58" y="156" font-size="15px" font-weight="700">Targeted Device Forensics</text>
+      <text x="58" y="178" font-size="15px" fill="#52616E">Personal files / time / area</text>
+
+      <rect x="19" y="200" width="214" height="24" rx="12" fill="#FFFFFF"/>
+      <text x="126" y="217" text-anchor="middle" font-size="14px" font-weight="700" fill="#A94E32">Evidence / consent / due process</text>
+    </g>
+
+    <path d="M92 384 H811" fill="none" stroke="#10283F" stroke-width="3" stroke-linecap="round"/>
+    <path d="M811 376 L831 384 L811 392 Z" fill="#10283F"/>
+    <text x="460" y="417" text-anchor="middle" font-size="18px" font-weight="700">Intrusion ↑  ·  Required evidence and approval ↑</text>
+    <text x="870" y="417" text-anchor="end" font-size="16px" fill="#6F777D">Analytical, not statutory</text>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+---
+description: "A one-page final check before entering the interview room"
+---
+
+# Final Interview Checklist {.unnumbered}
+
+After working through all nineteen royal policy questions, read this page **once, immediately before the interview**. Do not try to memorize every sentence. Check only that your conclusion, evidence, objection, and reversal condition form one connected argument.
+
+## 30-Second Preparation
+
+- Have I reframed the prompt as a **decision that must be made**, rather than a slogan for or against something?
+- Have I chosen the single most important value to protect and identified the group that will bear the cost of that choice?
+- Have I named one number or event—a **reversal condition**—that would change my conclusion?
+
+## Data Check
+
+- Can I state a number together with its **source, base year, and unit**?
+- Have I distinguished forecasts from observations, nominal from real values, averages from distributions, and correlation from causation?
+- Am I directly comparing numbers that cover different populations or accounting scopes?
+- If I cannot remember a number, am I ready to name the dataset I would verify instead of inventing a value?
+
+## Structure for a 90-Second Answer
+
+1. **Conclusion:** “My judgment is …”
+2. **Evidence:** Present two pieces of evidence that differ in kind.
+3. **Objection:** Acknowledge the strongest reason supporting the other side.
+4. **Condition:** State which indicator, at what threshold, would make you revise the decision.
+
+## Group-Discussion Conduct
+
+- Did I briefly summarize the previous speaker's central point before adding a missing indicator?
+- Did I examine assumptions, data, and criteria rather than attacking a person?
+- Did I help clarify the structure of the discussion instead of merely maximizing how often I spoke?
+- Did I invite a quiet participant into the discussion or connect them with an opportunity to speak?
+
+::: {.book-question}
+[Final Royal Policy Question]{.book-question-label}
+
+[What evidence would show that my conclusion is wrong, and would I actually change my judgment if that evidence appeared?]{.book-question-prompt}
+:::

@@ -1,0 +1,78 @@
+\usepackage[most]{tcolorbox}
+\usepackage{needspace}
+\usepackage{etoolbox}
+\usepackage[automark]{scrlayer-scrpage}
+\definecolor{questionnavy}{HTML}{10283F}
+\definecolor{questionaccent}{HTML}{A94E32}
+\definecolor{questioncream}{HTML}{F6F1E7}
+\definecolor{questionink}{HTML}{18212B}
+
+\setmainfont[
+  Path=C:/Windows/Fonts/,
+  UprightFont=YuGothR.ttc,
+  BoldFont=YuGothB.ttc
+]{Yu Gothic}
+\setsansfont[
+  Path=C:/Windows/Fonts/,
+  UprightFont=YuGothR.ttc,
+  BoldFont=YuGothB.ttc
+]{Yu Gothic}
+\newfontfamily\BookQuestionSans[
+  Path=C:/Windows/Fonts/,
+  UprightFont=YuGothR.ttc,
+  BoldFont=YuGothB.ttc
+]{Yu Gothic}
+\newfontfamily\BookQuestionSerif[
+  Path=C:/Windows/Fonts/,
+  UprightFont=YuGothR.ttc,
+  BoldFont=YuGothB.ttc
+]{Yu Gothic}
+
+\newcommand{\BookQuestionLabel}[1]{{\BookQuestionSans\bfseries\color{questionaccent}\fontsize{9pt}{12pt}\selectfont #1}}
+\newcommand{\BookQuestionPrompt}[1]{{\BookQuestionSerif\bfseries\color{questionink}\fontsize{11.3pt}{18pt}\selectfont #1}}
+
+\setkomafont{disposition}{\sffamily\bfseries}
+\setkomafont{chapter}{\sffamily\bfseries\color{questionnavy}\XeTeXlinebreaklocale "ja"\fontsize{15.5pt}{21pt}\selectfont}
+\setkomafont{section}{\sffamily\bfseries\XeTeXlinebreaklocale "ja"\fontsize{13pt}{18pt}\selectfont}
+\setkomafont{subsection}{\sffamily\bfseries\XeTeXlinebreaklocale "ja"\fontsize{11.2pt}{16pt}\selectfont}
+\clearpairofpagestyles
+\automark[chapter]{chapter}
+\ohead{\headmark}
+\ofoot*{\pagemark}
+\setkomafont{pageheadfoot}{\sffamily\fontsize{8.2pt}{10.5pt}\selectfont}
+\pagestyle{scrheadings}
+\RedeclareSectionCommand[
+  beforeskip=0pt,
+  afterskip=1.15em,
+  tocnumwidth=2.8em
+]{chapter}
+\renewcommand{\chapterlinesformat}[3]{%
+  \parbox{\textwidth}{%
+    \color{questionnavy}\rule{\textwidth}{0.8pt}\par\vspace{7pt}%
+    \raggedright\XeTeXlinebreaklocale "ja" #2#3\par\vspace{7pt}%
+    \color{questionaccent}\rule{30mm}{2.4pt}%
+  }%
+}
+
+\XeTeXlinebreaklocale "ja"
+\XeTeXlinebreakskip=0pt plus 1pt minus 0.1pt
+\AtBeginDocument{%
+  \subtitle{朝鮮王朝の策問で鍛える\\AI・製造工程・設計・サプライチェーンのデータ討論}%
+  \XeTeXlinebreaklocale "ja"
+  \rightskip=0pt
+  \spaceskip=0pt
+  \xspaceskip=0pt
+}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.28em plus 0.06em minus 0.03em}
+\setlength{\emergencystretch}{2em}
+\tolerance=1800
+\hbadness=1800
+\widowpenalty=10000
+\clubpenalty=10000
+\brokenpenalty=10000
+\interfootnotelinepenalty=10000
+\raggedbottom
+
+\pretocmd{\section}{\Needspace{6\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{5\baselineskip}}{}{}

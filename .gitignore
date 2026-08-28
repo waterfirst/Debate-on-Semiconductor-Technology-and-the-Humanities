@@ -8,6 +8,11 @@ book/*.docx
 book/tmp/
 book/output/archive/
 book/figures/symbols/source-sheets-color/
+translations/*/_book/
+translations/*/.quarto/
+translations/*/*-files/
+translations/*/chapters/*_files/
+translations/*/output/pdf/*-interior-a5.pdf
 _extensions/
 dist/
 tmp/

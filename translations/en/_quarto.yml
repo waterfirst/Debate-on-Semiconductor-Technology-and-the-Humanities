@@ -1,0 +1,92 @@
+project:
+  type: book
+  output-dir: _book
+
+lang: en-US
+title: "Semiconductor Interviews: Answer the King’s Question"
+subtitle: "Data-Driven Debates on AI, Manufacturing, Design, and Supply Chains, Inspired by Korea's Royal Policy Examinations"
+author: "Nakcho Choi"
+publisher: "Scholar Bridge"
+rights: "© 2026 Nakcho Choi. All rights reserved."
+
+book:
+  cover-image: cover/front-cover-en.png
+  title: "Semiconductor Interviews: Answer the King’s Question"
+  subtitle: "Data-Driven Debates on AI, Manufacturing, Design, and Supply Chains, Inspired by Korea's Royal Policy Examinations"
+  author: "Nakcho Choi"
+  page-navigation: true
+  search: true
+  chapters:
+    - index.qmd
+    - copyright.qmd
+    - part: "Forces Shaping the Industry"
+      chapters:
+        - chapters/week07.qmd
+        - chapters/week01.qmd
+        - chapters/week05.qmd
+        - chapters/week02.qmd
+        - chapters/week04.qmd
+    - part: "Judgment in Research, Design, and Manufacturing"
+      chapters:
+        - chapters/week09.qmd
+        - chapters/week08.qmd
+        - chapters/week10.qmd
+        - chapters/week15.qmd
+        - chapters/week11.qmd
+        - chapters/week12.qmd
+        - chapters/week13.qmd
+    - part: "Organizations, Security, and Talent"
+      chapters:
+        - chapters/week18.qmd
+        - chapters/week14.qmd
+        - chapters/week21.qmd
+        - chapters/week28.qmd
+    - part: "Infrastructure and Sustainability"
+      chapters:
+        - chapters/week19.qmd
+        - chapters/week26.qmd
+        - chapters/week30.qmd
+    - epilogue.qmd
+    - interview-checklist.qmd
+    - author.qmd
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    smooth-scroll: true
+  epub:
+    css: styles.css
+    toc: true
+    toc-depth: 1
+    number-sections: true
+  pdf:
+    documentclass: scrbook
+    classoption:
+      - open=any
+    pdf-engine: xelatex
+    papersize: a5
+    fontsize: 10.5pt
+    linestretch: 1.28
+    include-in-header:
+      - print-style.tex
+    geometry:
+      - inner=18mm
+      - outer=16mm
+      - top=18mm
+      - bottom=20mm
+    toc: true
+    toc-depth: 1
+    number-sections: true
+    colorlinks: false
+
+filters:
+  - book-question.lua
+  - table-widths.lua
+  - hanja-font.lua
+
+execute:
+  freeze: auto

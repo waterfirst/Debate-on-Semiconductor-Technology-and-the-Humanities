@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+<title id="title">自動化で生まれた時間は誰のものか</title>
+<style>
+  .bg{fill:#F7F4ED} .title{font:700 25px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F}
+  .unit{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#6A625A} .label{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#253443}
+  .value{font:700 20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
+  .axis{stroke:#768594;stroke-width:1.4} .note{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#756C63}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="44" class="title">自動化で生まれた時間は誰のものか</text>
+<text x="30" y="72" class="unit">単位：世界の雇用に占める割合（%）</text><desc id="desc">格差を強調するロリポップチャート</desc><text x="32" y="135" class="label">一部エクスポージャー</text><line x1="275" y1="130" x2="456.7" y2="130" stroke="#A94E32" stroke-width="5" stroke-linecap="round"/><circle cx="456.7" cy="130" r="11" fill="#A94E32"/><text x="478.7" y="136" class="value">25</text><text x="32" y="205" class="label">最高エクスポージャー</text><line x1="275" y1="200" x2="299.0" y2="200" stroke="#1F5A75" stroke-width="5" stroke-linecap="round"/><circle cx="299.0" cy="200" r="11" fill="#1F5A75"/><text x="321.0" y="206" class="value">3.3</text><text x="32" y="275" class="label">その他</text><line x1="275" y1="270" x2="820.0" y2="270" stroke="#4D7C6F" stroke-width="5" stroke-linecap="round"/><circle cx="820.0" cy="270" r="11" fill="#4D7C6F"/><text x="842.0" y="276" class="value">75</text><text x="32" y="410" class="note">最大値は最小値の22.7倍・格差の原因と基準を討論</text>
+<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 20px 'Yu Gothic','Noto Sans JP',sans-serif;fill:#F7F4ED">格差比較</text>
+</svg>

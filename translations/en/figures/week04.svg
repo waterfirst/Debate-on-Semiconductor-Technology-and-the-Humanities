@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+<title id="title">Does Lower Import Value Prove Successful Localization?</title>
+<style>
+  .bg{fill:#F7F4ED} .title{font:700 23px Arial,sans-serif;fill:#10283F}
+  .unit{font:21px Arial,sans-serif;fill:#6A625A} .label{font:21px Arial,sans-serif;fill:#253443}
+  .value{font:700 21px Arial,sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
+  .axis{stroke:#768594;stroke-width:1.4} .note{font:20px Arial,sans-serif;fill:#756C63}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="44" class="title">Does Lower Import Value Prove Successful Localization?</text>
+<text x="30" y="72" class="unit">Unit: Japanese hydrogen fluoride imports (USD millions)</text><desc id="desc">A chart comparing Japanese hydrogen fluoride imports in 2019, 2021, and 2022 at their actual year intervals</desc>
+<line x1="92" y1="338" x2="842" y2="338" class="axis"/>
+<line x1="92" y1="118" x2="92" y2="338" class="axis"/>
+<line x1="92" y1="118" x2="842" y2="118" class="grid"/><line x1="92" y1="228" x2="842" y2="228" class="grid"/>
+<text x="78" y="344" text-anchor="end" class="unit">0</text><text x="78" y="234" text-anchor="end" class="unit">20</text><text x="78" y="124" text-anchor="end" class="unit">40</text>
+<polyline points="92,138.4 592,269.3 842,292.4" fill="none" stroke="#1F5A75" stroke-width="5"/>
+<circle cx="92" cy="138.4" r="8" fill="#A94E32"/><circle cx="592" cy="269.3" r="8" fill="#4D7C6F"/><circle cx="842" cy="292.4" r="8" fill="#C18A3D"/>
+<text x="108" y="130" class="value">36.3</text><text x="592" y="254" text-anchor="middle" class="value">12.5</text><text x="842" y="277" text-anchor="middle" class="value">8.3</text>
+<text x="92" y="374" text-anchor="middle" class="label">2019</text><text x="342" y="374" text-anchor="middle" class="unit">2020 data not shown</text><text x="592" y="374" text-anchor="middle" class="label">2021</text><text x="842" y="374" text-anchor="middle" class="label">2022</text>
+<rect x="752" y="24" width="138" height="36" rx="18" fill="#10283F"/><text x="821" y="49" text-anchor="middle" style="font:700 16px Arial,sans-serif;fill:#F7F4ED">Year comparison</text>
+</svg>

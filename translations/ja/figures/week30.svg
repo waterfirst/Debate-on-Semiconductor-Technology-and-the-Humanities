@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+<title id="title">性能が二倍なら良い製品なのか</title>
+<style>
+  .bg{fill:#F7F4ED} .title{font:700 25px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F}
+  .unit{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#6A625A} .label{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#253443}
+  .value{font:700 20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
+  .axis{stroke:#768594;stroke-width:1.4} .note{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#756C63}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="44" class="title">性能が二倍なら良い製品なのか</text>
+<text x="30" y="72" class="unit">単位：年間労働時間（時間、2022年）</text><desc id="desc">カテゴリー別の縦棒比較チャート</desc><line x1="78" y1="350" x2="850" y2="350" class="axis"/><rect x="219.0" y="130.0" width="112.0" height="220.0" rx="7" fill="#A94E32"/><text x="275.0" y="117.0" text-anchor="middle" class="value">1,901</text><text x="275.0" y="380" text-anchor="middle" class="label">韓国</text><rect x="589.0" y="147.2" width="112.0" height="202.8" rx="7" fill="#1F5A75"/><text x="645.0" y="134.2" text-anchor="middle" class="value">1,752</text><text x="645.0" y="380" text-anchor="middle" class="label">OECD平均</text>
+<rect x="792" y="28" width="98" height="28" rx="14" fill="#10283F"/><text x="841" y="47" text-anchor="middle" style="font:700 20px 'Yu Gothic','Noto Sans JP',sans-serif;fill:#F7F4ED">縦比較</text>
+</svg>

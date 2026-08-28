@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+  <title id="title">半導体ファブの水はどこで使われるか</title>
+  <desc id="desc">半導体工程48%、施設支援23%、排ガス低減20%、超純水処理損失9%を比較した棒グラフ</desc>
+  <style>
+    .bg{fill:#F7F4ED}.title{font:700 25px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F}
+    .unit{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#6A625A}.label{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#253443}
+    .value{font:700 20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F}.axis{stroke:#768594;stroke-width:1.4}
+    .grid{stroke:#D9D1C5;stroke-width:1}.note{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#756C63}
+  </style>
+  <rect class="bg" width="100%" height="100%" rx="18"/>
+  <text x="30" y="44" class="title">半導体ファブの水はどこで使われるか</text>
+  <text x="30" y="72" class="unit">単位：代表的な水用途の割合（%）</text>
+  <line x1="70" y1="345" x2="855" y2="345" class="axis"/>
+  <line x1="70" y1="235" x2="855" y2="235" class="grid"/>
+  <line x1="70" y1="125" x2="855" y2="125" class="grid"/>
+  <rect x="112" y="134" width="112" height="211" rx="7" fill="#A94E32"/>
+  <text x="168" y="120" text-anchor="middle" class="value">48%</text>
+  <text x="168" y="376" text-anchor="middle" class="label">半導体工程</text>
+  <rect x="305" y="244" width="112" height="101" rx="7" fill="#1F5A75"/>
+  <text x="361" y="230" text-anchor="middle" class="value">23%</text>
+  <text x="361" y="376" text-anchor="middle" class="label">施設支援</text>
+  <rect x="498" y="257" width="112" height="88" rx="7" fill="#4D7C6F"/>
+  <text x="554" y="243" text-anchor="middle" class="value">20%</text>
+  <text x="554" y="376" text-anchor="middle" class="label">排ガス低減</text>
+  <rect x="691" y="305" width="112" height="40" rx="7" fill="#C18A3D"/>
+  <text x="747" y="291" text-anchor="middle" class="value">9%</text>
+  <text x="747" y="376" text-anchor="middle" class="label">UPW処理損失</text>
+  <text x="70" y="414" class="note" style="font-size:16px">NIST 2024年環境評価の代表構成。丸め値で、非産業用途1%未満は省略しています。</text>
+  <rect x="790" y="28" width="100" height="28" rx="14" fill="#10283F"/>
+  <text x="840" y="47" text-anchor="middle" style="font:700 20px 'Yu Gothic','Noto Sans JP',sans-serif;fill:#F7F4ED">用途比較</text>
+</svg>

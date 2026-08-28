@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+  <title id="title">UCIe標準のデータレート選択肢</title>
+  <desc id="desc">UCIe 2.0の最大32 GT/sと、UCIe 3.0の48 GT/s・64 GT/sを比較した棒グラフ</desc>
+  <style>
+    .bg{fill:#F7F4ED}.title{font:700 25px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F}
+    .unit{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#6A625A}.label{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#253443}
+    .value{font:700 20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F}.axis{stroke:#768594;stroke-width:1.4}
+    .grid{stroke:#D9D1C5;stroke-width:1}.note{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#756C63}
+  </style>
+  <rect class="bg" width="100%" height="100%" rx="18"/>
+  <text x="30" y="44" class="title">UCIe標準のデータレート選択肢</text>
+  <text x="30" y="72" class="unit">単位：GT/s（毎秒ギガ転送）、規格上のデータレート</text>
+  <line x1="78" y1="350" x2="850" y2="350" class="axis"/>
+  <line x1="78" y1="240" x2="850" y2="240" class="grid"/>
+  <line x1="78" y1="130" x2="850" y2="130" class="grid"/>
+  <rect x="157" y="240" width="112" height="110" rx="7" fill="#A94E32"/>
+  <text x="213" y="226" text-anchor="middle" class="value">32</text>
+  <text x="213" y="380" text-anchor="middle" class="label">UCIe 2.0最大</text>
+  <rect x="404" y="185" width="112" height="165" rx="7" fill="#1F5A75"/>
+  <text x="460" y="171" text-anchor="middle" class="value">48</text>
+  <text x="460" y="380" text-anchor="middle" class="label">UCIe 3.0選択</text>
+  <rect x="651" y="130" width="112" height="220" rx="7" fill="#4D7C6F"/>
+  <text x="707" y="116" text-anchor="middle" class="value">64</text>
+  <text x="707" y="380" text-anchor="middle" class="label">UCIe 3.0最大</text>
+  <text x="78" y="414" class="note">GT/sは実効GB/sではなく、レーン数・オーバーヘッド・パッケージ条件も必要です。</text>
+  <rect x="790" y="28" width="100" height="28" rx="14" fill="#10283F"/>
+  <text x="840" y="47" text-anchor="middle" style="font:700 20px 'Yu Gothic','Noto Sans JP',sans-serif;fill:#F7F4ED">規格比較</text>
+</svg>

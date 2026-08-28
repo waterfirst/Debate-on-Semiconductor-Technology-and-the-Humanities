@@ -1,0 +1,13 @@
+{
+  "name": "semiconductor-interviews-localized-editions",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Reproducible asset rendering for the English and Japanese book editions",
+  "type": "module",
+  "scripts": {
+    "render:translations": "node scripts/render_translation_assets.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.4"
+  }
+}

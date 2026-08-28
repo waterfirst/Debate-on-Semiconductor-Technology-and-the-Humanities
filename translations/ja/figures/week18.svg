@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="440" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+  <title id="title">技術保護の統制ラダー</title>
+  <desc id="desc">アクセス権限と業務ログから、退職前の対象限定点検、秘密保持、有償の競業制限、私用機器の対象限定フォレンジックへ進むほど、侵害強度と必要な証拠がともに高まる分析枠組み</desc>
+  <rect width="920" height="440" rx="18" fill="#F7F4ED"/>
+
+  <g font-family="Yu Gothic, Noto Sans JP, sans-serif" fill="#10283F">
+    <text x="50" y="48" font-size="27px" font-weight="700">技術保護の統制ラダー</text>
+    <text x="50" y="77" font-size="20px" fill="#52616E">証拠が一段階上がるとき、統制も一段階だけ上げます</text>
+
+    <g transform="translate(50 108)">
+      <rect width="252" height="236" rx="15" fill="#E9EFEA" stroke="#4D7C6F" stroke-width="2"/>
+      <rect width="252" height="38" rx="15" fill="#4D7C6F"/>
+      <rect y="23" width="252" height="15" fill="#4D7C6F"/>
+      <text x="18" y="26" font-size="20px" font-weight="700" fill="#FFFFFF">平時の基本統制</text>
+
+      <circle cx="30" cy="78" r="16" fill="#4D7C6F"/>
+      <text x="30" y="84" text-anchor="middle" font-size="20px" font-weight="700" fill="#FFFFFF">1</text>
+      <text x="58" y="76" font-size="20px" font-weight="700">職務別アクセス権限</text>
+      <text x="58" y="98" font-size="18px" fill="#52616E">必要な社内フォルダー</text>
+
+      <line x1="20" y1="120" x2="232" y2="120" stroke="#BFCBC5"/>
+
+      <circle cx="30" cy="158" r="16" fill="#1F5A75"/>
+      <text x="30" y="164" text-anchor="middle" font-size="20px" font-weight="700" fill="#FFFFFF">2</text>
+      <text x="58" y="156" font-size="20px" font-weight="700">DL・アクセスログ</text>
+      <text x="58" y="178" font-size="20px" fill="#52616E">社内メタデータ</text>
+
+      <rect x="19" y="200" width="214" height="24" rx="12" fill="#FFFFFF"/>
+      <text x="126" y="217" text-anchor="middle" font-size="20px" font-weight="700" fill="#4D7C6F">全担当者に同じ基準</text>
+    </g>
+
+    <g transform="translate(334 108)">
+      <rect width="252" height="236" rx="15" fill="#F3ECDD" stroke="#C18A3D" stroke-width="2"/>
+      <rect width="252" height="38" rx="15" fill="#C18A3D"/>
+      <rect y="23" width="252" height="15" fill="#C18A3D"/>
+      <text x="18" y="26" font-size="20px" font-weight="700" fill="#10283F">具体的事情がある場合</text>
+
+      <circle cx="30" cy="78" r="16" fill="#C18A3D"/>
+      <text x="30" y="84" text-anchor="middle" font-size="20px" font-weight="700" fill="#10283F">3</text>
+      <text x="58" y="76" font-size="18px" font-weight="700">退職前の対象限定点検</text>
+      <text x="58" y="98" font-size="14px" fill="#52616E">期間・アカウント・ファイル</text>
+
+      <line x1="20" y1="120" x2="232" y2="120" stroke="#D7C9AC"/>
+
+      <circle cx="30" cy="158" r="16" fill="#1F5A75"/>
+      <text x="30" y="164" text-anchor="middle" font-size="20px" font-weight="700" fill="#FFFFFF">4</text>
+      <text x="58" y="156" font-size="20px" font-weight="700">秘密保持・返却確認</text>
+      <text x="58" y="178" font-size="18px" fill="#52616E">定義済み情報・会社資産</text>
+
+      <rect x="19" y="200" width="214" height="24" rx="12" fill="#FFFFFF"/>
+      <text x="126" y="217" text-anchor="middle" font-size="16px" font-weight="700" fill="#A56E27">範囲・承認者・終了日を記録</text>
+    </g>
+
+    <g transform="translate(618 108)">
+      <rect width="252" height="236" rx="15" fill="#F1E5E0" stroke="#A94E32" stroke-width="2"/>
+      <rect width="252" height="38" rx="15" fill="#A94E32"/>
+      <rect y="23" width="252" height="15" fill="#A94E32"/>
+      <text x="18" y="26" font-size="20px" font-weight="700" fill="#FFFFFF">高い証拠基準</text>
+
+      <circle cx="30" cy="78" r="16" fill="#A94E32"/>
+      <text x="30" y="84" text-anchor="middle" font-size="20px" font-weight="700" fill="#FFFFFF">5</text>
+      <text x="58" y="76" font-size="18px" font-weight="700">有償・限定の競業制限</text>
+      <text x="58" y="98" font-size="17px" fill="#52616E">技術・職務・期間・対価</text>
+
+      <line x1="20" y1="120" x2="232" y2="120" stroke="#D3B7AE"/>
+
+      <circle cx="30" cy="158" r="16" fill="#A94E32"/>
+      <text x="30" y="164" text-anchor="middle" font-size="20px" font-weight="700" fill="#FFFFFF">6</text>
+      <text x="58" y="156" font-size="17px" font-weight="700">私用機器の対象限定解析</text>
+      <text x="58" y="178" font-size="16px" fill="#52616E">特定ファイル・期間・領域</text>
+
+      <rect x="19" y="200" width="214" height="24" rx="12" fill="#FFFFFF"/>
+      <text x="126" y="217" text-anchor="middle" font-size="16px" font-weight="700" fill="#A94E32">具体的証拠・合意・適法手続</text>
+    </g>
+
+    <path d="M92 384 H811" fill="none" stroke="#10283F" stroke-width="3" stroke-linecap="round"/>
+    <path d="M811 376 L831 384 L811 392 Z" fill="#10283F"/>
+    <text x="460" y="417" text-anchor="middle" font-size="18px" font-weight="700">侵害強度 ↑  ・  必要な証拠と承認も ↑</text>
+    <text x="870" y="417" text-anchor="end" font-size="16px" fill="#6F777D">法定等級ではない分析枠組み</text>
+  </g>
+</svg>

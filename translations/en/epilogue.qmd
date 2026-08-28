@@ -1,0 +1,113 @@
+---
+description: "Why writing matters to engineers—and why it is a pleasure"
+---
+
+# Epilogue — When Data Becomes a Sentence {.unnumbered}
+
+```{=latex}
+\begingroup
+\setstretch{1.28}
+```
+
+An engineer's day often resembles a crime scene.
+
+A defect has occurred, but the culprit is nowhere to be seen. We establish when and where it appeared, search the process history, and examine changes in materials and equipment. We collect measurements, draw time-series charts, separate the mean from the variation, and look for outliers. We even suspect that two factors may have acted together.
+
+Then we gather in a conference room and construct possible sequences of events.
+
+- Was the material the principal cause?
+- Were the process conditions an accomplice?
+- Did a change in equipment pull the trigger?
+- Or is there a variable we have not yet measured?
+
+Years ago, in a Brunch Story essay titled [“Find the Culprit”](https://brunch.co.kr/@waterfirst/57), I wrote that engineers and detectives have something in common.^[Kakao describes Brunch Story as its writing and content-publishing platform. Kakao, [“Kakao Story Services”](https://www.kakaocorp.com/page/detail/10814), January 9, 2024.] A detective gathers evidence to reconstruct a crime; an engineer gathers data to reconstruct the path by which a defect emerged. The detective arrests the culprit. The engineer removes the cause and designs a countermeasure so that the same problem does not return.
+
+At the end of that process, there was always writing.
+
+The job was not finished when the chart was drawn. Even after calculating regression coefficients and checking statistical significance, the analysis remained trapped on one person's computer if colleagues could not understand what it meant. Data needs sentences before it can move into organizational judgment.
+
+- What happened?
+- What do we know?
+- What do we still not know?
+- What is the most plausible explanation?
+- Which experiment could show that explanation to be wrong?
+
+Answering those questions is an engineer's form of writing.
+
+Writing exposes gaps in thought. A causal relationship that seemed obvious in the mind becomes uncertain when it is put into a sentence. Missing logic appears between two charts. Something we treated as a fact may reveal itself to be no more than an estimate drawn from experience.
+
+Writing is therefore not decoration added after problem-solving is complete. It is **the final verification step in the problem-solving process**.
+
+## Why Engineers Should Write
+
+For many years, I have written in the Brunch Story magazine [“Stories of a Display Engineer”](https://brunch.co.kr/magazine/super-power-age) about technology and people, organizations and the future. I wrote not only about what I learned while developing LCD, OLED, and Micro LED technologies, but also about organizational culture, diversity, generational change, and AI.
+
+Writing taught me that engineers do not work with matter alone. People who create technology must also reckon with the humans who use it and the society in which it operates. The performance of semiconductors and displays can be described in numbers. Numbers alone cannot decide whose lives those technologies will make easier, who will bear their costs, or what kind of future they will create.
+
+The first reason engineers should write is that writing tests their own thinking.
+
+The second is that it leaves experience behind as organizational memory. Knowledge that disappears when one person goes home or changes departments remains a private memory, not a technical asset. Failed experiments and mistaken hypotheses must also be recorded, so that the next person does not have to lose their way on the same road.
+
+The third is that writing connects people from different disciplines. A process engineer, a device researcher, a data analyst, and an executive can look at the same graph and read different meanings. Writing builds a bridge between the languages they use.
+
+There is one more reason.
+
+**Writing is a pleasure.**
+
+After staring at numbers and defects all day, the expression on the work changes when I begin to write. A data point labeled an “outlier” in a report becomes an event that happened on a particular day in the fab. Behind one sentence noting increased variation, materials, equipment, people, and schedules appear, moving in relation to one another.
+
+For a moment, the engineer ceases to be only a person who calculates and becomes someone who discovers a story.
+
+This pleasure is different from the satisfaction of finding the correct answer. It comes from knowing that the time I have lived and the lessons I learned on the manufacturing floor will not disappear, but will remain in a sentence. It is also the pleasure of rediscovering familiar technology from an unfamiliar angle.
+
+## What Remains After a Reorganization
+
+When a reorganization is announced, only a few boxes and lines change on the organization chart. For the people inside those boxes, accumulated roles and relationships are being severed. When I had to leave an unfinished project behind, I sometimes thought of Admiral Yi Sun-sin serving as an ordinary soldier after disgrace and then returning to command at Myeongnyang, or of unnamed people who crossed strange borders along the Silk Road. I did not compare myself to a hero. I was trying to understand the feeling of having to begin the next day's work even when orders and relationships have become uncertain.
+
+I first recorded these emotions in the Brunch Story essays [“Reorganization”](https://brunch.co.kr/@waterfirst/77), [“Serving in the Ranks … and Dreaming of Myeongnyang”](https://brunch.co.kr/@waterfirst/86), and [“A Tactical Retreat”](https://brunch.co.kr/@waterfirst/127). Personal experience is not objective evidence about an industry. It can, however, become a record that keeps failed hypotheses and hard-won lessons from disappearing when a project stops. I leave a trace of that feeling in this book not to tell applicants my personal story, but to remember that every technical decision is also work performed by people.
+
+## Practicing How to See Another World with AI
+
+A weekly AI study group with colleagues gave me the same pleasure. With AI, we traveled outside our own specialties. We interpreted historical questions through engineering and looked at technical problems through sociology. We did not accept AI's first answer. We asked again, produced objections, and compared our interpretations.
+
+In that group, a younger colleague who works for a semiconductor and display-equipment company once gave an unexpected answer—0.864 milliseconds—to a king's question about nature's cycles and the finitude of human life.
+
+It was not the correct answer. It made us laugh, made a familiar question strange again, and showed that one question could travel freely across the humanities, physics, astronomy, and signal processing.
+
+AI took part in finding material for this book, expanding its questions, and producing counterarguments. Humans still had to decide what to ask, which sources to trust, and which values mattered most when they collided.
+
+## From Brush-Written Answers to a Web Page
+
+While making this book, I also created the [Joseon Royal Policy Question Archive](https://waterfirst.github.io/Joseon-Dynasty-Civil-Service-Examination/) so that contemporary readers could explore the *chaekmun* directly. It brings together questions posed by kings, answers written by candidates, and material that helps readers reconsider those questions in today's language.
+
+Questions asked by kings centuries ago no longer end inside Classical Chinese records. They return on a web page built with data and code. Answers once written with a brush appear in a browser, and the royal policy questions of the civil service examination continue into the semiconductor industry.
+
+The process itself was a joyful form of writing for me.
+
+I read questions from the past, found data from the present, developed objections with AI, and wove charts and sentences together with R and Quarto. Writing and data analysis, history and semiconductors, human judgment and AI computation all met inside one book.
+
+In the essay [“Living as a Hardware Engineer”](https://brunch.co.kr/@waterfirst/117), I found the engineer's spirit in the Neo-Confucian expression *gyeokmul chiji* ([格物致知]{.hanja}): investigating things deeply in order to extend knowledge. Engineering writing adds one more step to that practice.
+
+Look closely at things,\
+verify them with data,\
+explain them in sentences,\
+and share them with colleagues so that judgment can improve.
+
+An experience left unwritten ends as one person's memory. An experience placed on the record becomes knowledge that colleagues can examine. Knowledge read and debated together becomes part of an organization's—and a society's—culture.
+
+Writing is therefore not an optional skill for engineers. It is how they offer the world they have seen to another person. It translates technology into human language. Above all, it is a joyful way for someone who has worked for a long time to rediscover the meaning of that time.
+
+It will be all right if readers close this book and still cannot produce a perfect answer in an interview. I hope instead that they can state the data they verified and the standards behind their judgment, discover a new perspective in another person's argument, and explain the conditions under which they would change their minds.
+
+The *chaekmun* did more than test one person's knowledge. It asked how that person understood the country's problems and what form of life with others they proposed.
+
+The same question remains for engineers today.
+
+> What will you make with technology?\
+> And in what words will you describe the world that technology will create?
+
+Now it is time for each of us to write an answer.
+
+```{=latex}
+\endgroup
+```

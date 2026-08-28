@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+  <title id="title">繰返しばらつきと拡張不確かさは別の値</title>
+<desc id="desc">NISTの約150 sccmでの繰返し試験の標準偏差と、SLowFlowSの95パーセント拡張不確かさを別々のパネルに示します。</desc>
+  <style>
+    .bg{fill:#F7F4ED}.panel{fill:#FCFAF5;stroke:#D9D1C5;stroke-width:1.2}.title{font:700 25px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F}.sub{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#6A625A}.head{font:700 20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F}.label{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#253443}.value{font:700 20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F}.note{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#756C63}.track{stroke:#DDD6CB;stroke-width:12;stroke-linecap:round}.rep{stroke:#4D7C6F;stroke-width:12;stroke-linecap:round}.unc{stroke:#A94E32;stroke-width:12;stroke-linecap:round}.dot1{fill:#4D7C6F}.dot2{fill:#A94E32}.rule{stroke:#BDB4A8;stroke-width:1}
+  </style>
+  <rect class="bg" width="920" height="440" rx="18"/>
+  <text x="30" y="42" class="title">繰返しばらつきと拡張不確かさは別の値です</text>
+  <text x="30" y="68" class="sub">NIST 2025・数値はすべて流量に対する割合</text>
+  <rect x="30" y="92" width="420" height="275" rx="14" class="panel"/>
+  <rect x="470" y="92" width="420" height="275" rx="14" class="panel"/>
+  <text x="52" y="124" class="head">限定的な繰返し試験</text>
+  <text x="52" y="147" class="sub" style="font-size:17px">約150 sccm・計器係数の標準偏差</text>
+  <text x="52" y="199" class="label">N₂・10回</text>
+  <line x1="170" y1="194" x2="366" y2="194" class="track"/>
+  <line x1="170" y1="194" x2="327" y2="194" class="rep"/>
+  <circle cx="327" cy="194" r="8" class="dot1"/>
+  <text x="421" y="200" text-anchor="end" class="value">0.020%</text>
+  <text x="52" y="264" class="label">SF₆・3回</text>
+  <line x1="170" y1="259" x2="366" y2="259" class="track"/>
+  <line x1="170" y1="259" x2="327" y2="259" class="rep"/>
+  <circle cx="327" cy="259" r="8" class="dot1"/>
+  <text x="421" y="265" text-anchor="end" class="value">0.020%</text>
+  <line x1="52" y1="303" x2="428" y2="303" class="rule"/>
+  <text x="52" y="329" class="note">同じ条件で値が集まった程度</text>
+  <text x="492" y="124" class="head">SLowFlowSの不確かさ</text>
+  <text x="492" y="147" class="sub">95%信頼水準・拡張不確かさ</text>
+  <text x="492" y="199" class="label">大型タンク</text>
+  <line x1="610" y1="194" x2="806" y2="194" class="track"/>
+  <line x1="610" y1="194" x2="710" y2="194" class="unc"/>
+  <circle cx="710" cy="194" r="8" class="dot2"/>
+  <text x="861" y="200" text-anchor="end" class="value">0.056%</text>
+  <text x="492" y="264" class="label">小型タンク</text>
+  <line x1="610" y1="259" x2="806" y2="259" class="track"/>
+  <line x1="610" y1="259" x2="785" y2="259" class="unc"/>
+  <circle cx="785" cy="259" r="8" class="dot2"/>
+  <text x="861" y="265" text-anchor="end" class="value" style="font-size:18px">0.098%</text>
+  <line x1="492" y1="303" x2="868" y2="303" class="rule"/>
+  <text x="492" y="329" class="note">複数の不確かさ成分を合わせた範囲</text>
+  <rect x="231" y="382" width="458" height="35" rx="17.5" fill="#E9E3D9"/>
+  <text x="460" y="405" text-anchor="middle" class="label" style="font-size:17px">定義が異なるため、棒の長さは直接比較しません</text>
+</svg>

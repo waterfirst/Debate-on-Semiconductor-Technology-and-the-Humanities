@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1748" height="2480" viewBox="0 0 1748 2480">
+  <title>Semiconductor Interviews: Answer the King's Question — English edition</title>
+  <defs>
+    <linearGradient id="paperLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf6e9" stop-opacity="0.28"/>
+      <stop offset="0.42" stop-color="#f5f0e3" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#e9edf0" stop-opacity="0.10"/>
+    </linearGradient>
+    <filter id="softLift" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#fffdf5" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <rect width="1748" height="2480" fill="#f5f0e3"/>
+  <image href="cover-art-gat-wafer-day-v4.png" x="0" y="0" width="1748" height="2480"
+         preserveAspectRatio="xMidYMid slice"/>
+  <rect width="1748" height="2480" fill="url(#paperLight)"/>
+  <rect x="20" y="20" width="1708" height="2440" fill="none" stroke="#7890a0" stroke-opacity="0.30" stroke-width="2"/>
+
+  <g fill="#071b2d" text-anchor="middle" filter="url(#softLift)">
+    <text x="874" y="192" font-family="Arial, sans-serif" font-weight="700" font-size="70" letter-spacing="7">SEMICONDUCTOR INTERVIEWS</text>
+    <text x="874" y="378" font-family="Georgia, serif" font-weight="700" font-size="124" letter-spacing="1">ANSWER THE KING'S</text>
+    <text x="874" y="570" font-family="Arial, sans-serif" font-weight="700" font-size="152" letter-spacing="8">QUESTION</text>
+  </g>
+
+  <g fill="#203a4c" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="874" y="720" font-size="38">DATA-DRIVEN DEBATES INSPIRED BY KOREA'S</text>
+    <text x="874" y="778" font-size="38">ROYAL POLICY EXAMINATIONS</text>
+    <text x="874" y="855" font-size="34" letter-spacing="0.4">AI · MANUFACTURING · DESIGN · SUPPLY CHAINS</text>
+  </g>
+  <rect x="764" y="916" width="220" height="7" rx="3.5" fill="#a94e32" opacity="0.90"/>
+
+  <rect x="70" y="2250" width="600" height="165" rx="14" fill="#f7f2e6" fill-opacity="0.84"/>
+  <g fill="#10283f" font-family="Georgia, serif" text-anchor="start">
+    <text x="110" y="2320" font-size="43" font-weight="700" letter-spacing="2">NAKCHO CHOI</text>
+    <text x="110" y="2375" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">SCHOLAR BRIDGE</text>
+  </g>
+</svg>

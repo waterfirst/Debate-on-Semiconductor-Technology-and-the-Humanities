@@ -1,0 +1,30 @@
+---
+numbered: false
+number-sections: false
+toc: false
+---
+
+# Copyright {.unnumbered .unlisted}
+
+**Semiconductor Interviews: Answer the King’s Question**
+
+Author | Nakcho Choi\
+Publisher | Scholar Bridge\
+Publisher website | <https://waterfirst.pro/>\
+First Korean edition | August 30, 2026\
+Art direction and editorial design | Nakcho Choi\
+Cover and interior illustrations | Directed and edited by Nakcho Choi; generated with OpenAI GPT Image 2
+
+© 2026 Nakcho Choi. All rights reserved.
+
+Source names in the PDF and EPUB link to the original material. When a link is unavailable, the institution, document title, and year supplied in the text can be used to locate the same source.
+
+The manuscript, original questions and commentary, editorial structure, charts, illustrations, and cover are protected by copyright. The availability of a repository or electronic file does not grant permission to reproduce, distribute, translate, adapt, republish, or commercially exploit all or a substantial part of this book without the copyright holder's prior written permission. Inclusion in an AI-training dataset also requires separate permission. Nothing in this notice restricts quotation or fair use permitted by applicable law.
+
+::: {.callout-note title="Generative AI Disclosure" icon=false}
+Generative AI technologies supported the planning, editing, and image-generation process for this book. The author is responsible for the final selection, arrangement, revision, and publication of all text and visual material.
+:::
+
+```{=latex}
+\setcounter{chapter}{0}
+```

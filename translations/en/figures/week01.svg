@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+<title id="title">Does War Advance Humanity?</title>
+<style>
+  .bg{fill:#F7F4ED} .title{font:700 28px Arial,sans-serif;fill:#10283F}
+  .unit{font:21px Arial,sans-serif;fill:#6A625A} .label{font:21px Arial,sans-serif;fill:#253443}
+  .value{font:700 21px Arial,sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
+  .axis{stroke:#768594;stroke-width:1.4} .note{font:20px Arial,sans-serif;fill:#756C63}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="44" class="title">Does War Advance Humanity?</text>
+<text x="30" y="72" class="unit">Unit: development start year</text><desc id="desc">A technology timeline showing that airplanes and radar predate the world wars, while ARPANET and GPS began after both wars</desc>
+<rect x="218" y="103" width="38" height="238" fill="#A94E32" opacity="0.12"/><text x="237" y="126" text-anchor="middle" class="unit" style="font-size:16px">WWI</text>
+<rect x="455" y="103" width="57" height="238" fill="#1F5A75" opacity="0.12"/><text x="484" y="126" text-anchor="middle" class="unit" style="font-size:16px">WWII</text>
+<line x1="86" y1="260" x2="842" y2="260" class="axis"/>
+<line x1="86" y1="251" x2="86" y2="269" class="axis"/><text x="86" y="300" text-anchor="middle" class="unit">1900</text>
+<line x1="275" y1="251" x2="275" y2="269" class="axis"/><text x="275" y="300" text-anchor="middle" class="unit">1920</text>
+<line x1="464" y1="251" x2="464" y2="269" class="axis"/><text x="464" y="300" text-anchor="middle" class="unit">1940</text>
+<line x1="653" y1="251" x2="653" y2="269" class="axis"/><text x="653" y="300" text-anchor="middle" class="unit">1960</text>
+<line x1="842" y1="251" x2="842" y2="269" class="axis"/><text x="842" y="300" text-anchor="middle" class="unit">1980</text>
+<circle cx="114" cy="260" r="10" fill="#A94E32"/><line x1="114" y1="250" x2="114" y2="178" stroke="#A94E32" stroke-width="2"/>
+<text x="114" y="151" text-anchor="middle" class="value">1903</text><text x="114" y="176" text-anchor="middle" class="label">Airplane</text>
+<rect x="425" y="250" width="20" height="20" fill="#1F5A75"/><line x1="435" y1="250" x2="435" y2="178" stroke="#1F5A75" stroke-width="2"/>
+<text x="435" y="151" text-anchor="middle" class="value">1937</text><text x="435" y="176" text-anchor="middle" class="label">Radar</text>
+<path d="M738 248L750 260L738 272L726 260Z" fill="#4D7C6F"/><line x1="738" y1="272" x2="738" y2="333" stroke="#4D7C6F" stroke-width="2"/>
+<text x="704" y="360" text-anchor="middle" class="value">1969</text><text x="704" y="385" text-anchor="middle" class="label">ARPANET</text>
+<path d="M776 248L789 272H763Z" fill="#C18A3D"/><line x1="776" y1="272" x2="776" y2="333" stroke="#C18A3D" stroke-width="2"/>
+<text x="813" y="360" text-anchor="middle" class="value">1973</text><text x="813" y="385" text-anchor="middle" class="label">GPS</text>
+<text x="86" y="424" class="note" style="font-size:18px">Keep invention, wartime acceleration, Cold War R&amp;D, and civilian transfer distinct.</text>
+<rect x="752" y="24" width="138" height="36" rx="18" fill="#10283F"/><text x="821" y="49" text-anchor="middle" style="font:700 16px Arial,sans-serif;fill:#F7F4ED">Tech timeline</text>
+</svg>

@@ -1,0 +1,25 @@
+---
+description: "Nakcho Choi"
+---
+
+# About the Author {.unnumbered}
+
+## Nakcho Choi
+
+**Semiconductor and display manufacturing engineer with 26 years of experience**
+
+Nakcho Choi has spent his career analyzing complex problems in manufacturing and R&D and turning the results into reports that colleagues can use.
+
+After earning a professional data-analysis certification, he expanded his use of R for manufacturing-data preprocessing and visualization. His work focuses on how to analyze large volumes of production-line data and Design of Experiments (DOE) results, then translate them into clear charts and decision materials.
+
+Since the emergence of GPT, he has studied multi-agent analysis and writing with tools including Claude, GPT, and Gemini. He sees AI not as a substitute writer, but as a collaborator that broadens questions, produces counterarguments, and supports human judgment.
+
+Observing the growing importance of group discussions that connect technology with the humanities in semiconductor recruitment, he applied the Joseon civil-service examination's *chaekmun* format to contemporary industry problems. This book uses data to debate AI, manufacturing processes, chip design, equipment, supply chains, labor, and the environment.
+
+He writes in the hope that researchers and applicants in the semiconductor and display fields will grow beyond explaining technology alone: that they will see the world more broadly and work with colleagues to solve problems that have no single correct answer.
+
+For many years, he has written about technology and people, organizations and the future in the Brunch Story magazine [“Stories of a Display Engineer”](https://brunch.co.kr/magazine/super-power-age).
+
+::: {.callout-note}
+This independent work presents the author's personal research and views. It does not represent the official position or hiring guidance of his employer, and it uses no confidential company data or internal recruitment information.
+:::

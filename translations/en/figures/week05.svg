@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+  <title id="title">Repeatability Dispersion and Expanded Uncertainty Are Different</title>
+  <desc id="desc">NIST standard deviations from repeatability tests at approximately 150 sccm and the 95% expanded uncertainties of SLowFlowS shown in separate panels.</desc>
+  <style>
+    .bg{fill:#F7F4ED}.panel{fill:#FCFAF5;stroke:#D9D1C5;stroke-width:1.2}.title{font:700 25px Arial,sans-serif;fill:#10283F}.sub{font:20px Arial,sans-serif;fill:#6A625A}.head{font:700 20px Arial,sans-serif;fill:#10283F}.label{font:20px Arial,sans-serif;fill:#253443}.value{font:700 20px Arial,sans-serif;fill:#10283F}.note{font:20px Arial,sans-serif;fill:#756C63}.track{stroke:#DDD6CB;stroke-width:12;stroke-linecap:round}.rep{stroke:#4D7C6F;stroke-width:12;stroke-linecap:round}.unc{stroke:#A94E32;stroke-width:12;stroke-linecap:round}.dot1{fill:#4D7C6F}.dot2{fill:#A94E32}.rule{stroke:#BDB4A8;stroke-width:1}
+  </style>
+  <rect class="bg" width="920" height="440" rx="18"/>
+  <text x="30" y="42" class="title">Repeatability Dispersion and Expanded Uncertainty Are Different</text>
+  <text x="30" y="68" class="sub">NIST 2025 · all values are percentages of flow</text>
+  <rect x="30" y="92" width="420" height="275" rx="14" class="panel"/>
+  <rect x="470" y="92" width="420" height="275" rx="14" class="panel"/>
+  <text x="52" y="124" class="head">Limited repeatability test</text>
+  <text x="52" y="147" class="sub" style="font-size:16px">Approx. 150 sccm · instrument-factor standard deviation</text>
+  <text x="52" y="199" class="label">N₂ · 10 runs</text>
+  <line x1="170" y1="194" x2="366" y2="194" class="track"/>
+  <line x1="170" y1="194" x2="327" y2="194" class="rep"/>
+  <circle cx="327" cy="194" r="8" class="dot1"/>
+  <text x="421" y="200" text-anchor="end" class="value">0.020%</text>
+  <text x="52" y="264" class="label">SF₆ · 3 runs</text>
+  <line x1="170" y1="259" x2="366" y2="259" class="track"/>
+  <line x1="170" y1="259" x2="327" y2="259" class="rep"/>
+  <circle cx="327" cy="259" r="8" class="dot1"/>
+  <text x="421" y="265" text-anchor="end" class="value">0.020%</text>
+  <line x1="52" y1="303" x2="428" y2="303" class="rule"/>
+  <text x="52" y="329" class="note">Clustering under identical conditions</text>
+  <text x="492" y="124" class="head">SLowFlowS uncertainty</text>
+  <text x="492" y="147" class="sub">95% confidence · expanded uncertainty</text>
+  <text x="492" y="199" class="label">Large tank</text>
+  <line x1="610" y1="194" x2="806" y2="194" class="track"/>
+  <line x1="610" y1="194" x2="710" y2="194" class="unc"/>
+  <circle cx="710" cy="194" r="8" class="dot2"/>
+  <text x="861" y="200" text-anchor="end" class="value">0.056%</text>
+  <text x="492" y="264" class="label">Small tank</text>
+  <line x1="610" y1="259" x2="806" y2="259" class="track"/>
+  <line x1="610" y1="259" x2="785" y2="259" class="unc"/>
+  <circle cx="785" cy="259" r="8" class="dot2"/>
+  <text x="861" y="265" text-anchor="end" class="value" style="font-size:18px">0.098%</text>
+  <line x1="492" y1="303" x2="868" y2="303" class="rule"/>
+  <text x="492" y="329" class="note" style="font-size:18px">Range combining multiple uncertainty components</text>
+  <rect x="231" y="382" width="458" height="35" rx="17.5" fill="#E9E3D9"/>
+  <text x="460" y="405" text-anchor="middle" class="label" style="font-size:18px">Different definitions—do not compare bar lengths</text>
+</svg>

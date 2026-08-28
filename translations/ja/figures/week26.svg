@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+<title id="title">演算効率と総電力のパラドックス</title>
+<style>
+  .bg{fill:#F7F4ED} .title{font:700 28px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F}
+  .unit{font:21px "Yu Gothic","Noto Sans JP",sans-serif;fill:#6A625A} .label{font:21px "Yu Gothic","Noto Sans JP",sans-serif;fill:#253443}
+  .value{font:700 21px "Yu Gothic","Noto Sans JP",sans-serif;fill:#10283F} .grid{stroke:#D9D1C5;stroke-width:1}
+  .axis{stroke:#768594;stroke-width:1.4} .note{font:20px "Yu Gothic","Noto Sans JP",sans-serif;fill:#756C63}
+</style>
+<rect class="bg" width="100%" height="100%" rx="18"/>
+<text x="30" y="44" class="title">演算効率と総電力のパラドックス</text>
+<text x="30" y="72" class="unit">単位：データセンターの電力消費（TWh）</text><desc id="desc">2024年のデータセンター電力消費の基準年推計と、2030・2035年のIEA基本シナリオ予測を区別した図</desc>
+<line x1="92" y1="338" x2="842" y2="338" class="axis"/><line x1="92" y1="108" x2="92" y2="338" class="axis"/>
+<line x1="92" y1="108" x2="842" y2="108" class="grid"/><line x1="92" y1="223" x2="842" y2="223" class="grid"/>
+<text x="78" y="344" text-anchor="end" class="unit">0</text><text x="78" y="229" text-anchor="end" class="unit">600</text><text x="78" y="114" text-anchor="end" class="unit">1,200</text>
+<circle cx="92" cy="258.5" r="9" fill="#1F5A75"/><text x="112" y="250" class="value">415</text>
+<line x1="92" y1="258.5" x2="842" y2="108" stroke="#A94E32" stroke-width="5" stroke-dasharray="13 9"/>
+<circle cx="542" cy="156.9" r="9" fill="#F7F4ED" stroke="#A94E32" stroke-width="5"/><circle cx="842" cy="108" r="9" fill="#F7F4ED" stroke="#A94E32" stroke-width="5"/>
+<text x="542" y="142" text-anchor="middle" class="value">945</text><text x="842" y="93" text-anchor="end" class="value">約1,200</text>
+<text x="92" y="374" text-anchor="middle" class="label">2024</text><text x="542" y="374" text-anchor="middle" class="label">2030</text><text x="842" y="374" text-anchor="middle" class="label">2035</text>
+<rect x="300" y="78" width="20" height="20" rx="10" fill="#1F5A75"/><text x="330" y="95" class="unit">基準年推計</text>
+<line x1="516" y1="88" x2="552" y2="88" stroke="#A94E32" stroke-width="5" stroke-dasharray="10 7"/><text x="565" y="95" class="unit">基本シナリオ予測</text>
+<text x="92" y="416" class="note">2030年以降は、需要・効率・政策による予測の不確実性がさらに高まります。</text>
+<rect x="752" y="24" width="138" height="36" rx="18" fill="#10283F"/><text x="821" y="49" text-anchor="middle" style="font:700 20px 'Yu Gothic','Noto Sans JP',sans-serif;fill:#F7F4ED">推計・予測</text>
+</svg>

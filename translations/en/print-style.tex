@@ -1,0 +1,58 @@
+\usepackage[most]{tcolorbox}
+\usepackage{needspace}
+\usepackage{etoolbox}
+\usepackage[automark]{scrlayer-scrpage}
+\definecolor{questionnavy}{HTML}{10283F}
+\definecolor{questionaccent}{HTML}{A94E32}
+\definecolor{questioncream}{HTML}{F6F1E7}
+\definecolor{questionink}{HTML}{18212B}
+
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
+\newfontfamily\BookQuestionSans{TeX Gyre Heros}
+\newfontfamily\BookQuestionSerif{TeX Gyre Pagella}
+\newfontfamily\HanjaFont[
+  Path=C:/Windows/Fonts/,
+  UprightFont=simsun.ttc,
+  BoldFont=simsun.ttc
+]{SimSun}
+
+\newcommand{\BookQuestionLabel}[1]{{\BookQuestionSans\bfseries\color{questionaccent}\fontsize{9pt}{11pt}\selectfont #1}}
+\newcommand{\BookQuestionPrompt}[1]{{\BookQuestionSerif\bfseries\color{questionink}\fontsize{11.2pt}{15.5pt}\selectfont #1}}
+
+\setkomafont{disposition}{\sffamily\bfseries}
+\setkomafont{chapter}{\sffamily\bfseries\color{questionnavy}\fontsize{16pt}{20pt}\selectfont}
+\setkomafont{section}{\sffamily\bfseries\fontsize{13pt}{16.5pt}\selectfont}
+\setkomafont{subsection}{\sffamily\bfseries\fontsize{11.2pt}{14.5pt}\selectfont}
+\clearpairofpagestyles
+\automark[chapter]{chapter}
+\ohead{\headmark}
+\ofoot*{\pagemark}
+\setkomafont{pageheadfoot}{\sffamily\fontsize{8.2pt}{10pt}\selectfont}
+\pagestyle{scrheadings}
+\RedeclareSectionCommand[
+  beforeskip=0pt,
+  afterskip=1.15em,
+  tocnumwidth=2.8em
+]{chapter}
+\renewcommand{\chapterlinesformat}[3]{%
+  \parbox{\textwidth}{%
+    \color{questionnavy}\rule{\textwidth}{0.8pt}\par\vspace{7pt}%
+    \raggedright #2#3\par\vspace{7pt}%
+    \color{questionaccent}\rule{30mm}{2.4pt}%
+  }%
+}
+
+\setlength{\parindent}{1.1em}
+\setlength{\parskip}{0.36em plus 0.08em minus 0.04em}
+\setlength{\emergencystretch}{2em}
+\tolerance=1600
+\hbadness=1800
+\widowpenalty=10000
+\clubpenalty=10000
+\brokenpenalty=10000
+\interfootnotelinepenalty=10000
+\raggedbottom
+
+\pretocmd{\section}{\Needspace{6\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{5\baselineskip}}{}{}
