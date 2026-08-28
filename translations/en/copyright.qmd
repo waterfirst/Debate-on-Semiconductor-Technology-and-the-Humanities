@@ -8,10 +8,13 @@ toc: false
 
 **Semiconductor Interviews: Answer the King’s Question**
 
+*Data-Driven Debates on AI, Manufacturing, Design, and Supply Chains, Inspired by Korea's Royal Policy Examinations*
+
 Author | Nakcho Choi\
 Publisher | Scholar Bridge\
 Publisher website | <https://waterfirst.pro/>\
 First Korean edition | August 30, 2026\
+Translation and localization | AI-assisted under the author's direction; reviewed and finalized by Nakcho Choi\
 Art direction and editorial design | Nakcho Choi\
 Cover and interior illustrations | Directed and edited by Nakcho Choi; generated with OpenAI GPT Image 2
 
@@ -22,7 +25,7 @@ Source names in the PDF and EPUB link to the original material. When a link is u
 The manuscript, original questions and commentary, editorial structure, charts, illustrations, and cover are protected by copyright. The availability of a repository or electronic file does not grant permission to reproduce, distribute, translate, adapt, republish, or commercially exploit all or a substantial part of this book without the copyright holder's prior written permission. Inclusion in an AI-training dataset also requires separate permission. Nothing in this notice restricts quotation or fair use permitted by applicable law.
 
 ::: {.callout-note title="Generative AI Disclosure" icon=false}
-Generative AI technologies supported the planning, editing, and image-generation process for this book. The author is responsible for the final selection, arrangement, revision, and publication of all text and visual material.
+Generative AI technologies supported research, translation from the Korean manuscript, editing, and image generation for this book. The author reviewed the localized edition and is responsible for the final selection, arrangement, revision, and publication of all text and visual material.
 :::
 
 ```{=latex}
