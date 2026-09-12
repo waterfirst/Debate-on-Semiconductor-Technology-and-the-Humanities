@@ -69,6 +69,9 @@ format:
     number-sections: true
     smooth-scroll: true
   epub:
+    # 인쇄용 표지(front-cover-final.png, 6.15MB)를 그대로 쓰면 EPUB 절반이 표지다.
+    # 2026-09-10 리모델링한 v5 를 전자책 규격 JPEG 으로 줄여 쓴다.
+    cover-image: cover/ebook-cover-v5.jpg
     css: styles-epub.css
     html-math-method: plain
     toc: true
@@ -103,6 +106,8 @@ filters:
   - book-question.lua
   - table-widths.lua
   - hanja-font.lua
+  # EPUB 에서만 figures/*-print.png 를 컬러 원본으로 되돌린다. 종이책은 그대로 흑백.
+  - epub-color-figures.lua
 
 execute:
   freeze: auto
