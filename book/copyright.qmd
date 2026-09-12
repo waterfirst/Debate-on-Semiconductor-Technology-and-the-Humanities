@@ -16,7 +16,9 @@ toc: false
 발행처 소재지 | 경기도\
 발행처 안내 | <https://waterfirst.pro/>\
 종이책 ISBN | 979-11-220895-8-5 (03500)\
-정가 | 15,000원\
+[전자책 1판 1쇄 발행 | @@EBOOK_PUBDATE@@\
+전자책 ISBN | @@EBOOK_ISBN@@ (05500)\
+정가 | 12,000원]{.content-visible when-format="epub"}[정가 | 15,000원]{.content-hidden when-format="epub"}\
 아트 디렉션·편집 디자인 | 최낙초\
 표지·본문 삽화 | 최낙초 기획·편집 / OpenAI GPT Image 2 생성
 
